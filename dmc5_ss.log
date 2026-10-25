@@ -1,0 +1,103 @@
+[+   0.000 f0] ==== dmc5_splitscreen compilado Oct 24 2026 23:20:05 ====
+[+   0.016 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
+[+   0.016 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
+[+   0.016 f0] API de plugins de REFramework (runtime): 1.10.0
+[+   0.016 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F11 (ver cabecera de main.cpp)
+[+   0.063 f0] Hook XInputGetState OK en xinput1_4.dll
+[+   0.172 f1] on_frame ACTIVO (UpdateBehavior, hilo 1808)
+[+   0.469 f20] ORDEN: ping
+[+   0.469 f20] pong (frame 20, hilo 1808)
+[+   0.641 f30] init: hook de diagnostico en app.PlayerManager::doUpdate
+[+   0.641 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
+[+   0.641 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
+[+   0.641 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
+[+   0.641 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
+[+   0.641 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
+[+   0.641 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
+[+   0.641 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
+[+   0.641 f30] trace: hook #7 en app.PlayerManager::set_manualPlayer/1 (id 18)
+[+   0.641 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 20)
+[+   0.641 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 22)
+[+   0.641 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 24)
+[+   0.641 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 26)
+[+   0.641 f30] trace: hook #12 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 28)
+[+   0.641 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 30)
+[+   0.641 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 32)
+[+   0.641 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 34)
+[+   0.641 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 36)
+[+   0.641 f30] trace: hook #17 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 38)
+[+   0.641 f30] trace: hook #18 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::set_CurrentState/1 (id 40)
+[+   0.641 f30] trace: hook #19 en app.CharacterFactory::load/3 (id 42)
+[+   0.641 f30] trace: hook #20 en app.CharacterFactory::create/5 (id 44)
+[+   0.641 f30] trace: hook #21 en app.CharacterFactory::create/3 (id 46)
+[+   0.641 f30] trace: hook #22 en app.CharacterFactory::unload/1 (id 48)
+[+   0.641 f30] trace: hook #23 en app.CharacterFactory::unloadAll/0 (id 50)
+[+   0.641 f30] trace: hook #24 en app.NetworkCharacterManager::registerCharacter/2 (id 52)
+[+   0.641 f30] trace: hook #25 en app.NetworkCharacterManager::releaseCharacter/1 (id 54)
+[+   0.641 f30] trace: instalacion terminada, 26 hooks (intentos: 1)
+[+   1.250 f60] app.AdditionalPlayerLoadManager disponible (000002AE2B713000)
+[+  30.344 f1800] latido: frame=1800
+[+  57.641 f3435] app.PlayerManager disponible (000002AE2BAC3220)
+[+  57.891 f3450] PlayerManager.players: -1 -> 0
+[+  60.391 f3600] latido: frame=3600
+[+  90.422 f5400] latido: frame=5400
+[+ 120.453 f7200] latido: frame=7200
+[+ 130.000 f7770] PlayerManager.players: 0 -> 1
+[+ 130.000 f7770]   player[0] 000002AE202EBF60 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00)
+[+ 141.000 f8430] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 141.016 f8430] hook de personaje en app.PlayerVergilPL::doLateUpdate
+[+ 141.016 f8430] hook de personaje en app.Player::doLateUpdate
+[+ 141.016 f8430] hook de personaje en app.character.Character::doUpdate
+[+ 141.016 f8430] hook de personaje en app.character.Character::doLateUpdate
+[+ 141.016 f8430] hook de personaje en app.GameModel::doUpdate
+[+ 141.016 f8430] hook de personaje en app.GameModel::doLateUpdate
+[+ 141.016 f8430] hook de personaje en app.ReplayBaseBehavior::doUpdate
+[+ 141.016 f8430] hook de personaje en app.ReplayBaseBehavior::doLateUpdate
+[+ 141.016 f8430] hook de personaje en app.NetworkBaseBehavior::doUpdate
+[+ 141.016 f8430] hook de personaje en app.NetworkBaseBehavior::doLateUpdate
+[+ 141.016 f8430] PlayerManager.players: 1 -> 2
+[+ 141.016 f8430]   player[0] 000002AE202EBF60 tipo=app.PlayerV id=Gilver(2) pos=(-128.96, -71.32, -87.41)
+[+ 141.016 f8430]   player[1] 000002AE202C0290 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-128.96, -71.32, -87.41) [P1/manual]
+[+ 150.375 f8621] ORDEN: recon
+[+ 150.375 f8621] dump app.CharacterFactory.CostumeID -> 11 metodos, 5 campos
+[+ 150.375 f8621] dump app.AdditionalPlayerLoadManager -> 71 metodos, 5 campos
+[+ 150.375 f8621] dump app.AdditionalPlayerLoadManager.AdditionalPlayerLoader -> 15 metodos, 9 campos
+[+ 150.375 f8621] dump app.CharacterFactory -> 74 metodos, 10 campos
+[+ 150.375 f8621] dump app.CharacterFactory.RequestData -> 3 metodos, 0 campos
+[+ 150.375 f8621] dump app.PadInput -> 119 metodos, 84 campos
+[+ 150.375 f8621] dump via.render.layer.Scene -> 58 metodos, 0 campos
+[+ 150.375 f8621] dump via.SceneView -> 37 metodos, 0 campos
+[+ 150.375 f8621] dump via.SceneManager -> 20 metodos, 0 campos
+[+ 150.391 f8621] dump app.Player -> 212 metodos, 93 campos
+[+ 150.391 f8621] dump app.PlayerManager -> 95 metodos, 16 campos
+[+ 150.391 f8621] dump app.CameraManager -> 90 metodos, 17 campos
+[+ 150.391 f8621] dump app.PlayerCameraController -> 383 metodos, 200 campos
+[+ 150.391 f8621] dump via.hid.GamePad -> 23 metodos, 0 campos
+[+ 150.391 f8621] [diag] dump_default terminado
+[+ 152.719 f8690] ORDEN: state
+[+ 152.719 f8690] =========== ESTADO ===========
+[+ 152.719 f8690] PlayerManager=000002AE2BAC3220  AdditionalPlayerLoadManager=000002AE2B713000
+[+ 152.719 f8690] getPlayerNum=2
+[+ 152.719 f8690] players.Count=2
+[+ 152.719 f8690]   player[0] 000002AE202EBF60 tipo=app.PlayerV id=Gilver(2) pos=(-131.20, -70.68, -91.40)
+[+ 152.719 f8690]   player[1] 000002AE202C0290 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-131.20, -70.68, -91.40) [P1/manual]
+[+ 152.719 f8690] APL: isAvailable=1 isBusy=0 isNotLoadPlayerResource=1 isBusyAllPlayerResource=0
+[+ 152.719 f8690]   Requested: 0
+[+ 152.719 f8690]   Finished: 0
+[+ 152.719 f8690] peticion P2: loading=0 pid=-1 cos=0 sit=0 ready=-1  P2=0000000000000000
+[+ 152.719 f8690] =========== SONDA DE CAMARA ===========
+[+ 152.719 f8690] via.SceneManager nativo=000002AE408CF5F0
+[+ 152.719 f8690] MainView=000002AE3E2F2080
+[+ 152.719 f8690]   WindowSize (como float)=1920 x 1080   (como int32)=1156579328 x 1149698048
+[+ 152.719 f8690]   PresentRect (como float)=0 0 1920 1080   (como int32)=0 0 1156579328 1149698048
+[+ 152.719 f8690] PrimaryCamera=000002AE2B723D50
+[+ 152.719 f8690]   get_FOV = 0
+[+ 152.719 f8690]   get_AspectRatio = 1.0842e-19
+[+ 152.719 f8690]   get_NearClipPlane = -1.0842e-19
+[+ 152.719 f8690]   get_FarClipPlane = 0
+[+ 152.719 f8690] SceneViews objeto=000002AE281C0120 tipo=via.SceneView[]
+[+ 160.266 f8882] ORDEN: ping
+[+ 160.266 f8882] pong (frame 8882, hilo 1808)
+[+ 165.375 f9000] latido: frame=9000
+[+ 178.375 f9570] P1 desaparecio (manualPlayer == null)
+[+ 178.375 f9570] PlayerManager.players: 2 -> -1
