@@ -1,0 +1,632 @@
+[+  31.766 f1900] [dump] ===== app.Player =====
+[+  31.766 f1900] [dump] -- declarados en app.Player
+[+  31.766 f1900] [dump]     campo <uvPadInput>k__BackingField : app.UserDataHolderB
+[+  31.766 f1900] [dump]     campo <padInput>k__BackingField : app.PadInput
+[+  31.766 f1900] [dump]     campo <enemyPadInput>k__BackingField : app.PadInput
+[+  31.766 f1900] [dump]     campo <tracePadInput>k__BackingField : app.PadInput
+[+  31.766 f1900] [dump]     campo <forbidCameraControl>k__BackingField : System.Boolean
+[+  31.766 f1900] [dump]     campo <playerControlType>k__BackingField : app.Player.PlayerControlType
+[+  31.766 f1900] [dump]     campo CachedPadInput : app.PadInput
+[+  31.766 f1900] [dump]     app.UserDataHolderB get_uvPadInput()
+[+  31.766 f1900] [dump]     System.Void set_uvPadInput(app.UserDataHolderB value)
+[+  31.766 f1900] [dump]     app.PadInput get_padInput()
+[+  31.766 f1900] [dump]     System.Void set_padInput(app.PadInput value)
+[+  31.766 f1900] [dump]     System.Void set_enemyPadInput(app.PadInput value)
+[+  31.766 f1900] [dump]     app.PadInput get_enemyPadInput()
+[+  31.766 f1900] [dump]     System.Void set_tracePadInput(app.PadInput value)
+[+  31.766 f1900] [dump]     app.PadInput get_tracePadInput()
+[+  31.766 f1900] [dump]     System.Boolean get_forbidCameraControl()
+[+  31.766 f1900] [dump]     System.Void set_forbidCameraControl(System.Boolean value)
+[+  31.766 f1900] [dump]     app.Player.PlayerControlType get_playerControlType()
+[+  31.766 f1900] [dump]     System.Void set_playerControlType(app.Player.PlayerControlType value)
+[+  31.766 f1900] [dump]     System.Boolean get_isManuallyControlled()
+[+  31.766 f1900] [dump]     System.Void resetPadInput(System.Boolean clearAutoPad)
+[+  31.766 f1900] [dump] -- declarados en app.player.PlayerBase
+[+  31.766 f1900] [dump] -- declarados en app.character.Character
+[+  31.766 f1900] [dump] -- declarados en app.GameModel
+[+  31.766 f1900] [dump] -- declarados en app.ReplayBaseBehavior
+[+  31.766 f1900] [dump] -- declarados en app.NetworkBaseBehavior
+[+  31.766 f1900] [dump] -- declarados en app.BaseBehavior
+[+  31.766 f1900] [dump] -- declarados en via.Behavior
+[+  31.766 f1900] [dump] TIPO INEXISTENTE: app.PlayerControlType
+[+  31.766 f1900] [dump] ===== via.hid.GamePadDevice =====
+[+  31.766 f1900] [dump] -- declarados en via.hid.GamePadDevice
+[+  31.766 f1900] [dump]     System.Void clear()
+[+  31.766 f1900] [dump]     System.Single getMotorPower(via.hid.GamePadMotor motor)
+[+  31.766 f1900] [dump]     via.hid.GamePadDevice makeNullDevice() [static]
+[+  31.766 f1900] [dump]     System.Void resetMotors()
+[+  31.766 f1900] [dump]     System.Void resetOrientation()
+[+  31.766 f1900] [dump]     System.Void setAngularVelocityDeadbandState(System.Boolean flag)
+[+  31.766 f1900] [dump]     System.Void setMotorPower(via.hid.GamePadMotor motor, System.Single power)
+[+  31.766 f1900] [dump]     System.Void setTiltCorrectionState(System.Boolean flag)
+[+  31.766 f1900] [dump]     System.Void showAccountPicker(System.Boolean allowGuestUser)
+[+  31.766 f1900] [dump]     via.hid.GamePadButton get_Button()
+[+  31.766 f1900] [dump]     System.Void set_Button(via.hid.GamePadButton value)
+[+  31.766 f1900] [dump]     via.hid.GamePadButton get_ButtonDown()
+[+  31.766 f1900] [dump]     System.Void set_ButtonDown(via.hid.GamePadButton value)
+[+  31.766 f1900] [dump]     via.hid.GamePadButton get_ButtonUp()
+[+  31.766 f1900] [dump]     System.Void set_ButtonUp(via.hid.GamePadButton value)
+[+  31.766 f1900] [dump]     via.vec2 get_RawAxisL()
+[+  31.766 f1900] [dump]     System.Void set_RawAxisL(via.vec2 value)
+[+  31.766 f1900] [dump]     via.vec2 get_RawAxisR()
+[+  31.766 f1900] [dump]     System.Void set_RawAxisR(via.vec2 value)
+[+  31.766 f1900] [dump]     via.vec2 get_AxisL()
+[+  31.766 f1900] [dump]     System.Void set_AxisL(via.vec2 value)
+[+  31.766 f1900] [dump]     via.vec2 get_AxisR()
+[+  31.766 f1900] [dump]     System.Void set_AxisR(via.vec2 value)
+[+  31.766 f1900] [dump]     System.Single get_AnalogL()
+[+  31.766 f1900] [dump]     System.Void set_AnalogL(System.Single value)
+[+  31.766 f1900] [dump]     System.Single get_AnalogR()
+[+  31.766 f1900] [dump]     System.Void set_AnalogR(System.Single value)
+[+  31.766 f1900] [dump]     via.Quaternion get_Orientation()
+[+  31.766 f1900] [dump]     System.Void set_Orientation(via.Quaternion value)
+[+  31.766 f1900] [dump]     via.vec3 get_Acceleration()
+[+  31.766 f1900] [dump]     System.Void set_Acceleration(via.vec3 value)
+[+  31.766 f1900] [dump]     via.vec3 get_AngularVelocity()
+[+  31.766 f1900] [dump]     System.Void set_AngularVelocity(via.vec3 value)
+[+  31.766 f1900] [dump]     via.hid.GamePadState[] get_AsyncBufferedState()
+[+  31.766 f1900] [dump]     via.hid.AccountPickerState get_AccountPickerState()
+[+  31.766 f1900] [dump]     via.hid.AccountPickerResults get_AccountPickerResults()
+[+  31.766 f1900] [dump]     System.Boolean get_HijackMode()
+[+  31.766 f1900] [dump]     System.Void set_HijackMode(System.Boolean value)
+[+  31.766 f1900] [dump]     System.Boolean get_EnableReleaseHijackVirtualByKeyPress()
+[+  31.766 f1900] [dump]     System.Void set_EnableReleaseHijackVirtualByKeyPress(System.Boolean value)
+[+  31.766 f1900] [dump]     System.Boolean get_EnableUpdateEnterCancelButton()
+[+  31.766 f1900] [dump]     System.Void set_EnableUpdateEnterCancelButton(System.Boolean value)
+[+  31.766 f1900] [dump]     System.Void .ctor()
+[+  31.766 f1900] [dump] -- declarados en via.hid.NativeDeviceBase
+[+  31.766 f1900] [dump]     System.Void .ctor()
+[+  31.766 f1900] [dump]     System.Void discardAsyncBuffer()
+[+  31.766 f1900] [dump]     void__via_UserIndex__via_UserIndex_ get_OnUserIndexChanged()
+[+  31.766 f1900] [dump]     System.Void set_OnUserIndexChanged(void__via_UserIndex__via_UserIndex_ value)
+[+  31.766 f1900] [dump]     void__via_hid_DeviceKindDetails__via_hid_DeviceKindDetails_ get_OnDeviceKindDetailsChanged()
+[+  31.766 f1900] [dump]     System.Void set_OnDeviceKindDetailsChanged(void__via_hid_DeviceKindDetails__via_hid_DeviceKindDetails_ value)
+[+  31.766 f1900] [dump]     System.Boolean get_Connecting()
+[+  31.766 f1900] [dump]     System.String get_Name()
+[+  31.766 f1900] [dump]     via.UserIndex get_UserIndex()
+[+  31.766 f1900] [dump]     via.hid.DeviceIndex get_DeviceIndex()
+[+  31.766 f1900] [dump]     via.hid.DeviceType get_DeviceType()
+[+  31.766 f1900] [dump]     via.hid.DeviceKind get_DeviceKind()
+[+  31.766 f1900] [dump]     via.hid.DeviceKindDetails get_DeviceKindDetails()
+[+  31.766 f1900] [dump]     via.hid.DeviceCaps get_DeviceCaps()
+[+  31.766 f1900] [dump]     System.UInt64 get_UniqueId()
+[+  31.766 f1900] [dump]     System.Boolean get_Merged()
+[+  31.766 f1900] [dump]     System.Boolean get_Virtual()
+[+  31.766 f1900] [dump]     System.Boolean get_HijackVirtual()
+[+  31.766 f1900] [dump]     System.Boolean get_EnableReleaseHijackVirtualByKeyPress()
+[+  31.766 f1900] [dump]     System.Void set_EnableReleaseHijackVirtualByKeyPress(System.Boolean value)
+[+  31.766 f1900] [dump]     System.Int32 get_AsyncBufferPos()
+[+  31.766 f1900] [enum] via.hid.GamePadButton (tamano 4)
+[+  31.766 f1900] [enum]     LUp = 1
+[+  31.766 f1900] [enum]     LDown = 2
+[+  31.766 f1900] [enum]     LLeft = 4
+[+  31.766 f1900] [enum]     LRight = 8
+[+  31.766 f1900] [enum]     RUp = 16
+[+  31.766 f1900] [enum]     RDown = 32
+[+  31.766 f1900] [enum]     RLeft = 64
+[+  31.766 f1900] [enum]     RRight = 128
+[+  31.766 f1900] [enum]     LTrigTop = 256
+[+  31.766 f1900] [enum]     LTrigBottom = 512
+[+  31.766 f1900] [enum]     RTrigTop = 1024
+[+  31.766 f1900] [enum]     RTrigBottom = 2048
+[+  31.766 f1900] [enum]     LStickPush = 4096
+[+  31.766 f1900] [enum]     RStickPush = 8192
+[+  31.766 f1900] [enum]     CLeft = 16384
+[+  31.766 f1900] [enum]     CRight = 32768
+[+  31.766 f1900] [enum]     CCenter = 65536
+[+  31.766 f1900] [enum]     Decide = 131072
+[+  31.766 f1900] [enum]     Cancel = 262144
+[+  31.766 f1900] [enum]     PlatformHome = 524288
+[+  31.766 f1900] [enum]     EmuLup = 1048576
+[+  31.766 f1900] [enum]     EmuLright = 2097152
+[+  31.766 f1900] [enum]     EmuLdown = 4194304
+[+  31.766 f1900] [enum]     EmuLleft = 8388608
+[+  31.766 f1900] [enum]     EmuRup = 16777216
+[+  31.766 f1900] [enum]     EmuRright = 33554432
+[+  31.766 f1900] [enum]     EmuRdown = 67108864
+[+  31.766 f1900] [enum]     EmuRleft = 134217728
+[+  31.766 f1900] [enum]     LSL = 268435456
+[+  31.766 f1900] [enum]     LSR = 536870912
+[+  31.766 f1900] [enum]     RSL = 1073741824
+[+  31.766 f1900] [enum]     RSR = -2147483648
+[+  31.766 f1900] [enum]     None = 0
+[+  31.766 f1900] [enum]     All = -1
+[+  31.766 f1900] [enum] via.UserIndex (tamano 4)
+[+  31.766 f1900] [enum]     User0 = 0
+[+  31.766 f1900] [enum]     User1 = 1
+[+  31.766 f1900] [enum]     User2 = 2
+[+  31.766 f1900] [enum]     User3 = 3
+[+  31.766 f1900] [enum]     User4 = 4
+[+  31.766 f1900] [enum]     User5 = 5
+[+  31.766 f1900] [enum]     User6 = 6
+[+  31.766 f1900] [enum]     User7 = 7
+[+  31.766 f1900] [enum]     User8 = 8
+[+  31.766 f1900] [enum]     User9 = 9
+[+  31.766 f1900] [enum]     User10 = 10
+[+  31.766 f1900] [enum]     User11 = 11
+[+  31.766 f1900] [enum]     User12 = 12
+[+  31.766 f1900] [enum]     User13 = 13
+[+  31.766 f1900] [enum]     User14 = 14
+[+  31.766 f1900] [enum]     User15 = 15
+[+  31.766 f1900] [enum]     Reserved = 16
+[+  31.766 f1900] [enum]     Max = 17
+[+  31.766 f1900] [enum]     System = 18
+[+  31.766 f1900] [enum]     Invalid = 19
+[+  31.766 f1900] [enum]     Merged = 20
+[+  31.766 f1900] [enum] via.hid.DeviceIndex (tamano 4)
+[+  31.766 f1900] [enum]     Index0 = 0
+[+  31.766 f1900] [enum]     Index1 = 1
+[+  31.766 f1900] [enum]     Index2 = 2
+[+  31.766 f1900] [enum]     Index3 = 3
+[+  31.766 f1900] [enum]     Index4 = 4
+[+  31.766 f1900] [enum]     Index5 = 5
+[+  31.766 f1900] [enum]     Index6 = 6
+[+  31.766 f1900] [enum]     Index7 = 7
+[+  31.766 f1900] [enum]     Index8 = 8
+[+  31.766 f1900] [enum]     Index9 = 9
+[+  31.766 f1900] [enum]     Index10 = 10
+[+  31.766 f1900] [enum]     Index11 = 11
+[+  31.766 f1900] [enum]     Index12 = 12
+[+  31.766 f1900] [enum]     Index13 = 13
+[+  31.766 f1900] [enum]     Index14 = 14
+[+  31.782 f1900] [enum]     Index15 = 15
+[+  31.782 f1900] [enum]     Index16 = 16
+[+  31.782 f1900] [enum]     Index17 = 17
+[+  31.782 f1900] [enum]     Index18 = 18
+[+  31.782 f1900] [enum]     Index19 = 19
+[+  31.782 f1900] [enum]     Index20 = 20
+[+  31.782 f1900] [enum]     Index21 = 21
+[+  31.782 f1900] [enum]     Index22 = 22
+[+  31.782 f1900] [enum]     Index23 = 23
+[+  31.782 f1900] [enum]     Index24 = 24
+[+  31.782 f1900] [enum]     Index25 = 25
+[+  31.782 f1900] [enum]     Index26 = 26
+[+  31.782 f1900] [enum]     Index27 = 27
+[+  31.782 f1900] [enum]     Index28 = 28
+[+  31.782 f1900] [enum]     Index29 = 29
+[+  31.782 f1900] [enum]     Index30 = 30
+[+  31.782 f1900] [enum]     Index31 = 31
+[+  31.782 f1900] [enum]     Index32 = 32
+[+  31.782 f1900] [enum]     Index33 = 33
+[+  31.782 f1900] [enum]     Index34 = 34
+[+  31.782 f1900] [enum]     Index35 = 35
+[+  31.782 f1900] [enum]     Index36 = 36
+[+  31.782 f1900] [enum]     Index37 = 37
+[+  31.782 f1900] [enum]     Index38 = 38
+[+  31.782 f1900] [enum]     Index39 = 39
+[+  31.782 f1900] [enum]     Index40 = 40
+[+  31.782 f1900] [enum]     Index41 = 41
+[+  31.782 f1900] [enum]     Index42 = 42
+[+  31.782 f1900] [enum]     Index43 = 43
+[+  31.782 f1900] [enum]     Index44 = 44
+[+  31.782 f1900] [enum]     Index45 = 45
+[+  31.782 f1900] [enum]     Index46 = 46
+[+  31.782 f1900] [enum]     Index47 = 47
+[+  31.782 f1900] [enum]     All = 65535
+[+  31.782 f1900] [enum]     Invalid = 65536
+[+  31.782 f1900] [enum]     Max = 65537
+[+  31.782 f1900] [dump] ===== app.PlayerManager.PlayerCostumeInfo =====
+[+  31.782 f1900] [dump] -- declarados en app.PlayerManager.PlayerCostumeInfo
+[+  31.782 f1900] [dump]     campo PlayerID : app.PlayerID
+[+  31.782 f1900] [dump]     campo CostumeID : app.PlayerCostumeID
+[+  31.782 f1900] [dump]     campo SituationID : app.PlayerSituationID
+[+  31.782 f1900] [dump]     System.String get_DispName()
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump]     System.Void .ctor(app.PlayerID id)
+[+  31.782 f1900] [dump]     app.PlayerManager.PlayerCostumeInfo getCopy()
+[+  31.782 f1900] [dump] ===== app.NetworkCharacterManager =====
+[+  31.782 f1900] [dump] -- declarados en app.NetworkCharacterManager
+[+  31.782 f1900] [dump]     campo CharacterList : System.Collections.Generic.List`1<app.NetworkCharacterManager.CharacterPtrInfo>
+[+  31.782 f1900] [dump]     System.Void registerCharacter(app.character.Character instanceChara, app.INetworkCharacterEvent instanceEvent) [static]
+[+  31.782 f1900] [dump]     System.Void releaseCharacter(app.character.Character instanceChara) [static]
+[+  31.782 f1900] [dump]     System.Void checkCharacterList()
+[+  31.782 f1900] [dump] -- declarados en app.NetworkSingletonBehavior`1<app.NetworkCharacterManager>
+[+  31.782 f1900] [dump] -- declarados en app.SingletonBehavior`1<app.NetworkCharacterManager>
+[+  31.782 f1900] [dump] -- declarados en via.Behavior
+[+  31.782 f1900] [dump]     System.Void registerCoroutine(System.Object coroutine)
+[+  31.782 f1900] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
+[+  31.782 f1900] [dump] -- declarados en via.Component
+[+  31.782 f1900] [dump] ===== app.CharacterFactory.RequestData =====
+[+  31.782 f1900] [dump] -- declarados en app.CharacterFactory.RequestData
+[+  31.782 f1900] [dump]     System.Void unload()
+[+  31.782 f1900] [dump]     System.Boolean isFinished()
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump] ===== via.GameObject =====
+[+  31.782 f1900] [dump] -- declarados en via.GameObject
+[+  31.782 f1900] [dump]     via.Component createComponent(System.Type typeInfo)
+[+  31.782 f1900] [dump]     !!0 createComponent()
+[+  31.782 f1900] [dump]     via.Component[] findComponents(System.Type typeinfo)
+[+  31.782 f1900] [dump]     !!0[] findComponents()
+[+  31.782 f1900] [dump]     via.Component getComponent(System.Type typeinfo)
+[+  31.782 f1900] [dump]     !!0 getComponent()
+[+  31.782 f1900] [dump]     via.Component getSameComponent(System.Type typeinfo)
+[+  31.782 f1900] [dump]     !!0 getSameComponent()
+[+  31.782 f1900] [dump]     System.String get_Name()
+[+  31.782 f1900] [dump]     System.Void set_Name(System.String value)
+[+  31.782 f1900] [dump]     via.Transform get_Transform()
+[+  31.782 f1900] [dump]     via.Component[] get_Components()
+[+  31.782 f1900] [dump] ===== via.Transform =====
+[+  31.782 f1900] [dump] -- declarados en via.Transform
+[+  31.782 f1900] [dump]     System.Collections.Generic.IEnumerable`1<via.Transform> get_Children()
+[+  31.782 f1900] [dump]     via.Transform get_Parent()
+[+  31.782 f1900] [dump]     System.Void set_Parent(via.Transform value)
+[+  31.782 f1900] [dump]     via.Transform get_Child()
+[+  31.782 f1900] [dump]     System.String get_ParentJoint()
+[+  31.782 f1900] [dump]     System.Void set_ParentJoint(System.String value)
+[+  31.782 f1900] [dump] -- declarados en via.Component
+[+  31.782 f1900] [dump]     via.GameObject get_GameObject()
+[+  31.782 f1900] [dump] ===== app.Player =====
+[+  31.782 f1900] [dump] -- declarados en app.Player
+[+  31.782 f1900] [dump]     campo <uvPlayerPadSub>k__BackingField : app.UserDataHolderF
+[+  31.782 f1900] [dump]     campo <uvLeanBlendStart>k__BackingField : app.UserDataHolderF
+[+  31.782 f1900] [dump]     campo <uvPadInput>k__BackingField : app.UserDataHolderB
+[+  31.782 f1900] [dump]     campo <uvMoveStartBlendRate>k__BackingField : app.UserDataHolderF
+[+  31.782 f1900] [dump]     campo <targetAngleInit>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <forceTargetAngleInitH>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <forceTargetAngleInitV>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo lockOnOrPad_SwitchState : app.Player.LockOnOrPad_SwitchState
+[+  31.782 f1900] [dump]     campo <avoidInit>k__BackingField : System.Boolean
+[+  31.782 f1900] [dump]     campo <padAngleTarget>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <padInput>k__BackingField : app.PadInput
+[+  31.782 f1900] [dump]     campo <enemyPadInput>k__BackingField : app.PadInput
+[+  31.782 f1900] [dump]     campo <tracePadInput>k__BackingField : app.PadInput
+[+  31.782 f1900] [dump]     campo <reserveJumpStatusInit>k__BackingField : System.Boolean
+[+  31.782 f1900] [dump]     campo <padInOutCount>k__BackingField : System.UInt32
+[+  31.782 f1900] [dump]     campo <minimumPadShakeTimer>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <padShakeIndex>k__BackingField : System.Int32
+[+  31.782 f1900] [dump]     campo <padAngularVelocity>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <oldPadAngularVelocity>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <originalRawPadAngle>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <isSpecialComboStarted>k__BackingField : System.Boolean
+[+  31.782 f1900] [dump]     campo <freePadAddPosMagnitude>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <firePadShakeTimer>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <jumpPadMoveOffFrame>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo CachedPadInput : app.PadInput
+[+  31.782 f1900] [dump]     app.UserDataHolderF get_uvPlayerPadSub()
+[+  31.782 f1900] [dump]     System.Void set_uvPlayerPadSub(app.UserDataHolderF value)
+[+  31.782 f1900] [dump]     app.UserDataHolderF get_uvLeanBlendStart()
+[+  31.782 f1900] [dump]     System.Void set_uvLeanBlendStart(app.UserDataHolderF value)
+[+  31.782 f1900] [dump]     app.UserDataHolderB get_uvPadInput()
+[+  31.782 f1900] [dump]     System.Void set_uvPadInput(app.UserDataHolderB value)
+[+  31.782 f1900] [dump]     app.UserDataHolderF get_uvMoveStartBlendRate()
+[+  31.782 f1900] [dump]     System.Void set_uvMoveStartBlendRate(app.UserDataHolderF value)
+[+  31.782 f1900] [dump]     System.Single get_targetAngleInit()
+[+  31.782 f1900] [dump]     System.Void set_targetAngleInit(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_forceTargetAngleInitH()
+[+  31.782 f1900] [dump]     System.Void set_forceTargetAngleInitH(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_forceTargetAngleInitV()
+[+  31.782 f1900] [dump]     System.Void set_forceTargetAngleInitV(System.Single value)
+[+  31.782 f1900] [dump]     System.Boolean get_isMoveStart()
+[+  31.782 f1900] [dump]     System.Boolean get_avoidInit()
+[+  31.782 f1900] [dump]     System.Void set_avoidInit(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Single get_padAngleTarget()
+[+  31.782 f1900] [dump]     System.Void set_padAngleTarget(System.Single value)
+[+  31.782 f1900] [dump]     System.Int32 get_padShakeValue()
+[+  31.782 f1900] [dump]     app.PadInput get_padInput()
+[+  31.782 f1900] [dump]     System.Void set_padInput(app.PadInput value)
+[+  31.782 f1900] [dump]     System.Void set_enemyPadInput(app.PadInput value)
+[+  31.782 f1900] [dump]     app.PadInput get_enemyPadInput()
+[+  31.782 f1900] [dump]     System.Void set_tracePadInput(app.PadInput value)
+[+  31.782 f1900] [dump]     app.PadInput get_tracePadInput()
+[+  31.782 f1900] [dump]     System.Boolean get_isInputLPad()
+[+  31.782 f1900] [dump]     System.Boolean get_reserveJumpStatusInit()
+[+  31.782 f1900] [dump]     System.Void set_reserveJumpStatusInit(System.Boolean value)
+[+  31.782 f1900] [dump]     System.UInt32 get_padInOutCount()
+[+  31.782 f1900] [dump]     System.Void set_padInOutCount(System.UInt32 value)
+[+  31.782 f1900] [dump]     System.Single get_minimumPadShakeTimer()
+[+  31.782 f1900] [dump]     System.Void set_minimumPadShakeTimer(System.Single value)
+[+  31.782 f1900] [dump]     System.Int32 get_padShakeIndex()
+[+  31.782 f1900] [dump]     System.Void set_padShakeIndex(System.Int32 value)
+[+  31.782 f1900] [dump]     System.Single get_padAngularVelocity()
+[+  31.782 f1900] [dump]     System.Void set_padAngularVelocity(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_oldPadAngularVelocity()
+[+  31.782 f1900] [dump]     System.Void set_oldPadAngularVelocity(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_originalRawPadAngle()
+[+  31.782 f1900] [dump]     System.Void set_originalRawPadAngle(System.Single value)
+[+  31.782 f1900] [dump]     System.Boolean get_isSpecialComboStarted()
+[+  31.782 f1900] [dump]     System.Void set_isSpecialComboStarted(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Single get_freePadAddPosMagnitude()
+[+  31.782 f1900] [dump]     System.Void set_freePadAddPosMagnitude(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_firePadShakeTimer()
+[+  31.782 f1900] [dump]     System.Void set_firePadShakeTimer(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_jumpPadMoveOffFrame()
+[+  31.782 f1900] [dump]     System.Void set_jumpPadMoveOffFrame(System.Single value)
+[+  31.782 f1900] [dump]     System.Void doAwake()
+[+  31.782 f1900] [dump]     System.Void initCommand()
+[+  31.782 f1900] [dump]     System.Void initJointCache()
+[+  31.782 f1900] [dump]     System.Void resetPadInput(System.Boolean clearAutoPad)
+[+  31.782 f1900] [dump]     System.Void setupTrainingMode()
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump]     System.Void startBlend(System.UInt32 hash, via.vec3 rate, via.vec3 angle)
+[+  31.782 f1900] [dump]     System.Void setInitAction(System.UInt32 layer, System.Single interplation_frame)
+[+  31.782 f1900] [dump]     System.Void updateTargetAngleInit()
+[+  31.782 f1900] [dump]     System.Void initAction()
+[+  31.782 f1900] [dump]     System.Void setDyingStartAction()
+[+  31.782 f1900] [dump]     System.Void onMotionChargeStart()
+[+  31.782 f1900] [dump]     System.Void startSpecialCombo(System.Boolean once)
+[+  31.782 f1900] [dump]     System.Void setFreePadAddPos(System.Single maxVelocity)
+[+  31.782 f1900] [dump]     System.Void setPadMove(System.Single speed)
+[+  31.782 f1900] [dump]     System.Void StartInteraction(app.Player.InteractionType type, via.GameObject target, System.Single checkRange, System.Int32 variationID)
+[+  31.782 f1900] [dump]     System.Void StartInteractionCheck(System.Boolean flag)
+[+  31.782 f1900] [dump]     System.Void startEventMotionJack()
+[+  31.782 f1900] [dump]     System.Void initMaterialType(app.Player.MaterialType type, app.Player.MaterialType exMaterialType)
+[+  31.782 f1900] [dump]     System.Void setupGroundActionName()
+[+  31.782 f1900] [dump]     System.Void requestPadShake(app.Player.PadShakeID id)
+[+  31.782 f1900] [dump]     System.Void requestPadShake(System.UInt32 id)
+[+  31.782 f1900] [dump]     System.Void onEm5000RoofBreakStart()
+[+  31.782 f1900] [dump]     System.Void onEm5000ChuchEventStart()
+[+  31.782 f1900] [dump]     System.Void updatePadShake()
+[+  31.782 f1900] [dump]     System.Void setlockOnOrPadState(app.Player.LockOnOrPad_SwitchState state)
+[+  31.782 f1900] [dump]     System.Void updatelockOnOrPadState()
+[+  31.782 f1900] [dump]     System.Void setupManualLockOn()
+[+  31.782 f1900] [dump]     System.Void resetTargetAngleInit()
+[+  31.782 f1900] [dump]     System.Void startMultiInputCheck()
+[+  31.782 f1900] [dump]     System.Boolean isCommandStartScceeded()
+[+  31.782 f1900] [dump]     System.Void initJumpStatus()
+[+  31.782 f1900] [dump]     System.Void setupUserVariables()
+[+  31.782 f1900] [dump]     System.Void initPlayerData()
+[+  31.782 f1900] [dump]     System.Void MissionInitPlayerData()
+[+  31.782 f1900] [dump]     System.Void initSuperModeMaterial()
+[+  31.782 f1900] [dump]     System.Void setupWindDamage(app.HitController.DamageInfo info)
+[+  31.782 f1900] [dump]     System.Void setupMinimumDamage(app.HitController.DamageInfo info, app.AttackUserData.DamageActTypeEnum[] types)
+[+  31.782 f1900] [dump]     System.Void setBlownPadShake(app.HitController.DamageInfo info)
+[+  31.782 f1900] [dump]     System.Void setupAttackHitTimer(app.HitController.DamageInfo info)
+[+  31.782 f1900] [dump]     System.Void setNavigationStart(via.GameObject obj, System.Int32 rank)
+[+  31.782 f1900] [dump]     System.Void setNavigationStart(via.vec3 pos)
+[+  31.782 f1900] [dump]     System.Void setupDevilTrigger()
+[+  31.782 f1900] [dump]     System.Void setupWetRate(app.player.WetControlData data)
+[+  31.782 f1900] [dump]     System.Void setupInvisibleArea(via.Transform t, System.String[] jointNames)
+[+  31.782 f1900] [dump]     System.Void initNetwork()
+[+  31.782 f1900] [dump]     System.Void initNetworkSelectNetworkType()
+[+  31.782 f1900] [dump]     System.Void onNtcStartMatch(System.Boolean isHost, System.Int32 selfIndex)
+[+  31.782 f1900] [dump]     System.Void startReplayRecord()
+[+  31.782 f1900] [dump]     System.Void startReplayRecordPlay()
+[+  31.782 f1900] [dump]     System.Void setupReplayRecord()
+[+  31.782 f1900] [dump] -- declarados en app.player.PlayerBase
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump] -- declarados en app.character.Character
+[+  31.782 f1900] [dump]     campo <gravityUpInit>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <gravityDownInit>k__BackingField : System.Single
+[+  31.782 f1900] [dump]     campo <exPivotInit>k__BackingField : System.Boolean
+[+  31.782 f1900] [dump]     campo IsLockonRangeInfinity : System.Boolean
+[+  31.782 f1900] [dump]     campo IsInitEPVComponents : System.Boolean
+[+  31.782 f1900] [dump]     System.Single get_gravityUpInit()
+[+  31.782 f1900] [dump]     System.Void set_gravityUpInit(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_gravityDownInit()
+[+  31.782 f1900] [dump]     System.Void set_gravityDownInit(System.Single value)
+[+  31.782 f1900] [dump]     System.Boolean get_exPivotInit()
+[+  31.782 f1900] [dump]     System.Void set_exPivotInit(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Void setupPivotJoint()
+[+  31.782 f1900] [dump]     System.Void initGravity()
+[+  31.782 f1900] [dump]     System.Boolean startCatch(via.GameObject g, System.Boolean isCaughtActSet, System.Boolean isCaughtReverseOwner)
+[+  31.782 f1900] [dump]     System.Boolean startCatch(via.GameObject attacker, via.GameObject target, System.Boolean isCaughtActSet, System.Boolean isCaughtReverseOwner) [static]
+[+  31.782 f1900] [dump]     System.Void startEventMotionJack()
+[+  31.782 f1900] [dump]     System.Void initDamageHitBackNoUse()
+[+  31.782 f1900] [dump]     System.Void setNavigationStart(via.GameObject obj, System.Int32 rank)
+[+  31.782 f1900] [dump]     System.Void setNavigationStart(via.vec3 pos)
+[+  31.782 f1900] [dump]     System.Void setDyingStartAction()
+[+  31.782 f1900] [dump]     System.Void setupGroundActionName()
+[+  31.782 f1900] [dump]     System.Boolean isSeqVFinishStart()
+[+  31.782 f1900] [dump]     System.Void restartPositionErrorCorrector()
+[+  31.782 f1900] [dump]     System.Void setupMotionPrivateLayer()
+[+  31.782 f1900] [dump]     System.Void initCachedComponent()
+[+  31.782 f1900] [dump]     System.Void startEnemyDT()
+[+  31.782 f1900] [dump]     System.Void startAttackNotice()
+[+  31.782 f1900] [dump]     System.Void setupVariableBGMBattleMode(System.UInt32 hash)
+[+  31.782 f1900] [dump]     System.Void doAwake()
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump]     System.Void initGeneratorType()
+[+  31.782 f1900] [dump]     System.Void initNetwork()
+[+  31.782 f1900] [dump]     System.Void startAIMpde()
+[+  31.782 f1900] [dump]     System.Void onNtcStartMatch(System.Boolean isHost, System.Int32 selfIndex)
+[+  31.782 f1900] [dump]     System.Void setupUserVariable()
+[+  31.782 f1900] [dump]     System.Void setupReplay()
+[+  31.782 f1900] [dump]     System.Void startReplayRecord()
+[+  31.782 f1900] [dump]     System.Void reqStartReplayRecordPlay()
+[+  31.782 f1900] [dump]     System.Void startReplayRecordPlay()
+[+  31.782 f1900] [dump]     System.Void <doAwake>b__1142_0(via.GameObject obj, via.motion.ExpressionUpdate updateTiming)
+[+  31.782 f1900] [dump] -- declarados en app.GameModel
+[+  31.782 f1900] [dump]     campo <initialPosition>k__BackingField : via.vec3
+[+  31.782 f1900] [dump]     campo <cachedActivateMediator>k__BackingField : app.ObjectActivateMediator
+[+  31.782 f1900] [dump]     via.vec3 get_initialPosition()
+[+  31.782 f1900] [dump]     System.Void set_initialPosition(via.vec3 value)
+[+  31.782 f1900] [dump]     app.ObjectActivateMediator get_cachedActivateMediator()
+[+  31.782 f1900] [dump]     System.Void set_cachedActivateMediator(app.ObjectActivateMediator value)
+[+  31.782 f1900] [dump]     System.Void triggerPadSE(System.UInt32 triggerID, System.Boolean send)
+[+  31.782 f1900] [dump]     System.Void doAwake()
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump]     System.Void initMaterialCtrlParam(via.render.Mesh mesh, app.MaterialController[] ctrlArr, app.GameModel.MaterialCtrlParam[] paramArr)
+[+  31.782 f1900] [dump]     System.Void initMaterialCtrlParam(via.render.Mesh mesh, app.MaterialController ctrl, app.GameModel.MaterialCtrlParam param)
+[+  31.782 f1900] [dump] -- declarados en app.ReplayBaseBehavior
+[+  31.782 f1900] [dump]     System.Void setupReplayRecord()
+[+  31.782 f1900] [dump] -- declarados en app.NetworkBaseBehavior
+[+  31.782 f1900] [dump]     System.Void doAwake()
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump]     System.Void initNetwork()
+[+  31.782 f1900] [dump]     System.Void initNetworkSelectNetworkType()
+[+  31.782 f1900] [dump]     System.Void setUpdateNetworkComponentLock(via.Component comp, System.Boolean isLock)
+[+  31.782 f1900] [dump]     System.Void onNtcConsistencyStart(System.Int32 index)
+[+  31.782 f1900] [dump] -- declarados en app.BaseBehavior
+[+  31.782 f1900] [dump]     campo <IsStarted>k__BackingField : System.Boolean
+[+  31.782 f1900] [dump]     System.Boolean get_IsStarted()
+[+  31.782 f1900] [dump]     System.Void set_IsStarted(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Void awake()
+[+  31.782 f1900] [dump]     System.Void start()
+[+  31.782 f1900] [dump]     System.Void doAwake()
+[+  31.782 f1900] [dump]     System.Void doStart()
+[+  31.782 f1900] [dump] -- declarados en via.Behavior
+[+  31.782 f1900] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
+[+  31.782 f1900] [dump]     System.Void awake()
+[+  31.782 f1900] [dump]     System.Void start()
+[+  31.782 f1900] [dump] ===== via.Prefab =====
+[+  31.782 f1900] [dump] -- declarados en via.Prefab
+[+  31.782 f1900] [dump]     System.Object Clone()
+[+  31.782 f1900] [dump]     System.String get_ResourcePath()
+[+  31.782 f1900] [dump]     System.Int32 GetHashCode()
+[+  31.782 f1900] [dump]     System.Boolean Equals(System.Object obj)
+[+  31.782 f1900] [dump]     System.Boolean op_Equality(via.Prefab a, via.Prefab b) [static]
+[+  31.782 f1900] [dump]     System.Boolean op_Inequality(via.Prefab a, via.Prefab b) [static]
+[+  31.782 f1900] [dump]     via.Prefab duplicate()
+[+  31.782 f1900] [dump]     System.Boolean equals(via.Prefab aPtr, via.Prefab bPtr) [static]
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position)
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position, via.Quaternion rotation)
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position, via.Folder folderPtr)
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position, via.Quaternion rotation, via.vec3 scale)
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position, via.Quaternion rotation, via.Folder folderPtr)
+[+  31.782 f1900] [dump]     via.GameObject instantiate(via.vec3 position, via.Quaternion rotation, via.vec3 scale, via.Folder folderPtr)
+[+  31.782 f1900] [dump]     System.String ToString()
+[+  31.782 f1900] [dump]     System.Boolean get_Valid()
+[+  31.782 f1900] [dump]     System.Boolean get_Standby()
+[+  31.782 f1900] [dump]     System.Void set_Standby(System.Boolean value)
+[+  31.782 f1900] [dump]     System.String get_Path()
+[+  31.782 f1900] [dump]     System.Void set_Path(System.String value)
+[+  31.782 f1900] [dump]     System.Boolean get_Ready()
+[+  31.782 f1900] [dump]     System.Boolean get_Exist()
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump] ===== via.Scene =====
+[+  31.782 f1900] [dump] -- declarados en via.Scene
+[+  31.782 f1900] [dump]     System.Collections.Generic.IEnumerable`1<via.Folder> get_Folders()
+[+  31.782 f1900] [dump]     via.Component[] findComponents(System.Type typeInfo)
+[+  31.782 f1900] [dump]     !!0[] findComponents()
+[+  31.782 f1900] [dump]     via.Folder findFolder(System.String pathStr)
+[+  31.782 f1900] [dump]     via.Folder[] findFoldersWithTag(System.String tagStr)
+[+  31.782 f1900] [dump]     via.GameObject findGameObject(System.String pathStr)
+[+  31.782 f1900] [dump]     via.GameObject findGameObject(System.Guid id)
+[+  31.782 f1900] [dump]     via.GameObject findGameObject(System.String pathStr, via.Folder folder)
+[+  31.782 f1900] [dump]     via.GameObject[] findGameObjectsWithTag(System.String tagStr)
+[+  31.782 f1900] [dump]     via.GameObject[] findGameObjectsWithTag(System.String tagStr, via.Folder folder)
+[+  31.782 f1900] [dump]     via.Folder getNextFolder(via.Folder folderPtr)
+[+  31.782 f1900] [dump]     via.Folder get_FirstFolder()
+[+  31.782 f1900] [dump]     System.String get_Name()
+[+  31.782 f1900] [dump]     System.Void set_Name(System.String value)
+[+  31.782 f1900] [dump] ===== via.Folder =====
+[+  31.782 f1900] [dump] -- declarados en via.Folder
+[+  31.782 f1900] [dump]     System.Collections.Generic.IEnumerable`1<via.Transform> get_Children()
+[+  31.782 f1900] [dump]     System.String get_Name()
+[+  31.782 f1900] [dump]     System.Boolean get_Active()
+[+  31.782 f1900] [dump]     via.Folder get_Child()
+[+  31.782 f1900] [enum] app.PadInput.GameAction (tamano 4)
+[+  31.782 f1900] [enum]     AttackS = 0
+[+  31.782 f1900] [enum]     AttackL = 1
+[+  31.782 f1900] [enum]     Jump = 2
+[+  31.782 f1900] [enum]     Provoke = 3
+[+  31.782 f1900] [enum]     LockOn = 4
+[+  31.782 f1900] [enum]     ChangeLockOn = 5
+[+  31.782 f1900] [enum]     Dash = 6
+[+  31.782 f1900] [enum]     Avoid = 7
+[+  31.782 f1900] [enum]     ChgStyleTS = 8
+[+  31.782 f1900] [enum]     ChgStyleRG = 9
+[+  31.782 f1900] [enum]     ChgStyleGS = 10
+[+  31.782 f1900] [enum]     ChgStyleSM = 11
+[+  31.782 f1900] [enum]     Special0 = 12
+[+  31.782 f1900] [enum]     Special1 = 13
+[+  31.782 f1900] [enum]     Special2 = 14
+[+  31.782 f1900] [enum]     CameraReset = 15
+[+  31.782 f1900] [enum]     DevilTrigger = 16
+[+  31.782 f1900] [enum]     Cross = 17
+[+  31.782 f1900] [enum]     MoveUp = 18
+[+  31.782 f1900] [enum]     MoveDown = 19
+[+  31.782 f1900] [enum]     MoveLeft = 20
+[+  31.782 f1900] [enum]     MoveRight = 21
+[+  31.782 f1900] [enum]     CameraUp = 22
+[+  31.782 f1900] [enum]     CameraDown = 23
+[+  31.782 f1900] [enum]     CameraLeft = 24
+[+  31.782 f1900] [enum]     CameraRight = 25
+[+  31.782 f1900] [enum]     MaxAction = 26
+[+  31.782 f1900] [dump] ===== app.pad.KeyAssign =====
+[+  31.782 f1900] [dump] -- declarados en app.pad.KeyAssign
+[+  31.782 f1900] [dump]     campo AssignList : System.Collections.Generic.List`1<app.pad.KeyAssign.AssignWork>
+[+  31.782 f1900] [dump]     via.hid.GamePadButton FindButton(app.PadInput.GameAction act)
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump] -- declarados en via.UserData
+[+  31.782 f1900] [dump]     System.String get_URI()
+[+  31.782 f1900] [dump]     System.Int32 GetHashCode()
+[+  31.782 f1900] [dump]     System.Boolean Equals(System.Object obj)
+[+  31.782 f1900] [dump]     System.Boolean op_Equality(via.UserData a, via.UserData b) [static]
+[+  31.782 f1900] [dump]     System.Boolean op_Inequality(via.UserData a, via.UserData b) [static]
+[+  31.782 f1900] [dump]     System.Boolean equals(via.UserData aPtr, via.UserData bPtr) [static]
+[+  31.782 f1900] [dump]     System.String ToString()
+[+  31.782 f1900] [dump]     System.String get_Path()
+[+  31.782 f1900] [dump]     System.Void set_Path(System.String value)
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump] ===== via.hid.GamePadDevice =====
+[+  31.782 f1900] [dump] -- declarados en via.hid.GamePadDevice
+[+  31.782 f1900] [dump]     System.Void clear()
+[+  31.782 f1900] [dump]     System.Single getMotorPower(via.hid.GamePadMotor motor)
+[+  31.782 f1900] [dump]     via.hid.GamePadDevice makeNullDevice() [static]
+[+  31.782 f1900] [dump]     System.Void resetMotors()
+[+  31.782 f1900] [dump]     System.Void resetOrientation()
+[+  31.782 f1900] [dump]     System.Void setAngularVelocityDeadbandState(System.Boolean flag)
+[+  31.782 f1900] [dump]     System.Void setMotorPower(via.hid.GamePadMotor motor, System.Single power)
+[+  31.782 f1900] [dump]     System.Void setTiltCorrectionState(System.Boolean flag)
+[+  31.782 f1900] [dump]     System.Void showAccountPicker(System.Boolean allowGuestUser)
+[+  31.782 f1900] [dump]     via.hid.GamePadButton get_Button()
+[+  31.782 f1900] [dump]     System.Void set_Button(via.hid.GamePadButton value)
+[+  31.782 f1900] [dump]     via.hid.GamePadButton get_ButtonDown()
+[+  31.782 f1900] [dump]     System.Void set_ButtonDown(via.hid.GamePadButton value)
+[+  31.782 f1900] [dump]     via.hid.GamePadButton get_ButtonUp()
+[+  31.782 f1900] [dump]     System.Void set_ButtonUp(via.hid.GamePadButton value)
+[+  31.782 f1900] [dump]     via.vec2 get_RawAxisL()
+[+  31.782 f1900] [dump]     System.Void set_RawAxisL(via.vec2 value)
+[+  31.782 f1900] [dump]     via.vec2 get_RawAxisR()
+[+  31.782 f1900] [dump]     System.Void set_RawAxisR(via.vec2 value)
+[+  31.782 f1900] [dump]     via.vec2 get_AxisL()
+[+  31.782 f1900] [dump]     System.Void set_AxisL(via.vec2 value)
+[+  31.782 f1900] [dump]     via.vec2 get_AxisR()
+[+  31.782 f1900] [dump]     System.Void set_AxisR(via.vec2 value)
+[+  31.782 f1900] [dump]     System.Single get_AnalogL()
+[+  31.782 f1900] [dump]     System.Void set_AnalogL(System.Single value)
+[+  31.782 f1900] [dump]     System.Single get_AnalogR()
+[+  31.782 f1900] [dump]     System.Void set_AnalogR(System.Single value)
+[+  31.782 f1900] [dump]     via.Quaternion get_Orientation()
+[+  31.782 f1900] [dump]     System.Void set_Orientation(via.Quaternion value)
+[+  31.782 f1900] [dump]     via.vec3 get_Acceleration()
+[+  31.782 f1900] [dump]     System.Void set_Acceleration(via.vec3 value)
+[+  31.782 f1900] [dump]     via.vec3 get_AngularVelocity()
+[+  31.782 f1900] [dump]     System.Void set_AngularVelocity(via.vec3 value)
+[+  31.782 f1900] [dump]     via.hid.GamePadState[] get_AsyncBufferedState()
+[+  31.782 f1900] [dump]     via.hid.AccountPickerState get_AccountPickerState()
+[+  31.782 f1900] [dump]     via.hid.AccountPickerResults get_AccountPickerResults()
+[+  31.782 f1900] [dump]     System.Boolean get_HijackMode()
+[+  31.782 f1900] [dump]     System.Void set_HijackMode(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Boolean get_EnableReleaseHijackVirtualByKeyPress()
+[+  31.782 f1900] [dump]     System.Void set_EnableReleaseHijackVirtualByKeyPress(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Boolean get_EnableUpdateEnterCancelButton()
+[+  31.782 f1900] [dump]     System.Void set_EnableUpdateEnterCancelButton(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump] -- declarados en via.hid.NativeDeviceBase
+[+  31.782 f1900] [dump]     System.Void .ctor()
+[+  31.782 f1900] [dump]     System.Void discardAsyncBuffer()
+[+  31.782 f1900] [dump]     void__via_UserIndex__via_UserIndex_ get_OnUserIndexChanged()
+[+  31.782 f1900] [dump]     System.Void set_OnUserIndexChanged(void__via_UserIndex__via_UserIndex_ value)
+[+  31.782 f1900] [dump]     void__via_hid_DeviceKindDetails__via_hid_DeviceKindDetails_ get_OnDeviceKindDetailsChanged()
+[+  31.782 f1900] [dump]     System.Void set_OnDeviceKindDetailsChanged(void__via_hid_DeviceKindDetails__via_hid_DeviceKindDetails_ value)
+[+  31.782 f1900] [dump]     System.Boolean get_Connecting()
+[+  31.782 f1900] [dump]     System.String get_Name()
+[+  31.782 f1900] [dump]     via.UserIndex get_UserIndex()
+[+  31.782 f1900] [dump]     via.hid.DeviceIndex get_DeviceIndex()
+[+  31.782 f1900] [dump]     via.hid.DeviceType get_DeviceType()
+[+  31.782 f1900] [dump]     via.hid.DeviceKind get_DeviceKind()
+[+  31.782 f1900] [dump]     via.hid.DeviceKindDetails get_DeviceKindDetails()
+[+  31.782 f1900] [dump]     via.hid.DeviceCaps get_DeviceCaps()
+[+  31.782 f1900] [dump]     System.UInt64 get_UniqueId()
+[+  31.782 f1900] [dump]     System.Boolean get_Merged()
+[+  31.782 f1900] [dump]     System.Boolean get_Virtual()
+[+  31.782 f1900] [dump]     System.Boolean get_HijackVirtual()
+[+  31.782 f1900] [dump]     System.Boolean get_EnableReleaseHijackVirtualByKeyPress()
+[+  31.782 f1900] [dump]     System.Void set_EnableReleaseHijackVirtualByKeyPress(System.Boolean value)
+[+  31.782 f1900] [dump]     System.Int32 get_AsyncBufferPos()
+[+  31.782 f1900] [dump] ===== via.hid.Keyboard =====
+[+  31.782 f1900] [dump] -- declarados en via.hid.Keyboard
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice getConnectingDevices(System.UInt32 index) [static]
+[+  31.782 f1900] [dump]     System.UInt32 getConnectingDevicesCount() [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice getDevDevice(via.UserIndex user_index) [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice getDevice(via.UserIndex user_index) [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice get_Device() [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice get_MergedDevice() [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice get_DevDevice() [static]
+[+  31.782 f1900] [dump]     via.hid.KeyboardDevice get_AllDevice() [static]
+[+  31.782 f1900] [dump]     via.hid.Keyboard.WrappedArrayContainer_ConnectingDevices get_ConnectingDevices() [static]
+[+  31.782 f1900] [dump]     void__via_hid_KeyboardDevice___ get_KeyboardConnectedEvent() [static]
+[+  31.782 f1900] [dump]     void__via_hid_KeyboardDevice___ get_KeyboardDisconnectedEvent() [static]
+[+  31.782 f1900] [dump]     System.Void set_KeyboardDisconnectedEvent(void__via_hid_KeyboardDevice___ value) [static]
