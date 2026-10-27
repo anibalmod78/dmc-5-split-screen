@@ -1,0 +1,27 @@
+# Peticion de volcado (orden "dump" / F7). Una linea por tipo; '#' = comentario.
+# "Tipo|clave1,clave2" muestra solo metodos/campos cuyo nombre contenga alguna clave.
+# Resultado en: reframework\data\dmc5_ss_dump.log
+#
+# Lo basico (enums, cargador, camara) ya lo hace la orden "recon" (F8).
+# Este archivo es para lo ADICIONAL:
+
+# --- Entrada por jugador ---
+app.Player|resetPadInput,padInput,playerControlType,isManuallyControlled,forbidCamera
+app.PlayerControlType
+via.hid.GamePadDevice
+via.hid.GamePadButton
+via.UserIndex
+via.hid.DeviceIndex
+
+# --- Registro de jugadores ---
+app.PlayerManager.PlayerCostumeInfo
+app.NetworkCharacterManager|register,release,character
+app.CharacterFactory.RequestData
+
+via.GameObject|Component,Name,Transform,instantiate,Children,Parent
+via.Transform|Parent,Child,GameObject
+app.Player|Awake,Start,start,awake,init,Init,setup,Setup,activate,Activate,Pad,pad
+via.Prefab
+via.Scene|find,Folder,Name
+via.Folder|Name,Object,Child,Active
+app.PadInput.GameAction
