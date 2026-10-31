@@ -1,606 +1,404 @@
-[+ 152.969 f9054] [dump] ===== app.PauseManager =====
-[+ 152.969 f9054] [dump] -- declarados en app.PauseManager
-[+ 152.969 f9054] [dump]     campo ObjectAddList : System.Collections.Generic.List`1[[via.GameObject, mscorlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]][]
-[+ 152.969 f9054] [dump]     campo PauseObjectDict : System.Collections.Generic.Dictionary`2<via.GameObject,app.PauseObject>
-[+ 152.969 f9054] [dump]     campo PauseObjectCount : System.Int32
-[+ 152.969 f9054] [dump]     campo isExecutePause : System.Boolean
-[+ 152.969 f9054] [dump]     System.Void init()
-[+ 152.969 f9054] [dump]     System.Void begin()
-[+ 152.969 f9054] [dump]     System.Void control()
-[+ 152.969 f9054] [dump]     System.Void register(via.GameObject gameObject)
-[+ 152.969 f9054] [dump]     System.Void execute(System.Boolean isPause)
-[+ 152.969 f9054] [dump]     System.Void setUpdateSelf(via.GameObject gameObject, System.Boolean flag)
-[+ 152.969 f9054] [dump]     System.Boolean getUpdateSelf(via.GameObject gameObject)
-[+ 152.969 f9054] [dump]     System.Void setRetroFilmFilter(System.Boolean isOn) [static]
-[+ 152.969 f9054] [dump]     System.Void executePause(System.Boolean isPause)
-[+ 152.969 f9054] [dump]     System.Void setMissionEffectUpdate(System.Boolean isUpdate)
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] ===== app.PauseObject =====
-[+ 152.969 f9054] [dump] -- declarados en app.PauseObject
-[+ 152.969 f9054] [dump]     campo <targetObject>k__BackingField : via.GameObject
-[+ 152.969 f9054] [dump]     campo isPause : System.Boolean
-[+ 152.969 f9054] [dump]     campo isUpdate : System.Boolean
-[+ 152.969 f9054] [dump]     via.GameObject get_targetObject()
-[+ 152.969 f9054] [dump]     System.Void set_targetObject(via.GameObject value)
-[+ 152.969 f9054] [dump]     System.Boolean get_IsPause()
-[+ 152.969 f9054] [dump]     System.Void execute()
-[+ 152.969 f9054] [dump]     System.Void cancel()
-[+ 152.969 f9054] [dump]     System.Void setUpdateSelf(System.Boolean flag)
-[+ 152.969 f9054] [dump]     System.Boolean getUpdateSelf()
-[+ 152.969 f9054] [dump]     System.Void forcePauseFlagOn()
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] ===== app.PauseSupplier =====
-[+ 152.969 f9054] [dump] -- declarados en app.PauseSupplier
-[+ 152.969 f9054] [dump]     campo BloodyResultName : System.String [static]
-[+ 152.969 f9054] [dump]     campo pauseReadyState : app.PauseSupplier.PauseReadyState
-[+ 152.969 f9054] [dump]     campo targetMenu : System.String
-[+ 152.969 f9054] [dump]     campo holder : app.MenuHolder
-[+ 152.969 f9054] [dump]     campo targetMode : app.GameManager.Mode
-[+ 152.969 f9054] [dump]     System.Void updatePauseReadyState()
-[+ 152.969 f9054] [dump]     System.Void doStart()
-[+ 152.969 f9054] [dump]     System.Void update()
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump]     System.Void .cctor() [static]
-[+ 152.969 f9054] [dump] -- declarados en app.BaseBehavior
-[+ 152.969 f9054] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 152.969 f9054] [dump]     System.Boolean get_IsStarted()
-[+ 152.969 f9054] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Void awake()
-[+ 152.969 f9054] [dump]     System.Void start()
-[+ 152.969 f9054] [dump]     System.Void reset()
-[+ 152.969 f9054] [dump]     System.Void onDestroy()
-[+ 152.969 f9054] [dump]     System.Void onDisable()
-[+ 152.969 f9054] [dump]     System.Void onEnable()
-[+ 152.969 f9054] [dump]     System.Void doAwake()
-[+ 152.969 f9054] [dump]     System.Void doStart()
-[+ 152.969 f9054] [dump]     System.Void doReset()
-[+ 152.969 f9054] [dump]     System.Void doOnDestroy()
-[+ 152.969 f9054] [dump]     System.Void doOnDisable()
-[+ 152.969 f9054] [dump]     System.Void doOnEnable()
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] -- declarados en via.Behavior
-[+ 152.969 f9054] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 152.969 f9054] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 152.969 f9054] [dump]     System.Void awake()
-[+ 152.969 f9054] [dump]     System.Void editUpdate()
-[+ 152.969 f9054] [dump]     System.Void lateUpdate()
-[+ 152.969 f9054] [dump]     System.Void onDestroy()
-[+ 152.969 f9054] [dump]     System.Void onDisable()
-[+ 152.969 f9054] [dump]     System.Void onEnable()
-[+ 152.969 f9054] [dump]     System.Void onLoad()
-[+ 152.969 f9054] [dump]     System.Void onUnload()
-[+ 152.969 f9054] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 152.969 f9054] [dump]     System.Void reset()
-[+ 152.969 f9054] [dump]     System.Void start()
-[+ 152.969 f9054] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 152.969 f9054] [dump]     System.Void update()
-[+ 152.969 f9054] [dump]     System.Boolean get_Enabled()
-[+ 152.969 f9054] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.UInt32 get_UpdateCost()
-[+ 152.969 f9054] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 152.969 f9054] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 152.969 f9054] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] -- declarados en via.Component
-[+ 152.969 f9054] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 152.969 f9054] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 152.969 f9054] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 152.969 f9054] [dump]     via.GameObject get_GameObject()
-[+ 152.969 f9054] [dump]     System.Boolean get_Valid()
-[+ 152.969 f9054] [dump]     via.Component get_Chain()
-[+ 152.969 f9054] [dump]     System.Single get_DeltaTime()
-[+ 152.969 f9054] [enum] app.GameManager.PauseRequest (tamano 4)
-[+ 152.969 f9054] [enum]     None = 0
-[+ 152.969 f9054] [enum]     MenuPause = 1
-[+ 152.969 f9054] [enum]     Matching = 2
-[+ 152.969 f9054] [enum]     EnemyRegister = 4
-[+ 152.969 f9054] [enum]     ItemGet = 8
-[+ 152.969 f9054] [enum]     Shop = 16
-[+ 152.969 f9054] [dump] ===== app.GameManager =====
-[+ 152.969 f9054] [dump] -- declarados en app.GameManager
-[+ 152.969 f9054] [dump]     campo GamePauseRequestHash : System.UInt32 [static]
-[+ 152.969 f9054] [dump]     campo GamePauseResumeHash : System.UInt32 [static]
-[+ 152.969 f9054] [dump]     campo <IsPauseTriggerOn>k__BackingField : System.Boolean
-[+ 152.969 f9054] [dump]     campo <IsPauseTriggerOff>k__BackingField : System.Boolean
-[+ 152.969 f9054] [dump]     campo <IsPausePreserved>k__BackingField : System.Boolean
-[+ 152.969 f9054] [dump]     campo PauseManager : app.PauseManager
-[+ 152.969 f9054] [dump]     campo IsPause : System.Boolean
-[+ 152.969 f9054] [dump]     campo IsPauseRequestChange : System.Boolean
-[+ 152.969 f9054] [dump]     campo CurrentPause : System.UInt32
-[+ 152.969 f9054] [dump]     campo PreviousPause : System.UInt32
-[+ 152.969 f9054] [dump]     campo gamePauseType : app.GameManager.PauseType
-[+ 152.969 f9054] [dump]     System.Boolean get_isPause()
-[+ 152.969 f9054] [dump]     System.Void set_isPause(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Boolean get_isPauseMenu()
-[+ 152.969 f9054] [dump]     System.Boolean get_isShopPause()
-[+ 152.969 f9054] [dump]     app.GameManager.PauseType get_GamePauseType()
-[+ 152.969 f9054] [dump]     System.Void set_GamePauseType(app.GameManager.PauseType value)
-[+ 152.969 f9054] [dump]     System.Boolean get_IsPauseTriggerOn()
-[+ 152.969 f9054] [dump]     System.Void set_IsPauseTriggerOn(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Boolean get_IsPauseTriggerOff()
-[+ 152.969 f9054] [dump]     System.Void set_IsPauseTriggerOff(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Boolean get_IsPausePreserved()
-[+ 152.969 f9054] [dump]     System.Void set_IsPausePreserved(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Void addPauseGameObject(via.GameObject gameObject)
-[+ 152.969 f9054] [dump]     System.Void pauseGame(System.Boolean isPause) [static]
-[+ 152.969 f9054] [dump]     System.Void requestPause(app.GameManager.PauseRequest type) [static]
-[+ 152.969 f9054] [dump]     System.Void cancelPause(app.GameManager.PauseRequest type) [static]
-[+ 152.969 f9054] [dump]     System.Void requestGamePauseSound() [static]
-[+ 152.969 f9054] [dump]     System.Void resumeGamePauseSound() [static]
-[+ 152.969 f9054] [dump]     System.Void applyPause()
-[+ 152.969 f9054] [dump]     System.Void setTimelinePause(System.Boolean isPause)
-[+ 152.969 f9054] [dump]     System.Void pauseUpdate()
-[+ 152.969 f9054] [dump] -- declarados en app.SingletonBehavior`1<app.GameManager>
-[+ 152.969 f9054] [dump] -- declarados en via.Behavior
-[+ 152.969 f9054] [dump] -- declarados en via.Component
-[+ 152.969 f9054] [dump] ===== app.GpuMotionPauseHelper =====
-[+ 152.969 f9054] [dump] -- declarados en app.GpuMotionPauseHelper
-[+ 152.969 f9054] [dump]     campo PauseTargetType : app.GpuMotionPauseHelper.TargetType
-[+ 152.969 f9054] [dump]     campo cachedGpuMotionList : System.Collections.Generic.List`1<via.motion.GpuMotion>
-[+ 152.969 f9054] [dump]     campo cachedPlayStateList : System.Collections.Generic.List`1<via.motion.GpuMotion.PlayState>
-[+ 152.969 f9054] [dump]     campo cachedTimeline : via.timeline.Timeline
-[+ 152.969 f9054] [dump]     campo cachedTimelineKicker : app.TimelineKicker
-[+ 152.969 f9054] [dump]     campo isRegister : System.Boolean
-[+ 152.969 f9054] [dump]     campo isPaused : System.Boolean
-[+ 152.969 f9054] [dump]     System.Void onPause(System.Boolean isPause)
-[+ 152.969 f9054] [dump]     System.Boolean initializeTimelineBindObjects()
-[+ 152.969 f9054] [dump]     System.Void doStart()
-[+ 152.969 f9054] [dump]     System.Void doOnDestroy()
-[+ 152.969 f9054] [dump]     System.Void lateUpdate()
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] -- declarados en app.BaseBehavior
-[+ 152.969 f9054] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 152.969 f9054] [dump]     System.Boolean get_IsStarted()
-[+ 152.969 f9054] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.Void awake()
-[+ 152.969 f9054] [dump]     System.Void start()
-[+ 152.969 f9054] [dump]     System.Void reset()
-[+ 152.969 f9054] [dump]     System.Void onDestroy()
-[+ 152.969 f9054] [dump]     System.Void onDisable()
-[+ 152.969 f9054] [dump]     System.Void onEnable()
-[+ 152.969 f9054] [dump]     System.Void doAwake()
-[+ 152.969 f9054] [dump]     System.Void doStart()
-[+ 152.969 f9054] [dump]     System.Void doReset()
-[+ 152.969 f9054] [dump]     System.Void doOnDestroy()
-[+ 152.969 f9054] [dump]     System.Void doOnDisable()
-[+ 152.969 f9054] [dump]     System.Void doOnEnable()
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] -- declarados en via.Behavior
-[+ 152.969 f9054] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 152.969 f9054] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 152.969 f9054] [dump]     System.Void awake()
-[+ 152.969 f9054] [dump]     System.Void editUpdate()
-[+ 152.969 f9054] [dump]     System.Void lateUpdate()
-[+ 152.969 f9054] [dump]     System.Void onDestroy()
-[+ 152.969 f9054] [dump]     System.Void onDisable()
-[+ 152.969 f9054] [dump]     System.Void onEnable()
-[+ 152.969 f9054] [dump]     System.Void onLoad()
-[+ 152.969 f9054] [dump]     System.Void onUnload()
-[+ 152.969 f9054] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 152.969 f9054] [dump]     System.Void reset()
-[+ 152.969 f9054] [dump]     System.Void start()
-[+ 152.969 f9054] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 152.969 f9054] [dump]     System.Void update()
-[+ 152.969 f9054] [dump]     System.Boolean get_Enabled()
-[+ 152.969 f9054] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 152.969 f9054] [dump]     System.UInt32 get_UpdateCost()
-[+ 152.969 f9054] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 152.969 f9054] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 152.969 f9054] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump] -- declarados en via.Component
-[+ 152.969 f9054] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 152.969 f9054] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 152.969 f9054] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 152.969 f9054] [dump]     System.Void .ctor()
-[+ 152.969 f9054] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 152.969 f9054] [dump]     via.GameObject get_GameObject()
-[+ 152.969 f9054] [dump]     System.Boolean get_Valid()
-[+ 152.969 f9054] [dump]     via.Component get_Chain()
-[+ 152.969 f9054] [dump]     System.Single get_DeltaTime()
-[+ 162.203 f9608] [dump] ===== app.PauseManager =====
-[+ 162.203 f9608] [dump] -- declarados en app.PauseManager
-[+ 162.203 f9608] [dump]     campo ObjectAddList : System.Collections.Generic.List`1[[via.GameObject, mscorlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]][]
-[+ 162.203 f9608] [dump]     campo PauseObjectDict : System.Collections.Generic.Dictionary`2<via.GameObject,app.PauseObject>
-[+ 162.203 f9608] [dump]     campo PauseObjectCount : System.Int32
-[+ 162.203 f9608] [dump]     campo isExecutePause : System.Boolean
-[+ 162.203 f9608] [dump]     System.Void init()
-[+ 162.203 f9608] [dump]     System.Void begin()
-[+ 162.203 f9608] [dump]     System.Void control()
-[+ 162.203 f9608] [dump]     System.Void register(via.GameObject gameObject)
-[+ 162.203 f9608] [dump]     System.Void execute(System.Boolean isPause)
-[+ 162.203 f9608] [dump]     System.Void setUpdateSelf(via.GameObject gameObject, System.Boolean flag)
-[+ 162.203 f9608] [dump]     System.Boolean getUpdateSelf(via.GameObject gameObject)
-[+ 162.203 f9608] [dump]     System.Void setRetroFilmFilter(System.Boolean isOn) [static]
-[+ 162.203 f9608] [dump]     System.Void executePause(System.Boolean isPause)
-[+ 162.203 f9608] [dump]     System.Void setMissionEffectUpdate(System.Boolean isUpdate)
-[+ 162.203 f9608] [dump]     System.Void .ctor()
-[+ 162.203 f9608] [dump] ===== app.PauseObject =====
-[+ 162.203 f9608] [dump] -- declarados en app.PauseObject
-[+ 162.203 f9608] [dump]     campo <targetObject>k__BackingField : via.GameObject
-[+ 162.203 f9608] [dump]     campo isPause : System.Boolean
-[+ 162.203 f9608] [dump]     campo isUpdate : System.Boolean
-[+ 162.203 f9608] [dump]     via.GameObject get_targetObject()
-[+ 162.203 f9608] [dump]     System.Void set_targetObject(via.GameObject value)
-[+ 162.203 f9608] [dump]     System.Boolean get_IsPause()
-[+ 162.219 f9608] [dump]     System.Void execute()
-[+ 162.219 f9608] [dump]     System.Void cancel()
-[+ 162.219 f9608] [dump]     System.Void setUpdateSelf(System.Boolean flag)
-[+ 162.219 f9608] [dump]     System.Boolean getUpdateSelf()
-[+ 162.219 f9608] [dump]     System.Void forcePauseFlagOn()
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] ===== app.PauseSupplier =====
-[+ 162.219 f9608] [dump] -- declarados en app.PauseSupplier
-[+ 162.219 f9608] [dump]     campo BloodyResultName : System.String [static]
-[+ 162.219 f9608] [dump]     campo pauseReadyState : app.PauseSupplier.PauseReadyState
-[+ 162.219 f9608] [dump]     campo targetMenu : System.String
-[+ 162.219 f9608] [dump]     campo holder : app.MenuHolder
-[+ 162.219 f9608] [dump]     campo targetMode : app.GameManager.Mode
-[+ 162.219 f9608] [dump]     System.Void updatePauseReadyState()
-[+ 162.219 f9608] [dump]     System.Void doStart()
-[+ 162.219 f9608] [dump]     System.Void update()
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump]     System.Void .cctor() [static]
-[+ 162.219 f9608] [dump] -- declarados en app.BaseBehavior
-[+ 162.219 f9608] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 162.219 f9608] [dump]     System.Boolean get_IsStarted()
-[+ 162.219 f9608] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Void awake()
-[+ 162.219 f9608] [dump]     System.Void start()
-[+ 162.219 f9608] [dump]     System.Void reset()
-[+ 162.219 f9608] [dump]     System.Void onDestroy()
-[+ 162.219 f9608] [dump]     System.Void onDisable()
-[+ 162.219 f9608] [dump]     System.Void onEnable()
-[+ 162.219 f9608] [dump]     System.Void doAwake()
-[+ 162.219 f9608] [dump]     System.Void doStart()
-[+ 162.219 f9608] [dump]     System.Void doReset()
-[+ 162.219 f9608] [dump]     System.Void doOnDestroy()
-[+ 162.219 f9608] [dump]     System.Void doOnDisable()
-[+ 162.219 f9608] [dump]     System.Void doOnEnable()
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] -- declarados en via.Behavior
-[+ 162.219 f9608] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 162.219 f9608] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 162.219 f9608] [dump]     System.Void awake()
-[+ 162.219 f9608] [dump]     System.Void editUpdate()
-[+ 162.219 f9608] [dump]     System.Void lateUpdate()
-[+ 162.219 f9608] [dump]     System.Void onDestroy()
-[+ 162.219 f9608] [dump]     System.Void onDisable()
-[+ 162.219 f9608] [dump]     System.Void onEnable()
-[+ 162.219 f9608] [dump]     System.Void onLoad()
-[+ 162.219 f9608] [dump]     System.Void onUnload()
-[+ 162.219 f9608] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 162.219 f9608] [dump]     System.Void reset()
-[+ 162.219 f9608] [dump]     System.Void start()
-[+ 162.219 f9608] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 162.219 f9608] [dump]     System.Void update()
-[+ 162.219 f9608] [dump]     System.Boolean get_Enabled()
-[+ 162.219 f9608] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.UInt32 get_UpdateCost()
-[+ 162.219 f9608] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 162.219 f9608] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 162.219 f9608] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] -- declarados en via.Component
-[+ 162.219 f9608] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 162.219 f9608] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 162.219 f9608] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 162.219 f9608] [dump]     via.GameObject get_GameObject()
-[+ 162.219 f9608] [dump]     System.Boolean get_Valid()
-[+ 162.219 f9608] [dump]     via.Component get_Chain()
-[+ 162.219 f9608] [dump]     System.Single get_DeltaTime()
-[+ 162.219 f9608] [enum] app.GameManager.PauseRequest (tamano 4)
-[+ 162.219 f9608] [enum]     None = 0
-[+ 162.219 f9608] [enum]     MenuPause = 1
-[+ 162.219 f9608] [enum]     Matching = 2
-[+ 162.219 f9608] [enum]     EnemyRegister = 4
-[+ 162.219 f9608] [enum]     ItemGet = 8
-[+ 162.219 f9608] [enum]     Shop = 16
-[+ 162.219 f9608] [dump] ===== app.GameManager =====
-[+ 162.219 f9608] [dump] -- declarados en app.GameManager
-[+ 162.219 f9608] [dump]     campo GamePauseRequestHash : System.UInt32 [static]
-[+ 162.219 f9608] [dump]     campo GamePauseResumeHash : System.UInt32 [static]
-[+ 162.219 f9608] [dump]     campo <IsPauseTriggerOn>k__BackingField : System.Boolean
-[+ 162.219 f9608] [dump]     campo <IsPauseTriggerOff>k__BackingField : System.Boolean
-[+ 162.219 f9608] [dump]     campo <IsPausePreserved>k__BackingField : System.Boolean
-[+ 162.219 f9608] [dump]     campo PauseManager : app.PauseManager
-[+ 162.219 f9608] [dump]     campo IsPause : System.Boolean
-[+ 162.219 f9608] [dump]     campo IsPauseRequestChange : System.Boolean
-[+ 162.219 f9608] [dump]     campo CurrentPause : System.UInt32
-[+ 162.219 f9608] [dump]     campo PreviousPause : System.UInt32
-[+ 162.219 f9608] [dump]     campo gamePauseType : app.GameManager.PauseType
-[+ 162.219 f9608] [dump]     System.Boolean get_isPause()
-[+ 162.219 f9608] [dump]     System.Void set_isPause(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Boolean get_isPauseMenu()
-[+ 162.219 f9608] [dump]     System.Boolean get_isShopPause()
-[+ 162.219 f9608] [dump]     app.GameManager.PauseType get_GamePauseType()
-[+ 162.219 f9608] [dump]     System.Void set_GamePauseType(app.GameManager.PauseType value)
-[+ 162.219 f9608] [dump]     System.Boolean get_IsPauseTriggerOn()
-[+ 162.219 f9608] [dump]     System.Void set_IsPauseTriggerOn(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Boolean get_IsPauseTriggerOff()
-[+ 162.219 f9608] [dump]     System.Void set_IsPauseTriggerOff(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Boolean get_IsPausePreserved()
-[+ 162.219 f9608] [dump]     System.Void set_IsPausePreserved(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Void addPauseGameObject(via.GameObject gameObject)
-[+ 162.219 f9608] [dump]     System.Void pauseGame(System.Boolean isPause) [static]
-[+ 162.219 f9608] [dump]     System.Void requestPause(app.GameManager.PauseRequest type) [static]
-[+ 162.219 f9608] [dump]     System.Void cancelPause(app.GameManager.PauseRequest type) [static]
-[+ 162.219 f9608] [dump]     System.Void requestGamePauseSound() [static]
-[+ 162.219 f9608] [dump]     System.Void resumeGamePauseSound() [static]
-[+ 162.219 f9608] [dump]     System.Void applyPause()
-[+ 162.219 f9608] [dump]     System.Void setTimelinePause(System.Boolean isPause)
-[+ 162.219 f9608] [dump]     System.Void pauseUpdate()
-[+ 162.219 f9608] [dump] -- declarados en app.SingletonBehavior`1<app.GameManager>
-[+ 162.219 f9608] [dump] -- declarados en via.Behavior
-[+ 162.219 f9608] [dump] -- declarados en via.Component
-[+ 162.219 f9608] [dump] ===== app.GpuMotionPauseHelper =====
-[+ 162.219 f9608] [dump] -- declarados en app.GpuMotionPauseHelper
-[+ 162.219 f9608] [dump]     campo PauseTargetType : app.GpuMotionPauseHelper.TargetType
-[+ 162.219 f9608] [dump]     campo cachedGpuMotionList : System.Collections.Generic.List`1<via.motion.GpuMotion>
-[+ 162.219 f9608] [dump]     campo cachedPlayStateList : System.Collections.Generic.List`1<via.motion.GpuMotion.PlayState>
-[+ 162.219 f9608] [dump]     campo cachedTimeline : via.timeline.Timeline
-[+ 162.219 f9608] [dump]     campo cachedTimelineKicker : app.TimelineKicker
-[+ 162.219 f9608] [dump]     campo isRegister : System.Boolean
-[+ 162.219 f9608] [dump]     campo isPaused : System.Boolean
-[+ 162.219 f9608] [dump]     System.Void onPause(System.Boolean isPause)
-[+ 162.219 f9608] [dump]     System.Boolean initializeTimelineBindObjects()
-[+ 162.219 f9608] [dump]     System.Void doStart()
-[+ 162.219 f9608] [dump]     System.Void doOnDestroy()
-[+ 162.219 f9608] [dump]     System.Void lateUpdate()
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] -- declarados en app.BaseBehavior
-[+ 162.219 f9608] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 162.219 f9608] [dump]     System.Boolean get_IsStarted()
-[+ 162.219 f9608] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.Void awake()
-[+ 162.219 f9608] [dump]     System.Void start()
-[+ 162.219 f9608] [dump]     System.Void reset()
-[+ 162.219 f9608] [dump]     System.Void onDestroy()
-[+ 162.219 f9608] [dump]     System.Void onDisable()
-[+ 162.219 f9608] [dump]     System.Void onEnable()
-[+ 162.219 f9608] [dump]     System.Void doAwake()
-[+ 162.219 f9608] [dump]     System.Void doStart()
-[+ 162.219 f9608] [dump]     System.Void doReset()
-[+ 162.219 f9608] [dump]     System.Void doOnDestroy()
-[+ 162.219 f9608] [dump]     System.Void doOnDisable()
-[+ 162.219 f9608] [dump]     System.Void doOnEnable()
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] -- declarados en via.Behavior
-[+ 162.219 f9608] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 162.219 f9608] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 162.219 f9608] [dump]     System.Void awake()
-[+ 162.219 f9608] [dump]     System.Void editUpdate()
-[+ 162.219 f9608] [dump]     System.Void lateUpdate()
-[+ 162.219 f9608] [dump]     System.Void onDestroy()
-[+ 162.219 f9608] [dump]     System.Void onDisable()
-[+ 162.219 f9608] [dump]     System.Void onEnable()
-[+ 162.219 f9608] [dump]     System.Void onLoad()
-[+ 162.219 f9608] [dump]     System.Void onUnload()
-[+ 162.219 f9608] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 162.219 f9608] [dump]     System.Void reset()
-[+ 162.219 f9608] [dump]     System.Void start()
-[+ 162.219 f9608] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 162.219 f9608] [dump]     System.Void update()
-[+ 162.219 f9608] [dump]     System.Boolean get_Enabled()
-[+ 162.219 f9608] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 162.219 f9608] [dump]     System.UInt32 get_UpdateCost()
-[+ 162.219 f9608] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 162.219 f9608] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 162.219 f9608] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump] -- declarados en via.Component
-[+ 162.219 f9608] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 162.219 f9608] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 162.219 f9608] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 162.219 f9608] [dump]     System.Void .ctor()
-[+ 162.219 f9608] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 162.219 f9608] [dump]     via.GameObject get_GameObject()
-[+ 162.219 f9608] [dump]     System.Boolean get_Valid()
-[+ 162.219 f9608] [dump]     via.Component get_Chain()
-[+ 162.219 f9608] [dump]     System.Single get_DeltaTime()
-[+ 283.125 f15967] [dump] ===== app.PauseManager =====
-[+ 283.125 f15967] [dump] -- declarados en app.PauseManager
-[+ 283.125 f15967] [dump]     campo ObjectAddList : System.Collections.Generic.List`1[[via.GameObject, mscorlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]][]
-[+ 283.125 f15967] [dump]     campo PauseObjectDict : System.Collections.Generic.Dictionary`2<via.GameObject,app.PauseObject>
-[+ 283.125 f15967] [dump]     campo PauseObjectCount : System.Int32
-[+ 283.125 f15967] [dump]     campo isExecutePause : System.Boolean
-[+ 283.125 f15967] [dump]     System.Void init()
-[+ 283.125 f15967] [dump]     System.Void begin()
-[+ 283.125 f15967] [dump]     System.Void control()
-[+ 283.125 f15967] [dump]     System.Void register(via.GameObject gameObject)
-[+ 283.125 f15967] [dump]     System.Void execute(System.Boolean isPause)
-[+ 283.125 f15967] [dump]     System.Void setUpdateSelf(via.GameObject gameObject, System.Boolean flag)
-[+ 283.125 f15967] [dump]     System.Boolean getUpdateSelf(via.GameObject gameObject)
-[+ 283.125 f15967] [dump]     System.Void setRetroFilmFilter(System.Boolean isOn) [static]
-[+ 283.125 f15967] [dump]     System.Void executePause(System.Boolean isPause)
-[+ 283.125 f15967] [dump]     System.Void setMissionEffectUpdate(System.Boolean isUpdate)
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] ===== app.PauseObject =====
-[+ 283.125 f15967] [dump] -- declarados en app.PauseObject
-[+ 283.125 f15967] [dump]     campo <targetObject>k__BackingField : via.GameObject
-[+ 283.125 f15967] [dump]     campo isPause : System.Boolean
-[+ 283.125 f15967] [dump]     campo isUpdate : System.Boolean
-[+ 283.125 f15967] [dump]     via.GameObject get_targetObject()
-[+ 283.125 f15967] [dump]     System.Void set_targetObject(via.GameObject value)
-[+ 283.125 f15967] [dump]     System.Boolean get_IsPause()
-[+ 283.125 f15967] [dump]     System.Void execute()
-[+ 283.125 f15967] [dump]     System.Void cancel()
-[+ 283.125 f15967] [dump]     System.Void setUpdateSelf(System.Boolean flag)
-[+ 283.125 f15967] [dump]     System.Boolean getUpdateSelf()
-[+ 283.125 f15967] [dump]     System.Void forcePauseFlagOn()
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] ===== app.PauseSupplier =====
-[+ 283.125 f15967] [dump] -- declarados en app.PauseSupplier
-[+ 283.125 f15967] [dump]     campo BloodyResultName : System.String [static]
-[+ 283.125 f15967] [dump]     campo pauseReadyState : app.PauseSupplier.PauseReadyState
-[+ 283.125 f15967] [dump]     campo targetMenu : System.String
-[+ 283.125 f15967] [dump]     campo holder : app.MenuHolder
-[+ 283.125 f15967] [dump]     campo targetMode : app.GameManager.Mode
-[+ 283.125 f15967] [dump]     System.Void updatePauseReadyState()
-[+ 283.125 f15967] [dump]     System.Void doStart()
-[+ 283.125 f15967] [dump]     System.Void update()
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump]     System.Void .cctor() [static]
-[+ 283.125 f15967] [dump] -- declarados en app.BaseBehavior
-[+ 283.125 f15967] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 283.125 f15967] [dump]     System.Boolean get_IsStarted()
-[+ 283.125 f15967] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Void awake()
-[+ 283.125 f15967] [dump]     System.Void start()
-[+ 283.125 f15967] [dump]     System.Void reset()
-[+ 283.125 f15967] [dump]     System.Void onDestroy()
-[+ 283.125 f15967] [dump]     System.Void onDisable()
-[+ 283.125 f15967] [dump]     System.Void onEnable()
-[+ 283.125 f15967] [dump]     System.Void doAwake()
-[+ 283.125 f15967] [dump]     System.Void doStart()
-[+ 283.125 f15967] [dump]     System.Void doReset()
-[+ 283.125 f15967] [dump]     System.Void doOnDestroy()
-[+ 283.125 f15967] [dump]     System.Void doOnDisable()
-[+ 283.125 f15967] [dump]     System.Void doOnEnable()
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] -- declarados en via.Behavior
-[+ 283.125 f15967] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 283.125 f15967] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 283.125 f15967] [dump]     System.Void awake()
-[+ 283.125 f15967] [dump]     System.Void editUpdate()
-[+ 283.125 f15967] [dump]     System.Void lateUpdate()
-[+ 283.125 f15967] [dump]     System.Void onDestroy()
-[+ 283.125 f15967] [dump]     System.Void onDisable()
-[+ 283.125 f15967] [dump]     System.Void onEnable()
-[+ 283.125 f15967] [dump]     System.Void onLoad()
-[+ 283.125 f15967] [dump]     System.Void onUnload()
-[+ 283.125 f15967] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 283.125 f15967] [dump]     System.Void reset()
-[+ 283.125 f15967] [dump]     System.Void start()
-[+ 283.125 f15967] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 283.125 f15967] [dump]     System.Void update()
-[+ 283.125 f15967] [dump]     System.Boolean get_Enabled()
-[+ 283.125 f15967] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.UInt32 get_UpdateCost()
-[+ 283.125 f15967] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 283.125 f15967] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 283.125 f15967] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] -- declarados en via.Component
-[+ 283.125 f15967] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 283.125 f15967] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 283.125 f15967] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 283.125 f15967] [dump]     via.GameObject get_GameObject()
-[+ 283.125 f15967] [dump]     System.Boolean get_Valid()
-[+ 283.125 f15967] [dump]     via.Component get_Chain()
-[+ 283.125 f15967] [dump]     System.Single get_DeltaTime()
-[+ 283.125 f15967] [enum] app.GameManager.PauseRequest (tamano 4)
-[+ 283.125 f15967] [enum]     None = 0
-[+ 283.125 f15967] [enum]     MenuPause = 1
-[+ 283.125 f15967] [enum]     Matching = 2
-[+ 283.125 f15967] [enum]     EnemyRegister = 4
-[+ 283.125 f15967] [enum]     ItemGet = 8
-[+ 283.125 f15967] [enum]     Shop = 16
-[+ 283.125 f15967] [dump] ===== app.GameManager =====
-[+ 283.125 f15967] [dump] -- declarados en app.GameManager
-[+ 283.125 f15967] [dump]     campo GamePauseRequestHash : System.UInt32 [static]
-[+ 283.125 f15967] [dump]     campo GamePauseResumeHash : System.UInt32 [static]
-[+ 283.125 f15967] [dump]     campo <IsPauseTriggerOn>k__BackingField : System.Boolean
-[+ 283.125 f15967] [dump]     campo <IsPauseTriggerOff>k__BackingField : System.Boolean
-[+ 283.125 f15967] [dump]     campo <IsPausePreserved>k__BackingField : System.Boolean
-[+ 283.125 f15967] [dump]     campo PauseManager : app.PauseManager
-[+ 283.125 f15967] [dump]     campo IsPause : System.Boolean
-[+ 283.125 f15967] [dump]     campo IsPauseRequestChange : System.Boolean
-[+ 283.125 f15967] [dump]     campo CurrentPause : System.UInt32
-[+ 283.125 f15967] [dump]     campo PreviousPause : System.UInt32
-[+ 283.125 f15967] [dump]     campo gamePauseType : app.GameManager.PauseType
-[+ 283.125 f15967] [dump]     System.Boolean get_isPause()
-[+ 283.125 f15967] [dump]     System.Void set_isPause(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Boolean get_isPauseMenu()
-[+ 283.125 f15967] [dump]     System.Boolean get_isShopPause()
-[+ 283.125 f15967] [dump]     app.GameManager.PauseType get_GamePauseType()
-[+ 283.125 f15967] [dump]     System.Void set_GamePauseType(app.GameManager.PauseType value)
-[+ 283.125 f15967] [dump]     System.Boolean get_IsPauseTriggerOn()
-[+ 283.125 f15967] [dump]     System.Void set_IsPauseTriggerOn(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Boolean get_IsPauseTriggerOff()
-[+ 283.125 f15967] [dump]     System.Void set_IsPauseTriggerOff(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Boolean get_IsPausePreserved()
-[+ 283.125 f15967] [dump]     System.Void set_IsPausePreserved(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Void addPauseGameObject(via.GameObject gameObject)
-[+ 283.125 f15967] [dump]     System.Void pauseGame(System.Boolean isPause) [static]
-[+ 283.125 f15967] [dump]     System.Void requestPause(app.GameManager.PauseRequest type) [static]
-[+ 283.125 f15967] [dump]     System.Void cancelPause(app.GameManager.PauseRequest type) [static]
-[+ 283.125 f15967] [dump]     System.Void requestGamePauseSound() [static]
-[+ 283.125 f15967] [dump]     System.Void resumeGamePauseSound() [static]
-[+ 283.125 f15967] [dump]     System.Void applyPause()
-[+ 283.125 f15967] [dump]     System.Void setTimelinePause(System.Boolean isPause)
-[+ 283.125 f15967] [dump]     System.Void pauseUpdate()
-[+ 283.125 f15967] [dump] -- declarados en app.SingletonBehavior`1<app.GameManager>
-[+ 283.125 f15967] [dump] -- declarados en via.Behavior
-[+ 283.125 f15967] [dump] -- declarados en via.Component
-[+ 283.125 f15967] [dump] ===== app.GpuMotionPauseHelper =====
-[+ 283.125 f15967] [dump] -- declarados en app.GpuMotionPauseHelper
-[+ 283.125 f15967] [dump]     campo PauseTargetType : app.GpuMotionPauseHelper.TargetType
-[+ 283.125 f15967] [dump]     campo cachedGpuMotionList : System.Collections.Generic.List`1<via.motion.GpuMotion>
-[+ 283.125 f15967] [dump]     campo cachedPlayStateList : System.Collections.Generic.List`1<via.motion.GpuMotion.PlayState>
-[+ 283.125 f15967] [dump]     campo cachedTimeline : via.timeline.Timeline
-[+ 283.125 f15967] [dump]     campo cachedTimelineKicker : app.TimelineKicker
-[+ 283.125 f15967] [dump]     campo isRegister : System.Boolean
-[+ 283.125 f15967] [dump]     campo isPaused : System.Boolean
-[+ 283.125 f15967] [dump]     System.Void onPause(System.Boolean isPause)
-[+ 283.125 f15967] [dump]     System.Boolean initializeTimelineBindObjects()
-[+ 283.125 f15967] [dump]     System.Void doStart()
-[+ 283.125 f15967] [dump]     System.Void doOnDestroy()
-[+ 283.125 f15967] [dump]     System.Void lateUpdate()
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] -- declarados en app.BaseBehavior
-[+ 283.125 f15967] [dump]     campo <IsStarted>k__BackingField : System.Boolean
-[+ 283.125 f15967] [dump]     System.Boolean get_IsStarted()
-[+ 283.125 f15967] [dump]     System.Void set_IsStarted(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.Void awake()
-[+ 283.125 f15967] [dump]     System.Void start()
-[+ 283.125 f15967] [dump]     System.Void reset()
-[+ 283.125 f15967] [dump]     System.Void onDestroy()
-[+ 283.125 f15967] [dump]     System.Void onDisable()
-[+ 283.125 f15967] [dump]     System.Void onEnable()
-[+ 283.125 f15967] [dump]     System.Void doAwake()
-[+ 283.125 f15967] [dump]     System.Void doStart()
-[+ 283.125 f15967] [dump]     System.Void doReset()
-[+ 283.125 f15967] [dump]     System.Void doOnDestroy()
-[+ 283.125 f15967] [dump]     System.Void doOnDisable()
-[+ 283.125 f15967] [dump]     System.Void doOnEnable()
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] -- declarados en via.Behavior
-[+ 283.125 f15967] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
-[+ 283.125 f15967] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
-[+ 283.125 f15967] [dump]     System.Void awake()
-[+ 283.125 f15967] [dump]     System.Void editUpdate()
-[+ 283.125 f15967] [dump]     System.Void lateUpdate()
-[+ 283.125 f15967] [dump]     System.Void onDestroy()
-[+ 283.125 f15967] [dump]     System.Void onDisable()
-[+ 283.125 f15967] [dump]     System.Void onEnable()
-[+ 283.125 f15967] [dump]     System.Void onLoad()
-[+ 283.125 f15967] [dump]     System.Void onUnload()
-[+ 283.125 f15967] [dump]     System.Void registerCoroutine(System.Object coroutine)
-[+ 283.125 f15967] [dump]     System.Void reset()
-[+ 283.125 f15967] [dump]     System.Void start()
-[+ 283.125 f15967] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
-[+ 283.125 f15967] [dump]     System.Void update()
-[+ 283.125 f15967] [dump]     System.Boolean get_Enabled()
-[+ 283.125 f15967] [dump]     System.Void set_Enabled(System.Boolean value)
-[+ 283.125 f15967] [dump]     System.UInt32 get_UpdateCost()
-[+ 283.125 f15967] [dump]     System.Void set_UpdateCost(System.UInt32 value)
-[+ 283.125 f15967] [dump]     System.UInt32 get_LateUpdateCost()
-[+ 283.125 f15967] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump] -- declarados en via.Component
-[+ 283.125 f15967] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
-[+ 283.125 f15967] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
-[+ 283.125 f15967] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
-[+ 283.125 f15967] [dump]     System.Void .ctor()
-[+ 283.125 f15967] [dump]     System.Void destroy(via.Component comp) [static]
-[+ 283.125 f15967] [dump]     via.GameObject get_GameObject()
-[+ 283.125 f15967] [dump]     System.Boolean get_Valid()
-[+ 283.125 f15967] [dump]     via.Component get_Chain()
-[+ 283.125 f15967] [dump]     System.Single get_DeltaTime()
+[+ 150.218 f8886] [dump] ===== app.PauseManager =====
+[+ 150.218 f8886] [dump] -- declarados en app.PauseManager
+[+ 150.218 f8886] [dump]     campo ObjectAddList : System.Collections.Generic.List`1[[via.GameObject, mscorlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]][]
+[+ 150.218 f8886] [dump]     campo PauseObjectDict : System.Collections.Generic.Dictionary`2<via.GameObject,app.PauseObject>
+[+ 150.218 f8886] [dump]     campo PauseObjectCount : System.Int32
+[+ 150.218 f8886] [dump]     campo isExecutePause : System.Boolean
+[+ 150.218 f8886] [dump]     System.Void init()
+[+ 150.218 f8886] [dump]     System.Void begin()
+[+ 150.218 f8886] [dump]     System.Void control()
+[+ 150.218 f8886] [dump]     System.Void register(via.GameObject gameObject)
+[+ 150.218 f8886] [dump]     System.Void execute(System.Boolean isPause)
+[+ 150.218 f8886] [dump]     System.Void setUpdateSelf(via.GameObject gameObject, System.Boolean flag)
+[+ 150.218 f8886] [dump]     System.Boolean getUpdateSelf(via.GameObject gameObject)
+[+ 150.218 f8886] [dump]     System.Void setRetroFilmFilter(System.Boolean isOn) [static]
+[+ 150.218 f8886] [dump]     System.Void executePause(System.Boolean isPause)
+[+ 150.218 f8886] [dump]     System.Void setMissionEffectUpdate(System.Boolean isUpdate)
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] ===== app.PauseObject =====
+[+ 150.218 f8886] [dump] -- declarados en app.PauseObject
+[+ 150.218 f8886] [dump]     campo <targetObject>k__BackingField : via.GameObject
+[+ 150.218 f8886] [dump]     campo isPause : System.Boolean
+[+ 150.218 f8886] [dump]     campo isUpdate : System.Boolean
+[+ 150.218 f8886] [dump]     via.GameObject get_targetObject()
+[+ 150.218 f8886] [dump]     System.Void set_targetObject(via.GameObject value)
+[+ 150.218 f8886] [dump]     System.Boolean get_IsPause()
+[+ 150.218 f8886] [dump]     System.Void execute()
+[+ 150.218 f8886] [dump]     System.Void cancel()
+[+ 150.218 f8886] [dump]     System.Void setUpdateSelf(System.Boolean flag)
+[+ 150.218 f8886] [dump]     System.Boolean getUpdateSelf()
+[+ 150.218 f8886] [dump]     System.Void forcePauseFlagOn()
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] ===== app.PauseSupplier =====
+[+ 150.218 f8886] [dump] -- declarados en app.PauseSupplier
+[+ 150.218 f8886] [dump]     campo BloodyResultName : System.String [static]
+[+ 150.218 f8886] [dump]     campo pauseReadyState : app.PauseSupplier.PauseReadyState
+[+ 150.218 f8886] [dump]     campo targetMenu : System.String
+[+ 150.218 f8886] [dump]     campo holder : app.MenuHolder
+[+ 150.218 f8886] [dump]     campo targetMode : app.GameManager.Mode
+[+ 150.218 f8886] [dump]     System.Void updatePauseReadyState()
+[+ 150.218 f8886] [dump]     System.Void doStart()
+[+ 150.218 f8886] [dump]     System.Void update()
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump]     System.Void .cctor() [static]
+[+ 150.218 f8886] [dump] -- declarados en app.BaseBehavior
+[+ 150.218 f8886] [dump]     campo <IsStarted>k__BackingField : System.Boolean
+[+ 150.218 f8886] [dump]     System.Boolean get_IsStarted()
+[+ 150.218 f8886] [dump]     System.Void set_IsStarted(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Void awake()
+[+ 150.218 f8886] [dump]     System.Void start()
+[+ 150.218 f8886] [dump]     System.Void reset()
+[+ 150.218 f8886] [dump]     System.Void onDestroy()
+[+ 150.218 f8886] [dump]     System.Void onDisable()
+[+ 150.218 f8886] [dump]     System.Void onEnable()
+[+ 150.218 f8886] [dump]     System.Void doAwake()
+[+ 150.218 f8886] [dump]     System.Void doStart()
+[+ 150.218 f8886] [dump]     System.Void doReset()
+[+ 150.218 f8886] [dump]     System.Void doOnDestroy()
+[+ 150.218 f8886] [dump]     System.Void doOnDisable()
+[+ 150.218 f8886] [dump]     System.Void doOnEnable()
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] -- declarados en via.Behavior
+[+ 150.218 f8886] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
+[+ 150.218 f8886] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
+[+ 150.218 f8886] [dump]     System.Void awake()
+[+ 150.218 f8886] [dump]     System.Void editUpdate()
+[+ 150.218 f8886] [dump]     System.Void lateUpdate()
+[+ 150.218 f8886] [dump]     System.Void onDestroy()
+[+ 150.218 f8886] [dump]     System.Void onDisable()
+[+ 150.218 f8886] [dump]     System.Void onEnable()
+[+ 150.218 f8886] [dump]     System.Void onLoad()
+[+ 150.218 f8886] [dump]     System.Void onUnload()
+[+ 150.218 f8886] [dump]     System.Void registerCoroutine(System.Object coroutine)
+[+ 150.218 f8886] [dump]     System.Void reset()
+[+ 150.218 f8886] [dump]     System.Void start()
+[+ 150.218 f8886] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
+[+ 150.218 f8886] [dump]     System.Void update()
+[+ 150.218 f8886] [dump]     System.Boolean get_Enabled()
+[+ 150.218 f8886] [dump]     System.Void set_Enabled(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.UInt32 get_UpdateCost()
+[+ 150.218 f8886] [dump]     System.Void set_UpdateCost(System.UInt32 value)
+[+ 150.218 f8886] [dump]     System.UInt32 get_LateUpdateCost()
+[+ 150.218 f8886] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] -- declarados en via.Component
+[+ 150.218 f8886] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
+[+ 150.218 f8886] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
+[+ 150.218 f8886] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump]     System.Void destroy(via.Component comp) [static]
+[+ 150.218 f8886] [dump]     via.GameObject get_GameObject()
+[+ 150.218 f8886] [dump]     System.Boolean get_Valid()
+[+ 150.218 f8886] [dump]     via.Component get_Chain()
+[+ 150.218 f8886] [dump]     System.Single get_DeltaTime()
+[+ 150.218 f8886] [enum] app.GameManager.PauseRequest (tamano 4)
+[+ 150.218 f8886] [enum]     None = 0
+[+ 150.218 f8886] [enum]     MenuPause = 1
+[+ 150.218 f8886] [enum]     Matching = 2
+[+ 150.218 f8886] [enum]     EnemyRegister = 4
+[+ 150.218 f8886] [enum]     ItemGet = 8
+[+ 150.218 f8886] [enum]     Shop = 16
+[+ 150.218 f8886] [dump] ===== app.GameManager =====
+[+ 150.218 f8886] [dump] -- declarados en app.GameManager
+[+ 150.218 f8886] [dump]     campo GamePauseRequestHash : System.UInt32 [static]
+[+ 150.218 f8886] [dump]     campo GamePauseResumeHash : System.UInt32 [static]
+[+ 150.218 f8886] [dump]     campo <IsPauseTriggerOn>k__BackingField : System.Boolean
+[+ 150.218 f8886] [dump]     campo <IsPauseTriggerOff>k__BackingField : System.Boolean
+[+ 150.218 f8886] [dump]     campo <IsPausePreserved>k__BackingField : System.Boolean
+[+ 150.218 f8886] [dump]     campo PauseManager : app.PauseManager
+[+ 150.218 f8886] [dump]     campo IsPause : System.Boolean
+[+ 150.218 f8886] [dump]     campo IsPauseRequestChange : System.Boolean
+[+ 150.218 f8886] [dump]     campo CurrentPause : System.UInt32
+[+ 150.218 f8886] [dump]     campo PreviousPause : System.UInt32
+[+ 150.218 f8886] [dump]     campo gamePauseType : app.GameManager.PauseType
+[+ 150.218 f8886] [dump]     System.Boolean get_isPause()
+[+ 150.218 f8886] [dump]     System.Void set_isPause(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Boolean get_isPauseMenu()
+[+ 150.218 f8886] [dump]     System.Boolean get_isShopPause()
+[+ 150.218 f8886] [dump]     app.GameManager.PauseType get_GamePauseType()
+[+ 150.218 f8886] [dump]     System.Void set_GamePauseType(app.GameManager.PauseType value)
+[+ 150.218 f8886] [dump]     System.Boolean get_IsPauseTriggerOn()
+[+ 150.218 f8886] [dump]     System.Void set_IsPauseTriggerOn(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Boolean get_IsPauseTriggerOff()
+[+ 150.218 f8886] [dump]     System.Void set_IsPauseTriggerOff(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Boolean get_IsPausePreserved()
+[+ 150.218 f8886] [dump]     System.Void set_IsPausePreserved(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Void addPauseGameObject(via.GameObject gameObject)
+[+ 150.218 f8886] [dump]     System.Void pauseGame(System.Boolean isPause) [static]
+[+ 150.218 f8886] [dump]     System.Void requestPause(app.GameManager.PauseRequest type) [static]
+[+ 150.218 f8886] [dump]     System.Void cancelPause(app.GameManager.PauseRequest type) [static]
+[+ 150.218 f8886] [dump]     System.Void requestGamePauseSound() [static]
+[+ 150.218 f8886] [dump]     System.Void resumeGamePauseSound() [static]
+[+ 150.218 f8886] [dump]     System.Void applyPause()
+[+ 150.218 f8886] [dump]     System.Void setTimelinePause(System.Boolean isPause)
+[+ 150.218 f8886] [dump]     System.Void pauseUpdate()
+[+ 150.218 f8886] [dump] -- declarados en app.SingletonBehavior`1<app.GameManager>
+[+ 150.218 f8886] [dump] -- declarados en via.Behavior
+[+ 150.218 f8886] [dump] -- declarados en via.Component
+[+ 150.218 f8886] [dump] ===== app.GpuMotionPauseHelper =====
+[+ 150.218 f8886] [dump] -- declarados en app.GpuMotionPauseHelper
+[+ 150.218 f8886] [dump]     campo PauseTargetType : app.GpuMotionPauseHelper.TargetType
+[+ 150.218 f8886] [dump]     campo cachedGpuMotionList : System.Collections.Generic.List`1<via.motion.GpuMotion>
+[+ 150.218 f8886] [dump]     campo cachedPlayStateList : System.Collections.Generic.List`1<via.motion.GpuMotion.PlayState>
+[+ 150.218 f8886] [dump]     campo cachedTimeline : via.timeline.Timeline
+[+ 150.218 f8886] [dump]     campo cachedTimelineKicker : app.TimelineKicker
+[+ 150.218 f8886] [dump]     campo isRegister : System.Boolean
+[+ 150.218 f8886] [dump]     campo isPaused : System.Boolean
+[+ 150.218 f8886] [dump]     System.Void onPause(System.Boolean isPause)
+[+ 150.218 f8886] [dump]     System.Boolean initializeTimelineBindObjects()
+[+ 150.218 f8886] [dump]     System.Void doStart()
+[+ 150.218 f8886] [dump]     System.Void doOnDestroy()
+[+ 150.218 f8886] [dump]     System.Void lateUpdate()
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] -- declarados en app.BaseBehavior
+[+ 150.218 f8886] [dump]     campo <IsStarted>k__BackingField : System.Boolean
+[+ 150.218 f8886] [dump]     System.Boolean get_IsStarted()
+[+ 150.218 f8886] [dump]     System.Void set_IsStarted(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.Void awake()
+[+ 150.218 f8886] [dump]     System.Void start()
+[+ 150.218 f8886] [dump]     System.Void reset()
+[+ 150.218 f8886] [dump]     System.Void onDestroy()
+[+ 150.218 f8886] [dump]     System.Void onDisable()
+[+ 150.218 f8886] [dump]     System.Void onEnable()
+[+ 150.218 f8886] [dump]     System.Void doAwake()
+[+ 150.218 f8886] [dump]     System.Void doStart()
+[+ 150.218 f8886] [dump]     System.Void doReset()
+[+ 150.218 f8886] [dump]     System.Void doOnDestroy()
+[+ 150.218 f8886] [dump]     System.Void doOnDisable()
+[+ 150.218 f8886] [dump]     System.Void doOnEnable()
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] -- declarados en via.Behavior
+[+ 150.218 f8886] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
+[+ 150.218 f8886] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
+[+ 150.218 f8886] [dump]     System.Void awake()
+[+ 150.218 f8886] [dump]     System.Void editUpdate()
+[+ 150.218 f8886] [dump]     System.Void lateUpdate()
+[+ 150.218 f8886] [dump]     System.Void onDestroy()
+[+ 150.218 f8886] [dump]     System.Void onDisable()
+[+ 150.218 f8886] [dump]     System.Void onEnable()
+[+ 150.218 f8886] [dump]     System.Void onLoad()
+[+ 150.218 f8886] [dump]     System.Void onUnload()
+[+ 150.218 f8886] [dump]     System.Void registerCoroutine(System.Object coroutine)
+[+ 150.218 f8886] [dump]     System.Void reset()
+[+ 150.218 f8886] [dump]     System.Void start()
+[+ 150.218 f8886] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
+[+ 150.218 f8886] [dump]     System.Void update()
+[+ 150.218 f8886] [dump]     System.Boolean get_Enabled()
+[+ 150.218 f8886] [dump]     System.Void set_Enabled(System.Boolean value)
+[+ 150.218 f8886] [dump]     System.UInt32 get_UpdateCost()
+[+ 150.218 f8886] [dump]     System.Void set_UpdateCost(System.UInt32 value)
+[+ 150.218 f8886] [dump]     System.UInt32 get_LateUpdateCost()
+[+ 150.218 f8886] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump] -- declarados en via.Component
+[+ 150.218 f8886] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
+[+ 150.218 f8886] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
+[+ 150.218 f8886] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
+[+ 150.218 f8886] [dump]     System.Void .ctor()
+[+ 150.218 f8886] [dump]     System.Void destroy(via.Component comp) [static]
+[+ 150.218 f8886] [dump]     via.GameObject get_GameObject()
+[+ 150.218 f8886] [dump]     System.Boolean get_Valid()
+[+ 150.218 f8886] [dump]     via.Component get_Chain()
+[+ 150.218 f8886] [dump]     System.Single get_DeltaTime()
+[+ 360.687 f19989] [dump] ===== app.PauseManager =====
+[+ 360.687 f19989] [dump] -- declarados en app.PauseManager
+[+ 360.687 f19989] [dump]     campo ObjectAddList : System.Collections.Generic.List`1[[via.GameObject, mscorlib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]][]
+[+ 360.687 f19989] [dump]     campo PauseObjectDict : System.Collections.Generic.Dictionary`2<via.GameObject,app.PauseObject>
+[+ 360.687 f19989] [dump]     campo PauseObjectCount : System.Int32
+[+ 360.687 f19989] [dump]     campo isExecutePause : System.Boolean
+[+ 360.687 f19989] [dump]     System.Void init()
+[+ 360.687 f19989] [dump]     System.Void begin()
+[+ 360.687 f19989] [dump]     System.Void control()
+[+ 360.687 f19989] [dump]     System.Void register(via.GameObject gameObject)
+[+ 360.687 f19989] [dump]     System.Void execute(System.Boolean isPause)
+[+ 360.687 f19989] [dump]     System.Void setUpdateSelf(via.GameObject gameObject, System.Boolean flag)
+[+ 360.687 f19989] [dump]     System.Boolean getUpdateSelf(via.GameObject gameObject)
+[+ 360.687 f19989] [dump]     System.Void setRetroFilmFilter(System.Boolean isOn) [static]
+[+ 360.687 f19989] [dump]     System.Void executePause(System.Boolean isPause)
+[+ 360.687 f19989] [dump]     System.Void setMissionEffectUpdate(System.Boolean isUpdate)
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] ===== app.PauseObject =====
+[+ 360.687 f19989] [dump] -- declarados en app.PauseObject
+[+ 360.687 f19989] [dump]     campo <targetObject>k__BackingField : via.GameObject
+[+ 360.687 f19989] [dump]     campo isPause : System.Boolean
+[+ 360.687 f19989] [dump]     campo isUpdate : System.Boolean
+[+ 360.687 f19989] [dump]     via.GameObject get_targetObject()
+[+ 360.687 f19989] [dump]     System.Void set_targetObject(via.GameObject value)
+[+ 360.687 f19989] [dump]     System.Boolean get_IsPause()
+[+ 360.687 f19989] [dump]     System.Void execute()
+[+ 360.687 f19989] [dump]     System.Void cancel()
+[+ 360.687 f19989] [dump]     System.Void setUpdateSelf(System.Boolean flag)
+[+ 360.687 f19989] [dump]     System.Boolean getUpdateSelf()
+[+ 360.687 f19989] [dump]     System.Void forcePauseFlagOn()
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] ===== app.PauseSupplier =====
+[+ 360.687 f19989] [dump] -- declarados en app.PauseSupplier
+[+ 360.687 f19989] [dump]     campo BloodyResultName : System.String [static]
+[+ 360.687 f19989] [dump]     campo pauseReadyState : app.PauseSupplier.PauseReadyState
+[+ 360.687 f19989] [dump]     campo targetMenu : System.String
+[+ 360.687 f19989] [dump]     campo holder : app.MenuHolder
+[+ 360.687 f19989] [dump]     campo targetMode : app.GameManager.Mode
+[+ 360.687 f19989] [dump]     System.Void updatePauseReadyState()
+[+ 360.687 f19989] [dump]     System.Void doStart()
+[+ 360.687 f19989] [dump]     System.Void update()
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump]     System.Void .cctor() [static]
+[+ 360.687 f19989] [dump] -- declarados en app.BaseBehavior
+[+ 360.687 f19989] [dump]     campo <IsStarted>k__BackingField : System.Boolean
+[+ 360.687 f19989] [dump]     System.Boolean get_IsStarted()
+[+ 360.687 f19989] [dump]     System.Void set_IsStarted(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Void awake()
+[+ 360.687 f19989] [dump]     System.Void start()
+[+ 360.687 f19989] [dump]     System.Void reset()
+[+ 360.687 f19989] [dump]     System.Void onDestroy()
+[+ 360.687 f19989] [dump]     System.Void onDisable()
+[+ 360.687 f19989] [dump]     System.Void onEnable()
+[+ 360.687 f19989] [dump]     System.Void doAwake()
+[+ 360.687 f19989] [dump]     System.Void doStart()
+[+ 360.687 f19989] [dump]     System.Void doReset()
+[+ 360.687 f19989] [dump]     System.Void doOnDestroy()
+[+ 360.687 f19989] [dump]     System.Void doOnDisable()
+[+ 360.687 f19989] [dump]     System.Void doOnEnable()
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] -- declarados en via.Behavior
+[+ 360.687 f19989] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
+[+ 360.687 f19989] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
+[+ 360.687 f19989] [dump]     System.Void awake()
+[+ 360.687 f19989] [dump]     System.Void editUpdate()
+[+ 360.687 f19989] [dump]     System.Void lateUpdate()
+[+ 360.687 f19989] [dump]     System.Void onDestroy()
+[+ 360.687 f19989] [dump]     System.Void onDisable()
+[+ 360.687 f19989] [dump]     System.Void onEnable()
+[+ 360.687 f19989] [dump]     System.Void onLoad()
+[+ 360.687 f19989] [dump]     System.Void onUnload()
+[+ 360.687 f19989] [dump]     System.Void registerCoroutine(System.Object coroutine)
+[+ 360.687 f19989] [dump]     System.Void reset()
+[+ 360.687 f19989] [dump]     System.Void start()
+[+ 360.687 f19989] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
+[+ 360.687 f19989] [dump]     System.Void update()
+[+ 360.687 f19989] [dump]     System.Boolean get_Enabled()
+[+ 360.687 f19989] [dump]     System.Void set_Enabled(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.UInt32 get_UpdateCost()
+[+ 360.687 f19989] [dump]     System.Void set_UpdateCost(System.UInt32 value)
+[+ 360.687 f19989] [dump]     System.UInt32 get_LateUpdateCost()
+[+ 360.687 f19989] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] -- declarados en via.Component
+[+ 360.687 f19989] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
+[+ 360.687 f19989] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
+[+ 360.687 f19989] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump]     System.Void destroy(via.Component comp) [static]
+[+ 360.687 f19989] [dump]     via.GameObject get_GameObject()
+[+ 360.687 f19989] [dump]     System.Boolean get_Valid()
+[+ 360.687 f19989] [dump]     via.Component get_Chain()
+[+ 360.687 f19989] [dump]     System.Single get_DeltaTime()
+[+ 360.687 f19989] [enum] app.GameManager.PauseRequest (tamano 4)
+[+ 360.687 f19989] [enum]     None = 0
+[+ 360.687 f19989] [enum]     MenuPause = 1
+[+ 360.687 f19989] [enum]     Matching = 2
+[+ 360.687 f19989] [enum]     EnemyRegister = 4
+[+ 360.687 f19989] [enum]     ItemGet = 8
+[+ 360.687 f19989] [enum]     Shop = 16
+[+ 360.687 f19989] [dump] ===== app.GameManager =====
+[+ 360.687 f19989] [dump] -- declarados en app.GameManager
+[+ 360.687 f19989] [dump]     campo GamePauseRequestHash : System.UInt32 [static]
+[+ 360.687 f19989] [dump]     campo GamePauseResumeHash : System.UInt32 [static]
+[+ 360.687 f19989] [dump]     campo <IsPauseTriggerOn>k__BackingField : System.Boolean
+[+ 360.687 f19989] [dump]     campo <IsPauseTriggerOff>k__BackingField : System.Boolean
+[+ 360.687 f19989] [dump]     campo <IsPausePreserved>k__BackingField : System.Boolean
+[+ 360.687 f19989] [dump]     campo PauseManager : app.PauseManager
+[+ 360.687 f19989] [dump]     campo IsPause : System.Boolean
+[+ 360.687 f19989] [dump]     campo IsPauseRequestChange : System.Boolean
+[+ 360.687 f19989] [dump]     campo CurrentPause : System.UInt32
+[+ 360.687 f19989] [dump]     campo PreviousPause : System.UInt32
+[+ 360.687 f19989] [dump]     campo gamePauseType : app.GameManager.PauseType
+[+ 360.687 f19989] [dump]     System.Boolean get_isPause()
+[+ 360.687 f19989] [dump]     System.Void set_isPause(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Boolean get_isPauseMenu()
+[+ 360.687 f19989] [dump]     System.Boolean get_isShopPause()
+[+ 360.687 f19989] [dump]     app.GameManager.PauseType get_GamePauseType()
+[+ 360.687 f19989] [dump]     System.Void set_GamePauseType(app.GameManager.PauseType value)
+[+ 360.687 f19989] [dump]     System.Boolean get_IsPauseTriggerOn()
+[+ 360.687 f19989] [dump]     System.Void set_IsPauseTriggerOn(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Boolean get_IsPauseTriggerOff()
+[+ 360.687 f19989] [dump]     System.Void set_IsPauseTriggerOff(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Boolean get_IsPausePreserved()
+[+ 360.687 f19989] [dump]     System.Void set_IsPausePreserved(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Void addPauseGameObject(via.GameObject gameObject)
+[+ 360.687 f19989] [dump]     System.Void pauseGame(System.Boolean isPause) [static]
+[+ 360.687 f19989] [dump]     System.Void requestPause(app.GameManager.PauseRequest type) [static]
+[+ 360.687 f19989] [dump]     System.Void cancelPause(app.GameManager.PauseRequest type) [static]
+[+ 360.687 f19989] [dump]     System.Void requestGamePauseSound() [static]
+[+ 360.687 f19989] [dump]     System.Void resumeGamePauseSound() [static]
+[+ 360.687 f19989] [dump]     System.Void applyPause()
+[+ 360.687 f19989] [dump]     System.Void setTimelinePause(System.Boolean isPause)
+[+ 360.687 f19989] [dump]     System.Void pauseUpdate()
+[+ 360.687 f19989] [dump] -- declarados en app.SingletonBehavior`1<app.GameManager>
+[+ 360.687 f19989] [dump] -- declarados en via.Behavior
+[+ 360.687 f19989] [dump] -- declarados en via.Component
+[+ 360.687 f19989] [dump] ===== app.GpuMotionPauseHelper =====
+[+ 360.687 f19989] [dump] -- declarados en app.GpuMotionPauseHelper
+[+ 360.687 f19989] [dump]     campo PauseTargetType : app.GpuMotionPauseHelper.TargetType
+[+ 360.687 f19989] [dump]     campo cachedGpuMotionList : System.Collections.Generic.List`1<via.motion.GpuMotion>
+[+ 360.687 f19989] [dump]     campo cachedPlayStateList : System.Collections.Generic.List`1<via.motion.GpuMotion.PlayState>
+[+ 360.687 f19989] [dump]     campo cachedTimeline : via.timeline.Timeline
+[+ 360.687 f19989] [dump]     campo cachedTimelineKicker : app.TimelineKicker
+[+ 360.687 f19989] [dump]     campo isRegister : System.Boolean
+[+ 360.687 f19989] [dump]     campo isPaused : System.Boolean
+[+ 360.687 f19989] [dump]     System.Void onPause(System.Boolean isPause)
+[+ 360.687 f19989] [dump]     System.Boolean initializeTimelineBindObjects()
+[+ 360.687 f19989] [dump]     System.Void doStart()
+[+ 360.687 f19989] [dump]     System.Void doOnDestroy()
+[+ 360.687 f19989] [dump]     System.Void lateUpdate()
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] -- declarados en app.BaseBehavior
+[+ 360.687 f19989] [dump]     campo <IsStarted>k__BackingField : System.Boolean
+[+ 360.687 f19989] [dump]     System.Boolean get_IsStarted()
+[+ 360.687 f19989] [dump]     System.Void set_IsStarted(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.Void awake()
+[+ 360.687 f19989] [dump]     System.Void start()
+[+ 360.687 f19989] [dump]     System.Void reset()
+[+ 360.687 f19989] [dump]     System.Void onDestroy()
+[+ 360.687 f19989] [dump]     System.Void onDisable()
+[+ 360.687 f19989] [dump]     System.Void onEnable()
+[+ 360.687 f19989] [dump]     System.Void doAwake()
+[+ 360.687 f19989] [dump]     System.Void doStart()
+[+ 360.687 f19989] [dump]     System.Void doReset()
+[+ 360.687 f19989] [dump]     System.Void doOnDestroy()
+[+ 360.687 f19989] [dump]     System.Void doOnDisable()
+[+ 360.687 f19989] [dump]     System.Void doOnEnable()
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] -- declarados en via.Behavior
+[+ 360.687 f19989] [dump]     System.Void startCoroutine(System.Collections.IEnumerator coroutine)
+[+ 360.687 f19989] [dump]     System.Void stopCoroutine(System.Collections.IEnumerator coroutine)
+[+ 360.687 f19989] [dump]     System.Void awake()
+[+ 360.687 f19989] [dump]     System.Void editUpdate()
+[+ 360.687 f19989] [dump]     System.Void lateUpdate()
+[+ 360.687 f19989] [dump]     System.Void onDestroy()
+[+ 360.687 f19989] [dump]     System.Void onDisable()
+[+ 360.687 f19989] [dump]     System.Void onEnable()
+[+ 360.687 f19989] [dump]     System.Void onLoad()
+[+ 360.687 f19989] [dump]     System.Void onUnload()
+[+ 360.687 f19989] [dump]     System.Void registerCoroutine(System.Object coroutine)
+[+ 360.687 f19989] [dump]     System.Void reset()
+[+ 360.687 f19989] [dump]     System.Void start()
+[+ 360.687 f19989] [dump]     System.Void unregisterCoroutine(System.Object coroutine)
+[+ 360.687 f19989] [dump]     System.Void update()
+[+ 360.687 f19989] [dump]     System.Boolean get_Enabled()
+[+ 360.687 f19989] [dump]     System.Void set_Enabled(System.Boolean value)
+[+ 360.687 f19989] [dump]     System.UInt32 get_UpdateCost()
+[+ 360.687 f19989] [dump]     System.Void set_UpdateCost(System.UInt32 value)
+[+ 360.687 f19989] [dump]     System.UInt32 get_LateUpdateCost()
+[+ 360.687 f19989] [dump]     System.Void set_LateUpdateCost(System.UInt32 value)
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump] -- declarados en via.Component
+[+ 360.687 f19989] [dump]     System.Boolean op_Implicit(via.Component obj) [static]
+[+ 360.687 f19989] [dump]     System.Boolean op_Equality(via.Component x, via.Component y) [static]
+[+ 360.687 f19989] [dump]     System.Boolean op_Inequality(via.Component x, via.Component y) [static]
+[+ 360.687 f19989] [dump]     System.Void .ctor()
+[+ 360.687 f19989] [dump]     System.Void destroy(via.Component comp) [static]
+[+ 360.687 f19989] [dump]     via.GameObject get_GameObject()
+[+ 360.687 f19989] [dump]     System.Boolean get_Valid()
+[+ 360.687 f19989] [dump]     via.Component get_Chain()
+[+ 360.687 f19989] [dump]     System.Single get_DeltaTime()
