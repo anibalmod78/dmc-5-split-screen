@@ -1,122 +1,47 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  2 2026 22:50:34 ====
-[+   0.000 f0] version del plugin: v67 (p2create: P2 creado por la via nativa del juego; lista Nero/Dante/V/Vergil)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  3 2026 10:23:52 ====
+[+   0.000 f0] version del plugin: v68 (remodelacion: solo crear/adoptar P2; volcado del cargador; codigo online retirado a legacy/)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
 [+   0.032 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.063 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 15540)
-[+   0.563 f30] v18: hook en app.Player::updateForceTargetAnglePuppet
-[+   0.563 f30] v14: hook en app.Player::get_isManuallyControlled
-[+   0.563 f30] v14: hook en app.Player::get_isMasterManualPlayer
-[+   0.563 f30] v14: hook en app.Player::get_battleManualPlayer
-[+   0.563 f30] v14: hook en app.Player::get_isMultiInputEnabled
-[+   0.563 f30] v14: hook en app.Player::isMasterObject
-[+   0.563 f30] v14: hook en app.Player::isForceMaster
-[+   0.563 f30] v27: hook en isNonMasterSetAction
-[+   0.563 f30] init: hook de diagnostico en app.PlayerManager::doUpdate; grabacion de CharacterFactory.create activa
-[+   0.563 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 20)
-[+   0.563 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 22)
-[+   0.563 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 24)
-[+   0.563 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 26)
-[+   0.563 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 28)
-[+   0.563 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 30)
-[+   0.563 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 32)
-[+   0.563 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 34)
-[+   0.563 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 36)
-[+   0.563 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 38)
-[+   0.563 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 40)
-[+   0.563 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 42)
-[+   0.578 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 44)
-[+   0.578 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 46)
-[+   0.578 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 48)
-[+   0.578 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 50)
-[+   0.578 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 52)
-[+   0.578 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 54)
-[+   0.578 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 56)
-[+   0.578 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 58)
-[+   0.578 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 60)
-[+   0.578 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 62)
-[+   0.578 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 64)
-[+   0.578 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 66)
-[+   0.578 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 68)
-[+   0.578 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 70)
-[+   0.578 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 72)
-[+   0.578 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 74)
-[+   0.578 f30] trace: hook #28 en app.PadInput::update/0 (id 76)
-[+   0.578 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
-[+   0.578 f30] p2input: hook en app.PadInput::update/0
-[+   0.578 f30] p2input: hook en via.hid.GamePad::getDevice/1
-[+   0.578 f30] p2input: hook en via.hid.GamePad::getDevice/2
-[+   0.578 f30] p2input: hook en via.hid.GamePad::getDevice/2
-[+   0.578 f30] p2input: hook en via.hid.GamePad::getMergedDevice/1
-[+   0.594 f30] p2input: censo instalado con 48 hooks (GamePad + GamePadDevice)
-[+   1.063 f60] app.AdditionalPlayerLoadManager disponible (000002C731F63000)
-[+  30.125 f1800] latido: frame=1800
-[+  60.657 f3600] latido: frame=3600
-[+  70.157 f4170] PlayerManager cambio: 0000000000000000 -> 000002C731EE5080 (nueva mision o fin de mision)
-[+  70.157 f4170] PlayerManager.players: -1 -> 0
-[+  90.719 f5400] latido: frame=5400
-[+ 120.750 f7200] latido: frame=7200
-[+ 122.750 f7320] p2input: reset (fin de mision): objetivo, escritura directa y espejo desactivados
-[+ 122.750 f7320] P1 (manualPlayer) detectado: app.PlayerDante
-[+ 122.750 f7320] hook de personaje en app.PlayerDante::doLateUpdate
-[+ 122.750 f7320] hook de personaje en app.Player::doLateUpdate
-[+ 122.750 f7320] hook de personaje en app.character.Character::doUpdate
-[+ 122.750 f7320] hook de personaje en app.character.Character::doLateUpdate
-[+ 122.750 f7320] hook de personaje en app.GameModel::doUpdate
-[+ 122.750 f7320] hook de personaje en app.GameModel::doLateUpdate
-[+ 122.750 f7320] hook de personaje en app.ReplayBaseBehavior::doUpdate
-[+ 122.750 f7320] hook de personaje en app.ReplayBaseBehavior::doLateUpdate
-[+ 122.750 f7320] hook de personaje en app.NetworkBaseBehavior::doUpdate
-[+ 122.750 f7320] hook de personaje en app.NetworkBaseBehavior::doLateUpdate
-[+ 122.750 f7320] PlayerManager.players: 0 -> 1
-[+ 122.750 f7320]   player[0] GO='pl0130_dante_dirt' padre='null'
-[+ 122.750 f7320]   player[0] componentes de su GO: app.Player=000002C726AB9410 (tipo real app.PlayerDante) app.character.Character=000002C726AB9410 (tipo real app.PlayerDante) app.PlayerDante=000002C726AB9410 (tipo real app.PlayerDante) 
-[+ 122.750 f7320]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+ 122.750 f7320]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002C73154C9D0
-[+ 122.750 f7320]   player[0] 000002C726AB9410 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=000002C73154BFD0 [P1/manual]
-[+ 122.750 f7320] v61 fisica P1: CharacterController.Enabled -2 -> 1 (f7320)
-[+ 132.391 f7890] PlayerManager.players: 1 -> 3
-[+ 132.391 f7890]   player[0] GO='pl0130_dante_dirt' padre='null'
-[+ 132.391 f7890]   player[0] componentes de su GO: app.Player=000002C726AB9410 (tipo real app.PlayerDante) app.character.Character=000002C726AB9410 (tipo real app.PlayerDante) app.PlayerDante=000002C726AB9410 (tipo real app.PlayerDante) 
-[+ 132.391 f7890]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+ 132.391 f7890]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002C73154C9D0
-[+ 132.391 f7890]   player[0] 000002C726AB9410 tipo=app.PlayerDante id=Dante(1) pos=(-13.56, 111.27, -29.12) padInput=000002C731ED36C0 [P1/manual]
-[+ 132.391 f7890]   player[1] GO='pl0200_v' padre='null'
-[+ 132.391 f7890]   player[1] componentes de su GO: app.Player=000002C726D1E880 (tipo real app.PlayerV) app.character.Character=000002C726D1E880 (tipo real app.PlayerV) app.PlayerV=000002C726D1E880 (tipo real app.PlayerV) 
-[+ 132.391 f7890]   player[1] hijos de su GO: 'PuppetStayRequester' 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 
-[+ 132.391 f7890]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002C730D00DD0
-[+ 132.391 f7890]   player[1] 000002C726D1E880 tipo=app.PlayerV id=Gilver(2) pos=(-19.06, 111.33, 24.51) padInput=000002C730D022B0
-[+ 132.391 f7890]   player[2] GO='pl0030_nero' padre='null'
-[+ 132.391 f7890]   player[2] componentes de su GO: app.Player=000002C726D1CAD0 (tipo real app.PlayerNero) app.character.Character=000002C726D1CAD0 (tipo real app.PlayerNero) app.PlayerNero=000002C726D1CAD0 (tipo real app.PlayerNero) 
-[+ 132.391 f7890]   player[2] hijos de su GO: 'PuppetStayRequester' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0000_08_human_arm' 'pl0010_devilWingControllerSS' 'pl0010_devilWingControllerSB' 
-[+ 132.391 f7890]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002C730D3AD30
-[+ 132.391 f7890]   player[2] 000002C726D1CAD0 tipo=app.PlayerNero id=Nero(0) pos=(33.08, 111.27, 4.79) padInput=000002C730D3C210
-[+ 151.797 f8811] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 152.453 f8842] P2: personaje elegido = V (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 153.063 f8871] P2: personaje elegido = Vergil (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 154.328 f8931] ORDEN: p2create Vergil
-[+ 154.328 f8931] IDs para P2: player=Vergil(3) costume=Default(0) situation=Default(0) (P1 player=Dante(1))
-[+ 154.328 f8931] p2create: requestPreloadPlayerResource(3) -> ok
-[+ 154.328 f8931] p2create: requestLoadPlayerResource -> ok
-[+ 154.516 f8940] p2create: cargador de 3 -> NakidPlayerAvailable(2) (fase 0)
-[+ 154.516 f8940] p2create: recurso cargado; margen para el registro automatico
-[+ 155.766 f9000] latido: frame=9000
-[+ 158.922 f9150] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
-[+ 159.547 f9180] p2create: cargador de 3 -> AdditionalPlayerAvailable(6) (fase 3)
-[+ 166.453 f9510] p2create: PlayerManager.findPlayer -> ok
-[+ 173.328 f9840] p2create: NO se creo el Player (ni el registro automatico, ni activate, ni findPlayer anadieron un Player). Estado final:
-[+ 173.328 f9840]   Requested: 3
-[+ 173.328 f9840]     loader[0] 000002C731B78180 estado=AdditionalPlayerAvailable(6) pid=Nero(0) costume=Default(0) situation=Dirty(1) finish=0 locWait=0 reload=0
-[+ 173.328 f9840]     loader[1] 000002C731B7DA90 estado=AdditionalPlayerAvailable(6) pid=Gilver(2) costume=Default(0) situation=DirtyM(2) finish=0 locWait=0 reload=0
-[+ 173.328 f9840]     loader[2] 000002C72F668C50 estado=AdditionalPlayerAvailable(6) pid=Vergil(3) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
-[+ 173.328 f9840]   Finished: 0
-[+ 193.391 f10800] latido: frame=10800
-[+ 230.953 f12600] latido: frame=12600
-[+ 240.594 f13155] v61 fisica P1: CharacterController.Enabled 1 -> -1 (f13155)
-[+ 240.860 f13170] p2input: reset (fin de mision): objetivo, escritura directa y espejo desactivados
-[+ 240.860 f13170] P1 desaparecio (manualPlayer == null): se descartan P1/P2 (las grabaciones de create se conservan hasta que el juego las descargue)
-[+ 240.860 f13170] PlayerManager.players: 3 -> -1
-[+ 242.344 f13260] PlayerManager cambio: 000002C731EE5080 -> 0000000000000000 (nueva mision o fin de mision)
+[+   0.078 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.125 f1] on_frame ACTIVO (UpdateBehavior, hilo 9592)
+[+   0.625 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.625 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
+[+   0.625 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
+[+   0.625 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
+[+   0.625 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
+[+   0.625 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
+[+   0.625 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
+[+   0.625 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
+[+   0.625 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
+[+   0.625 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
+[+   0.625 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
+[+   0.625 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
+[+   0.625 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
+[+   0.625 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
+[+   0.625 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
+[+   0.625 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
+[+   0.625 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
+[+   0.625 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
+[+   0.625 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
+[+   0.625 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
+[+   0.625 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
+[+   0.625 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
+[+   0.625 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
+[+   0.625 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
+[+   0.625 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
+[+   0.625 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
+[+   0.625 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
+[+   0.625 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
+[+   0.625 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
+[+   0.625 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
+[+   0.625 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
+[+   0.625 f30] p2input: hook en app.PadInput::update/0
+[+   1.125 f60] app.AdditionalPlayerLoadManager disponible (000001A2B69C3000)
+[+  30.250 f1800] latido: frame=1800
+[+  60.360 f3600] latido: frame=3600
+[+  83.375 f4980] PlayerManager cambio: 0000000000000000 -> 000001A2B6D7FBC0 (nueva mision o fin de mision)
+[+  83.422 f4980] PlayerManager.players: -1 -> 0
+[+  90.453 f5400] latido: frame=5400
