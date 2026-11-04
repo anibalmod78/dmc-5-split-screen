@@ -1,179 +1,95 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 09:22:38 ====
-[+   0.000 f0] version del plugin: v72 (sondeo de raices de la escena tras cargar/activar; p2_autocreate desactivado: bloqueaba la carga de la mision)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 11:19:00 ====
+[+   0.000 f0] version del plugin: v73 (sondeo de escena via GO de P1 y volcado de campos de APL/cargador/CharacterFactory; p2_autocreate desactivado)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
 [+   0.031 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.062 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 12860)
-[+   0.562 f30] init: hook en app.PlayerManager::doUpdate
-[+   0.562 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
-[+   0.562 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
-[+   0.562 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
-[+   0.562 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
-[+   0.562 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
-[+   0.562 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
-[+   0.562 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
-[+   0.562 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
-[+   0.562 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
-[+   0.562 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
-[+   0.562 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
-[+   0.562 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
-[+   0.562 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
-[+   0.562 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
-[+   0.562 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
-[+   0.562 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
-[+   0.562 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
-[+   0.562 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
-[+   0.562 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
-[+   0.562 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
-[+   0.562 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
-[+   0.562 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
-[+   0.562 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
-[+   0.562 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
-[+   0.562 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
-[+   0.562 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
-[+   0.562 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
-[+   0.578 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
-[+   0.578 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
-[+   0.578 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
-[+   0.578 f30] p2input: hook en app.PadInput::update/0
-[+   1.062 f60] app.AdditionalPlayerLoadManager disponible (0000020FF1355FD0)
-[+  30.125 f1800] latido: frame=1800
-[+  60.156 f3600] latido: frame=3600
-[+  90.218 f5400] PlayerManager cambio: 0000000000000000 -> 0000020FF10F9F10 (nueva mision o fin de mision)
-[+  90.218 f5400] PlayerManager.players: -1 -> 0
-[+  90.218 f5400] IDs para P2: player=Vergil(3) costume=Default(0) situation=Default(0) (P1 player=None(-1))
-[+  90.218 f5400] p2_autocreate=Vergil: se pide el personaje al aparecer el PlayerManager (antes de que exista P1)
-[+  90.218 f5400] p2create: requestPreloadPlayerResource(3) -> ok
-[+  90.218 f5400] p2create: requestLoadPlayerResource -> ok
-[+  90.218 f5400] latido: frame=5400
-[+  90.718 f5430] p2create: cargador de 3 -> NakidPlayerLoading(1) (fase 0)
-[+  90.718 f5430] p2create: esperando carga (30 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+  95.718 f5730] p2create: esperando carga (330 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 100.718 f6030] p2create: esperando carga (630 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 105.734 f6330] p2create: esperando carga (930 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 110.734 f6630] p2create: esperando carga (1230 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 115.734 f6930] p2create: esperando carga (1530 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 120.250 f7200] latido: frame=7200
-[+ 120.750 f7230] p2create: esperando carga (1830 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 125.765 f7530] p2create: esperando carga (2130 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 130.765 f7830] p2create: esperando carga (2430 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 135.765 f8130] p2create: esperando carga (2730 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 140.765 f8430] p2create: esperando carga (3030 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 145.765 f8730] p2create: esperando carga (3330 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 150.281 f9000] latido: frame=9000
-[+ 150.781 f9030] p2create: esperando carga (3630 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 155.781 f9330] p2create: esperando carga (3930 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 160.781 f9630] p2create: esperando carga (4230 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 165.781 f9930] p2create: esperando carga (4530 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 170.796 f10230] p2create: esperando carga (4830 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 175.812 f10530] p2create: esperando carga (5130 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 180.312 f10800] latido: frame=10800
-[+ 180.812 f10830] p2create: esperando carga (5430 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
-[+ 180.812 f10830] p2create: NO se creo el Player (el cargador no llego a Available a tiempo). Estado final:
-[+ 180.812 f10830]   Requested: 1
-[+ 180.812 f10830]     loader[0] 0000020FF1029640 estado=NakidPlayerLoading(1) pid=Vergil(3) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
-[+ 180.812 f10830]   Finished: 0
-[+ 180.812 f10830] --- cargador de 3 [fallo] 0000020FF1029640 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 1
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 3
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 180.812 f10830]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 180.812 f10830] --- escena (fallo): SceneManager=0000000000000000 Scene=0000000000000000 ---
-[+ 180.812 f10830] --- escena: 0 raices en total, 0 con Player/pl0* | players registrados=0 ---
-[+ 180.812 f10830] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(3) -> ok; cargador ahora: Finish(8)
-[+ 203.328 f12180] PlayerManager.players: 0 -> 1
-[+ 203.328 f12180]   player[0] GO='pl0200_v' padre='null'
-[+ 203.328 f12180]   player[0] componentes de su GO: app.Player=0000020FE5F17EE0 (tipo real app.PlayerV) app.character.Character=0000020FE5F17EE0 (tipo real app.PlayerV) app.PlayerV=0000020FE5F17EE0 (tipo real app.PlayerV) 
-[+ 203.328 f12180]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
-[+ 203.328 f12180]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000020FEFEB1A40
-[+ 203.328 f12180]   player[0] 0000020FE5F17EE0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=0000020FEFEB0BF0
-[+ 210.328 f12600] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 210.328 f12600] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 210.328 f12600] p2input: PadInput de P1 = 0000020FF12C46B0
-[+ 210.328 f12600] PlayerManager.players: 1 -> 2
-[+ 210.328 f12600]   player[0] GO='pl0200_v' padre='null'
-[+ 210.328 f12600]   player[0] componentes de su GO: app.Player=0000020FE5F17EE0 (tipo real app.PlayerV) app.character.Character=0000020FE5F17EE0 (tipo real app.PlayerV) app.PlayerV=0000020FE5F17EE0 (tipo real app.PlayerV) 
-[+ 210.328 f12600]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 210.328 f12600]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000020FEFEB1A40
-[+ 210.328 f12600]   player[0] 0000020FE5F17EE0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=0000020FF12C46B0
-[+ 210.343 f12600]   player[1] GO='pl0800_vergil' padre='null'
-[+ 210.343 f12600]   player[1] componentes de su GO: app.Player=0000020FE5F709C0 (tipo real app.PlayerVergilPL) app.character.Character=0000020FE5F709C0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=0000020FE5F709C0 (tipo real app.PlayerVergilPL) 
-[+ 210.343 f12600]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 210.343 f12600]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000020FEF7B9E20
-[+ 210.343 f12600]   player[1] 0000020FE5F709C0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=0000020FF12C46B0 [P1/manual]
-[+ 210.343 f12600] latido: frame=12600
-[+ 239.000 f14318] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 240.328 f14398] ORDEN: p2create Dante
-[+ 240.328 f14398] IDs para P2: player=Dante(1) costume=Default(0) situation=Default(0) (P1 player=VergilPL(4))
-[+ 240.328 f14398] p2create: requestPreloadPlayerResource(1) -> ok
-[+ 240.328 f14398] p2create: requestLoadPlayerResource -> ok
-[+ 240.359 f14400] p2create: cargador de 1 -> NakidPlayerLoading(1) (fase 0)
-[+ 240.359 f14400] p2create: esperando carga (2 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=1 isBusyAll=1
-[+ 240.359 f14400] latido: frame=14400
-[+ 241.359 f14460] p2create: cargador de 1 -> NakidPlayerAvailable(2) (fase 0)
-[+ 241.359 f14460] p2create: recurso cargado; margen para el registro automatico
-[+ 241.359 f14460] --- cargador de 1 [Nakid/Available] 0000020FEE275720 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 241.359 f14460]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 241.359 f14460] --- escena (cargador Available): SceneManager=0000000000000000 Scene=0000000000000000 ---
-[+ 241.359 f14460] --- escena: 0 raices en total, 0 con Player/pl0* | players registrados=2 ---
-[+ 244.875 f14670] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
-[+ 244.875 f14670] --- cargador de 1 [tras activate] 0000020FEE275720 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 5
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 244.875 f14670]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 245.375 f14700] p2create: cargador de 1 -> AdditionalPlayerAvailable(6) (fase 3)
-[+ 250.890 f15030] --- escena (tras activate): SceneManager=0000000000000000 Scene=0000000000000000 ---
-[+ 250.890 f15030] --- escena: 0 raices en total, 0 con Player/pl0* | players registrados=2 ---
-[+ 250.890 f15030] p2create: PlayerManager.findPlayer -> ok
-[+ 256.390 f15360] p2create: NO se creo el Player (ni el registro automatico, ni activate, ni findPlayer anadieron un Player). Estado final:
-[+ 256.390 f15360]   Requested: 1
-[+ 256.390 f15360]     loader[0] 0000020FEE275720 estado=AdditionalPlayerAvailable(6) pid=Dante(1) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
-[+ 256.390 f15360]   Finished: 0
-[+ 256.390 f15360] --- cargador de 1 [fallo] 0000020FEE275720 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 6
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 256.390 f15360]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 256.390 f15360] --- escena (fallo): SceneManager=0000000000000000 Scene=0000000000000000 ---
-[+ 256.390 f15360] --- escena: 0 raices en total, 0 con Player/pl0* | players registrados=2 ---
-[+ 256.390 f15360] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(1) -> ok; cargador ahora: AdditionalPlayerUnloading(7)
-[+ 270.390 f16200] latido: frame=16200
-[+ 300.437 f18000] latido: frame=18000
-[+ 330.453 f19800] latido: frame=19800
-[+ 360.484 f21600] latido: frame=21600
-[+ 390.515 f23400] latido: frame=23400
-[+ 420.546 f25200] latido: frame=25200
-[+ 450.593 f27000] latido: frame=27000
-[+ 480.609 f28800] latido: frame=28800
-[+ 510.640 f30600] latido: frame=30600
-[+ 518.656 f31080] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 518.656 f31080] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 518.656 f31080] PlayerManager.players: 2 -> -1
-[+ 520.140 f31170] PlayerManager cambio: 0000020FF10F9F10 -> 0000000000000000 (nueva mision o fin de mision)
+[+   0.063 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.156 f1] on_frame ACTIVO (UpdateBehavior, hilo 12072)
+[+   0.672 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.672 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
+[+   0.672 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
+[+   0.672 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
+[+   0.672 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
+[+   0.672 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
+[+   0.672 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
+[+   0.672 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
+[+   0.672 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
+[+   0.672 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
+[+   0.672 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
+[+   0.672 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
+[+   0.672 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
+[+   0.672 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
+[+   0.672 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
+[+   0.672 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
+[+   0.672 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
+[+   0.672 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
+[+   0.672 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
+[+   0.672 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
+[+   0.672 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
+[+   0.672 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
+[+   0.672 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
+[+   0.672 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
+[+   0.672 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
+[+   0.672 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
+[+   0.672 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
+[+   0.672 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
+[+   0.672 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
+[+   0.672 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
+[+   0.672 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
+[+   0.672 f30] p2input: hook en app.PadInput::update/0
+[+   1.172 f60] app.AdditionalPlayerLoadManager disponible (0000026D0B553000)
+[+  30.250 f1800] latido: frame=1800
+[+  47.766 f2850] PlayerManager cambio: 0000000000000000 -> 0000026D0B8A3220 (nueva mision o fin de mision)
+[+  47.781 f2850] PlayerManager.players: -1 -> 0
+[+  47.797 f2850] IDs para P2: player=Vergil(3) costume=Default(0) situation=Default(0) (P1 player=None(-1))
+[+  47.797 f2850] p2_autocreate=Vergil: se pide el personaje al aparecer el PlayerManager (antes de que exista P1)
+[+  47.797 f2850] p2create: requestPreloadPlayerResource(3) -> ok
+[+  47.797 f2850] p2create: requestLoadPlayerResource -> ok
+[+  48.266 f2880] p2create: cargador de 3 -> NakidPlayerLoading(1) (fase 0)
+[+  48.266 f2880] p2create: esperando carga (30 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  53.266 f3180] p2create: esperando carga (330 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  58.266 f3480] p2create: esperando carga (630 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  60.266 f3600] latido: frame=3600
+[+  63.281 f3780] p2create: esperando carga (930 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  68.281 f4080] p2create: esperando carga (1230 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  73.281 f4380] p2create: esperando carga (1530 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  78.297 f4680] p2create: esperando carga (1830 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  83.297 f4980] p2create: esperando carga (2130 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  88.313 f5280] p2create: esperando carga (2430 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  90.313 f5400] latido: frame=5400
+[+  93.313 f5580] p2create: esperando carga (2730 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+  98.313 f5880] p2create: esperando carga (3030 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 103.313 f6180] p2create: esperando carga (3330 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 108.328 f6480] p2create: esperando carga (3630 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 113.328 f6780] p2create: esperando carga (3930 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 118.328 f7080] p2create: esperando carga (4230 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 120.328 f7200] latido: frame=7200
+[+ 123.328 f7380] p2create: esperando carga (4530 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 128.344 f7680] p2create: esperando carga (4830 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 133.344 f7980] p2create: esperando carga (5130 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 138.375 f8280] p2create: esperando carga (5430 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=0 isBusyAll=1
+[+ 138.375 f8280] p2create: NO se creo el Player (el cargador no llego a Available a tiempo). Estado final:
+[+ 138.391 f8280]   Requested: 1
+[+ 138.391 f8280]     loader[0] 0000026D0B5ED340 estado=NakidPlayerLoading(1) pid=Vergil(3) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
+[+ 138.391 f8280]   Finished: 0
+[+ 138.391 f8280] --- cargador de 3 [fallo] 0000026D0B5ED340 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 1
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 3
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+ 138.391 f8280]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+ 138.391 f8280] --- escena (fallo): GO de P1=0000000000000000 Scene=0000000000000000 ---
+[+ 138.391 f8280] --- escena: 0 raices en total, 0 con Player/pl0* | players registrados=0 ---
+[+ 138.391 f8280] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(3) -> ok; cargador ahora: Finish(8)
+[+ 138.859 f8310] PlayerManager.players: 0 -> 1
+[+ 138.891 f8310]   player[0] GO='pl0200_v' padre='null'
+[+ 138.891 f8310]   player[0] componentes de su GO: app.Player=0000026D0013C800 (tipo real app.PlayerV) app.character.Character=0000026D0013C800 (tipo real app.PlayerV) app.PlayerV=0000026D0013C800 (tipo real app.PlayerV) 
+[+ 138.891 f8310]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
+[+ 138.891 f8310]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000026D0A0C9BF0
+[+ 138.891 f8310]   player[0] 0000026D0013C800 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=0000026D0A0C91F0
