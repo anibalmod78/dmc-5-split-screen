@@ -1,665 +1,99 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 20:00:18 ====
-[+   0.000 f0] version del plugin: v77 (volcado profundo de PlayerDataList: CostumeDataSet, prefabs y rutas)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 20:11:11 ====
+[+   0.000 f0] version del plugin: v78 (traza de via.Prefab::instantiate con la ruta de cada prefab)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
 [+   0.031 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.094 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.141 f1] on_frame ACTIVO (UpdateBehavior, hilo 14004)
-[+   0.688 f30] init: hook en app.PlayerManager::doUpdate
-[+   0.688 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
-[+   0.688 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
-[+   0.688 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
-[+   0.688 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
-[+   0.688 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
-[+   0.688 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
-[+   0.688 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
-[+   0.688 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
-[+   0.688 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
-[+   0.688 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
-[+   0.688 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
-[+   0.688 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
-[+   0.688 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
-[+   0.688 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
-[+   0.688 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
-[+   0.688 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
-[+   0.688 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
-[+   0.688 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
-[+   0.688 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
-[+   0.703 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
-[+   0.703 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
-[+   0.703 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
-[+   0.703 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
-[+   0.703 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
-[+   0.703 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
-[+   0.703 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
-[+   0.703 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
-[+   0.703 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
-[+   0.703 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
-[+   0.703 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
-[+   0.703 f30] p2input: hook en app.PadInput::update/0
-[+   1.188 f60] app.AdditionalPlayerLoadManager disponible (0000021A144E3000)
-[+  30.250 f1800] latido: frame=1800
-[+  48.266 f2880] PlayerManager cambio: 0000000000000000 -> 0000021A14896CF0 (nueva mision o fin de mision)
-[+  48.266 f2880] PlayerManager.players: -1 -> 0
-[+  60.281 f3600] latido: frame=3600
-[+  90.313 f5400] latido: frame=5400
-[+ 111.828 f6690] PlayerManager.players: 0 -> 1
-[+ 111.828 f6690]   player[0] GO='pl0200_v' padre='null'
-[+ 111.828 f6690]   player[0] componentes de su GO: app.Player=0000021A090BCBD0 (tipo real app.PlayerV) app.character.Character=0000021A090BCBD0 (tipo real app.PlayerV) app.PlayerV=0000021A090BCBD0 (tipo real app.PlayerV) 
-[+ 111.828 f6690]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
-[+ 111.828 f6690]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000021A13098640
-[+ 111.828 f6690]   player[0] 0000021A090BCBD0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=0000021A13097C40
-[+ 120.328 f7200] latido: frame=7200
-[+ 122.360 f7320] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 122.360 f7320] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 122.360 f7320] p2input: PadInput de P1 = 0000021A144536C0
-[+ 122.360 f7320] PlayerManager.players: 1 -> 2
-[+ 122.360 f7320]   player[0] GO='pl0200_v' padre='null'
-[+ 122.360 f7320]   player[0] componentes de su GO: app.Player=0000021A090BCBD0 (tipo real app.PlayerV) app.character.Character=0000021A090BCBD0 (tipo real app.PlayerV) app.PlayerV=0000021A090BCBD0 (tipo real app.PlayerV) 
-[+ 122.360 f7320]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 122.360 f7320]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000021A13098640
-[+ 122.360 f7320]   player[0] 0000021A090BCBD0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=0000021A144536C0
-[+ 122.360 f7320]   player[1] GO='pl0800_vergil' padre='null'
-[+ 122.360 f7320]   player[1] componentes de su GO: app.Player=0000021A0908F560 (tipo real app.PlayerVergilPL) app.character.Character=0000021A0908F560 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=0000021A0908F560 (tipo real app.PlayerVergilPL) 
-[+ 122.360 f7320]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 122.360 f7320]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000021A13314A60
-[+ 122.360 f7320]   player[1] 0000021A0908F560 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=0000021A144536C0 [P1/manual]
-[+ 132.031 f7901] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 133.625 f7997] ORDEN: p2create Dante
-[+ 133.656 f7997] IDs para P2: player=Dante(1) costume=Default(0) situation=Default(0) (P1 player=VergilPL(4))
-[+ 133.656 f7997] AVISO: la clave p2_autocreate ya no existe (v74: bloqueaba la carga de la mision); se ignora. Quitala de dmc5_ss_config.txt.
-[+ 133.656 f7997] p2create: requestPreloadPlayerResource(1) -> ok
-[+ 133.656 f7997] p2create: requestLoadPlayerResource -> ok
-[+ 133.875 f8010] p2create: cargador de 1 -> NakidPlayerLoading(1) (fase 0)
-[+ 133.875 f8010] p2create: esperando carga (13 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=1 isBusyAll=1
-[+ 135.875 f8130] p2create: cargador de 1 -> NakidPlayerAvailable(2) (fase 0)
-[+ 135.875 f8130] p2create: recurso cargado; margen para el registro automatico
-[+ 135.875 f8130] --- cargador de 1 [Nakid/Available] 0000021A11B3E040 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 135.875 f8130]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 135.875 f8130] --- escena (cargador Available): GO de P1=0000021A132E16B0, primer hermano raiz=0000021A132E1710 ---
-[+ 135.875 f8130]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 135.875 f8130]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 135.875 f8130]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 135.875 f8130]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 135.891 f8130]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 135.891 f8130]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 135.891 f8130]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 135.891 f8130]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 135.891 f8130]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 135.891 f8130]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 135.891 f8130]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 135.891 f8130] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 135.891 f8130] === factory_report (cargador Available) ===
-[+ 135.891 f8130] --- campos AdditionalPlayerLoadManager 0000021A144E3000 tipo=app.AdditionalPlayerLoadManager ---
-[+ 135.891 f8130]   V app.SingletonBehavior`1<app.AdditionalPlayerLoadManager>.IsKillOwn (System.Boolean) = 0
-[+ 135.891 f8130]   F app.AdditionalPlayerLoadManager.RequestedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader>
-[+ 135.891 f8130]   F app.AdditionalPlayerLoadManager.FinishedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader>
-[+ 135.891 f8130] --- campos cargador pedido 0000021A11B3E040 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 135.891 f8130]   V app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 135.891 f8130] --- campos CharacterFactory 0000021A1450E230 tipo=app.CharacterFactory ---
-[+ 135.891 f8130]   V app.SingletonBehavior`1<app.CharacterFactory>.IsKillOwn (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.Data : app.CharacterFactoryData = app.CharacterFactoryData
-[+ 135.891 f8130]   F app.CharacterFactory.DataTable : System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>> = System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>>
-[+ 135.891 f8130]   F app.CharacterFactory.RefCountTable : System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32> = System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32>
-[+ 135.891 f8130]   F app.CharacterFactory.RequestTable : System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>> = System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>>
-[+ 135.891 f8130]   F app.CharacterFactory.CreateRequestTable : System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData> = System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData>
-[+ 135.891 f8130]   F app.CharacterFactory.CommandRequestPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack>
-[+ 135.891 f8130]   F app.CharacterFactory.CommandExecutionPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack>
-[+ 135.891 f8130] --- campos PlayerManager 0000021A14896CF0 tipo=app.PlayerManager ---
-[+ 135.891 f8130]   V app.PlayerManager.<manualPlayerUpdateCount>k__BackingField (System.Single) = 812.000
-[+ 135.891 f8130]   V app.PlayerManager.ProvokeDTNum (System.Int32) = 0
-[+ 135.891 f8130]   V app.SingletonBehavior`1<app.PlayerManager>.IsKillOwn (System.Boolean) = 0
-[+ 135.891 f8130]   F app.PlayerManager.NeroData : app.PlayerManager.NeroDataHolder = app.PlayerManager.NeroDataHolder
-[+ 135.891 f8130]   F app.PlayerManager.<manualPlayer>k__BackingField : app.Player = app.PlayerVergilPL
-[+ 135.891 f8130]   F app.PlayerManager.players : System.Collections.Generic.List`1<app.Player> = System.Collections.Generic.List`1<app.Player>
-[+ 135.891 f8130]   F app.PlayerManager.<playerList>k__BackingField : app.Player[] = app.Player[]
-[+ 135.891 f8130]   F app.PlayerManager.playerCostumeList : System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> = System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo>
-[+ 135.891 f8130]   F app.PlayerManager.transceiverList : System.Collections.Generic.List`1<app.weapon.Transciever> = System.Collections.Generic.List`1<app.weapon.Transciever>
-[+ 135.891 f8130]   F app.PlayerManager.FearAddValueAll : System.Collections.Generic.List`1<System.Single> = System.Collections.Generic.List`1<System.Single>
-[+ 135.891 f8130]   F app.PlayerManager.FearAddAttackId : System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> = System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum>
-[+ 135.891 f8130]   F app.PlayerManager.LockProvokeDT : System.Object = System.Object
-[+ 135.891 f8130] factory_data: PlayerDataList.Count=32
-[+ 135.891 f8130] factory_data: PlayerDataList[0] ID=0 costumes=2
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0 0000021A1480B530 tipo=app.CharacterFactoryData.PlayerDataSet ---
-[+ 135.891 f8130]   V app.CharacterFactoryData.PlayerDataSet.ID (System.Int32) = 0
-[+ 135.891 f8130]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet>
-[+ 135.891 f8130]   F   PlayerDataList[0] ID=0.DataList: 2 elementos
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0] 0000021A1480B2D0 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].ID 0000021A1480B1D0 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 1106175613
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data 0000021A1480B240 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.Body 0000021A1480BCE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.BodyChangedHairStyle 0000021A1480BD30 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.BodyInGame 0000021A1480BD80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.BodyInGameChangedHairStyle 0000021A1480BDD0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.Face 0000021A1480BE20 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceLight 0000021A1480BE70 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceLow 0000021A1480BEC0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceChangedHairStyle 0000021A1480BF10 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceLightChangedHairStyle 0000021A1480BF60 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceLowChangedHairStyle 0000021A1480BFB0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceInGame 0000021A1480C000 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceInGameHigh 0000021A1480C050 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceInGameChangedHairStyle 0000021A1480C0A0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[0].Data.FaceInGameHighChangedHairStyle 0000021A1480C0F0 tipo=via.Prefab ---
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1] 0000021A1480B480 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].ID 0000021A1480B380 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 160198385
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data 0000021A1480B3F0 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.Body 0000021A1480CA00 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.BodyChangedHairStyle 0000021A1480CA50 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.BodyInGame 0000021A1480CAA0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.BodyInGameChangedHairStyle 0000021A1480CAF0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.Face 0000021A1480CB40 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceLight 0000021A1480CB90 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_c00_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceLow 0000021A1480CBE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0000_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceChangedHairStyle 0000021A1480CC30 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceLightChangedHairStyle 0000021A1480CC80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceLowChangedHairStyle 0000021A1480CCD0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceInGame 0000021A1480CD20 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceInGameHigh 0000021A1480CD70 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceInGameChangedHairStyle 0000021A1480CDC0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[0] ID=0.DataList[1].Data.FaceInGameHighChangedHairStyle 0000021A1480CE10 tipo=via.Prefab ---
-[+ 135.891 f8130] factory_data: PlayerDataList[1] ID=10 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[2] ID=30 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[3] ID=31 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[4] ID=50 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[5] ID=100 costumes=2
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100 0000021A147F13D0 tipo=app.CharacterFactoryData.PlayerDataSet ---
-[+ 135.891 f8130]   V app.CharacterFactoryData.PlayerDataSet.ID (System.Int32) = 100
-[+ 135.891 f8130]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet>
-[+ 135.891 f8130]   F   PlayerDataList[5] ID=100.DataList: 2 elementos
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0] 0000021A147F1170 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].ID 0000021A147F1070 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 1106175613
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data 0000021A147F10E0 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.Body 0000021A147F5030 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.BodyChangedHairStyle 0000021A147F5080 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.BodyInGame 0000021A147F50D0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.BodyInGameChangedHairStyle 0000021A147F5120 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.Face 0000021A147F5170 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceLight 0000021A147F51C0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceLow 0000021A147F5210 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceChangedHairStyle 0000021A147F5260 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceLightChangedHairStyle 0000021A147F52B0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceLowChangedHairStyle 0000021A147F5300 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceInGame 0000021A147F5350 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceInGameHigh 0000021A147F53A0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceInGameChangedHairStyle 0000021A147F53F0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[0].Data.FaceInGameHighChangedHairStyle 0000021A147F5440 tipo=via.Prefab ---
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1] 0000021A147F1320 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].ID 0000021A147F1220 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 160198385
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data 0000021A147F1290 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.Body 0000021A147F5D50 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.BodyChangedHairStyle 0000021A147F5DA0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.BodyInGame 0000021A147F5DF0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.BodyInGameChangedHairStyle 0000021A147F5E40 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.Face 0000021A147F5E90 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceLight 0000021A147F5EE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_c00_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceLow 0000021A147F5F30 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0100_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceChangedHairStyle 0000021A147F5F80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceLightChangedHairStyle 0000021A147F5FD0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceLowChangedHairStyle 0000021A147F6020 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceInGame 0000021A147F6070 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceInGameHigh 0000021A147F60C0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceInGameChangedHairStyle 0000021A147F6110 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[5] ID=100.DataList[1].Data.FaceInGameHighChangedHairStyle 0000021A147F6160 tipo=via.Prefab ---
-[+ 135.891 f8130] factory_data: PlayerDataList[6] ID=130 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[7] ID=131 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[8] ID=150 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[9] ID=151 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[10] ID=200 costumes=2
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200 0000021A147F8FC0 tipo=app.CharacterFactoryData.PlayerDataSet ---
-[+ 135.891 f8130]   V app.CharacterFactoryData.PlayerDataSet.ID (System.Int32) = 200
-[+ 135.891 f8130]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet>
-[+ 135.891 f8130]   F   PlayerDataList[10] ID=200.DataList: 2 elementos
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0] 0000021A147F8D60 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].ID 0000021A147F8C60 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 1106175613
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data 0000021A147F8CD0 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.Body 0000021A147FE360 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.BodyChangedHairStyle 0000021A147FE3B0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.BodyInGame 0000021A147FE400 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0200_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.BodyInGameChangedHairStyle 0000021A147FE450 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.Face 0000021A147FE4A0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceLight 0000021A147FE4F0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceLow 0000021A147FE540 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceChangedHairStyle 0000021A147FE590 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceLightChangedHairStyle 0000021A147FE5E0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceLowChangedHairStyle 0000021A147FE630 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceInGame 0000021A147FE680 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0200_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceInGameHigh 0000021A147FE6D0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceInGameChangedHairStyle 0000021A147FE720 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[0].Data.FaceInGameHighChangedHairStyle 0000021A147FE770 tipo=via.Prefab ---
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1] 0000021A147F8F10 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].ID 0000021A147F8E10 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 160198385
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data 0000021A147F8E80 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.Body 0000021A147FF080 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.BodyChangedHairStyle 0000021A147FF0D0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.BodyInGame 0000021A147FF120 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0200_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.BodyInGameChangedHairStyle 0000021A147FF170 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.Face 0000021A147FF1C0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceLight 0000021A147FF210 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_c00_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceLow 0000021A147FF260 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0200_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceChangedHairStyle 0000021A147FF2B0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceLightChangedHairStyle 0000021A147FF300 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceLowChangedHairStyle 0000021A147FF350 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceInGame 0000021A147FF3A0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0200_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceInGameHigh 0000021A147FF3F0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceInGameChangedHairStyle 0000021A147FF440 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[10] ID=200.DataList[1].Data.FaceInGameHighChangedHairStyle 0000021A147FF490 tipo=via.Prefab ---
-[+ 135.891 f8130] factory_data: PlayerDataList[11] ID=230 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[12] ID=231 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[13] ID=232 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[14] ID=300 costumes=2
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300 0000021A147E0FB0 tipo=app.CharacterFactoryData.PlayerDataSet ---
-[+ 135.891 f8130]   V app.CharacterFactoryData.PlayerDataSet.ID (System.Int32) = 300
-[+ 135.891 f8130]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet>
-[+ 135.891 f8130]   F   PlayerDataList[14] ID=300.DataList: 2 elementos
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0] 0000021A147E0D50 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].ID 0000021A147E0C50 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 1106175613
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data 0000021A147E0CC0 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.Body 0000021A147E5EE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.BodyChangedHairStyle 0000021A147E5F30 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.BodyInGame 0000021A147E5F80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.BodyInGameChangedHairStyle 0000021A147E5FD0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.Face 0000021A147E6020 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceLight 0000021A147E6070 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceLow 0000021A147E60C0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceChangedHairStyle 0000021A147E6110 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceLightChangedHairStyle 0000021A147E6160 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceLowChangedHairStyle 0000021A147E61B0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceInGame 0000021A147E6200 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceInGameHigh 0000021A147E6250 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceInGameChangedHairStyle 0000021A147E62A0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[0].Data.FaceInGameHighChangedHairStyle 0000021A147E62F0 tipo=via.Prefab ---
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1] 0000021A147E0F00 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].ID 0000021A147E0E00 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 160198385
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data 0000021A147E0E70 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.Body 0000021A147E6C00 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.BodyChangedHairStyle 0000021A147E6C50 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.BodyInGame 0000021A147E6CA0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.BodyInGameChangedHairStyle 0000021A147E6CF0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.Face 0000021A147E6D40 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceLight 0000021A147E6D90 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_c00_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceLow 0000021A147E6DE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceChangedHairStyle 0000021A147E6E30 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceLightChangedHairStyle 0000021A147E6E80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceLowChangedHairStyle 0000021A147E6ED0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceInGame 0000021A147E6F20 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0300_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceInGameHigh 0000021A147E6F70 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceInGameChangedHairStyle 0000021A147E6FC0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[14] ID=300.DataList[1].Data.FaceInGameHighChangedHairStyle 0000021A147E7010 tipo=via.Prefab ---
-[+ 135.891 f8130] factory_data: PlayerDataList[15] ID=330 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[16] ID=331 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[17] ID=400 costumes=2
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400 0000021A147E84C0 tipo=app.CharacterFactoryData.PlayerDataSet ---
-[+ 135.891 f8130]   V app.CharacterFactoryData.PlayerDataSet.ID (System.Int32) = 400
-[+ 135.891 f8130]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet>
-[+ 135.891 f8130]   F   PlayerDataList[17] ID=400.DataList: 2 elementos
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0] 0000021A147E8260 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].ID 0000021A147E8160 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 1106175613
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data 0000021A147E81D0 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.Body 0000021A147EBD90 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.BodyChangedHairStyle 0000021A147EBDE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.BodyInGame 0000021A147EBE30 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.BodyInGameChangedHairStyle 0000021A147EBE80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.Face 0000021A147EBED0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceLight 0000021A147EBF20 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceLow 0000021A147EBF70 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceChangedHairStyle 0000021A147EBFC0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceLightChangedHairStyle 0000021A147EC010 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceLowChangedHairStyle 0000021A147EC060 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceInGame 0000021A147EC0B0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceInGameHigh 0000021A147EC100 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceInGameChangedHairStyle 0000021A147EC150 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[0].Data.FaceInGameHighChangedHairStyle 0000021A147EC1A0 tipo=via.Prefab ---
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1] 0000021A147E8410 tipo=app.CharacterFactoryData.CostumeDataSet ---
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.ID : app.CharacterFactory.CostumeID = app.CharacterFactory.CostumeID
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].ID 0000021A147E8310 tipo=app.CharacterFactory.CostumeID ---
-[+ 135.891 f8130]   V app.CharacterFactory.FactoryID.HashID (System.UInt32) = 160198385
-[+ 135.891 f8130]   F app.CharacterFactory.FactoryID.StringID : System.String = System.String
-[+ 135.891 f8130]   F app.CharacterFactoryData.CostumeDataSet.Data : app.CharacterFactory.CostumeData = app.CharacterFactory.CostumeData
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data 0000021A147E8380 tipo=app.CharacterFactory.CostumeData ---
-[+ 135.891 f8130]   V app.CharacterFactory.CostumeData.IsHairStyleChangeable (System.Boolean) = 0
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Body : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.Body 0000021A147ECAB0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.BodyChangedHairStyle 0000021A147ECB00 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.BodyInGame 0000021A147ECB50 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_c00_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.BodyInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.BodyInGameChangedHairStyle 0000021A147ECBA0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.Face : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.Face 0000021A147ECBF0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLight : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceLight 0000021A147ECC40 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_c00_11_Light_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLow : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceLow 0000021A147ECC90 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/pl0400_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceChangedHairStyle 0000021A147ECCE0 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLightChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceLightChangedHairStyle 0000021A147ECD30 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceLowChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceLowChangedHairStyle 0000021A147ECD80 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGame : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceInGame 0000021A147ECDD0 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_c00_01_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHigh : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceInGameHigh 0000021A147ECE20 tipo=via.Prefab ---
-[+ 135.891 f8130]   RUTA Prefab/event/Player/InGame/pl0400_c00_11_ev.pfb
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceInGameChangedHairStyle 0000021A147ECE70 tipo=via.Prefab ---
-[+ 135.891 f8130]   F app.CharacterFactory.CostumeData.FaceInGameHighChangedHairStyle : via.Prefab = via.Prefab
-[+ 135.891 f8130] --- campos PlayerDataList[17] ID=400.DataList[1].Data.FaceInGameHighChangedHairStyle 0000021A147ECEC0 tipo=via.Prefab ---
-[+ 135.891 f8130] factory_data: PlayerDataList[18] ID=500 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[19] ID=510 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[20] ID=520 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[21] ID=530 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[22] ID=531 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[23] ID=540 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[24] ID=550 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[25] ID=600 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[26] ID=610 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[27] ID=630 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[28] ID=631 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[29] ID=110 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[30] ID=152 costumes=2
-[+ 135.891 f8130] factory_data: PlayerDataList[31] ID=350 costumes=2
-[+ 135.891 f8130] factory_data: DataTable.Count=32 (mismos ids que PlayerDataList; las claves de costume no son 0..12)
-[+ 139.375 f8340] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
-[+ 139.375 f8340] --- cargador de 1 [tras activate] 0000021A11B3E040 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 5
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 139.375 f8340]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 139.875 f8370] p2create: cargador de 1 -> AdditionalPlayerAvailable(6) (fase 3)
-[+ 145.375 f8700] --- escena (tras activate): GO de P1=0000021A132E16B0, primer hermano raiz=0000021A132E1710 ---
-[+ 145.375 f8700]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 145.375 f8700]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 145.375 f8700]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 145.375 f8700]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 145.391 f8700]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 145.391 f8700]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 145.391 f8700]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 145.391 f8700]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 145.391 f8700]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 145.391 f8700]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 145.391 f8700]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 145.391 f8700] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 145.391 f8700] p2create: PlayerManager.findPlayer -> ok
-[+ 150.375 f9000] latido: frame=9000
-[+ 150.875 f9030] p2create: NO se creo el Player (ni el registro automatico, ni activate, ni findPlayer anadieron un Player). Estado final:
-[+ 150.875 f9030]   Requested: 1
-[+ 150.875 f9030]     loader[0] 0000021A11B3E040 estado=AdditionalPlayerAvailable(6) pid=Dante(1) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
-[+ 150.875 f9030]   Finished: 0
-[+ 150.875 f9030] --- cargador de 1 [fallo] 0000021A11B3E040 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 6
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 150.875 f9030]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 150.875 f9030] --- escena (fallo): GO de P1=0000021A132E16B0, primer hermano raiz=0000021A132E1710 ---
-[+ 150.875 f9030]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 150.891 f9030]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 150.891 f9030]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 150.891 f9030]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 150.891 f9030]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 150.891 f9030]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 150.891 f9030]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 150.891 f9030]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 150.891 f9030]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 150.891 f9030]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 150.891 f9030]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 150.891 f9030] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 150.891 f9030] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(1) -> ok; cargador ahora: AdditionalPlayerUnloading(7)
-[+ 180.406 f10800] latido: frame=10800
-[+ 205.453 f12300] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 205.453 f12300] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 205.453 f12300] PlayerManager.players: 2 -> -1
-[+ 206.938 f12390] PlayerManager cambio: 0000021A14896CF0 -> 0000000000000000 (nueva mision o fin de mision)
-[+ 210.485 f12600] latido: frame=12600
+[+   0.062 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 4832)
+[+   0.547 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.547 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
+[+   0.547 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
+[+   0.547 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
+[+   0.547 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
+[+   0.562 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
+[+   0.562 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
+[+   0.562 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
+[+   0.562 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
+[+   0.562 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
+[+   0.562 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
+[+   0.562 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
+[+   0.562 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
+[+   0.562 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
+[+   0.562 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
+[+   0.562 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
+[+   0.562 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
+[+   0.562 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
+[+   0.562 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
+[+   0.562 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
+[+   0.562 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
+[+   0.562 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
+[+   0.562 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
+[+   0.562 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
+[+   0.562 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
+[+   0.562 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
+[+   0.562 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
+[+   0.562 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
+[+   0.562 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
+[+   0.562 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
+[+   0.562 f30] trace: hook #29 en via.Prefab::instantiate/1 (id 62)
+[+   0.562 f30] trace: hook #30 en via.Prefab::instantiate/2 (id 64)
+[+   0.562 f30] trace: hook #31 en via.Prefab::instantiate/2 (id 66)
+[+   0.562 f30] trace: hook #32 en via.Prefab::instantiate/3 (id 68)
+[+   0.562 f30] trace: hook #33 en via.Prefab::instantiate/3 (id 70)
+[+   0.562 f30] trace: hook #34 en via.Prefab::instantiate/4 (id 72)
+[+   0.562 f30] trace: instalacion terminada, 35 hooks (intentos: 1)
+[+   0.562 f30] p2input: hook en app.PadInput::update/0
+[+   1.047 f60] app.AdditionalPlayerLoadManager disponible (000001C8EB153000)
+[+  30.109 f1800] latido: frame=1800
+[+  36.109 f2160] PlayerManager cambio: 0000000000000000 -> 000001C8EB4A75B0 (nueva mision o fin de mision)
+[+  36.109 f2160] PlayerManager.players: -1 -> 0
+[+  60.125 f3600] latido: frame=3600
+[+  90.156 f5400] latido: frame=5400
+[+  95.656 f5730] PlayerManager.players: 0 -> 1
+[+  95.656 f5730]   player[0] GO='pl0200_v' padre='null'
+[+  95.656 f5730]   player[0] componentes de su GO: app.Player=000001C8DFD05610 (tipo real app.PlayerV) app.character.Character=000001C8DFD05610 (tipo real app.PlayerV) app.PlayerV=000001C8DFD05610 (tipo real app.PlayerV) 
+[+  95.656 f5730]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
+[+  95.656 f5730]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001C8E9D299E0
+[+  95.656 f5730]   player[0] 000001C8DFD05610 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000001C8E9D289F0
+[+ 102.172 f6120] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 102.172 f6120] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 102.172 f6120] p2input: PadInput de P1 = 000001C8EB0C36C0
+[+ 102.172 f6120] PlayerManager.players: 1 -> 2
+[+ 102.172 f6120]   player[0] GO='pl0200_v' padre='null'
+[+ 102.172 f6120]   player[0] componentes de su GO: app.Player=000001C8DFD05610 (tipo real app.PlayerV) app.character.Character=000001C8DFD05610 (tipo real app.PlayerV) app.PlayerV=000001C8DFD05610 (tipo real app.PlayerV) 
+[+ 102.172 f6120]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+ 102.172 f6120]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001C8E9D299E0
+[+ 102.172 f6120]   player[0] 000001C8DFD05610 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000001C8EB0C36C0
+[+ 102.172 f6120]   player[1] GO='pl0800_vergil' padre='null'
+[+ 102.172 f6120]   player[1] componentes de su GO: app.Player=000001C8DFCC9900 (tipo real app.PlayerVergilPL) app.character.Character=000001C8DFCC9900 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000001C8DFCC9900 (tipo real app.PlayerVergilPL) 
+[+ 102.172 f6120]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+ 102.172 f6120]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001C8E9FB59F0
+[+ 102.172 f6120]   player[1] 000001C8DFCC9900 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000001C8EB0C36C0 [P1/manual]
+[+ 120.187 f7200] latido: frame=7200
+[+ 150.219 f9000] latido: frame=9000
+[+ 152.719 f9150] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 152.719 f9150] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 152.719 f9150] PlayerManager.players: 2 -> -1
+[+ 154.219 f9240] PlayerManager cambio: 000001C8EB4A75B0 -> 0000000000000000 (nueva mision o fin de mision)
+[+ 166.766 f9990] PlayerManager cambio: 0000000000000000 -> 000001C8E89AC8B0 (nueva mision o fin de mision)
+[+ 166.766 f9990] PlayerManager.players: -1 -> 0
+[+ 180.297 f10800] latido: frame=10800
+[+ 210.312 f12600] latido: frame=12600
+[+ 213.812 f12810] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 213.812 f12810] P1 (manualPlayer) detectado: app.PlayerDante
+[+ 213.812 f12810] p2input: PadInput de P1 = 000001C8E92401D0
+[+ 213.812 f12810] PlayerManager.players: 0 -> 1
+[+ 213.812 f12810]   player[0] GO='pl0100_dante' padre='null'
+[+ 213.812 f12810]   player[0] componentes de su GO: app.Player=000001C8DFCC7D10 (tipo real app.PlayerDante) app.character.Character=000001C8DFCC7D10 (tipo real app.PlayerDante) app.PlayerDante=000001C8DFCC7D10 (tipo real app.PlayerDante) 
+[+ 213.812 f12810]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+ 213.812 f12810]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001C8E9240BD0
+[+ 213.812 f12810]   player[0] 000001C8DFCC7D10 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=000001C8E92401D0 [P1/manual]
+[+ 240.344 f14400] latido: frame=14400
+[+ 270.375 f16200] latido: frame=16200
+[+ 282.891 f16950] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 282.891 f16950] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 282.891 f16950] PlayerManager.players: 1 -> 0
+[+ 283.375 f16980] PlayerManager.players: 0 -> -1
+[+ 284.875 f17070] PlayerManager cambio: 000001C8E89AC8B0 -> 0000000000000000 (nueva mision o fin de mision)
