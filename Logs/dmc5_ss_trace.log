@@ -1,174 +1,174 @@
-[+   0.704 f30] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.704 f30] PRE  app.PadInput::update/0 [t15652 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.704 f30] POST app.PadInput::update/0 -> (void)
-[+   0.704 f30] POST app.PadInput::update/0 -> (void)
-[+   0.704 f31] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.704 f31] PRE  app.PadInput::update/0 [t8936 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.704 f31] POST app.PadInput::update/0 -> (void)
-[+   0.704 f31] POST app.PadInput::update/0 -> (void)
-[+   0.719 f32] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.719 f32] PRE  app.PadInput::update/0 [t15652 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.719 f32] POST app.PadInput::update/0 -> (void)
-[+   0.719 f32] POST app.PadInput::update/0 -> (void)
-[+   0.735 f33] PRE  app.PadInput::update/0 [t15652 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.735 f33] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.735 f33] POST app.PadInput::update/0 -> (void)
-[+   0.735 f33] POST app.PadInput::update/0 -> (void)
-[+   0.750 f34] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.750 f34] PRE  app.PadInput::update/0 [t8936 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.750 f34] POST app.PadInput::update/0 -> (void)
-[+   0.750 f34] POST app.PadInput::update/0 -> (void)
-[+   0.782 f35] PRE  app.PadInput::update/0 [t15652 argc=4] this=00000207145EDB00 app.PadInput 
-[+   0.782 f35] PRE  app.PadInput::update/0 [t13972 argc=4] this=00000207145E36C0 app.PadInput 
-[+   0.782 f35] POST app.PadInput::update/0 -> (void)
-[+   0.782 f35] POST app.PadInput::update/0 -> (void)
-[+  40.407 f2407] PRE  app.CharacterFactory::create/5 [t15652 argc=9] this=000002071469E230 app.CharacterFactory | p0=300 | p1=null | p2=00000207144132F0 via.GameObject | p3=Event(0) <app.CharacterFactory.ModeEnum> | p4=00000207143E05F0 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+  40.407 f2407] POST app.CharacterFactory::create/5 -> 00000207143E0620 app.CharacterFactory.RequestData
-[+  40.485 f2412] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=0000020714975EE0 via.Prefab | p1=00000207144132F0 via.GameObject | p2=false 
-[+  40.485 f2412] POST app.CharacterFactory::create/3 -> 00000207146369E0 via.GameObject
-[+  40.485 f2412] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=0000020714976020 via.Prefab | p1=00000207144132F0 via.GameObject | p2=false 
-[+  40.485 f2412] POST app.CharacterFactory::create/3 -> 00000207143B8540 via.GameObject
-[+  76.469 f4567] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=00000207143E0620 app.CharacterFactory.RequestData 
-[+  76.469 f4567] POST app.CharacterFactory::unload/1 -> (void)
-[+  76.657 f4579] PRE  app.PlayerManager::findPlayer/0 [t15652 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.657 f4579] POST app.PlayerManager::findPlayer/0 -> (void)
-[+  76.657 f4580] PRE  app.PlayerManager::findPlayer/0 [t8936 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.657 f4580] POST app.PlayerManager::findPlayer/0 -> (void)
-[+  76.657 f4580] PRE  app.PlayerManager::findPlayer/0 [t8936 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.657 f4580] POST app.PlayerManager::findPlayer/0 -> (void)
-[+  76.657 f4580] PRE  app.PlayerManager::updateMissionInitCheck/0 [t8936 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.657 f4580] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
-[+  76.672 f4581] PRE  app.PlayerManager::updateMissionInitCheck/0 [t8936 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.672 f4581] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
-[+  76.688 f4582] PRE  app.PlayerManager::updateMissionInitCheck/0 [t13972 argc=4] this=0000020714A23220 app.PlayerManager 
-[+  76.688 f4582] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=Nero(0) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=Nero(0) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=Gilver(2) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=Gilver(2) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=Vergil(3) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=Vergil(3) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+  76.735 f4585] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+  76.735 f4585] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+  76.735 f4585] POST app.PlayerManager::setSituationID/2 -> (void)
-[+ 116.625 f6976] PRE  app.PlayerManager::setCostumeID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
-[+ 116.625 f6976] POST app.PlayerManager::setCostumeID/2 -> (void)
-[+ 116.625 f6976] PRE  app.PlayerManager::setSituationID/2 [t8936 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
-[+ 116.625 f6976] POST app.PlayerManager::setSituationID/2 -> (void)
-[+ 139.266 f8332] PRE  app.CharacterFactory::create/5 [t13972 argc=9] this=000002071469E230 app.CharacterFactory | p0=600 | p1=null | p2=0000020714278B50 via.GameObject | p3=InGame(3) <app.CharacterFactory.ModeEnum> | p4=00000207139750D0 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+ 139.266 f8332] PRE  app.CharacterFactory::create/5 [t15652 argc=9] this=000002071469E230 app.CharacterFactory | p0=500 | p1=null | p2=0000020714270F30 via.GameObject | p3=InGame(3) <app.CharacterFactory.ModeEnum> | p4=00000207139997B0 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+ 139.266 f8332] POST app.CharacterFactory::create/5 -> 0000020713975100 app.CharacterFactory.RequestData
-[+ 139.266 f8332] POST app.CharacterFactory::create/5 -> 00000207139997E0 app.CharacterFactory.RequestData
-[+ 139.422 f8340] PRE  app.PlayerManager::addPlayerCore/1 [t15652 argc=5] this=0000020714A23220 app.PlayerManager | p0=0000020709249DE0 app.PlayerV 
-[+ 139.422 f8340] POST app.PlayerManager::addPlayerCore/1 -> (void)
-[+ 139.641 f8354] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=000002071496BE30 via.Prefab | p1=0000020714278B50 via.GameObject | p2=true 
-[+ 139.641 f8354] POST app.CharacterFactory::create/3 -> 0000020711D7D3E0 via.GameObject
-[+ 139.641 f8354] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=000002071496C0B0 via.Prefab | p1=0000020714261BF0 via.GameObject | p2=true 
-[+ 139.641 f8354] POST app.CharacterFactory::create/3 -> 0000020711D11C00 via.GameObject
-[+ 139.766 f8361] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=000002071497D870 via.Prefab | p1=0000020714270F30 via.GameObject | p2=true 
-[+ 139.766 f8361] POST app.CharacterFactory::create/3 -> 0000020711D16EE0 via.GameObject
-[+ 139.766 f8361] PRE  app.CharacterFactory::create/3 [t8936 argc=7] | p0=000002071497DAF0 via.Prefab | p1=0000020714277FB0 via.GameObject | p2=true 
-[+ 139.766 f8361] POST app.CharacterFactory::create/3 -> 0000020711D0ECB0 via.GameObject
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t13972 argc=6] | p0=0000020713203B10 app.enemy.em5800.Em5800 | p1=0000020713203B10 app.enemy.em5800.Em5800 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t13972 argc=6] | p0=00000207131FBBC0 app.enemy.em5801.Em5801 | p1=00000207131FBBC0 app.enemy.em5801.Em5801 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.PlayerManager::addPlayer/1 [t8936 argc=5] this=0000020714A23220 app.PlayerManager | p0=0000020709249DE0 app.PlayerV 
-[+ 150.375 f8997] POST app.PlayerManager::addPlayer/1 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=0000020709249DE0 app.PlayerV | p1=0000020709249DE0 app.PlayerV 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t13972 argc=6] | p0=000002071316E720 app.enemy.em5802.Em5802 | p1=000002071316E720 app.enemy.em5802.Em5802 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t8936 argc=5] | p0=000002071316E720 app.enemy.em5802.Em5802 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=000002071316E720 app.enemy.em5802.Em5802 | p1=000002071316E720 app.enemy.em5802.Em5802 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t8936 argc=5] | p0=00000207131FBBC0 app.enemy.em5801.Em5801 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=00000207131FBBC0 app.enemy.em5801.Em5801 | p1=00000207131FBBC0 app.enemy.em5801.Em5801 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t8936 argc=5] | p0=0000020713203B10 app.enemy.em5800.Em5800 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=0000020713203B10 app.enemy.em5800.Em5800 | p1=0000020713203B10 app.enemy.em5800.Em5800 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=00000207092406F0 app.PlayerVergilPL | p1=00000207092406F0 app.PlayerVergilPL 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 150.375 f8997] PRE  app.PlayerManager::addPlayer/1 [t8936 argc=5] this=0000020714A23220 app.PlayerManager | p0=00000207092192A0 app.PlayerVergilPL 
-[+ 150.375 f8997] PRE  app.PlayerManager::addPlayerCore/1 [t8936 argc=5] this=0000020714A23220 app.PlayerManager | p0=00000207092192A0 app.PlayerVergilPL 
-[+ 150.375 f8997] POST app.PlayerManager::addPlayerCore/1 -> (void)
-[+ 150.375 f8997] POST app.PlayerManager::addPlayer/1 -> (void)
-[+ 150.375 f8997] PRE  app.NetworkCharacterManager::registerCharacter/2 [t8936 argc=6] | p0=00000207092192A0 app.PlayerVergilPL | p1=00000207092192A0 app.PlayerVergilPL 
-[+ 150.375 f8997] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
-[+ 158.907 f9505] PRE  app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 [t15652 argc=5] this=0000020714673000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> 
-[+ 158.907 f9505] POST app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 -> (void)
-[+ 158.907 f9505] PRE  app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 [t15652 argc=8] this=0000020714673000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> | p2=Default(0) <app.PlayerSituationID> | p3=true 
-[+ 158.907 f9505] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 [t15652 argc=7] this=0000020711635820 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader | p0=Default(0) <app.PlayerCostumeID> | p1=Default(0) <app.PlayerSituationID> | p2=true 
-[+ 158.907 f9505] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 -> false
-[+ 158.907 f9505] POST app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 -> (void)
-[+ 164.485 f9840] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 [t15652 argc=4] this=0000020711635820 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader 
-[+ 164.485 f9840] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 -> true
-[+ 175.985 f10530] PRE  app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 [t15652 argc=5] this=0000020714673000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> 
-[+ 175.985 f10530] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 [t15652 argc=4] this=0000020711635820 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader 
-[+ 175.985 f10530] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 -> true
-[+ 175.985 f10530] POST app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 -> (void)
-[+ 255.454 f15292] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=0000020713975100 app.CharacterFactory.RequestData 
-[+ 255.454 f15292] POST app.CharacterFactory::unload/1 -> (void)
-[+ 255.469 f15292] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=00000207139997E0 app.CharacterFactory.RequestData 
-[+ 255.469 f15292] POST app.CharacterFactory::unload/1 -> (void)
-[+ 255.500 f15294] PRE  app.PlayerManager::removePlayer/2 [t15652 argc=6] this=0000020714A23220 app.PlayerManager | p0=00000207092406F0 app.PlayerVergilPL | p1=false 
-[+ 255.500 f15294] POST app.PlayerManager::removePlayer/2 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=00000207092406F0 app.PlayerVergilPL 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 255.500 f15294] PRE  app.PlayerManager::removePlayer/2 [t15652 argc=6] this=0000020714A23220 app.PlayerManager | p0=00000207092192A0 app.PlayerVergilPL | p1=false 
-[+ 255.500 f15294] POST app.PlayerManager::removePlayer/2 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=00000207092192A0 app.PlayerVergilPL 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=000002071316E720 app.enemy.em5802.Em5802 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=00000207131FBBC0 app.enemy.em5801.Em5801 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=0000020713203B10 app.enemy.em5800.Em5800 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 255.500 f15294] PRE  app.PlayerManager::removePlayer/2 [t15652 argc=6] this=0000020714A23220 app.PlayerManager | p0=0000020709249DE0 app.PlayerV | p1=false 
-[+ 255.500 f15294] POST app.PlayerManager::removePlayer/2 -> (void)
-[+ 255.500 f15294] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t15652 argc=5] | p0=0000020709249DE0 app.PlayerV 
-[+ 255.500 f15294] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
-[+ 258.938 f15501] PRE  app.CharacterFactory::create/5 [t13972 argc=9] this=000002071469E230 app.CharacterFactory | p0=0 | p1=null | p2=0000020713707A60 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=00000207136D6D90 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+ 258.938 f15501] POST app.CharacterFactory::create/5 -> 00000207136D6DC0 app.CharacterFactory.RequestData
-[+ 259.125 f15512] PRE  app.CharacterFactory::create/5 [t13972 argc=9] this=000002071469E230 app.CharacterFactory | p0=200 | p1=null | p2=000002071370FFB0 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=00000207119D6E40 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+ 259.125 f15512] POST app.CharacterFactory::create/5 -> 00000207119D6E70 app.CharacterFactory.RequestData
-[+ 259.532 f15536] PRE  app.CharacterFactory::create/5 [t13972 argc=9] this=000002071469E230 app.CharacterFactory | p0=400 | p1=null | p2=00000207118F6730 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=000002071375EE90 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
-[+ 259.532 f15536] POST app.CharacterFactory::create/5 -> 000002071375EEC0 app.CharacterFactory.RequestData
-[+ 260.110 f15571] PRE  app.CharacterFactory::create/3 [t13972 argc=7] | p0=000002071499BCE0 via.Prefab | p1=0000020713707A60 via.GameObject | p2=false 
-[+ 260.110 f15571] POST app.CharacterFactory::create/3 -> 000002071377EBE0 via.GameObject
-[+ 260.110 f15571] PRE  app.CharacterFactory::create/3 [t13972 argc=7] | p0=000002071499BE70 via.Prefab | p1=0000020713707A60 via.GameObject | p2=false 
-[+ 260.110 f15571] POST app.CharacterFactory::create/3 -> 0000020713747090 via.GameObject
-[+ 260.157 f15574] PRE  app.CharacterFactory::create/3 [t15652 argc=7] | p0=000002071498E360 via.Prefab | p1=000002071370FFB0 via.GameObject | p2=false 
-[+ 260.157 f15574] POST app.CharacterFactory::create/3 -> 000002071342AE00 via.GameObject
-[+ 260.157 f15574] PRE  app.CharacterFactory::create/3 [t15652 argc=7] | p0=000002071498E4F0 via.Prefab | p1=000002071370FFB0 via.GameObject | p2=false 
-[+ 260.157 f15574] POST app.CharacterFactory::create/3 -> 00000207137055B0 via.GameObject
-[+ 260.188 f15576] PRE  app.CharacterFactory::create/3 [t13972 argc=7] | p0=000002071497BD90 via.Prefab | p1=00000207118F6730 via.GameObject | p2=false 
-[+ 260.188 f15576] POST app.CharacterFactory::create/3 -> 0000020711979FD0 via.GameObject
-[+ 260.188 f15576] PRE  app.CharacterFactory::create/3 [t13972 argc=7] | p0=000002071497BF20 via.Prefab | p1=00000207118F6730 via.GameObject | p2=false 
-[+ 260.188 f15576] POST app.CharacterFactory::create/3 -> 0000020711907E90 via.GameObject
-[+ 265.657 f15902] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=000002071375EEC0 app.CharacterFactory.RequestData 
-[+ 265.657 f15902] POST app.CharacterFactory::unload/1 -> (void)
-[+ 265.657 f15902] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=00000207119D6E70 app.CharacterFactory.RequestData 
-[+ 265.657 f15902] POST app.CharacterFactory::unload/1 -> (void)
-[+ 265.657 f15902] PRE  app.CharacterFactory::unload/1 [t15652 argc=5] this=000002071469E230 app.CharacterFactory | p0=00000207136D6DC0 app.CharacterFactory.RequestData 
-[+ 265.657 f15902] POST app.CharacterFactory::unload/1 -> (void)
+[+   0.594 f30] PRE  app.PadInput::update/0 [t14396 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.594 f30] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.594 f30] POST app.PadInput::update/0 -> (void)
+[+   0.594 f30] POST app.PadInput::update/0 -> (void)
+[+   0.594 f31] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.594 f31] PRE  app.PadInput::update/0 [t2676 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.594 f31] POST app.PadInput::update/0 -> (void)
+[+   0.594 f31] POST app.PadInput::update/0 -> (void)
+[+   0.609 f32] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.609 f32] PRE  app.PadInput::update/0 [t2676 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.609 f32] POST app.PadInput::update/0 -> (void)
+[+   0.609 f32] POST app.PadInput::update/0 -> (void)
+[+   0.641 f33] PRE  app.PadInput::update/0 [t2676 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.641 f33] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.641 f33] POST app.PadInput::update/0 -> (void)
+[+   0.641 f33] POST app.PadInput::update/0 -> (void)
+[+   0.656 f34] PRE  app.PadInput::update/0 [t14396 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.656 f34] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.656 f34] POST app.PadInput::update/0 -> (void)
+[+   0.656 f34] POST app.PadInput::update/0 -> (void)
+[+   0.672 f35] PRE  app.PadInput::update/0 [t14540 argc=4] this=000002169BCFDB00 app.PadInput 
+[+   0.672 f35] PRE  app.PadInput::update/0 [t2676 argc=4] this=000002169BCF36C0 app.PadInput 
+[+   0.672 f35] POST app.PadInput::update/0 -> (void)
+[+   0.672 f35] POST app.PadInput::update/0 -> (void)
+[+  30.719 f1834] PRE  app.CharacterFactory::create/5 [t14540 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=300 | p1=null | p2=000002169BB44090 via.GameObject | p3=Event(0) <app.CharacterFactory.ModeEnum> | p4=000002169BB758B0 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+  30.719 f1834] POST app.CharacterFactory::create/5 -> 000002169BB758E0 app.CharacterFactory.RequestData
+[+  30.750 f1836] PRE  app.CharacterFactory::create/3 [t2676 argc=7] | p0=000002169C085EE0 via.Prefab | p1=000002169BB44090 via.GameObject | p2=false 
+[+  30.750 f1836] POST app.CharacterFactory::create/3 -> 000002169BE402E0 via.GameObject
+[+  30.750 f1836] PRE  app.CharacterFactory::create/3 [t2676 argc=7] | p0=000002169C086020 via.Prefab | p1=000002169BB44090 via.GameObject | p2=false 
+[+  30.750 f1836] POST app.CharacterFactory::create/3 -> 000002169BDEA7F0 via.GameObject
+[+  44.531 f2660] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=000002169BB758E0 app.CharacterFactory.RequestData 
+[+  44.531 f2660] POST app.CharacterFactory::unload/1 -> (void)
+[+  44.672 f2670] PRE  app.PlayerManager::findPlayer/0 [t14396 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.672 f2670] POST app.PlayerManager::findPlayer/0 -> (void)
+[+  44.672 f2671] PRE  app.PlayerManager::findPlayer/0 [t2676 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.672 f2671] POST app.PlayerManager::findPlayer/0 -> (void)
+[+  44.672 f2671] PRE  app.PlayerManager::findPlayer/0 [t2676 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.672 f2671] POST app.PlayerManager::findPlayer/0 -> (void)
+[+  44.672 f2671] PRE  app.PlayerManager::updateMissionInitCheck/0 [t2676 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.672 f2671] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
+[+  44.688 f2672] PRE  app.PlayerManager::updateMissionInitCheck/0 [t14396 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.688 f2672] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
+[+  44.719 f2673] PRE  app.PlayerManager::updateMissionInitCheck/0 [t14396 argc=4] this=000002169C0D3220 app.PlayerManager 
+[+  44.719 f2673] POST app.PlayerManager::updateMissionInitCheck/0 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=Nero(0) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=Nero(0) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=Gilver(2) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=Gilver(2) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=Vergil(3) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=Vergil(3) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setCostumeID/2 [t2676 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  44.766 f2676] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  44.766 f2676] PRE  app.PlayerManager::setSituationID/2 [t2676 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  44.766 f2676] POST app.PlayerManager::setSituationID/2 -> (void)
+[+  85.078 f5092] PRE  app.PlayerManager::setCostumeID/2 [t14540 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> 
+[+  85.078 f5092] POST app.PlayerManager::setCostumeID/2 -> (void)
+[+  85.078 f5092] PRE  app.PlayerManager::setSituationID/2 [t14540 argc=6] | p0=VergilPL(4) <app.PlayerID> | p1=Default(0) <app.PlayerSituationID> 
+[+  85.078 f5092] POST app.PlayerManager::setSituationID/2 -> (void)
+[+ 101.969 f6104] PRE  app.CharacterFactory::create/5 [t2676 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=500 | p1=null | p2=000002169B980F30 via.GameObject | p3=InGame(3) <app.CharacterFactory.ModeEnum> | p4=000002169B095650 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+ 101.969 f6104] PRE  app.CharacterFactory::create/5 [t14396 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=600 | p1=null | p2=000002169B988B50 via.GameObject | p3=InGame(3) <app.CharacterFactory.ModeEnum> | p4=000002169B081E80 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+ 101.969 f6104] POST app.CharacterFactory::create/5 -> 000002169B095680 app.CharacterFactory.RequestData
+[+ 101.969 f6104] POST app.CharacterFactory::create/5 -> 000002169B081EB0 app.CharacterFactory.RequestData
+[+ 102.109 f6112] PRE  app.PlayerManager::addPlayerCore/1 [t14540 argc=5] this=000002169C0D3220 app.PlayerManager | p0=0000021690934660 app.PlayerV 
+[+ 102.109 f6112] POST app.PlayerManager::addPlayerCore/1 -> (void)
+[+ 102.109 f6113] PRE  app.CharacterFactory::create/3 [t2676 argc=7] | p0=000002169C08D870 via.Prefab | p1=000002169B980F30 via.GameObject | p2=true 
+[+ 102.109 f6113] POST app.CharacterFactory::create/3 -> 0000021699475300 via.GameObject
+[+ 102.109 f6113] PRE  app.CharacterFactory::create/3 [t2676 argc=7] | p0=000002169C08DAF0 via.Prefab | p1=000002169B987FB0 via.GameObject | p2=true 
+[+ 102.109 f6113] POST app.CharacterFactory::create/3 -> 00000216994443A0 via.GameObject
+[+ 102.125 f6114] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C07BE30 via.Prefab | p1=000002169B988B50 via.GameObject | p2=true 
+[+ 102.125 f6114] POST app.CharacterFactory::create/3 -> 0000021699489020 via.GameObject
+[+ 102.125 f6114] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C07C0B0 via.Prefab | p1=000002169B971BF0 via.GameObject | p2=true 
+[+ 102.125 f6114] POST app.CharacterFactory::create/3 -> 000002169942D410 via.GameObject
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t2676 argc=6] | p0=000002169A92C3B0 app.enemy.em5800.Em5800 | p1=000002169A92C3B0 app.enemy.em5800.Em5800 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t2676 argc=6] | p0=000002169A904D70 app.enemy.em5801.Em5801 | p1=000002169A904D70 app.enemy.em5801.Em5801 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.PlayerManager::addPlayer/1 [t14396 argc=5] this=000002169C0D3220 app.PlayerManager | p0=0000021690934660 app.PlayerV 
+[+ 108.578 f6501] POST app.PlayerManager::addPlayer/1 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=0000021690934660 app.PlayerV | p1=0000021690934660 app.PlayerV 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t2676 argc=6] | p0=000002169A878140 app.enemy.em5802.Em5802 | p1=000002169A878140 app.enemy.em5802.Em5802 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A878140 app.enemy.em5802.Em5802 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=000002169A878140 app.enemy.em5802.Em5802 | p1=000002169A878140 app.enemy.em5802.Em5802 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A904D70 app.enemy.em5801.Em5801 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=000002169A904D70 app.enemy.em5801.Em5801 | p1=000002169A904D70 app.enemy.em5801.Em5801 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A92C3B0 app.enemy.em5800.Em5800 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=000002169A92C3B0 app.enemy.em5800.Em5800 | p1=000002169A92C3B0 app.enemy.em5800.Em5800 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=000002169092AF70 app.PlayerVergilPL | p1=000002169092AF70 app.PlayerVergilPL 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 108.578 f6501] PRE  app.PlayerManager::addPlayer/1 [t14396 argc=5] this=000002169C0D3220 app.PlayerManager | p0=0000021690907320 app.PlayerVergilPL 
+[+ 108.578 f6501] PRE  app.PlayerManager::addPlayerCore/1 [t14396 argc=5] this=000002169C0D3220 app.PlayerManager | p0=0000021690907320 app.PlayerVergilPL 
+[+ 108.578 f6501] POST app.PlayerManager::addPlayerCore/1 -> (void)
+[+ 108.578 f6501] POST app.PlayerManager::addPlayer/1 -> (void)
+[+ 108.578 f6501] PRE  app.NetworkCharacterManager::registerCharacter/2 [t14396 argc=6] | p0=0000021690907320 app.PlayerVergilPL | p1=0000021690907320 app.PlayerVergilPL 
+[+ 108.578 f6501] POST app.NetworkCharacterManager::registerCharacter/2 -> (void)
+[+ 130.797 f7832] PRE  app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 [t14396 argc=5] this=000002169BD83000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> 
+[+ 130.797 f7832] POST app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 -> (void)
+[+ 130.797 f7832] PRE  app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 [t14396 argc=8] this=000002169BD83000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> | p1=Default(0) <app.PlayerCostumeID> | p2=Default(0) <app.PlayerSituationID> | p3=true 
+[+ 130.797 f7832] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 [t14396 argc=7] this=0000021698E00210 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader | p0=Default(0) <app.PlayerCostumeID> | p1=Default(0) <app.PlayerSituationID> | p2=true 
+[+ 130.797 f7832] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 -> false
+[+ 130.797 f7832] POST app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 -> (void)
+[+ 135.500 f8100] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 [t14396 argc=4] this=0000021698E00210 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader 
+[+ 135.500 f8100] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 -> true
+[+ 147.016 f8790] PRE  app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 [t14396 argc=5] this=000002169BD83000 app.AdditionalPlayerLoadManager | p0=Dante(1) <app.PlayerID> 
+[+ 147.016 f8790] PRE  app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 [t14396 argc=4] this=0000021698E00210 app.AdditionalPlayerLoadManager.AdditionalPlayerLoader 
+[+ 147.016 f8790] POST app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 -> true
+[+ 147.016 f8790] POST app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 -> (void)
+[+ 239.922 f14358] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=000002169B081EB0 app.CharacterFactory.RequestData 
+[+ 239.922 f14358] POST app.CharacterFactory::unload/1 -> (void)
+[+ 239.922 f14358] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=000002169B095680 app.CharacterFactory.RequestData 
+[+ 239.922 f14358] POST app.CharacterFactory::unload/1 -> (void)
+[+ 239.938 f14360] PRE  app.PlayerManager::removePlayer/2 [t14396 argc=6] this=000002169C0D3220 app.PlayerManager | p0=000002169092AF70 app.PlayerVergilPL | p1=false 
+[+ 239.938 f14360] POST app.PlayerManager::removePlayer/2 -> (void)
+[+ 239.938 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169092AF70 app.PlayerVergilPL 
+[+ 239.938 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 239.953 f14360] PRE  app.PlayerManager::removePlayer/2 [t14396 argc=6] this=000002169C0D3220 app.PlayerManager | p0=0000021690907320 app.PlayerVergilPL | p1=false 
+[+ 239.953 f14360] POST app.PlayerManager::removePlayer/2 -> (void)
+[+ 239.953 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=0000021690907320 app.PlayerVergilPL 
+[+ 239.953 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 239.953 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A878140 app.enemy.em5802.Em5802 
+[+ 239.953 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 239.953 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A904D70 app.enemy.em5801.Em5801 
+[+ 239.953 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 239.953 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=000002169A92C3B0 app.enemy.em5800.Em5800 
+[+ 239.953 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 239.953 f14360] PRE  app.PlayerManager::removePlayer/2 [t14396 argc=6] this=000002169C0D3220 app.PlayerManager | p0=0000021690934660 app.PlayerV | p1=false 
+[+ 239.953 f14360] POST app.PlayerManager::removePlayer/2 -> (void)
+[+ 239.953 f14360] PRE  app.NetworkCharacterManager::releaseCharacter/1 [t14396 argc=5] | p0=0000021690934660 app.PlayerV 
+[+ 239.953 f14360] POST app.NetworkCharacterManager::releaseCharacter/1 -> (void)
+[+ 242.125 f14491] PRE  app.CharacterFactory::create/5 [t14540 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=400 | p1=null | p2=0000021699262E90 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=000002169924C570 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+ 242.125 f14491] POST app.CharacterFactory::create/5 -> 000002169924C5A0 app.CharacterFactory.RequestData
+[+ 242.438 f14510] PRE  app.CharacterFactory::create/5 [t8956 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=500 | p1=null | p2=000002169926DB60 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=000002169C220F40 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+ 242.438 f14510] POST app.CharacterFactory::create/5 -> 000002169C220F70 app.CharacterFactory.RequestData
+[+ 242.625 f14521] PRE  app.CharacterFactory::create/5 [t14540 argc=9] this=000002169BDAE230 app.CharacterFactory | p0=600 | p1=null | p2=00000216990BB770 via.GameObject | p3=EventLight(1) <app.CharacterFactory.ModeEnum> | p4=00000216992C51E0 app.CharacterFactory.FinishCreationEvent {DELEGADO target=0000000000000000 null metodo=?} 
+[+ 242.625 f14521] POST app.CharacterFactory::create/5 -> 00000216992C5210 app.CharacterFactory.RequestData
+[+ 242.641 f14522] PRE  app.CharacterFactory::create/3 [t14396 argc=7] | p0=000002169C08BD90 via.Prefab | p1=0000021699262E90 via.GameObject | p2=false 
+[+ 242.641 f14522] POST app.CharacterFactory::create/3 -> 00000216992E6D10 via.GameObject
+[+ 242.641 f14522] PRE  app.CharacterFactory::create/3 [t14396 argc=7] | p0=000002169C08BF20 via.Prefab | p1=0000021699262E90 via.GameObject | p2=false 
+[+ 242.641 f14522] POST app.CharacterFactory::create/3 -> 00000216993E0A00 via.GameObject
+[+ 242.688 f14525] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C08D7D0 via.Prefab | p1=000002169926DB60 via.GameObject | p2=false 
+[+ 242.688 f14525] POST app.CharacterFactory::create/3 -> 00000216992E2E20 via.GameObject
+[+ 242.688 f14525] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C08D960 via.Prefab | p1=000002169926DB60 via.GameObject | p2=false 
+[+ 242.688 f14525] POST app.CharacterFactory::create/3 -> 0000021699245680 via.GameObject
+[+ 242.719 f14527] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C07BD90 via.Prefab | p1=00000216990BB770 via.GameObject | p2=false 
+[+ 242.719 f14527] POST app.CharacterFactory::create/3 -> 00000216992541A0 via.GameObject
+[+ 242.719 f14527] PRE  app.CharacterFactory::create/3 [t14540 argc=7] | p0=000002169C07BF20 via.Prefab | p1=00000216990BB770 via.GameObject | p2=false 
+[+ 242.719 f14527] POST app.CharacterFactory::create/3 -> 00000216991DCAA0 via.GameObject
+[+ 273.484 f16371] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=00000216992C5210 app.CharacterFactory.RequestData 
+[+ 273.484 f16371] POST app.CharacterFactory::unload/1 -> (void)
+[+ 273.484 f16371] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=000002169C220F70 app.CharacterFactory.RequestData 
+[+ 273.484 f16371] POST app.CharacterFactory::unload/1 -> (void)
+[+ 273.484 f16371] PRE  app.CharacterFactory::unload/1 [t14396 argc=5] this=000002169BDAE230 app.CharacterFactory | p0=000002169924C5A0 app.CharacterFactory.RequestData 
+[+ 273.484 f16371] POST app.CharacterFactory::unload/1 -> (void)

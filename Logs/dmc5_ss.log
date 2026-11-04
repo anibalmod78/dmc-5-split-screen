@@ -1,210 +1,271 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 14:27:19 ====
-[+   0.000 f0] version del plugin: v75 (volcado de CharacterFactory.DataTable/CostumeData; escena por hermanos de P1)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 14:36:39 ====
+[+   0.000 f0] version del plugin: v76 (volcado de CharacterFactoryData.PlayerDataList y CostumeData por clave real de costume)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
-[+   0.032 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.063 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.172 f1] on_frame ACTIVO (UpdateBehavior, hilo 15652)
-[+   0.688 f30] init: hook en app.PlayerManager::doUpdate
-[+   0.688 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
-[+   0.688 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
-[+   0.688 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
-[+   0.688 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
-[+   0.688 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
-[+   0.704 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
-[+   0.704 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
-[+   0.704 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
-[+   0.704 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
-[+   0.704 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
-[+   0.704 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
-[+   0.704 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
-[+   0.704 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
-[+   0.704 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
-[+   0.704 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
-[+   0.704 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
-[+   0.704 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
-[+   0.704 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
-[+   0.704 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
-[+   0.704 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
-[+   0.704 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
-[+   0.704 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
-[+   0.704 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
-[+   0.704 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
-[+   0.704 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
-[+   0.704 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
-[+   0.704 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
-[+   0.704 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
-[+   0.704 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
-[+   0.704 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
-[+   0.704 f30] p2input: hook en app.PadInput::update/0
-[+   1.188 f60] app.AdditionalPlayerLoadManager disponible (0000020714673000)
-[+  30.266 f1800] latido: frame=1800
-[+  60.297 f3600] latido: frame=3600
-[+  76.813 f4590] PlayerManager cambio: 0000000000000000 -> 0000020714A23220 (nueva mision o fin de mision)
-[+  76.813 f4590] PlayerManager.players: -1 -> 0
-[+  90.329 f5400] latido: frame=5400
-[+ 120.360 f7200] latido: frame=7200
-[+ 139.907 f8370] PlayerManager.players: 0 -> 1
-[+ 139.907 f8370]   player[0] GO='pl0200_v' padre='null'
-[+ 139.907 f8370]   player[0] componentes de su GO: app.Player=0000020709249DE0 (tipo real app.PlayerV) app.character.Character=0000020709249DE0 (tipo real app.PlayerV) app.PlayerV=0000020709249DE0 (tipo real app.PlayerV) 
-[+ 139.907 f8370]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
-[+ 139.907 f8370]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000020713226A20
-[+ 139.907 f8370]   player[0] 0000020709249DE0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=0000020713226020
-[+ 150.438 f9000] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 150.438 f9000] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 150.438 f9000] p2input: PadInput de P1 = 00000207145E36C0
-[+ 150.438 f9000] PlayerManager.players: 1 -> 2
-[+ 150.438 f9000]   player[0] GO='pl0200_v' padre='null'
-[+ 150.438 f9000]   player[0] componentes de su GO: app.Player=0000020709249DE0 (tipo real app.PlayerV) app.character.Character=0000020709249DE0 (tipo real app.PlayerV) app.PlayerV=0000020709249DE0 (tipo real app.PlayerV) 
-[+ 150.438 f9000]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 150.438 f9000]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000020713226A20
-[+ 150.438 f9000]   player[0] 0000020709249DE0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=00000207145E36C0
-[+ 150.438 f9000]   player[1] GO='pl0800_vergil' padre='null'
-[+ 150.438 f9000]   player[1] componentes de su GO: app.Player=00000207092192A0 (tipo real app.PlayerVergilPL) app.character.Character=00000207092192A0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=00000207092192A0 (tipo real app.PlayerVergilPL) 
-[+ 150.438 f9000]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 150.438 f9000]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000020713297810
-[+ 150.438 f9000]   player[1] 00000207092192A0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=00000207145E36C0 [P1/manual]
-[+ 150.438 f9000] latido: frame=9000
-[+ 155.860 f9326] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 158.844 f9505] ORDEN: p2create Dante
-[+ 158.891 f9505] IDs para P2: player=Dante(1) costume=Default(0) situation=Default(0) (P1 player=VergilPL(4))
-[+ 158.907 f9505] AVISO: la clave p2_autocreate ya no existe (v74: bloqueaba la carga de la mision); se ignora. Quitala de dmc5_ss_config.txt.
-[+ 158.907 f9505] p2create: requestPreloadPlayerResource(1) -> ok
-[+ 158.907 f9505] p2create: requestLoadPlayerResource -> ok
-[+ 158.985 f9510] p2create: cargador de 1 -> NakidPlayerLoading(1) (fase 0)
-[+ 158.985 f9510] p2create: esperando carga (5 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=1 isBusyAll=1
-[+ 160.985 f9630] p2create: cargador de 1 -> NakidPlayerAvailable(2) (fase 0)
-[+ 160.985 f9630] p2create: recurso cargado; margen para el registro automatico
-[+ 160.985 f9630] --- cargador de 1 [Nakid/Available] 0000020711635820 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 160.985 f9630]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 160.985 f9630] --- escena (cargador Available): GO de P1=00000207134CFAC0, primer hermano raiz=00000207134CFB20 ---
-[+ 160.985 f9630]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 160.985 f9630]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 160.985 f9630]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 160.985 f9630]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 160.985 f9630]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 160.985 f9630]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 160.985 f9630]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 160.985 f9630]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 160.985 f9630]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 160.985 f9630]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 160.985 f9630]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 160.985 f9630] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 160.985 f9630] === factory_report (cargador Available) ===
-[+ 160.985 f9630] --- campos AdditionalPlayerLoadManager 0000020714673000 tipo=app.AdditionalPlayerLoadManager ---
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.RequestedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> 2229430327984
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.FinishedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> 2229430328080
-[+ 160.985 f9630]   F app.SingletonBehavior`1<app.AdditionalPlayerLoadManager>.IsKillOwn : System.Boolean = (valor)
-[+ 160.985 f9630] --- campos cargador pedido 0000020711635820 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField : app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState = (enum)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID : app.PlayerID = (enum)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID : app.PlayerCostumeID = (enum)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID : app.PlayerSituationID = (enum)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow : System.Boolean = (valor)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow : System.Boolean = (valor)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow : System.Boolean = (valor)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID : app.PlayerCostumeID = (enum)
-[+ 160.985 f9630]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID : app.PlayerSituationID = (enum)
-[+ 160.985 f9630] --- campos CharacterFactory 000002071469E230 tipo=app.CharacterFactory ---
-[+ 160.985 f9630]   F app.CharacterFactory.Data : app.CharacterFactoryData = app.CharacterFactoryData 2229433646224
-[+ 160.985 f9630]   F app.CharacterFactory.DataTable : System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>> = System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>> 2229430507008
-[+ 160.985 f9630]   F app.CharacterFactory.RefCountTable : System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32> = System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32> 2229430507072
-[+ 160.985 f9630]   F app.CharacterFactory.RequestTable : System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>> = System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>> 2229430507152
-[+ 160.985 f9630]   F app.CharacterFactory.CreateRequestTable : System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData> = System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData> 2229430507232
-[+ 160.985 f9630]   F app.CharacterFactory.CommandRequestPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> 2229430507296
-[+ 160.985 f9630]   F app.CharacterFactory.CommandExecutionPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> 2229430507344
-[+ 160.985 f9630]   F app.SingletonBehavior`1<app.CharacterFactory>.IsKillOwn : System.Boolean = (valor)
-[+ 160.985 f9630] --- campos PlayerManager 0000020714A23220 tipo=app.PlayerManager ---
-[+ 161.000 f9630]   F app.PlayerManager.NeroData : app.PlayerManager.NeroDataHolder = app.PlayerManager.NeroDataHolder 2229434199408
-[+ 161.000 f9630]   F app.PlayerManager.<manualPlayer>k__BackingField : app.Player = app.PlayerVergilPL 2229241221792
-[+ 161.000 f9630]   F app.PlayerManager.<manualPlayerUpdateCount>k__BackingField : System.Single = (valor)
-[+ 161.000 f9630]   F app.PlayerManager.players : System.Collections.Generic.List`1<app.Player> = System.Collections.Generic.List`1<app.Player> 2229434199472
-[+ 161.000 f9630]   F app.PlayerManager.<playerList>k__BackingField : app.Player[] = app.Player[] 2229434199568
-[+ 161.000 f9630]   F app.PlayerManager.playerCostumeList : System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> = System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> 2229434199664
-[+ 161.000 f9630]   F app.PlayerManager.transceiverList : System.Collections.Generic.List`1<app.weapon.Transciever> = System.Collections.Generic.List`1<app.weapon.Transciever> 2229434199760
-[+ 161.000 f9630]   F app.PlayerManager.FearAddValueAll : System.Collections.Generic.List`1<System.Single> = System.Collections.Generic.List`1<System.Single> 2229434199856
-[+ 161.000 f9630]   F app.PlayerManager.FearAddAttackId : System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> = System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> 2229434199936
-[+ 161.000 f9630]   F app.PlayerManager.ProvokeDTNum : System.Int32 = (valor)
-[+ 161.000 f9630]   F app.PlayerManager.LockProvokeDT : System.Object = System.Object 2229434200016
-[+ 161.000 f9630]   F app.SingletonBehavior`1<app.PlayerManager>.IsKillOwn : System.Boolean = (valor)
-[+ 161.000 f9630] --- campos CharacterFactory.Data 000002071499BC90 tipo=app.CharacterFactoryData ---
-[+ 161.000 f9630]   F app.CharacterFactoryData.PlayerDataList : System.Collections.Generic.List`1<app.CharacterFactoryData.PlayerDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.PlayerDataSet> 2229433643376
-[+ 161.000 f9630] factory_data: DataTable.Count=32
-[+ 161.000 f9630] factory_data: id=0 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=100 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=200 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=300 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=400 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=500 existe, costumes=2
-[+ 161.000 f9630] factory_data: id=600 existe, costumes=2
-[+ 164.485 f9840] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
-[+ 164.485 f9840] --- cargador de 1 [tras activate] 0000020711635820 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 5
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 164.485 f9840]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 164.985 f9870] p2create: cargador de 1 -> AdditionalPlayerAvailable(6) (fase 3)
-[+ 170.485 f10200] --- escena (tras activate): GO de P1=00000207134CFAC0, primer hermano raiz=00000207134CFB20 ---
-[+ 170.485 f10200]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 170.485 f10200]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 170.485 f10200]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 170.485 f10200]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 170.485 f10200]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 170.485 f10200]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 170.485 f10200]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 170.485 f10200]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 170.485 f10200]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 170.485 f10200]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 170.485 f10200]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 170.485 f10200] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 170.485 f10200] p2create: PlayerManager.findPlayer -> ok
-[+ 175.985 f10530] p2create: NO se creo el Player (ni el registro automatico, ni activate, ni findPlayer anadieron un Player). Estado final:
-[+ 175.985 f10530]   Requested: 1
-[+ 175.985 f10530]     loader[0] 0000020711635820 estado=AdditionalPlayerAvailable(6) pid=Dante(1) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
-[+ 175.985 f10530]   Finished: 0
-[+ 175.985 f10530] --- cargador de 1 [fallo] 0000020711635820 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 6
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
-[+ 175.985 f10530]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
-[+ 175.985 f10530] --- escena (fallo): GO de P1=00000207134CFAC0, primer hermano raiz=00000207134CFB20 ---
-[+ 175.985 f10530]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
-[+ 175.985 f10530]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
-[+ 175.985 f10530]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 175.985 f10530]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
-[+ 175.985 f10530]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 175.985 f10530]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
-[+ 175.985 f10530]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
-[+ 175.985 f10530]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
-[+ 175.985 f10530]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
-[+ 175.985 f10530]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
-[+ 175.985 f10530]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
-[+ 175.985 f10530] --- escena: 697 raices en total, 11 con Player/pl0* | players registrados=2 ---
-[+ 175.985 f10530] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(1) -> ok; cargador ahora: AdditionalPlayerUnloading(7)
-[+ 180.485 f10800] latido: frame=10800
-[+ 210.516 f12600] latido: frame=12600
-[+ 240.547 f14400] latido: frame=14400
-[+ 255.594 f15300] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 255.594 f15300] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 255.594 f15300] PlayerManager.players: 2 -> -1
-[+ 257.094 f15390] PlayerManager cambio: 0000020714A23220 -> 0000000000000000 (nueva mision o fin de mision)
+[+   0.047 f0] Hook XInputGetState OK en xinput1_4.dll
+[+   0.094 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.109 f1] on_frame ACTIVO (UpdateBehavior, hilo 14396)
+[+   0.578 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.578 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
+[+   0.578 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
+[+   0.594 f30] trace: hook #2 en app.PlayerManager::removePlayer/2 (id 8)
+[+   0.594 f30] trace: hook #3 en app.PlayerManager::setCostumeInfo/3 (id 10)
+[+   0.594 f30] trace: hook #4 en app.PlayerManager::setCostumeID/2 (id 12)
+[+   0.594 f30] trace: hook #5 en app.PlayerManager::setSituationID/2 (id 14)
+[+   0.594 f30] trace: hook #6 en app.PlayerManager::playAIMode/3 (id 16)
+[+   0.594 f30] trace: hook #7 en app.AdditionalPlayerLoadManager::requestPreloadPlayerResource/1 (id 18)
+[+   0.594 f30] trace: hook #8 en app.AdditionalPlayerLoadManager::requestLoadPlayerResource/4 (id 20)
+[+   0.594 f30] trace: hook #9 en app.AdditionalPlayerLoadManager::requestUnloadPlayerResource/1 (id 22)
+[+   0.594 f30] trace: hook #10 en app.AdditionalPlayerLoadManager::requestFinishPlayerResource/1 (id 24)
+[+   0.594 f30] trace: hook #11 en app.AdditionalPlayerLoadManager::requestFinishAllPlayerResource/0 (id 26)
+[+   0.594 f30] trace: hook #12 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::init/0 (id 28)
+[+   0.594 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
+[+   0.594 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
+[+   0.594 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
+[+   0.594 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
+[+   0.594 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
+[+   0.594 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
+[+   0.594 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
+[+   0.594 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
+[+   0.594 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
+[+   0.594 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
+[+   0.594 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
+[+   0.594 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
+[+   0.594 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
+[+   0.594 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
+[+   0.594 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
+[+   0.594 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
+[+   0.594 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
+[+   0.594 f30] p2input: hook en app.PadInput::update/0
+[+   1.078 f60] app.AdditionalPlayerLoadManager disponible (000002169BD83000)
+[+  30.141 f1800] latido: frame=1800
+[+  45.156 f2700] PlayerManager cambio: 0000000000000000 -> 000002169C0D3220 (nueva mision o fin de mision)
+[+  45.156 f2700] PlayerManager.players: -1 -> 0
+[+  60.172 f3600] latido: frame=3600
+[+  90.203 f5400] latido: frame=5400
+[+ 102.219 f6120] PlayerManager.players: 0 -> 1
+[+ 102.219 f6120]   player[0] GO='pl0200_v' padre='null'
+[+ 102.219 f6120]   player[0] componentes de su GO: app.Player=0000021690934660 (tipo real app.PlayerV) app.character.Character=0000021690934660 (tipo real app.PlayerV) app.PlayerV=0000021690934660 (tipo real app.PlayerV) 
+[+ 102.219 f6120]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
+[+ 102.219 f6120]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002169A94F630
+[+ 102.219 f6120]   player[0] 0000021690934660 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000002169A94EC30
+[+ 108.719 f6510] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 108.719 f6510] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 108.719 f6510] p2input: PadInput de P1 = 000002169BCF36C0
+[+ 108.719 f6510] PlayerManager.players: 1 -> 2
+[+ 108.719 f6510]   player[0] GO='pl0200_v' padre='null'
+[+ 108.719 f6510]   player[0] componentes de su GO: app.Player=0000021690934660 (tipo real app.PlayerV) app.character.Character=0000021690934660 (tipo real app.PlayerV) app.PlayerV=0000021690934660 (tipo real app.PlayerV) 
+[+ 108.719 f6510]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+ 108.719 f6510]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002169A94F630
+[+ 108.719 f6510]   player[0] 0000021690934660 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000002169BCF36C0
+[+ 108.719 f6510]   player[1] GO='pl0800_vergil' padre='null'
+[+ 108.719 f6510]   player[1] componentes de su GO: app.Player=0000021690907320 (tipo real app.PlayerVergilPL) app.character.Character=0000021690907320 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=0000021690907320 (tipo real app.PlayerVergilPL) 
+[+ 108.719 f6510]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+ 108.719 f6510]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002169A9CEB90
+[+ 108.719 f6510]   player[1] 0000021690907320 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000002169BCF36C0 [P1/manual]
+[+ 120.234 f7200] latido: frame=7200
+[+ 130.000 f7785] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+ 130.797 f7832] ORDEN: p2create Dante
+[+ 130.797 f7832] IDs para P2: player=Dante(1) costume=Default(0) situation=Default(0) (P1 player=VergilPL(4))
+[+ 130.797 f7832] AVISO: la clave p2_autocreate ya no existe (v74: bloqueaba la carga de la mision); se ignora. Quitala de dmc5_ss_config.txt.
+[+ 130.797 f7832] p2create: requestPreloadPlayerResource(1) -> ok
+[+ 130.797 f7832] p2create: requestLoadPlayerResource -> ok
+[+ 131.250 f7860] p2create: cargador de 1 -> NakidPlayerLoading(1) (fase 0)
+[+ 131.250 f7860] p2create: esperando carga (28 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=1 isBusyAll=1
+[+ 131.750 f7890] p2create: cargador de 1 -> NakidPlayerAvailable(2) (fase 0)
+[+ 131.750 f7890] p2create: recurso cargado; margen para el registro automatico
+[+ 131.750 f7890] --- cargador de 1 [Nakid/Available] 0000021698E00210 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+ 131.750 f7890]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+ 131.750 f7890] --- escena (cargador Available): GO de P1=000002169ABC5750, primer hermano raiz=000002169ABC57B0 ---
+[+ 131.750 f7890]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
+[+ 131.750 f7890]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
+[+ 131.766 f7890]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 131.766 f7890]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 131.766 f7890]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 131.766 f7890]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 131.766 f7890]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
+[+ 131.766 f7890]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
+[+ 131.766 f7890]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
+[+ 131.766 f7890]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
+[+ 131.766 f7890]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
+[+ 131.766 f7890] --- escena: 696 raices en total, 11 con Player/pl0* | players registrados=2 ---
+[+ 131.766 f7890] === factory_report (cargador Available) ===
+[+ 131.766 f7890] --- campos AdditionalPlayerLoadManager 000002169BD83000 tipo=app.AdditionalPlayerLoadManager ---
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.RequestedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> 2296127167152
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.FinishedPlayerLoaderList : System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> = System.Collections.Generic.List`1<app.AdditionalPlayerLoadManager.AdditionalPlayerLoader> 2296127167248
+[+ 131.766 f7890]   F app.SingletonBehavior`1<app.AdditionalPlayerLoadManager>.IsKillOwn : System.Boolean = (valor)
+[+ 131.766 f7890] --- campos cargador pedido 0000021698E00210 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField : app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState = (enum)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID : app.PlayerID = (enum)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID : app.PlayerCostumeID = (enum)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID : app.PlayerSituationID = (enum)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow : System.Boolean = (valor)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow : System.Boolean = (valor)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow : System.Boolean = (valor)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID : app.PlayerCostumeID = (enum)
+[+ 131.766 f7890]   F app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID : app.PlayerSituationID = (enum)
+[+ 131.766 f7890] --- campos CharacterFactory 000002169BDAE230 tipo=app.CharacterFactory ---
+[+ 131.766 f7890]   F app.CharacterFactory.Data : app.CharacterFactoryData = app.CharacterFactoryData 2296130481312
+[+ 131.766 f7890]   F app.CharacterFactory.DataTable : System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>> = System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Dictionary`2<app.CharacterFactory.CostumeID,app.CharacterFactory.CostumeData>> 2296127346176
+[+ 131.766 f7890]   F app.CharacterFactory.RefCountTable : System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32> = System.Collections.Generic.Dictionary`2<via.Prefab,System.Int32> 2296127346240
+[+ 131.766 f7890]   F app.CharacterFactory.RequestTable : System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>> = System.Collections.Generic.Dictionary`2<app.CharacterFactory.RequestData,System.Collections.Generic.IEnumerable`1<via.Prefab>> 2296127346320
+[+ 131.766 f7890]   F app.CharacterFactory.CreateRequestTable : System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData> = System.Collections.Generic.HashSet`1<app.CharacterFactory.RequestData> 2296127346400
+[+ 131.766 f7890]   F app.CharacterFactory.CommandRequestPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> 2296127346464
+[+ 131.766 f7890]   F app.CharacterFactory.CommandExecutionPool : System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> = System.Collections.Generic.LinkedList`1<app.CharacterFactory.CreateCommandPack> 2296127346512
+[+ 131.766 f7890]   F app.SingletonBehavior`1<app.CharacterFactory>.IsKillOwn : System.Boolean = (valor)
+[+ 131.766 f7890] --- campos PlayerManager 000002169C0D3220 tipo=app.PlayerManager ---
+[+ 131.766 f7890]   F app.PlayerManager.NeroData : app.PlayerManager.NeroDataHolder = app.PlayerManager.NeroDataHolder 2296130645360
+[+ 131.766 f7890]   F app.PlayerManager.<manualPlayer>k__BackingField : app.Player = app.PlayerVergilPL 2295937921824
+[+ 131.766 f7890]   F app.PlayerManager.<manualPlayerUpdateCount>k__BackingField : System.Single = (valor)
+[+ 131.766 f7890]   F app.PlayerManager.players : System.Collections.Generic.List`1<app.Player> = System.Collections.Generic.List`1<app.Player> 2296130645424
+[+ 131.766 f7890]   F app.PlayerManager.<playerList>k__BackingField : app.Player[] = app.Player[] 2296130645520
+[+ 131.766 f7890]   F app.PlayerManager.playerCostumeList : System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> = System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> 2296130645616
+[+ 131.766 f7890]   F app.PlayerManager.transceiverList : System.Collections.Generic.List`1<app.weapon.Transciever> = System.Collections.Generic.List`1<app.weapon.Transciever> 2296130645712
+[+ 131.766 f7890]   F app.PlayerManager.FearAddValueAll : System.Collections.Generic.List`1<System.Single> = System.Collections.Generic.List`1<System.Single> 2296130645808
+[+ 131.766 f7890]   F app.PlayerManager.FearAddAttackId : System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> = System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> 2296130645888
+[+ 131.766 f7890]   F app.PlayerManager.ProvokeDTNum : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.PlayerManager.LockProvokeDT : System.Object = System.Object 2296130645968
+[+ 131.766 f7890]   F app.SingletonBehavior`1<app.PlayerManager>.IsKillOwn : System.Boolean = (valor)
+[+ 131.766 f7890] factory_data: PlayerDataList.Count=32
+[+ 131.766 f7890] --- campos PlayerDataList[0] 000002169C0AA540 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130479456
+[+ 131.766 f7890] --- campos PlayerDataList[1] 000002169C0AA920 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130480448
+[+ 131.766 f7890] --- campos PlayerDataList[2] 000002169C090100 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130371872
+[+ 131.766 f7890] --- campos PlayerDataList[3] 000002169C0904E0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130372864
+[+ 131.766 f7890] --- campos PlayerDataList[4] 000002169C0908C0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130373856
+[+ 131.766 f7890] --- campos PlayerDataList[5] 000002169C090CA0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130374848
+[+ 131.766 f7890] --- campos PlayerDataList[6] 000002169C0979F0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130402832
+[+ 131.766 f7890] --- campos PlayerDataList[7] 000002169C097DD0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130403824
+[+ 131.766 f7890] --- campos PlayerDataList[8] 000002169C0981B0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130404816
+[+ 131.766 f7890] --- campos PlayerDataList[9] 000002169C0984B0 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130405584
+[+ 131.766 f7890] --- campos PlayerDataList[10] 000002169C098890 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130406576
+[+ 131.766 f7890] --- campos PlayerDataList[11] 000002169C080410 tipo=app.CharacterFactoryData.PlayerDataSet ---
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.ID : System.Int32 = (valor)
+[+ 131.766 f7890]   F app.CharacterFactoryData.PlayerDataSet.DataList : System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> = System.Collections.Generic.List`1<app.CharacterFactoryData.CostumeDataSet> 2296130307120
+[+ 131.766 f7890] factory_data: DataTable.Count=32
+[+ 131.781 f7890] factory_data: id=0 costumes=2 claves(0..12)=[]
+[+ 131.797 f7890] factory_data: id=10 costumes=2 claves(0..12)=[]
+[+ 131.797 f7890] factory_data: id=30 costumes=2 claves(0..12)=[]
+[+ 131.813 f7890] factory_data: id=31 costumes=2 claves(0..12)=[]
+[+ 131.813 f7890] factory_data: id=50 costumes=2 claves(0..12)=[]
+[+ 131.828 f7890] factory_data: id=100 costumes=2 claves(0..12)=[]
+[+ 131.828 f7890] factory_data: id=110 costumes=2 claves(0..12)=[]
+[+ 131.828 f7890] factory_data: id=130 costumes=2 claves(0..12)=[]
+[+ 131.844 f7890] factory_data: id=131 costumes=2 claves(0..12)=[]
+[+ 131.844 f7890] factory_data: id=150 costumes=2 claves(0..12)=[]
+[+ 131.859 f7890] factory_data: id=151 costumes=2 claves(0..12)=[]
+[+ 131.859 f7890] factory_data: id=152 costumes=2 claves(0..12)=[]
+[+ 131.875 f7890] factory_data: id=200 costumes=2 claves(0..12)=[]
+[+ 131.875 f7890] factory_data: id=230 costumes=2 claves(0..12)=[]
+[+ 131.875 f7890] factory_data: id=231 costumes=2 claves(0..12)=[]
+[+ 131.891 f7890] factory_data: id=232 costumes=2 claves(0..12)=[]
+[+ 131.891 f7890] factory_data: id=300 costumes=2 claves(0..12)=[]
+[+ 131.906 f7890] factory_data: id=330 costumes=2 claves(0..12)=[]
+[+ 131.906 f7890] factory_data: id=331 costumes=2 claves(0..12)=[]
+[+ 131.922 f7890] factory_data: id=350 costumes=2 claves(0..12)=[]
+[+ 131.922 f7890] factory_data: id=400 costumes=2 claves(0..12)=[]
+[+ 131.938 f7890] factory_data: id=500 costumes=2 claves(0..12)=[]
+[+ 131.938 f7890] factory_data: id=510 costumes=2 claves(0..12)=[]
+[+ 131.938 f7890] factory_data: id=520 costumes=2 claves(0..12)=[]
+[+ 131.953 f7890] factory_data: id=530 costumes=2 claves(0..12)=[]
+[+ 131.953 f7890] factory_data: id=531 costumes=2 claves(0..12)=[]
+[+ 131.969 f7890] factory_data: id=540 costumes=2 claves(0..12)=[]
+[+ 131.969 f7890] factory_data: id=550 costumes=2 claves(0..12)=[]
+[+ 131.984 f7890] factory_data: id=600 costumes=2 claves(0..12)=[]
+[+ 131.984 f7890] factory_data: id=610 costumes=2 claves(0..12)=[]
+[+ 132.000 f7890] factory_data: id=630 costumes=2 claves(0..12)=[]
+[+ 132.000 f7890] factory_data: id=631 costumes=2 claves(0..12)=[]
+[+ 135.500 f8100] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
+[+ 135.500 f8100] --- cargador de 1 [tras activate] 0000021698E00210 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 5
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+ 135.500 f8100]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+ 136.000 f8130] p2create: cargador de 1 -> AdditionalPlayerAvailable(6) (fase 3)
+[+ 141.500 f8460] --- escena (tras activate): GO de P1=000002169ABC5750, primer hermano raiz=000002169ABC57B0 ---
+[+ 141.500 f8460]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
+[+ 141.500 f8460]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
+[+ 141.500 f8460]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 141.500 f8460]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 141.516 f8460]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 141.516 f8460]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 141.516 f8460]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
+[+ 141.516 f8460]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
+[+ 141.516 f8460]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
+[+ 141.516 f8460]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
+[+ 141.516 f8460]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
+[+ 141.516 f8460] --- escena: 696 raices en total, 11 con Player/pl0* | players registrados=2 ---
+[+ 141.516 f8460] p2create: PlayerManager.findPlayer -> ok
+[+ 147.000 f8790] p2create: NO se creo el Player (ni el registro automatico, ni activate, ni findPlayer anadieron un Player). Estado final:
+[+ 147.000 f8790]   Requested: 1
+[+ 147.000 f8790]     loader[0] 0000021698E00210 estado=AdditionalPlayerAvailable(6) pid=Dante(1) costume=Default(0) situation=Default(0) finish=0 locWait=0 reload=0
+[+ 147.000 f8790]   Finished: 0
+[+ 147.000 f8790] --- cargador de 1 [fallo] 0000021698E00210 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 6
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+ 147.000 f8790]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+ 147.000 f8790] --- escena (fallo): GO de P1=000002169ABC5750, primer hermano raiz=000002169ABC57B0 ---
+[+ 147.000 f8790]   raiz 'pl0800_vergil' Draw=1 Upd=1  app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
+[+ 147.000 f8790]   raiz 'lnf_00_l00_0004_00' Draw=0 Upd=0  via.effect.lensflare.LensflarePlayer=? 
+[+ 147.000 f8790]   raiz 'lnf_00_l00_0004_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 147.000 f8790]   raiz 'lnf_03_l00_000_01' Draw=1 Upd=1  via.effect.lensflare.LensflarePlayer=? 
+[+ 147.016 f8790]   raiz 'M10_pl0600_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFacialMotionSequence=1 app.WwiseFacialController=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 147.016 f8790]   raiz 'M10_pl0500_ingameev01' Draw=0 Upd=0  via.motion.DummySkeleton=? via.motion.Motion=1 app.CharacterCreate=1 app.InGameEventFacialController=1 app.WorkRate=1 app.FootEffectControllerApp=1 app.HitController=1 app.player.NonPlayerCharacter=1 app.PlayerLookAt=1 via.physics.RequestSetCollider=0 app.ObjectRestrictController=1 app.AdjustPress=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseMissionDialogWorkRateRegisterComponent=1 app.TransparentMeshController=0 app.VergilModeObjectActivater=1 app.NetworkRpcCharacter=1 via.physics.CharacterController=1 app.TargetController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 
+[+ 147.016 f8790]   raiz 'PlayerPositionSetter' Draw=1 Upd=1  app.PlayerPositionSetter=0 
+[+ 147.016 f8790]   raiz 'PlayerPositionSetterCheckPoint' Draw=1 Upd=1  app.PlayerPositionSetter=0 app.CheckPointPlayerPositionController=0 
+[+ 147.016 f8790]   raiz 'PlayerCameraController' Draw=1 Upd=1  app.PlayerCameraController=1 app.ObjectRestrictController=1 app.RenderOutputController=1 app.ToneMappingController=1 app.SoftBloomController=1 app.ColorCorrectController=1 app.ColorCorrectColorCube2Controller=1 app.SSRController=1 app.ShadowQualityController=1 app.FogController=1 app.DepthOfFieldController=1 app.SSSSSController=1 app.MotionBlurController=1 app.SSAOController=1 app.LDRPostProcessController=1 app.LDRLensDistortionController=1 app.ToneMappingEchoController=1 app.FarClipController=1 app.FilmGrainController=1 app.PolynomialLensController=1 app.FFTBloomController=1 via.navigation.NavigationVolumeSpace=? 
+[+ 147.016 f8790]   raiz 'BattleSystemManager' Draw=1 Upd=1  app.PlayerManager=1 app.HitManager=1 app.LocationThroughManager=1 app.MissionFlowManager=1 app.CatchManager=1 app.EnvCullingManager=1 app.EnemyManager=1 app.StylishManager=1 app.ShellManager=1 app.WwiseStylishRankStateManager=1 app.MissionManager=1 app.HudManager=1 app.ParameterManager=1 app.MenuHolder=1 app.WwiseBattleStateManager=1 app.CameraModeChanger=1 app.OrbManager=1 app.LockOnTargetManager=1 app.WwiseGameFlowStateManager=1 app.ClearSetModelManager=1 app.DifficultyManager=1 app.AttackPermitManager=1 app.SingleTargetEventManager=1 app.EnemyRegisterManager=1 app.LookAtTargetManager=1 app.WwiseContainerApp=1 app.WwiseCameraEventManager=1 app.EnemyGimmickManager=1 app.GimmickManager=1 app.CutSceneManager=1 app.Item1stGetSetting=1 app.WwisePlayerHPStateManager=1 app.NightmareSpecialAppearManager=1 via.relib.effect.behavior.ReLibMarkOrderContainer=1 app.InGameVoiceManager=1 app.PauseSupplier=1 app.TransparentMeshManager=1 app.WindManager=1 app.SetGauntletManager=1 via.wwise.WwiseGetGameParameterList=1 app.SecretMissionFlowManager=1 app.BreakObjectManager=1 app.InterpolationMediateManager=1 app.SwingWindManager=1 app.WwiseRangeManager=1 app.MeshLodManager=1 app.HellTreeCuringManager=1 app.MissionNowLoadingHelper=1 app.MissionManagerAfter=1 via.wwise.WwiseGameParameterList=1 
+[+ 147.016 f8790]   raiz 'GameManager' Draw=1 Upd=1  app.GameManager=1 app.Collision.CollisionSystem=1 app.TemporaryObjectsManager=1 app.ObjectUpdateAndDrawRestrictManager=0 app.WorkRateSystem=1 app.SceneStandbyMediator=1 app.FadeManager=1 app.SceneActivateManager=1 app.UserPadManager=1 app.ObjectManager=1 app.MessageSystem=1 app.InventoryManager=1 app.WwiseSavableEventManager=1 app.MissionSettingManager=1 app.PlayerLoadManager=1 app.CameraManager=1 app.WwiseSituationStateListRequester=1 app.WwiseBGMTriggerManager=0 app.SaveDataManager=1 app.OptionManager=1 app.UserServiceManager=1 app.QuickSilverSystem=1 app.DynamicsManager=1 app.PadManager=1 app.RenderTargetTextureSerializer=1 app.MenuEnvLoadManager=1 app.RecordManager=1 app.UserCapabilityManager=1 app.WwiseManagerApp=1 app.WwiseSealsController=1 app.WwiseDMCTrailerBGMStateController=1 app.WwiseContainerApp=1 app.AppEffectManager=1 app.PlayerEmitter=1 via.effect.script.EffectManager=1 app.PostEffectManager=1 app.WwiseHellTreeGeneratorManager=1 app.ShareServiceManager=1 app.LocationEnvManager=1 via.render.HazeCompositorController=? app.HIDManager=1 app.CharacterFactory=1 app.SceneDeactivateNotifier=1 app.DLCManager=1 app.WwiseMessageIdListManager=1 app.SoundCallSettingManager=1 app.TrainingParamHolder=1 app.WwiseExtraMissionStateManager=1 app.VariableAccessor=0 app.EventMaterialManager=1 app.StreamingTextureManager=1 app.GalleryDataManager=1 app.AdditionalPlayerLoadManager=1 app.BloodyPalaceRecordManager=1 app.PS5HardwareManager=1 via.network.RemoteProcedure=? via.wwise.WwiseGameParameterList=1 
+[+ 147.016 f8790] --- escena: 696 raices en total, 11 con Player/pl0* | players registrados=2 ---
+[+ 147.016 f8790] p2create: peticion ANULADA (fallo de la creacion): requestFinishPlayerResource(1) -> ok; cargador ahora: AdditionalPlayerUnloading(7)
+[+ 150.500 f9000] latido: frame=9000
+[+ 180.531 f10800] latido: frame=10800
+[+ 210.563 f12600] latido: frame=12600
+[+ 240.109 f14370] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 240.109 f14370] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 240.109 f14370] PlayerManager.players: 2 -> -1
+[+ 240.609 f14400] latido: frame=14400
+[+ 241.609 f14460] PlayerManager cambio: 000002169C0D3220 -> 0000000000000000 (nueva mision o fin de mision)
+[+ 270.625 f16200] latido: frame=16200
