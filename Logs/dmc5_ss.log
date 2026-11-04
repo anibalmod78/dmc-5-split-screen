@@ -1,12 +1,12 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 20:38:38 ====
-[+   0.000 f0] version del plugin: v80 (api de via.Folder/via.Scene; origen del Player solo con la cadena de carpetas)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  4 2026 20:48:46 ====
+[+   0.000 f0] version del plugin: v81 (arbol de carpetas de la escena por mision)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
 [+   0.032 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.047 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.079 f1] on_frame ACTIVO (UpdateBehavior, hilo 11440)
+[+   0.063 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 4936)
 [+   0.563 f30] init: hook en app.PlayerManager::doUpdate
 [+   0.563 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
 [+   0.563 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
@@ -31,100 +31,877 @@
 [+   0.563 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
 [+   0.563 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
 [+   0.563 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
-[+   0.563 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
-[+   0.563 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
-[+   0.563 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
-[+   0.563 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
-[+   0.563 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
-[+   0.563 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
-[+   0.563 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
-[+   0.563 f30] p2input: hook en app.PadInput::update/0
-[+   1.063 f60] app.AdditionalPlayerLoadManager disponible (000001C8B3E05FD0)
-[+  30.125 f1800] latido: frame=1800
-[+  45.141 f2700] PlayerManager cambio: 0000000000000000 -> 000001C8B41B3220 (nueva mision o fin de mision)
-[+  45.141 f2700] PlayerManager.players: -1 -> 0
-[+  60.141 f3600] latido: frame=3600
+[+   0.578 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
+[+   0.578 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
+[+   0.578 f30] trace: hook #25 en app.PlayerManager::initCostumeInfo/0 (id 54)
+[+   0.578 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
+[+   0.578 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
+[+   0.578 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
+[+   0.578 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
+[+   0.578 f30] p2input: hook en app.PadInput::update/0
+[+   1.063 f60] app.AdditionalPlayerLoadManager disponible (000001D754A15FD0)
+[+  30.110 f1800] latido: frame=1800
+[+  48.641 f2910] PlayerManager cambio: 0000000000000000 -> 000001D754DC9720 (nueva mision o fin de mision)
+[+  48.641 f2910] PlayerManager.players: -1 -> 0
+[+  60.157 f3600] latido: frame=3600
 [+  90.188 f5400] latido: frame=5400
-[+ 103.188 f6180] PlayerManager.players: 0 -> 1
-[+ 103.188 f6180]   player[0] GO='pl0200_v' padre='null'
-[+ 103.188 f6180]   player[0] componentes de su GO: app.Player=000001C8A89ACB10 (tipo real app.PlayerV) app.character.Character=000001C8A89ACB10 (tipo real app.PlayerV) app.PlayerV=000001C8A89ACB10 (tipo real app.PlayerV) 
-[+ 103.188 f6180]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
-[+ 103.188 f6180]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001C8B29AF420
-[+ 103.188 f6180]   player[0] 000001C8A89ACB10 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000001C8B29AE430
-[+ 103.188 f6180]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 103.188 f6180]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 103.188 f6180]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 109.704 f6570] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 109.704 f6570] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 109.704 f6570] p2input: PadInput de P1 = 000001C8B3D746B0
-[+ 109.704 f6570] PlayerManager.players: 1 -> 2
-[+ 109.704 f6570]   player[0] GO='pl0200_v' padre='null'
-[+ 109.704 f6570]   player[0] componentes de su GO: app.Player=000001C8A89ACB10 (tipo real app.PlayerV) app.character.Character=000001C8A89ACB10 (tipo real app.PlayerV) app.PlayerV=000001C8A89ACB10 (tipo real app.PlayerV) 
-[+ 109.704 f6570]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 109.704 f6570]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001C8B29AF420
-[+ 109.704 f6570]   player[0] 000001C8A89ACB10 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000001C8B3D746B0
-[+ 109.704 f6570]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 109.704 f6570]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 109.704 f6570]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 109.704 f6570]   player[1] GO='pl0800_vergil' padre='null'
-[+ 109.704 f6570]   player[1] componentes de su GO: app.Player=000001C8A897F740 (tipo real app.PlayerVergilPL) app.character.Character=000001C8A897F740 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000001C8A897F740 (tipo real app.PlayerVergilPL) 
-[+ 109.704 f6570]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 109.704 f6570]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001C8B2C1CC00
-[+ 109.704 f6570]   player[1] 000001C8A897F740 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000001C8B3D746B0 [P1/manual]
-[+ 109.704 f6570]   player[1] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
-[+ 109.704 f6570]   player[1] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 109.704 f6570] --- api via.Folder ---
-[+ 109.704 f6570]   getAllSubFolders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
-[+ 109.704 f6570]   get_Children() -> System.Collections.Generic.IEnumerable`1<via.Transform>
-[+ 109.704 f6570]   get_Folders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
-[+ 109.704 f6570]   static op_Implicit(via.Folder) -> System.Boolean
-[+ 109.704 f6570]   static op_Equality(via.Folder, via.Folder) -> System.Boolean
-[+ 109.704 f6570]   static op_Inequality(via.Folder, via.Folder) -> System.Boolean
-[+ 109.704 f6570]   activate() -> System.Void
-[+ 109.704 f6570]   activate(System.Boolean) -> System.Void
-[+ 109.704 f6570]   deactivate() -> System.Void
-[+ 109.704 f6570]   static destroy(via.Folder) -> System.Void
-[+ 109.704 f6570]   ToString() -> System.String
-[+ 109.704 f6570]   get_Name() -> System.String
-[+ 109.704 f6570]   get_Path() -> System.String
-[+ 109.704 f6570]   get_Tag() -> System.String
-[+ 109.704 f6570]   set_Tag(System.String) -> System.Void
-[+ 109.704 f6570]   get_Update() -> System.Boolean
-[+ 109.704 f6570]   get_Draw() -> System.Boolean
-[+ 109.704 f6570]   get_Select() -> System.Boolean
-[+ 109.704 f6570]   set_Select(System.Boolean) -> System.Void
-[+ 109.704 f6570]   get_UpdateSelf() -> System.Boolean
-[+ 109.704 f6570]   set_UpdateSelf(System.Boolean) -> System.Void
-[+ 109.704 f6570]   get_DrawSelf() -> System.Boolean
-[+ 109.704 f6570]   set_DrawSelf(System.Boolean) -> System.Void
-[+ 109.704 f6570]   get_Active() -> System.Boolean
-[+ 109.704 f6570]   get_Activating() -> System.Boolean
-[+ 109.704 f6570]   get_Valid() -> System.Boolean
-[+ 109.704 f6570]   get_Standby() -> System.Boolean
-[+ 109.704 f6570]   set_Standby(System.Boolean) -> System.Void
-[+ 109.704 f6570]   get_Ready() -> System.Boolean
-[+ 109.704 f6570]   get_Exist() -> System.Boolean
-[+ 109.704 f6570]   get_SceneFolder() -> System.Boolean
-[+ 109.704 f6570]   get_Parent() -> via.Folder
-[+ 109.704 f6570]   get_Scene() -> via.Scene
-[+ 109.704 f6570]   get_Child() -> via.Folder
-[+ 109.704 f6570]   get_Next() -> via.Folder
-[+ 109.704 f6570]   .ctor() -> System.Void
-[+ 109.704 f6570]   (36 metodos)
-[+ 109.704 f6570] --- api via.Scene ---
-[+ 109.704 f6570]   get_Folders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
-[+ 109.704 f6570]   findFolder(System.String) -> via.Folder
-[+ 109.704 f6570]   findFoldersWithTag(System.String) -> via.Folder[]
-[+ 109.704 f6570]   getNextFolder(via.Folder) -> via.Folder
-[+ 109.704 f6570]   get_FirstFolder() -> via.Folder
-[+ 109.704 f6570]   (5 metodos)
-[+ 109.704 f6570] --- api via.GameObject ---
-[+ 109.704 f6570]   get_Folder() -> via.Folder
-[+ 109.704 f6570]   (1 metodos)
-[+ 109.704 f6570] api: carpeta de P1 000001C8B4303CE0 tipo=via.Folder Active=1 Standby=1 Scene=000001C8BC2011A0
-[+ 120.204 f7200] latido: frame=7200
+[+ 107.703 f6450] PlayerManager.players: 0 -> 1
+[+ 107.703 f6450]   player[0] GO='pl0200_v' padre='null'
+[+ 107.703 f6450]   player[0] componentes de su GO: app.Player=000001D7495C2FC0 (tipo real app.PlayerV) app.character.Character=000001D7495C2FC0 (tipo real app.PlayerV) app.PlayerV=000001D7495C2FC0 (tipo real app.PlayerV) 
+[+ 107.703 f6450]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
+[+ 107.703 f6450]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001D7535B36A0
+[+ 107.703 f6450]   player[0] 000001D7495C2FC0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000001D7535B2CA0
+[+ 107.703 f6450]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+ 107.703 f6450]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+ 107.703 f6450]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
+[+ 114.203 f6840] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 114.203 f6840] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 114.203 f6840] p2input: PadInput de P1 = 000001D7549846B0
+[+ 114.203 f6840] PlayerManager.players: 1 -> 2
+[+ 114.203 f6840]   player[0] GO='pl0200_v' padre='null'
+[+ 114.203 f6840]   player[0] componentes de su GO: app.Player=000001D7495C2FC0 (tipo real app.PlayerV) app.character.Character=000001D7495C2FC0 (tipo real app.PlayerV) app.PlayerV=000001D7495C2FC0 (tipo real app.PlayerV) 
+[+ 114.203 f6840]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+ 114.203 f6840]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001D7535B36A0
+[+ 114.203 f6840]   player[0] 000001D7495C2FC0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000001D7549846B0
+[+ 114.203 f6840]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+ 114.203 f6840]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+ 114.203 f6840]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
+[+ 114.203 f6840]   player[1] GO='pl0800_vergil' padre='null'
+[+ 114.203 f6840]   player[1] componentes de su GO: app.Player=000001D749595EF0 (tipo real app.PlayerVergilPL) app.character.Character=000001D749595EF0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000001D749595EF0 (tipo real app.PlayerVergilPL) 
+[+ 114.203 f6840]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+ 114.203 f6840]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001D753633DB0
+[+ 114.203 f6840]   player[1] 000001D749595EF0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000001D7549846B0 [P1/manual]
+[+ 114.203 f6840]   player[1] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
+[+ 114.203 f6840]   player[1] origen: carpeta[1] nombre='Players' ruta='Players'
+[+ 114.203 f6840] --- carpetas de la escena (Scene=000001D75CE111A0) ---
+[+ 114.203 f6840]   carpeta 'GameSystem' ruta='GameSystem' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'SystemResident' ruta='GameSystem/SystemResident' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'TemporaryObjects' ruta='GameSystem/SystemResident/TemporaryObjects' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'UI' ruta='GameSystem/SystemResident/TemporaryObjects/UI' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Sound' ruta='GameSystem/SystemResident/TemporaryObjects/Sound' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'Fade' ruta='GameSystem/SystemResident/Fade' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'UserShaderTimer' ruta='GameSystem/SystemResident/UserShaderTimer' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'Sound_Resident' ruta='GameSystem/SystemResident/Sound_Resident' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'BGM_Battle_Set_05_bst' ruta='GameSystem/SystemResident/Sound_Resident/BGM_Battle_Set_05_bst' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'NetworkSystemGroup' ruta='GameSystem/SystemResident/NetworkSystemGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'ReplayGroup' ruta='GameSystem/SystemResident/ReplayGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'DlcMenu' ruta='GameSystem/SystemResident/DlcMenu' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'DlcMenu_WeGame' ruta='GameSystem/SystemResident/DlcMenu_WeGame' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'BattleSystem' ruta='GameSystem/BattleSystem' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'StayRequester' ruta='GameSystem/BattleSystem/StayRequester' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'Sound_Ingame_System' ruta='GameSystem/BattleSystem/Sound_Ingame_System' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'TemporaryObjects' ruta='GameSystem/BattleSystem/TemporaryObjects' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Shell' ruta='GameSystem/BattleSystem/TemporaryObjects/Shell' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Enemy' ruta='GameSystem/BattleSystem/TemporaryObjects/Enemy' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Orb' ruta='GameSystem/BattleSystem/TemporaryObjects/Orb' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Gauntlet' ruta='GameSystem/BattleSystem/TemporaryObjects/Gauntlet' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Mark' ruta='GameSystem/BattleSystem/TemporaryObjects/Mark' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'Props' ruta='GameSystem/BattleSystem/TemporaryObjects/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'SwingWind' ruta='GameSystem/BattleSystem/TemporaryObjects/SwingWind' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'EnemyDataLoader' ruta='GameSystem/BattleSystem/TemporaryObjects/EnemyDataLoader' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'Event' ruta='GameSystem/BattleSystem/Event' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'UI' ruta='GameSystem/BattleSystem/UI' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'EnemyRegistration' ruta='GameSystem/BattleSystem/UI/EnemyRegistration' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'ER_changeCC' ruta='GameSystem/BattleSystem/UI/ER_changeCC' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'Replay' ruta='GameSystem/BattleSystem/Replay' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'NetworkGameGroup' ruta='GameSystem/BattleSystem/NetworkGameGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'VFX' ruta='GameSystem/BattleSystem/VFX' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'EnemyPrefabRegisters' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0000_hell_caina_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0000_hell_caina_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0001_hell_antenora_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0001_hell_antenora_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0002_hell_judecca_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0002_hell_judecca_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0002_M13_hell_judecca_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0002_M13_hell_judecca_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0100_empusa_scout_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0100_empusa_scout_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0101_empusa_medic_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0101_empusa_medic_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0102_empusa_keeper_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0102_empusa_keeper_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0103_empusa_soldier_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0103_empusa_soldier_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0200_riod_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0200_riod_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0201_riot_slasher_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0201_riot_slasher_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0202_riot_red_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0202_riot_red_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0300_baphomet_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0300_baphomet_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0301_lusachia_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0301_lusachia_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0400_behemoth_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0400_behemoth_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0500_nobody_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0500_nobody_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0600_scudo_angelo_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0600_scudo_angelo_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0601_proto_angelo_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0601_proto_angelo_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0700_sin_scissors_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0700_sin_scissors_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0800_byakhee_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0800_byakhee_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em0801_fire_byakhee_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0801_fire_byakhee_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em1000_hell_tree_s_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em1000_hell_tree_s_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5000_goliath_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5000_goliath_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5000_goliath_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5000_goliath_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5100_malphas_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5100_malphas_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5200_nidhogg_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5200_nidhogg_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5300_artemis_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5300_artemis_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5300_artemis_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5300_artemis_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5400_gilgamesh_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5400_gilgamesh_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5500_geryon_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5500_geryon_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5501_angelo_gabriello_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5501_angelo_gabriello_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5501_angelo_gabriello_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5501_angelo_gabriello_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5600_helltree_l_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5600_helltree_l_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5700_king_cerberus_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5700_king_cerberus_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5800_griffon_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5800_griffon_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5801_shadow_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5801_shadow_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5802_nightmare_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5802_nightmare_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5900_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5900_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5901_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5901_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em5902_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5902_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em6000_vergil_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6000_vergil_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em6030_vergil_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6030_vergil_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em6100_dante_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6100_dante_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'em6101_dante_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6101_dante_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'DevelopSystem' ruta='GameSystem/DevelopSystem' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta 'Players' ruta='Players' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0000' ruta='Players/pl0000' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0000_c00' ruta='Players/pl0000_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0030' ruta='Players/pl0030' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0030_c00' ruta='Players/pl0030_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0031' ruta='Players/pl0031' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0031_c00' ruta='Players/pl0031_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0100' ruta='Players/pl0100' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0100_c00' ruta='Players/pl0100_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0130' ruta='Players/pl0130' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0130_c00' ruta='Players/pl0130_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0131' ruta='Players/pl0131' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0131_c00' ruta='Players/pl0131_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0200' ruta='Players/pl0200' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0200_c00' ruta='Players/pl0200_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0230' ruta='Players/pl0230' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0230_c00' ruta='Players/pl0230_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0231' ruta='Players/pl0231' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0231_c00' ruta='Players/pl0231_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0232' ruta='Players/pl0232' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0232_c00' ruta='Players/pl0232_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0300' ruta='Players/pl0300' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0500' ruta='Players/pl0500' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0600' ruta='Players/pl0600' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0800' ruta='Players/pl0800' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'pl0200_summon' ruta='Players/pl0800/pl0200_summon' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0800_c00' ruta='Players/pl0800_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0160' ruta='Players/pl0160' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0160_c00' ruta='Players/pl0160_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0161' ruta='Players/pl0161' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0161_c00' ruta='Players/pl0161_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0831' ruta='Players/pl0831' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'pl0831_c00' ruta='Players/pl0831_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta 'LevelDesign' ruta='LevelDesign' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission00' ruta='LevelDesign/Mission00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission01' ruta='LevelDesign/Mission01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission02' ruta='LevelDesign/Mission02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission03' ruta='LevelDesign/Mission03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission04' ruta='LevelDesign/Mission04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission05' ruta='LevelDesign/Mission05' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission06' ruta='LevelDesign/Mission06' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission07' ruta='LevelDesign/Mission07' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission08' ruta='LevelDesign/Mission08' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission09' ruta='LevelDesign/Mission09' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta   'Mission10' ruta='LevelDesign/Mission10' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta     'M10_Flow' ruta='LevelDesign/Mission10/M10_Flow' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'M10_MainFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta           'Tex' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/Tex' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta           'm10_120c' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/m10_120c' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta           'm10_130c' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/m10_130c' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_MainFlow_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'ReplayData' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/ReplayData' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_EventCamera' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_EventCamera' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta       'M10_GimmickFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.203 f6840]   carpeta         'M10_GimmickFlow_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_SoundSetting' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_SoundSetting_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting/M10_SoundSetting_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_SoundSetting_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting/M10_SoundSetting_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_SoundFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_LightFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_LightFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_InGameVoice' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_InGameVoice_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Camera' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'JumpArea1' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera/JumpArea1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'JumpArea2' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera/JumpArea2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta     'M10_Placement' ruta='LevelDesign/Mission10/M10_Placement' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Enemy' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Enemy_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Folder' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/Folder' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Npc' ruta='LevelDesign/Mission10/M10_Placement/M10_Npc' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'pl0500_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_Npc/pl0500_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Item' ruta='LevelDesign/Mission10/M10_Placement/M10_Item' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Item_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_Item/M10_Item_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Orb' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Orb_d000' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d000' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Orb_d001' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d001' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Orb_d002' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d002' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_Orb_d003' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_01_start' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_01_start' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_02_outdoor01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_03_passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_03_passage01' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_04_room01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_05_cloister01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_06_room02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_07_cloister02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_07_cloister02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_08_confluencezone01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_08_confluencezone01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_11_room04' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_12_passage03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_13_room5' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_14_jump01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_15_jump02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_15_jump02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_16_outdoor02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_16_outdoor02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_17_stair01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_18_bossarea' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_18_bossarea' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_19_battlearea01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_19_battlearea01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_22_secretpassage03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_23_secretroom02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_24_prologue' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_24_prologue' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_25_distantview' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_25_distantview' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_26_passage00' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_26_passage00' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_28_room01passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_27_room02passage' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_27_room02passage' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_29_room03secret01path' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_29_room03secret01path' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_30_passage02out' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_30_passage02out' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'l10_31_room04path' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_31_room04path' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_HellBound' ruta='LevelDesign/Mission10/M10_Placement/M10_HellBound' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_RedSeal' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_RedSeal_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_Gimmick' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_02_outdoor01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_05_cloister01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_06_room02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_09_room03' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_23_secretroom02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_CheckPoint' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'M10_CheckPoint_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_SecretMission' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_01_start' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_01_start' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_02_outdoor01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_03_passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_03_passage01' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_04_room01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_05_cloister01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_06_room02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_07_cloister02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_07_cloister02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_08_confluencezone01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_08_confluencezone01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_11_room04' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_12_passage03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_13_room5' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_14_jump01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_15_jump02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_15_jump02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_16_outdoor02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_16_outdoor02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_17_stair01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_18_bossarea' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_18_bossarea' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_19_battlearea01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_19_battlearea01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_22_secretpassage03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_23_secretroom02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_24_prologue' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_24_prologue' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_25_distantview' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_25_distantview' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_26_passage00' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_26_passage00' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_28_room01passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_27_room02passage' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_27_room02passage' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_29_room03secret01path' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_29_room03secret01path' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_30_passage02out' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_30_passage02out' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'l10_31_room04path' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_31_room04path' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'M10_RouteAssist' ruta='LevelDesign/Mission10/M10_Placement/M10_RouteAssist' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta     'Mission10_Sound' ruta='LevelDesign/Mission10/Mission10_Sound' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'snd_bgm_Mission10' ruta='LevelDesign/Mission10/Mission10_Sound/snd_bgm_Mission10' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta     'M10_System' ruta='LevelDesign/Mission10/M10_System' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission11' ruta='LevelDesign/Mission11' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission12' ruta='LevelDesign/Mission12' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission13' ruta='LevelDesign/Mission13' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission14' ruta='LevelDesign/Mission14' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission15' ruta='LevelDesign/Mission15' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission16' ruta='LevelDesign/Mission16' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission17' ruta='LevelDesign/Mission17' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission18' ruta='LevelDesign/Mission18' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission19' ruta='LevelDesign/Mission19' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission20' ruta='LevelDesign/Mission20' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission21' ruta='LevelDesign/Mission21' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission22' ruta='LevelDesign/Mission22' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission23' ruta='LevelDesign/Mission23' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission30' ruta='LevelDesign/Mission30' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission31' ruta='LevelDesign/Mission31' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission32' ruta='LevelDesign/Mission32' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission33' ruta='LevelDesign/Mission33' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission34' ruta='LevelDesign/Mission34' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission35' ruta='LevelDesign/Mission35' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission36' ruta='LevelDesign/Mission36' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission37' ruta='LevelDesign/Mission37' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission38' ruta='LevelDesign/Mission38' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission39' ruta='LevelDesign/Mission39' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission40' ruta='LevelDesign/Mission40' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission62' ruta='LevelDesign/Mission62' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission66' ruta='LevelDesign/Mission66' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission71' ruta='LevelDesign/Mission71' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission72' ruta='LevelDesign/Mission72' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission73' ruta='LevelDesign/Mission73' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission74' ruta='LevelDesign/Mission74' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission75' ruta='LevelDesign/Mission75' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission76' ruta='LevelDesign/Mission76' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission77' ruta='LevelDesign/Mission77' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission78' ruta='LevelDesign/Mission78' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission79' ruta='LevelDesign/Mission79' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission80' ruta='LevelDesign/Mission80' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission81' ruta='LevelDesign/Mission81' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Mission82' ruta='LevelDesign/Mission82' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'MissionBloodyPalace' ruta='LevelDesign/MissionBloodyPalace' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta 'Location' ruta='Location' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location00' ruta='Location/Location00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location01' ruta='Location/Location01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location02' ruta='Location/Location02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location03' ruta='Location/Location03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location04' ruta='Location/Location04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location05' ruta='Location/Location05' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location06' ruta='Location/Location06' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location07' ruta='Location/Location07' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location08' ruta='Location/Location08' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location09' ruta='Location/Location09' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta   'Location10' ruta='Location/Location10' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta     'Location10_Environments' ruta='Location/Location10/Location10_Environments' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_01_start' ruta='Location/Location10/Location10_Environments/l10_01_start' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_01_start/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_01_start/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_01_start/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_02_outdoor01' ruta='Location/Location10/Location10_Environments/l10_02_outdoor01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_02_outdoor01/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_02_outdoor01/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_02_outdoor01/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_03_passage01' ruta='Location/Location10/Location10_Environments/l10_03_passage01' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_04_room01' ruta='Location/Location10/Location10_Environments/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_05_cloister01' ruta='Location/Location10/Location10_Environments/l10_05_cloister01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_06_room02' ruta='Location/Location10/Location10_Environments/l10_06_room02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_07_cloister02' ruta='Location/Location10/Location10_Environments/l10_07_cloister02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_08_confluencezone01' ruta='Location/Location10/Location10_Environments/l10_08_confluencezone01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_09_room03' ruta='Location/Location10/Location10_Environments/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_10_passage02' ruta='Location/Location10/Location10_Environments/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_11_room04' ruta='Location/Location10/Location10_Environments/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_12_passage03' ruta='Location/Location10/Location10_Environments/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_13_room5' ruta='Location/Location10/Location10_Environments/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_14_jump01' ruta='Location/Location10/Location10_Environments/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_15_jump02' ruta='Location/Location10/Location10_Environments/l10_15_jump02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_16_outdoor02' ruta='Location/Location10/Location10_Environments/l10_16_outdoor02' Active=0 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_17_stair01' ruta='Location/Location10/Location10_Environments/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_18_bossarea' ruta='Location/Location10/Location10_Environments/l10_18_bossarea' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_19_battlearea01' ruta='Location/Location10/Location10_Environments/l10_19_battlearea01' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_19_battlearea01/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_19_battlearea01/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_19_battlearea01/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_20_secretroom01' ruta='Location/Location10/Location10_Environments/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_21_room03secret01' ruta='Location/Location10/Location10_Environments/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_22_secretpassage03' ruta='Location/Location10/Location10_Environments/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_23_secretroom02' ruta='Location/Location10/Location10_Environments/l10_23_secretroom02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_24_prologue' ruta='Location/Location10/Location10_Environments/l10_24_prologue' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_24_prologue/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_24_prologue/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_24_prologue/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_25_distantview' ruta='Location/Location10/Location10_Environments/l10_25_distantview' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_26_passage00' ruta='Location/Location10/Location10_Environments/l10_26_passage00' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_26_passage00/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_26_passage00/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_26_passage00/Props/PropsSmall' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_28_room01passage01' ruta='Location/Location10/Location10_Environments/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_27_room02passage' ruta='Location/Location10/Location10_Environments/l10_27_room02passage' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_29_room03secret01path' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_30_passage02out' ruta='Location/Location10/Location10_Environments/l10_30_passage02out' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta       'l10_31_room04path' ruta='Location/Location10/Location10_Environments/l10_31_room04path' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 114.219 f6840]   carpeta     'Location10_LoadCollision' ruta='Location/Location10/Location10_LoadCollision' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'Environments' ruta='Location/Location10/Location10_LoadCollision/Environments' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta     'Location10_Light' ruta='Location/Location10/Location10_Light' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_01_start' ruta='Location/Location10/Location10_Light/l10_01_start' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta         'CubeMap' ruta='Location/Location10/Location10_Light/l10_01_start/CubeMap' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.219 f6840]   carpeta       'l10_01_start_Gate' ruta='Location/Location10/Location10_Light/l10_01_start_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 114.235 f6840] --- fin carpetas (400 lineas, tope 400) ---
+[+ 120.235 f7200] latido: frame=7200
 [+ 150.235 f9000] latido: frame=9000
-[+ 151.235 f9060] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 151.235 f9060] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 151.235 f9060] PlayerManager.players: 2 -> -1
-[+ 152.735 f9150] PlayerManager cambio: 000001C8B41B3220 -> 0000000000000000 (nueva mision o fin de mision)
+[+ 169.797 f10170] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 169.797 f10170] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 169.797 f10170] PlayerManager.players: 2 -> -1
+[+ 171.297 f10260] PlayerManager cambio: 000001D754DC9720 -> 0000000000000000 (nueva mision o fin de mision)
+[+ 180.297 f10800] latido: frame=10800
+[+ 188.297 f11280] PlayerManager cambio: 0000000000000000 -> 000001D751E74210 (nueva mision o fin de mision)
+[+ 188.297 f11280] PlayerManager.players: -1 -> 0
+[+ 210.328 f12600] latido: frame=12600
+[+ 240.344 f14400] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 240.344 f14400] P1 (manualPlayer) detectado: app.PlayerDante
+[+ 240.344 f14400] p2input: PadInput de P1 = 000001D752CA01D0
+[+ 240.344 f14400] PlayerManager.players: 0 -> 1
+[+ 240.344 f14400]   player[0] GO='pl0100_dante' padre='null'
+[+ 240.344 f14400]   player[0] componentes de su GO: app.Player=000001D749583090 (tipo real app.PlayerDante) app.character.Character=000001D749583090 (tipo real app.PlayerDante) app.PlayerDante=000001D749583090 (tipo real app.PlayerDante) 
+[+ 240.344 f14400]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+ 240.344 f14400]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001D752CA0BD0
+[+ 240.344 f14400]   player[0] 000001D749583090 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=000001D752CA01D0 [P1/manual]
+[+ 240.344 f14400]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+ 240.344 f14400]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
+[+ 240.344 f14400] --- carpetas de la escena (Scene=000001D75CE111A0) ---
+[+ 240.344 f14400]   carpeta 'GameSystem' ruta='GameSystem' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'SystemResident' ruta='GameSystem/SystemResident' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'TemporaryObjects' ruta='GameSystem/SystemResident/TemporaryObjects' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'UI' ruta='GameSystem/SystemResident/TemporaryObjects/UI' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'Sound' ruta='GameSystem/SystemResident/TemporaryObjects/Sound' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta     'Fade' ruta='GameSystem/SystemResident/Fade' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'UserShaderTimer' ruta='GameSystem/SystemResident/UserShaderTimer' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'Sound_Resident' ruta='GameSystem/SystemResident/Sound_Resident' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'BGM_Battle_Set_05_bst' ruta='GameSystem/SystemResident/Sound_Resident/BGM_Battle_Set_05_bst' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'NetworkSystemGroup' ruta='GameSystem/SystemResident/NetworkSystemGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'ReplayGroup' ruta='GameSystem/SystemResident/ReplayGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'DlcMenu' ruta='GameSystem/SystemResident/DlcMenu' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'DlcMenu_WeGame' ruta='GameSystem/SystemResident/DlcMenu_WeGame' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'BattleSystem' ruta='GameSystem/BattleSystem' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'StayRequester' ruta='GameSystem/BattleSystem/StayRequester' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'Sound_Ingame_System' ruta='GameSystem/BattleSystem/Sound_Ingame_System' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'TemporaryObjects' ruta='GameSystem/BattleSystem/TemporaryObjects' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'Shell' ruta='GameSystem/BattleSystem/TemporaryObjects/Shell' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'Enemy' ruta='GameSystem/BattleSystem/TemporaryObjects/Enemy' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'Orb' ruta='GameSystem/BattleSystem/TemporaryObjects/Orb' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'Gauntlet' ruta='GameSystem/BattleSystem/TemporaryObjects/Gauntlet' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'Mark' ruta='GameSystem/BattleSystem/TemporaryObjects/Mark' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'Props' ruta='GameSystem/BattleSystem/TemporaryObjects/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'SwingWind' ruta='GameSystem/BattleSystem/TemporaryObjects/SwingWind' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'EnemyDataLoader' ruta='GameSystem/BattleSystem/TemporaryObjects/EnemyDataLoader' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'Event' ruta='GameSystem/BattleSystem/Event' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'UI' ruta='GameSystem/BattleSystem/UI' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'EnemyRegistration' ruta='GameSystem/BattleSystem/UI/EnemyRegistration' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'ER_changeCC' ruta='GameSystem/BattleSystem/UI/ER_changeCC' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'Replay' ruta='GameSystem/BattleSystem/Replay' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'NetworkGameGroup' ruta='GameSystem/BattleSystem/NetworkGameGroup' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'VFX' ruta='GameSystem/BattleSystem/VFX' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'EnemyPrefabRegisters' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0000_hell_caina_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0000_hell_caina_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0001_hell_antenora_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0001_hell_antenora_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0002_hell_judecca_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0002_hell_judecca_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0002_M13_hell_judecca_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0002_M13_hell_judecca_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0100_empusa_scout_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0100_empusa_scout_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0101_empusa_medic_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0101_empusa_medic_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0102_empusa_keeper_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0102_empusa_keeper_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0103_empusa_soldier_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0103_empusa_soldier_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0200_riod_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0200_riod_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0201_riot_slasher_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0201_riot_slasher_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0202_riot_red_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0202_riot_red_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0300_baphomet_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0300_baphomet_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0301_lusachia_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0301_lusachia_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0400_behemoth_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0400_behemoth_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0500_nobody_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0500_nobody_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0600_scudo_angelo_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0600_scudo_angelo_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0601_proto_angelo_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0601_proto_angelo_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0700_sin_scissors_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0700_sin_scissors_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0800_byakhee_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0800_byakhee_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em0801_fire_byakhee_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em0801_fire_byakhee_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em1000_hell_tree_s_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em1000_hell_tree_s_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5000_goliath_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5000_goliath_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5000_goliath_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5000_goliath_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5100_malphas_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5100_malphas_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5200_nidhogg_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5200_nidhogg_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5300_artemis_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5300_artemis_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5300_artemis_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5300_artemis_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5400_gilgamesh_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5400_gilgamesh_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5500_geryon_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5500_geryon_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5501_angelo_gabriello_M14_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5501_angelo_gabriello_M14_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5501_angelo_gabriello_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5501_angelo_gabriello_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5600_helltree_l_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5600_helltree_l_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5700_king_cerberus_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5700_king_cerberus_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5800_griffon_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5800_griffon_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5801_shadow_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5801_shadow_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5802_nightmare_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5802_nightmare_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5900_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5900_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5901_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5901_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em5902_urizen_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em5902_urizen_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em6000_vergil_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6000_vergil_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em6030_vergil_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6030_vergil_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em6100_dante_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6100_dante_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta       'em6101_dante_register' ruta='GameSystem/BattleSystem/EnemyPrefabRegisters/em6101_dante_register' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'DevelopSystem' ruta='GameSystem/DevelopSystem' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta 'Players' ruta='Players' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0000' ruta='Players/pl0000' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0000_c00' ruta='Players/pl0000_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0030' ruta='Players/pl0030' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0030_c00' ruta='Players/pl0030_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0031' ruta='Players/pl0031' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0031_c00' ruta='Players/pl0031_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0100' ruta='Players/pl0100' Active=1 Standby=1 Ready=1 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0100_c00' ruta='Players/pl0100_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0130' ruta='Players/pl0130' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0130_c00' ruta='Players/pl0130_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0131' ruta='Players/pl0131' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0131_c00' ruta='Players/pl0131_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0200' ruta='Players/pl0200' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0200_c00' ruta='Players/pl0200_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0230' ruta='Players/pl0230' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0230_c00' ruta='Players/pl0230_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0231' ruta='Players/pl0231' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0231_c00' ruta='Players/pl0231_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0232' ruta='Players/pl0232' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0232_c00' ruta='Players/pl0232_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0300' ruta='Players/pl0300' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0500' ruta='Players/pl0500' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0600' ruta='Players/pl0600' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0800' ruta='Players/pl0800' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0800_c00' ruta='Players/pl0800_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0160' ruta='Players/pl0160' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0160_c00' ruta='Players/pl0160_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0161' ruta='Players/pl0161' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0161_c00' ruta='Players/pl0161_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0831' ruta='Players/pl0831' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta   'pl0831_c00' ruta='Players/pl0831_c00' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta 'LevelDesign' ruta='LevelDesign' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission00' ruta='LevelDesign/Mission00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission01' ruta='LevelDesign/Mission01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission02' ruta='LevelDesign/Mission02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission03' ruta='LevelDesign/Mission03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission04' ruta='LevelDesign/Mission04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission05' ruta='LevelDesign/Mission05' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission06' ruta='LevelDesign/Mission06' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission07' ruta='LevelDesign/Mission07' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission08' ruta='LevelDesign/Mission08' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission09' ruta='LevelDesign/Mission09' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta   'Mission10' ruta='LevelDesign/Mission10' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=1
+[+ 240.344 f14400]   carpeta     'M10_Flow' ruta='LevelDesign/Mission10/M10_Flow' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_MainFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta           'Tex' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/Tex' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta           'm10_120c' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/m10_120c' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta           'm10_130c' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_01_Tutorial/m10_130c' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_MainFlow_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_MainFlow_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'ReplayData' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/ReplayData' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_EventCamera' ruta='LevelDesign/Mission10/M10_Flow/M10_MainFlow/M10_EventCamera' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_GimmickFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_GimmickFlow_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_GimmickFlow/M10_GimmickFlow_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_SoundSetting' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_SoundSetting_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting/M10_SoundSetting_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_SoundSetting_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundSetting/M10_SoundSetting_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_SoundFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_SoundFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_LightFlow' ruta='LevelDesign/Mission10/M10_Flow/M10_LightFlow' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_InGameVoice' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_00_Start' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_00_Start' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_01_Tutorial' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_02_Trial1' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_03_Trial2' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_04_Trial3' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_05_SpFloor' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_06_Cliff' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_07_Gate' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_InGameVoice_08_Boss' ruta='LevelDesign/Mission10/M10_Flow/M10_InGameVoice/M10_InGameVoice_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_Camera' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'JumpArea1' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera/JumpArea1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'JumpArea2' ruta='LevelDesign/Mission10/M10_Flow/M10_Camera/JumpArea2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta     'M10_Placement' ruta='LevelDesign/Mission10/M10_Placement' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta       'M10_Enemy' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_Enemy_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_Enemy_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_Enemy_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_Enemy_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.344 f14400]   carpeta         'M10_Enemy_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Enemy_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Enemy_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Enemy_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/M10_Enemy_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Folder' ruta='LevelDesign/Mission10/M10_Placement/M10_Enemy/Folder' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_Npc' ruta='LevelDesign/Mission10/M10_Placement/M10_Npc' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'pl0500_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_Npc/pl0500_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_Item' ruta='LevelDesign/Mission10/M10_Placement/M10_Item' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Item_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_Item/M10_Item_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_Orb' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Orb_d000' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d000' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Orb_d001' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d001' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Orb_d002' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d002' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_Orb_d003' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003' Active=1 Standby=1 Ready=1 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_01_start' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_01_start' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_02_outdoor01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_03_passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_03_passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_04_room01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_05_cloister01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_06_room02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_07_cloister02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_07_cloister02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_08_confluencezone01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_08_confluencezone01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_11_room04' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_12_passage03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_13_room5' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_14_jump01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_15_jump02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_15_jump02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_16_outdoor02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_16_outdoor02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_17_stair01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_18_bossarea' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_18_bossarea' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_19_battlearea01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_19_battlearea01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_22_secretpassage03' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_23_secretroom02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_24_prologue' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_24_prologue' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_25_distantview' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_25_distantview' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_26_passage00' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_26_passage00' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_28_room01passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_27_room02passage' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_27_room02passage' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_29_room03secret01path' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_29_room03secret01path' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_30_passage02out' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_30_passage02out' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'l10_31_room04path' ruta='LevelDesign/Mission10/M10_Placement/M10_Orb/M10_Orb_d003/l10_31_room04path' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_HellBound' ruta='LevelDesign/Mission10/M10_Placement/M10_HellBound' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_RedSeal' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_RedSeal_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_RedSeal/M10_RedSeal_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_Gimmick' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_02_outdoor01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_05_cloister01' Active=0 Standby=1 Ready=1 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_06_room02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_09_room03' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_Gimmick/l10_23_secretroom02' Active=0 Standby=1 Ready=1 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_CheckPoint' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_01_Tutorial' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_01_Tutorial' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_02_Trial1' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_02_Trial1' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_03_Trial2' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_03_Trial2' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_04_Trial3' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_04_Trial3' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_05_SpFloor' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_05_SpFloor' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_06_Cliff' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_06_Cliff' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_07_Gate' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_07_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'M10_CheckPoint_08_Boss' ruta='LevelDesign/Mission10/M10_Placement/M10_CheckPoint/M10_CheckPoint_08_Boss' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_SecretMission' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_01_start' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_01_start' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_02_outdoor01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_02_outdoor01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_03_passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_03_passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_04_room01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_05_cloister01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_05_cloister01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_06_room02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_06_room02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_07_cloister02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_07_cloister02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_08_confluencezone01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_08_confluencezone01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_09_room03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_10_passage02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_11_room04' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_12_passage03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_13_room5' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_14_jump01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_15_jump02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_15_jump02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_16_outdoor02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_16_outdoor02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_17_stair01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_18_bossarea' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_18_bossarea' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_19_battlearea01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_19_battlearea01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_20_secretroom01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_21_room03secret01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_22_secretpassage03' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_23_secretroom02' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_23_secretroom02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_24_prologue' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_24_prologue' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_25_distantview' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_25_distantview' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_26_passage00' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_26_passage00' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_28_room01passage01' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_27_room02passage' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_27_room02passage' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_29_room03secret01path' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_29_room03secret01path' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_30_passage02out' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_30_passage02out' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'l10_31_room04path' ruta='LevelDesign/Mission10/M10_Placement/M10_SecretMission/l10_31_room04path' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'M10_RouteAssist' ruta='LevelDesign/Mission10/M10_Placement/M10_RouteAssist' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta     'Mission10_Sound' ruta='LevelDesign/Mission10/Mission10_Sound' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta       'snd_bgm_Mission10' ruta='LevelDesign/Mission10/Mission10_Sound/snd_bgm_Mission10' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta     'M10_System' ruta='LevelDesign/Mission10/M10_System' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission11' ruta='LevelDesign/Mission11' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission12' ruta='LevelDesign/Mission12' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission13' ruta='LevelDesign/Mission13' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission14' ruta='LevelDesign/Mission14' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission15' ruta='LevelDesign/Mission15' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission16' ruta='LevelDesign/Mission16' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission17' ruta='LevelDesign/Mission17' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission18' ruta='LevelDesign/Mission18' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission19' ruta='LevelDesign/Mission19' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission20' ruta='LevelDesign/Mission20' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission21' ruta='LevelDesign/Mission21' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission22' ruta='LevelDesign/Mission22' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission23' ruta='LevelDesign/Mission23' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission30' ruta='LevelDesign/Mission30' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission31' ruta='LevelDesign/Mission31' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission32' ruta='LevelDesign/Mission32' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission33' ruta='LevelDesign/Mission33' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission34' ruta='LevelDesign/Mission34' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission35' ruta='LevelDesign/Mission35' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission36' ruta='LevelDesign/Mission36' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission37' ruta='LevelDesign/Mission37' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission38' ruta='LevelDesign/Mission38' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission39' ruta='LevelDesign/Mission39' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission40' ruta='LevelDesign/Mission40' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission62' ruta='LevelDesign/Mission62' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission66' ruta='LevelDesign/Mission66' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission71' ruta='LevelDesign/Mission71' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission72' ruta='LevelDesign/Mission72' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission73' ruta='LevelDesign/Mission73' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission74' ruta='LevelDesign/Mission74' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission75' ruta='LevelDesign/Mission75' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission76' ruta='LevelDesign/Mission76' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission77' ruta='LevelDesign/Mission77' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission78' ruta='LevelDesign/Mission78' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission79' ruta='LevelDesign/Mission79' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission80' ruta='LevelDesign/Mission80' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission81' ruta='LevelDesign/Mission81' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Mission82' ruta='LevelDesign/Mission82' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'MissionBloodyPalace' ruta='LevelDesign/MissionBloodyPalace' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta 'Location' ruta='Location' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location00' ruta='Location/Location00' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location01' ruta='Location/Location01' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location02' ruta='Location/Location02' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location03' ruta='Location/Location03' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location04' ruta='Location/Location04' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location05' ruta='Location/Location05' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location06' ruta='Location/Location06' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location07' ruta='Location/Location07' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location08' ruta='Location/Location08' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location09' ruta='Location/Location09' Active=0 Standby=0 Ready=0 Exist=1 Upd=1 Draw=1
+[+ 240.360 f14400]   carpeta   'Location10' ruta='Location/Location10' Active=1 Standby=1 Ready=1 Exist=1 Upd=1 Draw=0
+[+ 240.360 f14400]   carpeta     'Location10_Environments' ruta='Location/Location10/Location10_Environments' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_01_start' ruta='Location/Location10/Location10_Environments/l10_01_start' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_02_outdoor01' ruta='Location/Location10/Location10_Environments/l10_02_outdoor01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_03_passage01' ruta='Location/Location10/Location10_Environments/l10_03_passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_04_room01' ruta='Location/Location10/Location10_Environments/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_05_cloister01' ruta='Location/Location10/Location10_Environments/l10_05_cloister01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_06_room02' ruta='Location/Location10/Location10_Environments/l10_06_room02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_07_cloister02' ruta='Location/Location10/Location10_Environments/l10_07_cloister02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_08_confluencezone01' ruta='Location/Location10/Location10_Environments/l10_08_confluencezone01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_09_room03' ruta='Location/Location10/Location10_Environments/l10_09_room03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_10_passage02' ruta='Location/Location10/Location10_Environments/l10_10_passage02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_11_room04' ruta='Location/Location10/Location10_Environments/l10_11_room04' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_12_passage03' ruta='Location/Location10/Location10_Environments/l10_12_passage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_13_room5' ruta='Location/Location10/Location10_Environments/l10_13_room5' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_14_jump01' ruta='Location/Location10/Location10_Environments/l10_14_jump01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_15_jump02' ruta='Location/Location10/Location10_Environments/l10_15_jump02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_16_outdoor02' ruta='Location/Location10/Location10_Environments/l10_16_outdoor02' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_17_stair01' ruta='Location/Location10/Location10_Environments/l10_17_stair01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_18_bossarea' ruta='Location/Location10/Location10_Environments/l10_18_bossarea' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_18_bossarea/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_19_battlearea01' ruta='Location/Location10/Location10_Environments/l10_19_battlearea01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_20_secretroom01' ruta='Location/Location10/Location10_Environments/l10_20_secretroom01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_21_room03secret01' ruta='Location/Location10/Location10_Environments/l10_21_room03secret01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_22_secretpassage03' ruta='Location/Location10/Location10_Environments/l10_22_secretpassage03' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_23_secretroom02' ruta='Location/Location10/Location10_Environments/l10_23_secretroom02' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_24_prologue' ruta='Location/Location10/Location10_Environments/l10_24_prologue' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_25_distantview' ruta='Location/Location10/Location10_Environments/l10_25_distantview' Active=1 Standby=1 Ready=1 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_25_distantview/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_26_passage00' ruta='Location/Location10/Location10_Environments/l10_26_passage00' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_28_room01passage01' ruta='Location/Location10/Location10_Environments/l10_28_room01passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_27_room02passage' ruta='Location/Location10/Location10_Environments/l10_27_room02passage' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_29_room03secret01path' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_29_room03secret01path/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_30_passage02out' ruta='Location/Location10/Location10_Environments/l10_30_passage02out' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_30_passage02out/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_31_room04path' ruta='Location/Location10/Location10_Environments/l10_31_room04path' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Props' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsLarge' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props/PropsLarge' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'PropsSmall' ruta='Location/Location10/Location10_Environments/l10_31_room04path/Props/PropsSmall' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta     'Location10_LoadCollision' ruta='Location/Location10/Location10_LoadCollision' Active=1 Standby=0 Ready=0 Exist=1 Upd=1 Draw=0
+[+ 240.360 f14400]   carpeta       'Environments' ruta='Location/Location10/Location10_LoadCollision/Environments' Active=0 Standby=0 Ready=0 Exist=0 Upd=1 Draw=0
+[+ 240.360 f14400]   carpeta     'Location10_Light' ruta='Location/Location10/Location10_Light' Active=1 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_01_start' ruta='Location/Location10/Location10_Light/l10_01_start' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_01_start_Gate' ruta='Location/Location10/Location10_Light/l10_01_start_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Light' ruta='Location/Location10/Location10_Light/l10_01_start_Gate/Light' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Probe' ruta='Location/Location10/Location10_Light/l10_01_start_Gate/Probe' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_02_outdoor01' ruta='Location/Location10/Location10_Light/l10_02_outdoor01' Active=0 Standby=1 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_02_outdoor01_Gate' ruta='Location/Location10/Location10_Light/l10_02_outdoor01_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Light' ruta='Location/Location10/Location10_Light/l10_02_outdoor01_Gate/Light' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Probe' ruta='Location/Location10/Location10_Light/l10_02_outdoor01_Gate/Probe' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_03_passage01' ruta='Location/Location10/Location10_Light/l10_03_passage01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_03_passage01_Gate' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Activate00' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate00' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'Light' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate00/Light' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'Probe' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate00/Probe' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta         'Activate01' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate01' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'Light' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate01/Light' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'Probe' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate01/Probe' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta           'Occluder' ruta='Location/Location10/Location10_Light/l10_03_passage01_Gate/Activate01/Occluder' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_04_room01' ruta='Location/Location10/Location10_Light/l10_04_room01' Active=0 Standby=0 Ready=0 Exist=1 Upd=0 Draw=0
+[+ 240.360 f14400]   carpeta       'l10_04_room01_Gate' ruta='Location/Location10/Location10_Light/l10_04_room01_Gate' Active=0 Standby=0 Ready=0 Exist=0 Upd=0 Draw=0
+[+ 240.375 f14400] --- fin carpetas (400 lineas, tope 400) ---
+[+ 240.375 f14400] latido: frame=14400
+[+ 270.375 f16200] latido: frame=16200
+[+ 300.407 f18000] latido: frame=18000
+[+ 311.922 f18690] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 311.922 f18690] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 311.922 f18690] PlayerManager.players: 1 -> -1
+[+ 313.422 f18780] PlayerManager cambio: 000001D751E74210 -> 0000000000000000 (nueva mision o fin de mision)
