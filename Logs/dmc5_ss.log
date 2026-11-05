@@ -1,12 +1,12 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  5 2026 07:45:29 ====
-[+   0.000 f0] version del plugin: v88 (diag: campos base distintos P1/P2 y llamadas de logica de Player ejecutadas por P2)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  5 2026 07:53:26 ====
+[+   0.000 f0] version del plugin: v89 (retirados los hooks vigilados de Player que cerraban el juego; diag con campos base distintos P1/P2)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
 [+   0.031 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.062 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 17080)
+[+   0.078 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 13360)
 [+   0.562 f30] init: hook en app.PlayerManager::doUpdate
 [+   0.562 f30] trace: hook #0 en app.PlayerManager::addPlayer/1 (id 4)
 [+   0.562 f30] trace: hook #1 en app.PlayerManager::addPlayerCore/1 (id 6)
@@ -24,12 +24,12 @@
 [+   0.562 f30] trace: hook #13 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::preloadNakidPlayerResource/0 (id 30)
 [+   0.562 f30] trace: hook #14 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::loadAddtionalPlayerResource/3 (id 32)
 [+   0.562 f30] trace: hook #15 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::activatePlayerResource/0 (id 34)
-[+   0.562 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
-[+   0.562 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
-[+   0.562 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
-[+   0.562 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
-[+   0.562 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
-[+   0.562 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
+[+   0.578 f30] trace: hook #16 en app.AdditionalPlayerLoadManager.AdditionalPlayerLoader::unloadAdditionalPlayerResource/0 (id 36)
+[+   0.578 f30] trace: hook #17 en app.CharacterFactory::load/3 (id 38)
+[+   0.578 f30] trace: hook #18 en app.CharacterFactory::create/5 (id 40)
+[+   0.578 f30] trace: hook #19 en app.CharacterFactory::create/3 (id 42)
+[+   0.578 f30] trace: hook #20 en app.CharacterFactory::unload/1 (id 44)
+[+   0.578 f30] trace: hook #21 en app.CharacterFactory::unloadAll/0 (id 46)
 [+   0.578 f30] trace: hook #22 en app.CharacterFactory.FinishCreationEvent::Invoke/3 (id 48)
 [+   0.578 f30] trace: hook #23 en app.PlayerManager::findPlayer/0 (id 50)
 [+   0.578 f30] trace: hook #24 en app.PlayerManager::updateMissionInitCheck/0 (id 52)
@@ -37,50 +37,979 @@
 [+   0.578 f30] trace: hook #26 en app.NetworkCharacterManager::registerCharacter/2 (id 56)
 [+   0.578 f30] trace: hook #27 en app.NetworkCharacterManager::releaseCharacter/1 (id 58)
 [+   0.578 f30] trace: hook #28 en app.PadInput::update/0 (id 60)
-[+   0.578 f30] trace: hook #29 en app.Player::updateThink/0 (id 62)
-[+   0.578 f30] trace: hook #30 en app.Player::lateupdateThink/0 (id 64)
-[+   0.578 f30] trace: hook #31 en app.Player::updateThinkOnThinkOff/0 (id 66)
-[+   0.578 f30] trace: hook #32 en app.Player::preparePlayerThink/0 (id 68)
-[+   0.578 f30] trace: hook #33 en app.Player::changePlayerActionFromThink/0 (id 70)
-[+   0.578 f30] trace: hook #34 en app.Player::setActionFromThink/2 (id 72)
-[+   0.578 f30] trace: hook #35 en app.Player::resetThink/2 (id 74)
-[+   0.578 f30] trace: hook #36 en app.Player::updatePuppet/0 (id 76)
-[+   0.578 f30] trace: hook #37 en app.Player::lateUpdatePuppet/0 (id 78)
-[+   0.578 f30] trace: hook #38 en app.Player::updateAIMode/0 (id 80)
-[+   0.578 f30] trace: instalacion terminada, 39 hooks (intentos: 1)
+[+   0.578 f30] trace: instalacion terminada, 29 hooks (intentos: 1)
 [+   0.578 f30] p2input: hook en app.PadInput::update/0
-[+   1.062 f60] app.AdditionalPlayerLoadManager disponible (000001BF3EB53000)
-[+  30.125 f1800] latido: frame=1800
-[+  60.140 f3600] latido: frame=3600
-[+  69.640 f4170] PlayerManager cambio: 0000000000000000 -> 000001BF3EEA42C0 (nueva mision o fin de mision)
-[+  69.640 f4170] PlayerManager.players: -1 -> 0
-[+  90.172 f5400] latido: frame=5400
-[+ 120.187 f7200] latido: frame=7200
-[+ 127.203 f7620] PlayerManager.players: 0 -> 1
-[+ 127.203 f7620]   player[0] GO='pl0200_v' padre='null'
-[+ 127.203 f7620]   player[0] componentes de su GO: app.Player=000001BF337032D0 (tipo real app.PlayerV) app.character.Character=000001BF337032D0 (tipo real app.PlayerV) app.PlayerV=000001BF337032D0 (tipo real app.PlayerV) 
-[+ 127.203 f7620]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
-[+ 127.203 f7620]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001BF3D6F8640
-[+ 127.203 f7620]   player[0] 000001BF337032D0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000001BF3D6F7C40
-[+ 127.203 f7620]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 127.203 f7620]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 127.203 f7620]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 133.703 f8010] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 133.703 f8010] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 133.703 f8010] p2input: PadInput de P1 = 000001BF3EAC36C0
-[+ 133.703 f8010] PlayerManager.players: 1 -> 2
-[+ 133.703 f8010]   player[0] GO='pl0200_v' padre='null'
-[+ 133.703 f8010]   player[0] componentes de su GO: app.Player=000001BF337032D0 (tipo real app.PlayerV) app.character.Character=000001BF337032D0 (tipo real app.PlayerV) app.PlayerV=000001BF337032D0 (tipo real app.PlayerV) 
-[+ 133.703 f8010]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 133.703 f8010]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000001BF3D6F8640
-[+ 133.703 f8010]   player[0] 000001BF337032D0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000001BF3EAC36C0
-[+ 133.703 f8010]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 133.703 f8010]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 133.703 f8010]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 133.703 f8010]   player[1] GO='pl0800_vergil' padre='null'
-[+ 133.703 f8010]   player[1] componentes de su GO: app.Player=000001BF336D5EF0 (tipo real app.PlayerVergilPL) app.character.Character=000001BF336D5EF0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000001BF336D5EF0 (tipo real app.PlayerVergilPL) 
-[+ 133.703 f8010]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 133.703 f8010]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000001BF3D778E30
-[+ 133.703 f8010]   player[1] 000001BF336D5EF0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000001BF3EAC36C0 [P1/manual]
-[+ 133.703 f8010]   player[1] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
-[+ 133.703 f8010]   player[1] origen: carpeta[1] nombre='Players' ruta='Players'
+[+   1.062 f60] app.AdditionalPlayerLoadManager disponible (000002293C873000)
+[+  30.109 f1800] latido: frame=1800
+[+  47.125 f2820] PlayerManager cambio: 0000000000000000 -> 000002293C647CE0 (nueva mision o fin de mision)
+[+  47.125 f2820] PlayerManager.players: -1 -> 0
+[+  59.656 f3540] PlayerManager.players: 0 -> 1
+[+  59.656 f3540]   player[0] GO='pl0200_v' padre='null'
+[+  59.656 f3540]   player[0] componentes de su GO: app.Player=00000229314242A0 (tipo real app.PlayerV) app.character.Character=00000229314242A0 (tipo real app.PlayerV) app.PlayerV=00000229314242A0 (tipo real app.PlayerV) 
+[+  59.656 f3540]   player[0] hijos de su GO: 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'pl0200_03' 'pl0200_01' 
+[+  59.656 f3540]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002293B422330
+[+  59.656 f3540]   player[0] 00000229314242A0 tipo=app.PlayerV id=Gilver(2) pos=(0.00, 0.00, 0.00) padInput=000002293B421930
+[+  59.656 f3540]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+  59.656 f3540]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+  59.656 f3540]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
+[+  60.656 f3600] latido: frame=3600
+[+  66.672 f3960] p2input: reset (fin de mision): objetivo y modo desactivados
+[+  66.672 f3960] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+  66.672 f3960] p2input: PadInput de P1 = 000002293C7E36C0
+[+  66.672 f3960] PlayerManager.players: 1 -> 2
+[+  66.672 f3960]   player[0] GO='pl0200_v' padre='null'
+[+  66.672 f3960]   player[0] componentes de su GO: app.Player=00000229314242A0 (tipo real app.PlayerV) app.character.Character=00000229314242A0 (tipo real app.PlayerV) app.PlayerV=00000229314242A0 (tipo real app.PlayerV) 
+[+  66.672 f3960]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+  66.672 f3960]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002293B422330
+[+  66.672 f3960]   player[0] 00000229314242A0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000002293C7E36C0
+[+  66.672 f3960]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+  66.672 f3960]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+  66.672 f3960]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
+[+  66.672 f3960]   player[1] GO='pl0800_vergil' padre='null'
+[+  66.672 f3960]   player[1] componentes de su GO: app.Player=00000229313F5EF0 (tipo real app.PlayerVergilPL) app.character.Character=00000229313F5EF0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=00000229313F5EF0 (tipo real app.PlayerVergilPL) 
+[+  66.687 f3960]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+  66.687 f3960]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002293B492050
+[+  66.687 f3960]   player[1] 00000229313F5EF0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000002293C7E36C0 [P1/manual]
+[+  66.687 f3960]   player[1] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
+[+  66.687 f3960]   player[1] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  69.718 f4142] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+  70.468 f4187] ORDEN: p2create Dante
+[+  70.468 f4187] IDs para P2: player=Dante(1) costume=Default(0) situation=Default(0) (P1 player=VergilPL(4))
+[+  70.468 f4187] AVISO: la clave p2_autocreate ya no existe (v74: bloqueaba la carga de la mision); se ignora. Quitala de dmc5_ss_config.txt.
+[+  70.468 f4187] p2create: requestPreloadPlayerResource(1) -> ok
+[+  70.468 f4187] p2create: requestLoadPlayerResource -> ok
+[+  70.687 f4200] p2create: cargador de 1 -> NakidPlayerLoading(1) (fase 0)
+[+  70.687 f4200] p2create: esperando carga (13 frames): estado=NakidPlayerLoading(1) APL isAvailable=1 isBusy=1 isNotLoadPlayerResource=1 isBusyAll=1
+[+  71.687 f4260] p2create: cargador de 1 -> NakidPlayerAvailable(2) (fase 0)
+[+  71.687 f4260] p2create: recurso cargado; margen para el registro automatico
+[+  71.687 f4260] --- cargador de 1 [Nakid/Available] 0000022939B41760 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 2
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+  71.687 f4260]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+  73.187 f4350] p2create: activatePlayerResource -> ok (devolvio 1), estado AdditionalPlayerActivating(5)
+[+  73.187 f4350] --- cargador de 1 [tras activate] 0000022939B41760 tipo=app.AdditionalPlayerLoadManager.AdditionalPlayerLoader ---
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.<CurrentState>k__BackingField (app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.LoadState) = 5
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingCostumeID (app.PlayerCostumeID) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.ReloadingSituationID (app.PlayerSituationID) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedCostumeID (app.PlayerCostumeID) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedPlayerID (app.PlayerID) = 1
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.RequestedSituationID (app.PlayerSituationID) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isFinishFlow (System.Boolean) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isLocationWaitFlow (System.Boolean) = 0
+[+  73.187 f4350]   LDR app.AdditionalPlayerLoadManager.AdditionalPlayerLoader.isReloadFlow (System.Boolean) = 0
+[+  73.687 f4380] p2create: cargador de 1 -> AdditionalPlayerAvailable(6) (fase 3)
+[+  75.187 f4470] p2create: carpeta antes de Standby: 'pl0100' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
+[+  75.187 f4470] p2create: carpeta.set_Standby(true) -> ok
+[+  75.687 f4500] p2create: esperando Ready: 'pl0100' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
+[+  75.687 f4500] p2create: Ready: 'pl0100' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
+[+  76.187 f4530] p2create: carpeta.activate() -> ok
+[+  76.187 f4530] p2create: tras activate: 'pl0100' Active=0 Activating=1 Standby=1 Ready=1 Exist=1
+[+  76.718 f4560] PlayerManager.players: 2 -> 3
+[+  76.718 f4560]   player[0] GO='pl0200_v' padre='null'
+[+  76.718 f4560]   player[0] componentes de su GO: app.Player=00000229314242A0 (tipo real app.PlayerV) app.character.Character=00000229314242A0 (tipo real app.PlayerV) app.PlayerV=00000229314242A0 (tipo real app.PlayerV) 
+[+  76.718 f4560]   player[0] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+  76.718 f4560]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002293B422330
+[+  76.718 f4560]   player[0] 00000229314242A0 tipo=app.PlayerV id=Gilver(2) pos=(-89.20, -70.37, -238.73) padInput=000002293C7E36C0
+[+  76.718 f4560]   player[0] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+  76.718 f4560]   player[0] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+  76.718 f4560]   player[0] origen: carpeta[2] nombre='Players' ruta='Players'
+[+  76.718 f4560]   player[1] GO='pl0800_vergil' padre='null'
+[+  76.718 f4560]   player[1] componentes de su GO: app.Player=00000229313F5EF0 (tipo real app.PlayerVergilPL) app.character.Character=00000229313F5EF0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=00000229313F5EF0 (tipo real app.PlayerVergilPL) 
+[+  76.718 f4560]   player[1] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+  76.718 f4560]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002293B492050
+[+  76.718 f4560]   player[1] 00000229313F5EF0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.20, -70.37, -238.73) padInput=000002293C7E36C0 [P1/manual]
+[+  76.718 f4560]   player[1] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
+[+  76.718 f4560]   player[1] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  76.718 f4560]   player[2] GO='pl0100_dante' padre='null'
+[+  76.718 f4560]   player[2] componentes de su GO: app.Player=0000022931C5DE30 (tipo real app.PlayerDante) app.character.Character=0000022931C5DE30 (tipo real app.PlayerDante) app.PlayerDante=0000022931C5DE30 (tipo real app.PlayerDante) 
+[+  76.718 f4560]   player[2] hijos de su GO: 'PuppetStayRequester' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 
+[+  76.718 f4560]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000022939896740
+[+  76.718 f4560]   player[2] 0000022931C5DE30 tipo=app.PlayerDante id=Dante(1) pos=(-89.72, -70.35, -238.63) padInput=000002293989B110
+[+  76.718 f4560]   player[2] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+  76.718 f4560]   player[2] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  76.718 f4560] p2input: PadInput de P2 = 000002293989B110
+[+  76.718 f4560] P2 DETECTADO en PlayerManager.players[2]: app.PlayerDante
+[+  76.718 f4560]   player[2] GO='pl0100_dante' padre='null'
+[+  76.718 f4560]   player[2] componentes de su GO: app.Player=0000022931C5DE30 (tipo real app.PlayerDante) app.character.Character=0000022931C5DE30 (tipo real app.PlayerDante) app.PlayerDante=0000022931C5DE30 (tipo real app.PlayerDante) 
+[+  76.718 f4560]   player[2] hijos de su GO: 'PuppetStayRequester' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 
+[+  76.718 f4560]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000022939896740
+[+  76.718 f4560]   player[2] 0000022931C5DE30 tipo=app.PlayerDante id=Dante(1) pos=(-89.72, -70.35, -238.63) padInput=000002293989B110 [P2]
+[+  76.718 f4560] p2create: P2 creado (app.PlayerDante) en la fase 7, 30 frames despues del ultimo paso
+[+  76.718 f4560] p2: Player.IsThinkEnable 0 -> 1
+[+  76.718 f4560] p2create: Draw/Update y fisica (CharacterController + Colliders) de P2 FORZADOS y mantenidos (p2vis stop lo quita; p2_autovis=0 en la config lo evita)
+[+  78.218 f4650] === diag P2 (app.PlayerDante) f4650 ===
+[+  78.218 f4650] --- p2vis: visibilidad P1 vs P2 ---
+[+  78.218 f4650]   [P1] 00000229313F5EF0 GO='pl0800_vergil' Draw=1 DrawSelf=1 Update=1 UpdateSelf=1 Player.Enabled=1 Folder.Active=1 (-1 = no legible)
+[+  78.218 f4650]   [P1] FISICA: CharacterController.Enabled=1 Colliders.Enabled=1 (-1 = componente/metodo no disponible)
+[+  78.218 f4650]   [P1] pos=(-89.20, -70.37, -238.73) escalaLocal=(1.000, 1.000, 1.000)  hijos_escaneados=27 GOs_con_DrawSelf_apagado=9 mallas=14 habilitadas=14
+[+  78.218 f4650]   [P2] 0000022931C5DE30 GO='pl0100_dante' Draw=1 DrawSelf=1 Update=1 UpdateSelf=1 Player.Enabled=1 Folder.Active=1 (-1 = no legible)
+[+  78.218 f4650]   [P2] FISICA: CharacterController.Enabled=1 Colliders.Enabled=1 (-1 = componente/metodo no disponible)
+[+  78.218 f4650]   [P2] pos=(-90.18, -70.35, -238.55) escalaLocal=(1.000, 1.000, 1.000)  hijos_escaneados=42 GOs_con_DrawSelf_apagado=24 mallas=27 habilitadas=27
+[+  78.218 f4650]   distancia P1-P2 = 1.00 m
+[+  78.218 f4650]   DIFERENCIAS P2 vs P1: mallas_habilitadas(P2=27 P1=14) GOs_DrawSelf_apagado(P2=24 P1=9) 
+[+  78.218 f4650]   P2 campo app.BaseBehavior.<IsStarted>k__BackingField (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.GameModel.<puppetTriggerEffect>k__BackingField (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.GameModel.<puppetTriggerSE>k__BackingField (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<IsIntegrity>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<IsMediationPuppet>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<MasterIndex>k__BackingField (System.Int32) = -1
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<MediationType>k__BackingField (app.NetworkMasterMediationType) = 3
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<SelfIndex>k__BackingField (System.Int32) = -1
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<networkWwiseType>k__BackingField (app.network.NetworkWwiseType) = 2
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.<oldNetworkObjectType>k__BackingField (app.network.NetworkObjectType) = 4
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.GeneratorType (app.NetworkBaseBehavior.NetworkGeneratorType) = 0
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.IsUpdateNetworkType (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.NetworkCheckType (app.network.NetworkObjectType) = 1
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.NetworkType (app.network.NetworkObjectType) = 4
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.ReqNetworkType (app.network.NetworkObjectType) = 1
+[+  78.218 f4650]   P2 campo app.NetworkBaseBehavior.isPuppetSlow (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.Player.<avoidInit>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.<forceTargetAngleInitH>k__BackingField (System.Single) = 0.358
+[+  78.218 f4650]   P2 campo app.Player.<forceTargetAngleInitV>k__BackingField (System.Single) = 0.264
+[+  78.218 f4650]   P2 campo app.Player.<isEnableSnatch>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.<isPuppetEventMoveLock>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.<isSpecialComboStarted>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.<reserveJumpStatusInit>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.<rpcPuppetMotionChargeState>k__BackingField (app.RpcChargeState) = -1
+[+  78.218 f4650]   P2 campo app.Player.<targetAngleInit>k__BackingField (System.Single) = 0.358
+[+  78.218 f4650]   P2 campo app.Player.IsOldThinkPause (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.IsPuppetEventMoveLockMission (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.IsThinkEnable (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.Player.playerNameHudEnable (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.puppetIsBattle (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.Player.puppetStylishRank (app.StylishManager.StylishRank) = 0
+[+  78.218 f4650]   P2 campo app.PlayerDante.<PuppetSheathChargeTime>k__BackingField (System.Single) = 0.000
+[+  78.218 f4650]   P2 campo app.PlayerDante.<PuppetUseWeaponS>k__BackingField (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.PlayerDante.<activeAction>k__BackingField (app.PlayerDante.ActiveAction) = 0
+[+  78.218 f4650]   P2 campo app.PlayerDante.<ignoreSetActiveAction>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.PlayerDante.<isReact2ProvocationEnable>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.PlayerDante.<puppetDevilTriggerGaurge>k__BackingField (System.Single) = 0.000
+[+  78.218 f4650]   P2 campo app.PlayerDante.<puppetIsTheDTShortTrans>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.PlayerDante.<puppetTrickStarDashAngle>k__BackingField (System.Single) = 0.000
+[+  78.218 f4650]   P2 campo app.PlayerDante.<weaponLNotDrawTimer>k__BackingField (System.Single) = 8.000
+[+  78.218 f4650]   P2 campo app.character.Character.<exPivotInit>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.<gravityDownInit>k__BackingField (System.Single) = 0.007
+[+  78.218 f4650]   P2 campo app.character.Character.<gravityUpInit>k__BackingField (System.Single) = 0.010
+[+  78.218 f4650]   P2 campo app.character.Character.<isEnableDownDying>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.<isHoldEnable>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.<isSpecialProcessForDieOnPuppet>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.<nullTransScalePuppet>k__BackingField (System.Single) = 1.000
+[+  78.218 f4650]   P2 campo app.character.Character.<puppetExitAlpha>k__BackingField (System.Single) = 1.000
+[+  78.218 f4650]   P2 campo app.character.Character.<waitIntegrityPuppet>k__BackingField (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.FrameEnableIK (System.Single) = 0.000
+[+  78.218 f4650]   P2 campo app.character.Character.IsInitEPVComponents (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.character.Character.IsOldThinkPause (System.Boolean) = 0
+[+  78.218 f4650]   P2 campo app.character.Character.OldEnableFourLegIK (System.Boolean) = 1
+[+  78.218 f4650]   P2 campo app.character.Character.OldEnableLegIK (System.Boolean) = 1
+[+  78.218 f4650]   DIF base P1=2 P2=3 : app.NetworkBaseBehavior.<MediationType>k__BackingField (app.NetworkMasterMediationType)
+[+  78.218 f4650]   DIF base P1=1 P2=2 : app.NetworkBaseBehavior.<networkWwiseType>k__BackingField (app.network.NetworkWwiseType)
+[+  78.218 f4650]   DIF base P1=16 P2=1 : app.NetworkBaseBehavior.NetworkCheckType (app.network.NetworkObjectType)
+[+  78.218 f4650]   DIF base P1=0.219 P2=0.358 : app.Player.<catchTargetAngle>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.000 P2=0.142 : app.Player.<currentGunAngleH>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.000 P2=0.264 : app.Player.<currentGunAngleV>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=720.000 P2=0.000 : app.Player.<damageFaceReactionTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=3000.000 P2=0.000 : app.Player.<devilTriggerGauge>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.500 P2=1.100 : app.Player.<dissolveTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.219 P2=0.358 : app.Player.<forceTargetAngleInitH>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.000 P2=0.264 : app.Player.<forceTargetAngleInitV>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.219 P2=0.000 : app.Player.<homingAngle>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.570 P2=0.000 : app.Player.<inputRateFront>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=1 P2=0 : app.Player.<isEnableSnatch>k__BackingField (System.Boolean)
+[+  78.218 f4650]   DIF base P1=64 P2=57 : app.Player.<lFootOffsetJointIndex>k__BackingField (System.Int32)
+[+  78.218 f4650]   DIF base P1=10000.000 P2=3000.000 : app.Player.<maxDevilTriggerGauge>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=-1 P2=0 : app.Player.<minimumDamageType>k__BackingField (app.AttackUserData.DamageActTypeEnum)
+[+  78.218 f4650]   DIF base P1=180.000 P2=118.000 : app.Player.<moveSpeedTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=-1.000 P2=0.000 : app.Player.<multiInputCheckTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=347.452 P2=0.000 : app.Player.<padAngleTarget>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=4 P2=1 : app.Player.<playerID>k__BackingField (app.PlayerID)
+[+  78.218 f4650]   DIF base P1=69 P2=62 : app.Player.<rFootOffsetJointIndex>k__BackingField (System.Int32)
+[+  78.218 f4650]   DIF base P1=720.000 P2=0.000 : app.Player.<safePositionTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.219 P2=0.358 : app.Player.<targetAngleInit>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.000 P2=83.000 : app.Player.<waitTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=40.000 P2=5.000 : app.Player.GunCancelFrame (System.Single)
+[+  78.218 f4650]   DIF base P1=0 P2=1 : app.Player.IsThinkEnable (System.Boolean)
+[+  78.218 f4650]   DIF base P1=0 P2=4 : app.Player.angulerVelocityIndex (System.Int32)
+[+  78.218 f4650]   DIF base P1=0.007 P2=0.010 : app.character.Character.<gravityDown>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=1 P2=0 : app.character.Character.<isWaitForIK>k__BackingField (System.Boolean)
+[+  78.218 f4650]   DIF base P1=0 P2=1 : app.character.Character.<lookAtMode>k__BackingField (app.character.Character.LookAtMode)
+[+  78.218 f4650]   DIF base P1=720.000 P2=0.000 : app.character.Character.<moveBattleTimer>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=0.776 P2=0.000 : app.character.Character.<syncRandomF>k__BackingField (System.Single)
+[+  78.218 f4650]   DIF base P1=198 P2=0 : app.character.Character.<syncRandomUI>k__BackingField (System.UInt32)
+[+  78.218 f4650]   (34 campos base distintos entre P1 y P2, se muestran hasta 200)
+[+  78.218 f4650] tree: inicio
+[+  78.218 f4650] --- tree P1 (app.PlayerVergilPL) GO='pl0800_vergil' ---
+[+  78.218 f4650]   P1 padres (hacia la raiz): (ninguno: es raiz)
+[+  78.218 f4650]   P1 componentes de la raiz: via.Transform=? app.WorkRate=1 via.motion.DummySkeleton=? via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=1 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=1 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 via.motion.IkLeg=1 app.PlayerVergilPL=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcPlayer=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
+[+  78.218 f4650]   P1 wp08_001_forceedge  Draw=0 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=0 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponForceEdge=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P1 wp08_002_beowulf  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponBeowulf=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P1 wp08_000_yamato  Draw=1 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponYamatoPL=1 app.MaterialChangeController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P1 IKFootL  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P1 IKFootR  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P1 IKHandL  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P1 IKHandR  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P1 FBIKTargetHandL  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P1 FBIKTargetHandR  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P1 sound_position_r  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P1 sound_position_l  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P1 pl0820_vfx  Draw=0 Upd=1 | via.render.Mesh=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 
+[+  78.218 f4650]   P1 pl0820_vfx  Draw=0 Upd=1 | via.render.Mesh=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 
+[+  78.218 f4650]   P1 wp08_002_yamato_sword  Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.player.pl0300.weapon.WeaponYamatoSheath=1 app.WwiseContainerApp=1 app.WwiseMaterial=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.WorkRate=1 app.TransparentMeshController=1 app.MaterialChangeController=1 app.NetworkRpcGameModel=1 app.HitController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P1 wp08_000_yamato_sheath  Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.player.pl0300.weapon.WeaponYamatoSheath=1 app.WwiseContainerApp=1 app.WwiseMaterial=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.WorkRate=1 app.TransparentMeshController=1 app.MaterialChangeController=1 app.NetworkRpcGameModel=1 app.HitController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P1 pl0820_04  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 app.TransparentMeshController=1 app.MaterialChangeController=1 via.motion.ChildSecondary=1 
+[+  78.218 f4650]   P1 pl0820  Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 via.motion.ChildSecondary=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P1   pl0820_06  Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 app.MaterialChangeController=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P1   pl0820_05  Draw=0 Upd=0 | via.render.Mesh=1 app.WorkRate=1 via.motion.Motion=1 via.motion.Chain=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P1 pl0800  Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 app.PlayerChain=1 via.motion.ChildSecondary=1 via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 app.MaterialChangeController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? 
+[+  78.218 f4650]   P1   pl0800_01  Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Motion=1 app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P1     pl0800_03  Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 via.motion.Motion=1 app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P1 SubCharacterController  Draw=1 Upd=1 | via.physics.CharacterController=1 
+[+  78.218 f4650]   P1 R_ShalloeObstacle  Draw=1 Upd=1 | via.render.GridFluid2DWaterObstacle=1 
+[+  78.218 f4650]   P1 L_ShalloeObstacle  Draw=1 Upd=1 | via.render.GridFluid2DWaterObstacle=1 
+[+  78.218 f4650]   P1 PlayerNameHud  Draw=0 Upd=1 | via.gui.GUI=1 app.PlayerNameGUI=1 
+[+  78.218 f4650]   P1 WindGenerator  Draw=1 Upd=0 | via.physics.Colliders=1 app.WindGenerator=1 via.render.SwingWind=1 
+[+  78.218 f4650]   P1: 26 GameObjects descendientes
+[+  78.218 f4650] --- tree P2 (app.PlayerDante) GO='pl0100_dante' ---
+[+  78.218 f4650]   P2 padres (hacia la raiz): (ninguno: es raiz)
+[+  78.218 f4650]   P2 componentes de la raiz: via.Transform=? app.WorkRate=1 via.motion.DummySkeleton=? app.PlayerDante=1 app.DevilSwordSheathController=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.behaviortree.BehaviorTree=0 via.physics.CharacterController=1 via.physics.Colliders=1 app.HitController=1 via.physics.RequestSetCollider=1 app.AdjustPress=1 app.AdjustTerrain=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.wwise.WwiseSpaceDeterminationListenerOverwriter=0 app.WwiseWeaponMotionSequence=1 app.WwiseCastRayFootEffetctControllerSequence=1 app.WwiseDamageController=1 app.TargetController=1 app.LockOnTarget=1 app.ObjectRestrictController=1 via.effect.script.ObjectEffectManager=1 via.motion.ActorMotion=0 via.render.SwingWind=1 via.motion.IkLeg=0 app.IKFullbody=0 app.ObjectActivateMediator=0 app.PlayerLookAt=1 via.navigation.NavigationSurface=? app.WwiseFacialController=1 app.WwiseFacialMotionSequence=1 app.WwiseCollisionAttributeMotionSequence=1 app.WwiseFootEffectControllerMuteMotionSequence=1 via.dynamics.Ragdoll=1 app.PlayerRagdoll=1 app.FootEffectControllerApp=1 app.VFXLevelTriggerController=1 app.CharacterMovingFloorGroundController=1 via.timeline.Timeline=1 app.player.PlayerFacialMotionController=1 app.CharacterWindController=1 app.TransparentMeshController=1 app.Humanoid=0 app.PlayerLookAtController=1 app.NetworkRpcPlayerDante=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseMotionSwitchList=1 via.wwise.WwiseJointAngleTriggerList=1 via.wwise.WwisePackageList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertFootLanding=1 via.effect.script.EPVExpertCharacterDamage=1 via.effect.script.EPVExpertPlayerState=1 via.effect.script.EPVExpertCharacterHit=1 via.network.RemoteProcedure=? app.NetworkMasterMediation=1 
+[+  78.218 f4650]   P2 PuppetStayRequester  Draw=1 Upd=1 | app.PuppetStayRequester=1 via.physics.Colliders=1 
+[+  78.218 f4650]   P2 IKFootL  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P2 IKFootR  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P2 IKHandL  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P2 IKHandR  Draw=1 Upd=1 | app.IK2Bone=1 
+[+  78.218 f4650]   P2 FBIKTargetHandL  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P2 FBIKTargetHandR  Draw=1 Upd=1 | 
+[+  78.218 f4650]   P2 ac01_010_fausthat_cloak  Draw=0 Upd=1 | app.WorkRate=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 via.effect.script.ObjectEffectManager=1 app.accessory.FaustCloakAccessory=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.MaterialChangeController=1 app.TransparentMeshController=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 
+[+  78.218 f4650]   P2   effect_ac01_010_fausthat_cloak  Draw=1 Upd=1 | via.effect.EffectPlayer=? via.effect.script.EffectInfoHolder=1 
+[+  78.218 f4650]   P2 ac01_009_emperor_goggles  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.accessory.GoggleAccessory=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 wp01_010_fausthat  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponFaustHat=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_008_kalina_mark2  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.motion.MotionFsm2=1 via.effect.script.SequenceController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponKalinaAnn=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_008_kalina_mark1  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponKalinaAnn=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_003_coyotea  Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.wwise.WwiseMotionSequence=1 app.WwiseMaterial=1 app.WeaponCoyoteA=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_001_ivory  Draw=0 Upd=1 | app.WorkRate=1 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.wwise.WwiseMotionSequence=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseMaterial=1 app.WeaponIvory=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_001_ebony  Draw=0 Upd=1 | app.WorkRate=1 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseMaterial=1 app.WeaponEbony=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_007_cerberus_triplet  Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 via.wwise.WwiseMotionSequence=1 app.player.pl0100.weapon.WeaponCerberusTriplet=1 via.physics.RequestSetCollider=0 app.SequenceController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_007_cerberus_pole  Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.player.pl0100.weapon.WeaponCerberusPole=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.relib.effect.behavior.ReLibEPVStandardChild=? via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_007_cerberus_nunchaku  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 via.motion.Motion=1 via.motion.MotionFsm2=1 app.HitController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 app.player.pl0100.weapon.WeaponCerberusNunchaku=1 via.motion.Chain=1 via.physics.Colliders=0 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2   effect_wp01_007_cerberus_nunchaku  Draw=1 Upd=1 | via.effect.EffectPlayer=? via.effect.script.EffectInfoHolder=1 app.WorkRate=1 
+[+  78.218 f4650]   P2     PointLight Particle0  Draw=1 Upd=1 | via.effect.script.EffectLight.LightID=1 via.render.PointLight=1 
+[+  78.218 f4650]   P2 wp01_004_balrog  Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WeaponBalrog=1 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_006_devilsword  Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.WeaponDevilSword=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2   CollidersController  Draw=1 Upd=1 | via.physics.Colliders=1 
+[+  78.218 f4650]   P2 wp01_005_spada  Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.wwise.WwiseMotionSequence=1 app.WwiseMaterial=1 app.WeaponSpada=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 wp01_000_rebellion  Draw=0 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=0 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.WeaponRebellion=1 via.physics.Colliders=0 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? 
+[+  78.218 f4650]   P2 pl0120_04  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 app.TransparentMeshController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.MaterialChangeController=1 
+[+  78.218 f4650]   P2 pl0120_vfx  Draw=0 Upd=1 | via.render.Mesh=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 pl0120  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 via.motion.JointConstraints=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P2 pl0110_05  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P2 pl0110_04  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 app.TransparentMeshController=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P2 pl0110  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=0 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 via.motion.ChildSecondary=1 app.MaterialChangeController=1 
+[+  78.218 f4650]   P2 pl0100_14  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=0 app.MaterialChangeController=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 pl0100_13  Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 pl0100_04  Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 pl0100_03  Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 pl0100_01  Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 app.WorkRate=1 
+[+  78.218 f4650]   P2 pl0100  Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=0 app.PlayerChain=1 via.motion.JointConstraints=1 app.MaterialChangeController=1 app.animation.MotionSynchronizer=0 via.relib.effect.behavior.ReLibEPVStandardChild=? via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 
+[+  78.218 f4650]   P2 SubCharacterController  Draw=1 Upd=1 | via.physics.CharacterController=1 
+[+  78.218 f4650]   P2 R_ShalloeObstacle  Draw=1 Upd=1 | via.render.GridFluid2DWaterObstacle=1 
+[+  78.218 f4650]   P2 L_ShalloeObstacle  Draw=1 Upd=1 | via.render.GridFluid2DWaterObstacle=1 
+[+  78.218 f4650]   P2 PlayerNameHud  Draw=0 Upd=1 | via.gui.GUI=1 app.PlayerNameGUI=1 
+[+  78.218 f4650]   P2: 42 GameObjects descendientes
+[+  78.218 f4650] --- tree DIFERENCIAS por ruta (P1 vs P2) ---
+[+  78.218 f4650]   solo P1: /WindGenerator  [Draw=1 Upd=0 | via.physics.Colliders=1 app.WindGenerator=1 via.render.SwingWind=1 ]
+[+  78.218 f4650]   solo P1: /pl0800  [Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 app.PlayerChain=1 via.motion.ChildSecondary=1 via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 app.MaterialChangeController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? ]
+[+  78.218 f4650]   solo P1: /pl0800/pl0800_01  [Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Motion=1 app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P1: /pl0800/pl0800_01/pl0800_03  [Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 via.motion.Motion=1 app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P1: /pl0820  [Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 via.motion.ChildSecondary=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P1: /pl0820/pl0820_05  [Draw=0 Upd=0 | via.render.Mesh=1 app.WorkRate=1 via.motion.Motion=1 via.motion.Chain=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P1: /pl0820/pl0820_06  [Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 app.MaterialChangeController=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P1: /pl0820_04  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=1 via.motion.Chain=1 app.TransparentMeshController=1 app.MaterialChangeController=1 via.motion.ChildSecondary=1 ]
+[+  78.218 f4650]   solo P1: /pl0820_vfx  [Draw=0 Upd=1 | via.render.Mesh=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P1: /sound_position_l  [Draw=1 Upd=1 | ]
+[+  78.218 f4650]   solo P1: /sound_position_r  [Draw=1 Upd=1 | ]
+[+  78.218 f4650]   solo P1: /wp08_000_yamato  [Draw=1 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponYamatoPL=1 app.MaterialChangeController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P1: /wp08_000_yamato_sheath  [Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.player.pl0300.weapon.WeaponYamatoSheath=1 app.WwiseContainerApp=1 app.WwiseMaterial=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.WorkRate=1 app.TransparentMeshController=1 app.MaterialChangeController=1 app.NetworkRpcGameModel=1 app.HitController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P1: /wp08_001_forceedge  [Draw=0 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=0 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponForceEdge=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P1: /wp08_002_beowulf  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? app.WeaponBeowulf=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P1: /wp08_002_yamato_sword  [Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.player.pl0300.weapon.WeaponYamatoSheath=1 app.WwiseContainerApp=1 app.WwiseMaterial=1 via.effect.script.ObjectEffectManager=1 via.physics.Colliders=0 app.WorkRate=1 app.TransparentMeshController=1 app.MaterialChangeController=1 app.NetworkRpcGameModel=1 app.HitController=1 via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /PuppetStayRequester  [Draw=1 Upd=1 | app.PuppetStayRequester=1 via.physics.Colliders=1 ]
+[+  78.218 f4650]   solo P2: /ac01_009_emperor_goggles  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=1 via.motion.Motion=1 app.accessory.GoggleAccessory=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /ac01_010_fausthat_cloak  [Draw=0 Upd=1 | app.WorkRate=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=1 via.effect.script.ObjectEffectManager=1 app.accessory.FaustCloakAccessory=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.MaterialChangeController=1 app.TransparentMeshController=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 ]
+[+  78.218 f4650]   solo P2: /ac01_010_fausthat_cloak/effect_ac01_010_fausthat_cloak  [Draw=1 Upd=1 | via.effect.EffectPlayer=? via.effect.script.EffectInfoHolder=1 ]
+[+  78.218 f4650]   solo P2: /pl0100  [Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=0 app.PlayerChain=1 via.motion.JointConstraints=1 app.MaterialChangeController=1 app.animation.MotionSynchronizer=0 via.relib.effect.behavior.ReLibEPVStandardChild=? via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /pl0100_01  [Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 app.WorkRate=1 ]
+[+  78.218 f4650]   solo P2: /pl0100_03  [Draw=1 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /pl0100_04  [Draw=0 Upd=0 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /pl0100_13  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=1 app.MaterialChangeController=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /pl0100_14  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Chain=0 via.motion.Motion=0 app.MaterialChangeController=1 app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /pl0110  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.Motion=1 via.motion.Chain=0 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 via.render.AmbientOcclusionGeometry=1 app.TransparentMeshController=1 via.motion.ChildSecondary=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P2: /pl0110_04  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P2: /pl0110_05  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P2: /pl0120  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 via.motion.JointConstraints=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P2: /pl0120_04  [Draw=0 Upd=1 | via.render.Mesh=1 via.motion.ChildSecondary=1 via.motion.Chain=0 app.TransparentMeshController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.MaterialChangeController=1 ]
+[+  78.218 f4650]   solo P2: /pl0120_vfx  [Draw=0 Upd=1 | via.render.Mesh=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 ]
+[+  78.218 f4650]   solo P2: /wp01_000_rebellion  [Draw=0 Upd=1 | via.render.Mesh=1 app.HitController=1 app.WorkRate=0 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.WeaponRebellion=1 via.physics.Colliders=0 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_001_ebony  [Draw=0 Upd=1 | app.WorkRate=1 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseMaterial=1 app.WeaponEbony=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_001_ivory  [Draw=0 Upd=1 | app.WorkRate=1 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.wwise.WwiseMotionSequence=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseMaterial=1 app.WeaponIvory=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_003_coyotea  [Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.wwise.WwiseMotionSequence=1 app.WwiseMaterial=1 app.WeaponCoyoteA=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_004_balrog  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WeaponBalrog=1 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? via.motion.JointConstraints=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_005_spada  [Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 via.wwise.WwiseMotionSequence=1 app.WwiseMaterial=1 app.WeaponSpada=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_006_devilsword  [Draw=1 Upd=1 | via.render.Mesh=1 app.WorkRate=1 app.HitController=1 via.motion.Motion=1 via.wwise.WwiseMotionSequence=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.WeaponDevilSword=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_006_devilsword/CollidersController  [Draw=1 Upd=1 | via.physics.Colliders=1 ]
+[+  78.218 f4650]   solo P2: /wp01_007_cerberus_nunchaku  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 via.motion.Motion=1 via.motion.MotionFsm2=1 app.HitController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 app.player.pl0100.weapon.WeaponCerberusNunchaku=1 via.motion.Chain=1 via.physics.Colliders=0 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_007_cerberus_nunchaku/effect_wp01_007_cerberus_nunchaku  [Draw=1 Upd=1 | via.effect.EffectPlayer=? via.effect.script.EffectInfoHolder=1 app.WorkRate=1 ]
+[+  78.218 f4650]   solo P2: /wp01_007_cerberus_nunchaku/effect_wp01_007_cerberus_nunchaku/PointLight Particle0  [Draw=1 Upd=1 | via.effect.script.EffectLight.LightID=1 via.render.PointLight=1 ]
+[+  78.218 f4650]   solo P2: /wp01_007_cerberus_pole  [Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.player.pl0100.weapon.WeaponCerberusPole=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.relib.effect.behavior.ReLibEPVStandardChild=? via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_007_cerberus_triplet  [Draw=0 Upd=1 | app.WorkRate=0 app.HitController=1 app.WwiseContainerApp=1 via.effect.script.ObjectEffectManager=1 app.ObjectActivateMediator=0 app.ObjectRestrictController=1 via.render.Mesh=1 via.motion.Motion=1 via.motion.MotionFsm2=1 via.wwise.WwiseMotionSequence=1 app.player.pl0100.weapon.WeaponCerberusTriplet=1 via.physics.RequestSetCollider=0 app.SequenceController=1 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_008_kalina_mark1  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.motion.MotionFsm2=1 app.SequenceController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponKalinaAnn=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_008_kalina_mark2  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 via.motion.MotionFsm2=1 via.effect.script.SequenceController=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponKalinaAnn=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 via.physics.Colliders=0 via.relib.effect.behavior.ReLibEPVStandardChild=? app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertMuzzleFlashCustom=1 via.effect.script.EPVExpertCharacterHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   solo P2: /wp01_010_fausthat  [Draw=0 Upd=1 | via.render.Mesh=1 app.WorkRate=0 app.HitController=1 via.motion.Motion=1 app.WwiseContainerApp=1 via.wwise.WwiseMotionSequence=1 via.effect.script.ObjectEffectManager=1 app.WeaponFaustHat=1 app.ObjectActivateMediator=0 app.WwiseMaterial=1 app.TransparentMeshController=1 via.render.StreamingTextureController=? via.wwise.WwiseGameParameterList=1 via.wwise.WwiseSwitchList=1 via.wwise.WwiseMaterialSwitchList=1 via.effect.script.EPVStandard=1 via.effect.script.EPVExpertCharacterHit=1 via.effect.script.EPVExpertTerrainHit=1 app.NetworkRpcGameModel=1 via.network.RemoteProcedure=? ]
+[+  78.218 f4650]   (48 diferencias, se muestran hasta 150)
+[+  78.218 f4650] tree: fin
+[+  78.218 f4650] === fin diag P2 ===
+[+  83.828 f4987] ORDEN: p2copy
+[+  83.828 f4987] MANDO: P2 ESPEJA a P1 (copia todos los campos del PadInput de P1)
+[+  83.828 f4987] p2pad: modo ESPEJO: P2 recibe una copia de TODO el PadInput de P1 tras cada update
+[+  83.828 f4987] p2pad watch: observando 25 s. PULSA botones y mueve palancas en el mando 0 y en el de P2. Una linea por cambio.
+[+  83.828 f4987] watch f4987 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  83.828 f4987]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  83.828 f4987]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  83.843 f4988] watch f4988 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00) | P2 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00)
+[+  83.843 f4988]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  83.843 f4988]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  84.265 f5013] watch f5013 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  84.265 f5013]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  84.265 f5013]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  86.468 f5145] watch f5145 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  86.468 f5145]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  86.468 f5145]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  86.484 f5146] watch f5146 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  86.484 f5146]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  86.484 f5146]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  86.500 f5147] watch f5147 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  86.500 f5147]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  86.500 f5147]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  86.734 f5161] watch f5161 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  86.734 f5161]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  86.734 f5161]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  86.750 f5162] watch f5162 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  86.750 f5162]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  86.750 f5162]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  87.922 f5232] watch f5232 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  87.922 f5232]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  87.922 f5232]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  87.937 f5233] watch f5233 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  87.937 f5233]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  87.937 f5233]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  87.953 f5234] watch f5234 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  87.953 f5234]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  87.953 f5234]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.031 f5239] watch f5239 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  88.031 f5239]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-69.77,-238.49) inputAngle=0.000
+[+  88.031 f5239]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.125 f5245] watch f5245 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  88.125 f5245]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-68.25,-238.49) inputAngle=0.000
+[+  88.125 f5245]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.140 f5246] watch f5246 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  88.140 f5246]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-68.07,-238.49) inputAngle=0.000
+[+  88.140 f5246]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.172 f5247] watch f5247 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.172 f5247]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-67.91,-238.49) inputAngle=0.000
+[+  88.172 f5247]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.234 f5251] watch f5251 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.234 f5251]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-67.41,-238.49) inputAngle=0.000
+[+  88.234 f5251]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.328 f5257] watch f5257 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.328 f5257]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-67.09,-238.49) inputAngle=0.000
+[+  88.328 f5257]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.437 f5263] watch f5263 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.437 f5263]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-67.39,-238.49) inputAngle=0.000
+[+  88.437 f5263]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.531 f5269] watch f5269 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.531 f5269]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-68.21,-238.49) inputAngle=0.000
+[+  88.531 f5269]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.625 f5275] watch f5275 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.625 f5275]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-69.28,-238.49) inputAngle=0.000
+[+  88.625 f5275]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  88.734 f5281] watch f5281 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  88.734 f5281]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  88.734 f5281]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.093 f5303] watch f5303 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  89.093 f5303]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  89.093 f5303]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.125 f5304] watch f5304 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+  89.125 f5304]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  89.125 f5304]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.125 f5305] watch f5305 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+  89.125 f5305]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.14,-70.37,-238.49) inputAngle=0.000
+[+  89.125 f5305]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.281 f5314] watch f5314 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+  89.281 f5314]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.12,-70.37,-238.38) inputAngle=0.000
+[+  89.281 f5314]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.312 f5316] watch f5316 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  89.312 f5316]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.10,-70.36,-238.27) inputAngle=0.000
+[+  89.312 f5316]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.343 f5318] watch f5318 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  89.343 f5318]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.07,-70.36,-238.16) inputAngle=0.000
+[+  89.343 f5318]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.453 f5324] watch f5324 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  89.453 f5324]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=0.000
+[+  89.453 f5324]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.515 f5328] watch f5328 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  89.515 f5328]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=0.000
+[+  89.515 f5328]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.531 f5329] watch f5329 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  89.531 f5329]       MOV P1: padAngleTarget=347.45 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=0.000
+[+  89.531 f5329]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.547 f5330] watch f5330 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+  89.547 f5330]       MOV P1: padAngleTarget=188.93 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=-2.767
+[+  89.547 f5330]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.609 f5334] watch f5334 | mando0 btn=0x00000410 L=(-0.02,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+  89.609 f5334]       MOV P1: padAngleTarget=188.93 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=-2.767
+[+  89.609 f5334]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.625 f5335] watch f5335 | mando0 btn=0x00000410 L=(-0.02,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.02,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.02,-1.00)
+[+  89.625 f5335]       MOV P1: padAngleTarget=187.80 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=3.12 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=-2.786
+[+  89.625 f5335]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=3.12 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.640 f5336] watch f5336 | mando0 btn=0x00000410 L=(-0.02,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.02,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.02,-1.00)
+[+  89.640 f5336]       MOV P1: padAngleTarget=187.80 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=3.12 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.05,-70.36,-238.04) inputAngle=-2.786
+[+  89.640 f5336]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=3.12 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.718 f5340] watch f5340 | mando0 btn=0x00000410 L=(-0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.00,-1.00)
+[+  89.718 f5340]       MOV P1: padAngleTarget=188.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.03,-70.36,-237.99) inputAngle=-2.771
+[+  89.718 f5340]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.812 f5346] watch f5346 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  89.812 f5346]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.02,-70.36,-237.94) inputAngle=-2.763
+[+  89.812 f5346]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  89.937 f5353] watch f5353 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  89.937 f5353]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-88.99,-70.35,-237.79) inputAngle=-2.763
+[+  89.937 f5353]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.031 f5359] watch f5359 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  90.031 f5359]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-69.26,-237.82) inputAngle=-2.763
+[+  90.031 f5359]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.125 f5365] watch f5365 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  90.125 f5365]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-67.39,-237.82) inputAngle=-2.763
+[+  90.125 f5365]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.297 f5375] watch f5375 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  90.297 f5375]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-67.35,-237.82) inputAngle=-2.763
+[+  90.297 f5375]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.312 f5376] watch f5376 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+  90.312 f5376]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-67.35,-237.82) inputAngle=-2.763
+[+  90.312 f5376]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.343 f5378] watch f5378 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+  90.343 f5378]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-67.35,-237.82) inputAngle=-2.763
+[+  90.343 f5378]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.453 f5384] watch f5384 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  90.453 f5384]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-67.36,-237.82) inputAngle=-2.763
+[+  90.453 f5384]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.609 f5394] watch f5394 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  90.609 f5394]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-67.48,-237.82) inputAngle=-2.763
+[+  90.609 f5394]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.718 f5400] watch f5400 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  90.718 f5400]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-67.78,-237.82) inputAngle=-2.763
+[+  90.718 f5400]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.718 f5400] latido: frame=5400
+[+  90.812 f5406] watch f5406 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  90.812 f5406]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-68.34,-237.82) inputAngle=-2.763
+[+  90.812 f5406]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  90.922 f5412] watch f5412 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  90.922 f5412]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-69.14,-237.82) inputAngle=-2.763
+[+  90.922 f5412]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.015 f5418] watch f5418 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  91.015 f5418]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-70.35,-237.82) inputAngle=-2.763
+[+  91.015 f5418]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.172 f5427] watch f5427 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  91.172 f5427]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.00,-70.35,-237.82) inputAngle=-2.763
+[+  91.172 f5427]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.187 f5428] watch f5428 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  91.187 f5428]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-70.35,-237.82) inputAngle=-2.763
+[+  91.187 f5428]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.203 f5429] watch f5429 | mando0 btn=0x00000410 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  91.203 f5429]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.00,-70.35,-237.82) inputAngle=-2.763
+[+  91.203 f5429]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.281 f5434] watch f5434 | mando0 btn=0x00000410 L=(-0.06,0.24) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-1.00)
+[+  91.281 f5434]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-88.98,-70.35,-237.76) inputAngle=-2.763
+[+  91.281 f5434]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.375 f5440] watch f5440 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  91.375 f5440]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.97,-70.35,-237.70) inputAngle=0.473
+[+  91.375 f5440]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.484 f5446] watch f5446 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  91.484 f5446]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.94,-70.35,-237.56) inputAngle=0.473
+[+  91.484 f5446]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.578 f5452] watch f5452 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  91.578 f5452]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-69.25,-237.60) inputAngle=0.473
+[+  91.578 f5452]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.687 f5458] watch f5458 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  91.687 f5458]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-67.38,-237.60) inputAngle=0.473
+[+  91.687 f5458]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.734 f5461] watch f5461 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  91.734 f5461]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-67.37,-237.60) inputAngle=0.473
+[+  91.734 f5461]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  91.750 f5462] watch f5462 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  91.750 f5462]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-67.37,-237.60) inputAngle=0.473
+[+  91.750 f5462]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.172 f5487] watch f5487 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  92.172 f5487]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-67.47,-237.60) inputAngle=0.473
+[+  92.172 f5487]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.265 f5493] watch f5493 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  92.265 f5493]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-67.78,-237.60) inputAngle=0.473
+[+  92.265 f5493]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.359 f5499] watch f5499 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  92.359 f5499]       MOV P1: padAngleTarget=14.53 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-88.95,-68.33,-237.60) inputAngle=0.473
+[+  92.359 f5499]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.468 f5505] watch f5505 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+  92.468 f5505]       MOV P1: padAngleTarget=189.15 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-88.95,-69.14,-237.62) inputAngle=-2.763
+[+  92.468 f5505]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.562 f5511] watch f5511 | mando0 btn=0x00000400 L=(0.00,-0.85) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-0.88) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-0.88)
+[+  92.562 f5511]       MOV P1: padAngleTarget=189.18 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=0.88 yaw=12.5 pos=(-89.01,-70.35,-237.74) inputAngle=-2.762
+[+  92.562 f5511]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=0.88 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.640 f5516] watch f5516 | mando0 btn=0x00000410 L=(0.00,-0.18) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00)
+[+  92.640 f5516]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.01,-70.35,-237.74) inputAngle=0.371
+[+  92.640 f5516]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.672 f5517] watch f5517 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,-0.34) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,-0.34)
+[+  92.672 f5517]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.13 padLRot=0.00 mag=0.34 yaw=12.5 pos=(-89.01,-70.35,-237.74) inputAngle=0.371
+[+  92.672 f5517]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.13 padLRot=0.00 mag=0.34 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.687 f5518] watch f5518 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  92.687 f5518]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.01,-70.35,-237.75) inputAngle=0.371
+[+  92.687 f5518]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.765 f5523] watch f5523 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  92.765 f5523]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.04,-70.35,-237.89) inputAngle=0.371
+[+  92.765 f5523]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.859 f5529] watch f5529 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  92.859 f5529]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.09,-70.36,-238.14) inputAngle=0.371
+[+  92.859 f5529]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  92.968 f5535] watch f5535 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  92.968 f5535]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.12,-70.36,-238.27) inputAngle=0.371
+[+  92.968 f5535]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  93.203 f5549] watch f5549 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  93.203 f5549]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.15,-70.37,-238.38) inputAngle=0.371
+[+  93.203 f5549]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.18,-70.35,-238.55) inputAngle=0.000
+[+  93.297 f5555] watch f5555 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  93.297 f5555]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.20,-70.37,-238.63) inputAngle=0.371
+[+  93.297 f5555]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.19,-70.35,-238.55) inputAngle=0.000
+[+  93.390 f5561] watch f5561 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  93.390 f5561]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.26,-70.38,-238.89) inputAngle=0.371
+[+  93.390 f5561]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  93.500 f5567] watch f5567 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  93.500 f5567]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.29,-70.38,-239.01) inputAngle=0.371
+[+  93.500 f5567]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  95.375 f5680] watch f5680 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+  95.375 f5680]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.27,-70.38,-238.92) inputAngle=0.371
+[+  95.375 f5680]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  95.390 f5681] watch f5681 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  95.390 f5681]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.27,-70.38,-238.92) inputAngle=0.371
+[+  95.390 f5681]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.031 f5719] watch f5719 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+  96.031 f5719]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.26,-70.38,-238.90) inputAngle=0.371
+[+  96.031 f5719]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.047 f5720] watch f5720 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.047 f5720]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.26,-70.38,-238.90) inputAngle=0.371
+[+  96.047 f5720]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.468 f5745] watch f5745 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.468 f5745]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.24,-70.38,-238.79) inputAngle=0.371
+[+  96.468 f5745]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.578 f5752] watch f5752 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.578 f5752]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  96.578 f5752]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.593 f5753] watch f5753 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  96.593 f5753]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  96.593 f5753]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.609 f5754] watch f5754 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  96.609 f5754]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  96.609 f5754]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.703 f5759] watch f5759 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  96.703 f5759]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-69.77,-238.76) inputAngle=0.371
+[+  96.703 f5759]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.765 f5763] watch f5763 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+  96.765 f5763]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.66,-238.76) inputAngle=0.371
+[+  96.765 f5763]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.781 f5764] watch f5764 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.781 f5764]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.47,-238.76) inputAngle=0.371
+[+  96.781 f5764]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.797 f5765] watch f5765 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.797 f5765]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.29,-238.76) inputAngle=0.371
+[+  96.797 f5765]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  96.890 f5771] watch f5771 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  96.890 f5771]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.52,-238.76) inputAngle=0.371
+[+  96.890 f5771]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  97.000 f5777] watch f5777 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  97.000 f5777]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.30,-238.76) inputAngle=0.371
+[+  97.000 f5777]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  97.093 f5783] watch f5783 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  97.093 f5783]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.68,-238.76) inputAngle=0.371
+[+  97.093 f5783]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  97.203 f5789] watch f5789 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  97.203 f5789]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.60,-238.76) inputAngle=0.371
+[+  97.203 f5789]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  97.297 f5795] watch f5795 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  97.297 f5795]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-69.78,-238.76) inputAngle=0.371
+[+  97.297 f5795]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  97.390 f5801] watch f5801 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  97.390 f5801]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  97.390 f5801]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  98.187 f5848] watch f5848 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00) | P2 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00)
+[+  98.187 f5848]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  98.187 f5848]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  98.203 f5849] watch f5849 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00) | P2 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00)
+[+  98.203 f5849]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  98.203 f5849]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  99.250 f5912] ORDEN: p2copy
+[+  99.250 f5912] MANDO: P2 ESPEJA a P1 (copia todos los campos del PadInput de P1)
+[+  99.250 f5912] p2pad: modo ESPEJO: P2 recibe una copia de TODO el PadInput de P1 tras cada update
+[+  99.250 f5912] p2pad watch: observando 25 s. PULSA botones y mueve palancas en el mando 0 y en el de P2. Una linea por cambio.
+[+  99.250 f5912] watch f5912 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00) | P2 padBtn=0x00001000 on=0x00000020 L=(0.00,0.00)
+[+  99.250 f5912]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  99.250 f5912]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+  99.765 f5943] watch f5943 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+  99.765 f5943]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+  99.765 f5943]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.703 f5999] watch f5999 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 100.703 f5999]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 100.703 f5999]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.718 f6000] watch f6000 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 100.718 f6000]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 100.718 f6000]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.734 f6001] watch f6001 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 100.734 f6001]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 100.734 f6001]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.812 f6006] watch f6006 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 100.812 f6006]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-69.77,-238.76) inputAngle=0.371
+[+ 100.812 f6006]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.906 f6012] watch f6012 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 100.906 f6012]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.26,-238.76) inputAngle=0.371
+[+ 100.906 f6012]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.968 f6015] watch f6015 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 100.968 f6015]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.75,-238.76) inputAngle=0.371
+[+ 100.968 f6015]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 100.984 f6016] watch f6016 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 100.984 f6016]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.61,-238.76) inputAngle=0.371
+[+ 100.984 f6016]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.015 f6018] watch f6018 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.015 f6018]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.37,-238.76) inputAngle=0.371
+[+ 101.015 f6018]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.109 f6024] watch f6024 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.109 f6024]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-66.99,-238.76) inputAngle=0.371
+[+ 101.109 f6024]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.218 f6030] watch f6030 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.218 f6030]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.23,-238.76) inputAngle=0.371
+[+ 101.218 f6030]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.312 f6036] watch f6036 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.312 f6036]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-67.98,-238.76) inputAngle=0.371
+[+ 101.312 f6036]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.406 f6042] watch f6042 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.406 f6042]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-68.98,-238.76) inputAngle=0.371
+[+ 101.406 f6042]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.515 f6048] watch f6048 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.515 f6048]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 101.515 f6048]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.640 f6056] watch f6056 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.640 f6056]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 101.640 f6056]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.656 f6057] watch f6057 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+ 101.656 f6057]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 101.656 f6057]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.687 f6058] watch f6058 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+ 101.687 f6058]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.23,-70.37,-238.76) inputAngle=0.371
+[+ 101.687 f6058]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.828 f6067] watch f6067 | mando0 btn=0x00000010 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+ 101.828 f6067]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.21,-70.37,-238.65) inputAngle=0.371
+[+ 101.828 f6067]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.859 f6069] watch f6069 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00) | P2 padBtn=0x00000010 on=0x00000001 L=(0.00,0.00)
+[+ 101.859 f6069]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.18,-70.37,-238.54) inputAngle=0.371
+[+ 101.859 f6069]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.875 f6070] watch f6070 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.875 f6070]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.17,-70.37,-238.48) inputAngle=0.371
+[+ 101.875 f6070]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 101.937 f6073] watch f6073 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 101.937 f6073]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=0.371
+[+ 101.937 f6073]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.187 f6088] watch f6088 | mando0 btn=0x00000000 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 102.187 f6088]       MOV P1: padAngleTarget=8.70 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=0.371
+[+ 102.187 f6088]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.281 f6094] watch f6094 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,-1.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,-1.00)
+[+ 102.281 f6094]       MOV P1: padAngleTarget=181.88 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=-2.890
+[+ 102.281 f6094]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.297 f6095] watch f6095 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+ 102.297 f6095]       MOV P1: padAngleTarget=181.88 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=-2.890
+[+ 102.297 f6095]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.312 f6096] watch f6096 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+ 102.312 f6096]       MOV P1: padAngleTarget=181.88 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=-2.890
+[+ 102.312 f6096]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.375 f6100] watch f6100 | mando0 btn=0x00000400 L=(-0.16,-0.99) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+ 102.375 f6100]       MOV P1: padAngleTarget=181.88 targetAngleInit=0.22 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-89.13,-70.36,-238.32) inputAngle=-2.890
+[+ 102.375 f6100]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.484 f6106] watch f6106 | mando0 btn=0x00000410 L=(-0.21,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.19,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.19,-0.98)
+[+ 102.484 f6106]       MOV P1: padAngleTarget=153.40 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.95 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.16,-70.37,-238.45) inputAngle=-3.086
+[+ 102.484 f6106]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.95 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.500 f6107] watch f6107 | mando0 btn=0x00000410 L=(-0.21,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98)
+[+ 102.500 f6107]       MOV P1: padAngleTarget=152.52 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.16,-70.37,-238.45) inputAngle=-3.101
+[+ 102.500 f6107]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.515 f6108] watch f6108 | mando0 btn=0x00000410 L=(-0.22,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98)
+[+ 102.515 f6108]       MOV P1: padAngleTarget=152.52 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.16,-70.37,-238.45) inputAngle=-3.101
+[+ 102.515 f6108]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.531 f6109] watch f6109 | mando0 btn=0x00000410 L=(-0.21,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.22,-0.98) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.22,-0.98)
+[+ 102.531 f6109]       MOV P1: padAngleTarget=151.99 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.92 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.16,-70.37,-238.44) inputAngle=-3.110
+[+ 102.531 f6109]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.92 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.625 f6115] watch f6115 | mando0 btn=0x00000410 L=(-0.19,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.21,-0.98)
+[+ 102.625 f6115]       MOV P1: padAngleTarget=152.52 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.12,-70.37,-238.39) inputAngle=-3.101
+[+ 102.625 f6115]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.93 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.687 f6118] watch f6118 | mando0 btn=0x00000400 L=(-0.18,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(-0.19,-0.98) | P2 padBtn=0x00000410 on=0x00000011 L=(-0.19,-0.98)
+[+ 102.687 f6118]       MOV P1: padAngleTarget=153.40 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.95 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.11,-70.37,-238.36) inputAngle=-3.086
+[+ 102.687 f6118]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.95 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.703 f6119] watch f6119 | mando0 btn=0x00000400 L=(-0.18,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98)
+[+ 102.703 f6119]       MOV P1: padAngleTarget=153.84 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.10,-70.37,-238.35) inputAngle=-3.078
+[+ 102.703 f6119]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.797 f6125] watch f6125 | mando0 btn=0x00000400 L=(-0.19,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98)
+[+ 102.797 f6125]       MOV P1: padAngleTarget=153.84 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.03,-70.36,-238.22) inputAngle=-3.078
+[+ 102.797 f6125]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 102.890 f6131] watch f6131 | mando0 btn=0x00000400 L=(-0.18,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98)
+[+ 102.890 f6131]       MOV P1: padAngleTarget=154.29 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=-3.070
+[+ 102.890 f6131]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.000 f6137] watch f6137 | mando0 btn=0x00000400 L=(-0.18,-0.98) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98)
+[+ 103.000 f6137]       MOV P1: padAngleTarget=153.84 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=-3.078
+[+ 103.000 f6137]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.109 f6144] watch f6144 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.18,-0.98)
+[+ 103.109 f6144]       MOV P1: padAngleTarget=153.84 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=-3.078
+[+ 103.109 f6144]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=2.96 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.218 f6150] watch f6150 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+ 103.218 f6150]       MOV P1: padAngleTarget=164.67 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=-2.889
+[+ 103.218 f6150]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.312 f6156] watch f6156 | mando0 btn=0x00000400 L=(0.00,-1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,-1.00)
+[+ 103.312 f6156]       MOV P1: padAngleTarget=164.67 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=-2.889
+[+ 103.312 f6156]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-3.14 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.422 f6162] watch f6162 | mando0 btn=0x00000400 L=(0.00,1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(-0.82,-0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(-0.82,-0.00)
+[+ 103.422 f6162]       MOV P1: padAngleTarget=74.72 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=1.58 padLRot=0.00 mag=0.82 yaw=29.8 pos=(-89.04,-70.36,-238.24) inputAngle=1.824
+[+ 103.422 f6162]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=1.58 padLRot=0.00 mag=0.82 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.515 f6168] watch f6168 | mando0 btn=0x00000410 L=(0.00,1.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00)
+[+ 103.515 f6168]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.04,-70.36,-238.24) inputAngle=0.245
+[+ 103.515 f6168]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.531 f6169] watch f6169 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,1.00)
+[+ 103.531 f6169]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=29.8 pos=(-89.04,-70.36,-238.24) inputAngle=0.245
+[+ 103.531 f6169]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=1.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.547 f6170] watch f6170 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 103.547 f6170]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.04,-70.36,-238.24) inputAngle=0.245
+[+ 103.547 f6170]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.562 f6171] watch f6171 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 103.562 f6171]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.05,-70.36,-238.25) inputAngle=0.245
+[+ 103.562 f6171]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.656 f6176] watch f6176 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 103.656 f6176]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.12,-70.37,-238.37) inputAngle=0.245
+[+ 103.656 f6176]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.21,-70.35,-238.55) inputAngle=0.000
+[+ 103.750 f6182] watch f6182 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 103.750 f6182]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.25,-70.37,-238.60) inputAngle=0.245
+[+ 103.750 f6182]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.24,-70.35,-238.54) inputAngle=0.000
+[+ 103.843 f6188] watch f6188 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 103.843 f6188]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.31,-70.37,-238.71) inputAngle=0.245
+[+ 103.843 f6188]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.29,-70.35,-238.54) inputAngle=0.000
+[+ 104.093 f6203] watch f6203 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 104.093 f6203]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.38,-70.38,-238.84) inputAngle=0.245
+[+ 104.093 f6203]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.33,-70.35,-238.53) inputAngle=0.000
+[+ 104.203 f6209] watch f6209 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 104.203 f6209]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.52,-70.38,-239.07) inputAngle=0.245
+[+ 104.203 f6209]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 104.297 f6215] watch f6215 | mando0 btn=0x00000410 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 104.297 f6215]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.64,-70.39,-239.29) inputAngle=0.245
+[+ 104.297 f6215]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 106.250 f6332] watch f6332 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00) | P2 padBtn=0x00000410 on=0x00000011 L=(0.00,0.00)
+[+ 106.250 f6332]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.64,-70.39,-239.29) inputAngle=0.245
+[+ 106.250 f6332]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 106.281 f6334] watch f6334 | mando0 btn=0x00000400 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+ 106.281 f6334]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.64,-70.39,-239.29) inputAngle=0.245
+[+ 106.281 f6334]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 106.781 f6364] watch f6364 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00) | P2 padBtn=0x00000400 on=0x00000010 L=(0.00,0.00)
+[+ 106.781 f6364]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.63,-70.39,-239.27) inputAngle=0.245
+[+ 106.781 f6364]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 106.797 f6365] watch f6365 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 106.797 f6365]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.63,-70.39,-239.27) inputAngle=0.245
+[+ 106.797 f6365]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 107.390 f6400] watch f6400 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 107.390 f6400]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.57,-70.38,-239.16) inputAngle=0.245
+[+ 107.390 f6400]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 111.031 f6618] watch f6618 | mando0 btn=0x00008000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 111.031 f6618]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 111.031 f6618]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 111.047 f6619] watch f6619 | mando0 btn=0x00008000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00008000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00008000 on=0x00000000 L=(0.00,0.00)
+[+ 111.047 f6619]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 111.047 f6619]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 111.187 f6628] watch f6628 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00008000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00008000 on=0x00000000 L=(0.00,0.00)
+[+ 111.187 f6628]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 111.187 f6628]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 111.203 f6629] watch f6629 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 111.203 f6629]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 111.203 f6629]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.672 f6717] watch f6717 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 112.672 f6717]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.672 f6717]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.687 f6718] watch f6718 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 112.687 f6718]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.687 f6718]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.703 f6719] watch f6719 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 112.703 f6719]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.703 f6719]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.781 f6723] watch f6723 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 112.781 f6723]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.781 f6723]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.797 f6724] watch f6724 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 112.797 f6724]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.797 f6724]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.922 f6732] watch f6732 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 112.922 f6732]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.922 f6732]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.937 f6733] watch f6733 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 112.937 f6733]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.937 f6733]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 112.953 f6734] watch f6734 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 112.953 f6734]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 112.953 f6734]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.047 f6739] watch f6739 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 113.047 f6739]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.047 f6739]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.062 f6740] watch f6740 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 113.062 f6740]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.062 f6740]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.187 f6748] watch f6748 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 113.187 f6748]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.187 f6748]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.203 f6749] watch f6749 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 113.203 f6749]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.203 f6749]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.218 f6750] watch f6750 | mando0 btn=0x00000002 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 113.218 f6750]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.218 f6750]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.297 f6754] watch f6754 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00) | P2 padBtn=0x00000002 on=0x00000200 L=(0.00,0.00)
+[+ 113.297 f6754]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.297 f6754]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.312 f6755] watch f6755 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 113.312 f6755]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.312 f6755]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.609 f6773] watch f6773 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 113.609 f6773]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.609 f6773]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.625 f6774] watch f6774 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 113.625 f6774]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.625 f6774]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.640 f6775] watch f6775 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 113.640 f6775]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.640 f6775]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.890 f6790] watch f6790 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 113.890 f6790]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.890 f6790]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 113.906 f6791] watch f6791 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 113.906 f6791]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 113.906 f6791]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.359 f6818] watch f6818 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 114.359 f6818]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.359 f6818]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.375 f6819] watch f6819 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.375 f6819]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.375 f6819]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.390 f6820] watch f6820 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.390 f6820]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.390 f6820]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.562 f6830] watch f6830 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.562 f6830]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.562 f6830]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.578 f6831] watch f6831 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 114.578 f6831]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.578 f6831]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.687 f6838] watch f6838 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 114.687 f6838]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.687 f6838]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.718 f6839] watch f6839 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.718 f6839]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.718 f6839]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.734 f6840] watch f6840 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.734 f6840]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.734 f6840]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.875 f6849] watch f6849 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.875 f6849]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.875 f6849]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.890 f6850] watch f6850 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 114.890 f6850]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.890 f6850]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.953 f6854] watch f6854 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 114.953 f6854]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.953 f6854]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 114.984 f6855] watch f6855 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 114.984 f6855]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 114.984 f6855]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.000 f6856] watch f6856 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 115.000 f6856]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.000 f6856]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.172 f6867] watch f6867 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 115.172 f6867]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.172 f6867]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.187 f6868] watch f6868 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 115.187 f6868]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.187 f6868]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.297 f6874] watch f6874 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 115.297 f6874]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.297 f6874]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.312 f6875] watch f6875 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 115.312 f6875]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.312 f6875]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.328 f6876] watch f6876 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 115.328 f6876]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.328 f6876]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.422 f6882] watch f6882 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00) | P2 padBtn=0x00020020 on=0x00000004 L=(0.00,0.00)
+[+ 115.422 f6882]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.422 f6882]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 115.437 f6883] watch f6883 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 115.437 f6883]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=29.8 pos=(-89.56,-70.38,-239.15) inputAngle=0.245
+[+ 115.437 f6883]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 116.062 f6919] watch f6919 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 116.062 f6919]       MOV P1: padAngleTarget=344.22 targetAngleInit=0.52 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.245
+[+ 116.062 f6919]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.36 origRawPadAngle=0.00 padLAngle=-0.00 padLRot=0.00 mag=0.00 yaw=12.5 pos=(-90.35,-70.35,-238.52) inputAngle=0.000
+[+ 116.265 f6930] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 116.265 f6930] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 116.265 f6930] PlayerManager.players: 3 -> -1
+[+ 116.281 f6931] watch f6931 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 116.281 f6931]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 116.281 f6931]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 117.765 f7020] PlayerManager cambio: 000002293C647CE0 -> 0000000000000000 (nueva mision o fin de mision)
+[+ 119.375 f7117] watch f7117 | mando0 btn=0x00000001 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 119.375 f7117]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 119.375 f7117]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 119.562 f7128] watch f7128 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 119.562 f7128]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 119.562 f7128]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 119.843 f7145] watch f7145 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 119.843 f7145]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 119.843 f7145]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.015 f7155] watch f7155 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 120.015 f7155]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.015 f7155]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.468 f7182] watch f7182 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 120.468 f7182]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.468 f7182]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.656 f7193] watch f7193 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 120.656 f7193]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.656 f7193]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.750 f7199] watch f7199 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 120.750 f7199]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.750 f7199]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.765 f7200] latido: frame=7200
+[+ 120.906 f7208] watch f7208 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 120.906 f7208]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 120.906 f7208]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.031 f7216] watch f7216 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.031 f7216]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.031 f7216]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.187 f7225] watch f7225 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.187 f7225]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.187 f7225]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.281 f7231] watch f7231 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.281 f7231]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.281 f7231]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.437 f7240] watch f7240 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.437 f7240]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.437 f7240]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.531 f7246] watch f7246 | mando0 btn=0x00020020 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.531 f7246]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.531 f7246]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.718 f7257] watch f7257 | mando0 btn=0x00000000 L=(0.00,0.00) | mando1 btn=0x00000000 | P1 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00) | P2 padBtn=0x00000000 on=0x00000000 L=(0.00,0.00)
+[+ 121.718 f7257]       MOV P1: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
+[+ 121.718 f7257]       MOV P2: padAngleTarget=0.00 targetAngleInit=0.00 origRawPadAngle=0.00 padLAngle=0.00 padLRot=0.00 mag=0.00 yaw=0.0 pos=(0.00,0.00,0.00) inputAngle=0.000
