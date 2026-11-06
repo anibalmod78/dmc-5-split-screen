@@ -1,91 +1,1078 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  6 2026 00:59:10 ====
-[+   0.000 f0] version del plugin: v101 (p2_via_apl=0: se devuelve manualPlayer a P1 tras crear a P2)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  6 2026 01:09:25 ====
+[+   0.000 f0] version del plugin: v102 (vigila el manualPlayer tras devolverlo a P1; vuelca la camara del juego)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
-[+   0.046 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.078 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.093 f1] on_frame ACTIVO (UpdateBehavior, hilo 19184)
-[+   0.578 f30] init: hook en app.PlayerManager::doUpdate
-[+   0.578 f30] trace: hooks de diagnostico desactivados (trace_hooks=1 en la config los activa)
-[+   0.578 f30] trace: hook #0 en app.PadInput::update/0 (id 4)
-[+   0.578 f30] trace: instalacion terminada, 1 hooks (intentos: 1)
-[+   0.578 f30] p2input: hook en app.PadInput::update/0
-[+   1.078 f60] app.AdditionalPlayerLoadManager disponible (0000027C0B553000)
-[+  30.109 f1800] latido: frame=1800
-[+  46.640 f2760] PlayerManager cambio: 0000000000000000 -> 0000027C0B60B4D0 (nueva mision o fin de mision)
-[+  46.640 f2760] PlayerManager.players: -1 -> 0
-[+  60.640 f3600] latido: frame=3600
-[+  90.703 f5400] latido: frame=5400
-[+  95.718 f5700] p2input: reset (fin de mision): objetivo y modo desactivados
-[+  95.718 f5700] P1 (manualPlayer) detectado: app.PlayerDante
-[+  95.718 f5700] p2input: PadInput de P1 = 0000027C0A349610
-[+  95.718 f5700] PlayerManager.players: 0 -> 1
-[+  95.718 f5700]   player[0] GO='pl0100_dante' padre='null'
-[+  95.718 f5700]   player[0] componentes de su GO: app.Player=0000027C000C5A40 (tipo real app.PlayerDante) app.character.Character=0000027C000C5A40 (tipo real app.PlayerDante) app.PlayerDante=0000027C000C5A40 (tipo real app.PlayerDante) 
-[+  95.718 f5700]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+  95.718 f5700]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000027C0A34A4E0
-[+  95.718 f5700]   player[0] 0000027C000C5A40 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=0000027C0A349610 [P1/manual]
-[+  95.718 f5700]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
-[+  95.718 f5700]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 105.109 f6261] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 105.578 f6289] P2: personaje elegido = V (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 106.000 f6315] P2: personaje elegido = Vergil (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 107.796 f6422] ORDEN: p2create VergilPL
-[+ 107.796 f6422] IDs para P2: player=VergilPL(4) costume=Default(0) situation=Default(0) (P1 player=Dante(1))
-[+ 107.796 f6422] config: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss_config.txt -> p2_via_apl=0 
-[+ 107.796 f6422] p2create: p2_via_apl=0: sin AdditionalPlayerLoadManager, directo a la carpeta Players/plXXXX
-[+ 108.250 f6450] p2create: cargador de 4 -> (sin cargador) (fase 4)
-[+ 108.250 f6450] p2create: carpeta antes de Standby: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
-[+ 108.250 f6450] p2create: carpeta.set_Standby(true) -> ok
-[+ 108.750 f6480] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
-[+ 110.750 f6600] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
-[+ 112.750 f6720] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
-[+ 113.250 f6750] p2create: Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
-[+ 113.750 f6780] p2create: carpeta.activate() -> ok
-[+ 113.750 f6780] p2create: tras activate: 'pl0800' Active=0 Activating=1 Standby=1 Ready=1 Exist=1
-[+ 114.265 f6810] p2create: el juego hizo manual al personaje creado (app.PlayerVergilPL); se devuelve manualPlayer a P1 (app.PlayerDante)
-[+ 114.265 f6810]   manual antes: manualPlayer=P2 (P1=app.PlayerDante P2=app.PlayerVergilPL) | P1 isManual=0 masterManual=0 | P2 isManual=1 masterManual=1
-[+ 114.265 f6810] p2create: PlayerManager.set_manualPlayer(P1) -> ok
-[+ 114.265 f6810]   manual despues: manualPlayer=P1 (P1=app.PlayerDante P2=app.PlayerVergilPL) | P1 isManual=1 masterManual=1 | P2 isManual=0 masterManual=0
-[+ 114.265 f6810] p2input: PadInput de P1 = 0000027C0B4C36C0
-[+ 114.265 f6810] p2input: PadInput de P2 = 0000027C0B4C36C0
-[+ 114.265 f6810] PlayerManager.players: 1 -> 3
-[+ 114.265 f6810]   player[0] GO='pl0100_dante' padre='null'
-[+ 114.265 f6810]   player[0] componentes de su GO: app.Player=0000027C000C5A40 (tipo real app.PlayerDante) app.character.Character=0000027C000C5A40 (tipo real app.PlayerDante) app.PlayerDante=0000027C000C5A40 (tipo real app.PlayerDante) 
-[+ 114.265 f6810]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+ 114.265 f6810]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000027C0A34A4E0
-[+ 114.265 f6810]   player[0] 0000027C000C5A40 tipo=app.PlayerDante id=Dante(1) pos=(-89.52, -70.38, -239.11) padInput=0000027C0B4C36C0 [P1/manual]
-[+ 114.265 f6810]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
-[+ 114.265 f6810]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 114.265 f6810]   player[1] GO='pl0200_v' padre='null'
-[+ 114.265 f6810]   player[1] componentes de su GO: app.Player=0000027C0047DCE0 (tipo real app.PlayerV) app.character.Character=0000027C0047DCE0 (tipo real app.PlayerV) app.PlayerV=0000027C0047DCE0 (tipo real app.PlayerV) 
-[+ 114.265 f6810]   player[1] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 114.265 f6810]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000027C09935F20
-[+ 114.265 f6810]   player[1] 0000027C0047DCE0 tipo=app.PlayerV id=Gilver(2) pos=(-88.88, -70.36, -238.34) padInput=0000027C0B4C36C0
-[+ 114.265 f6810]   player[1] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 114.265 f6810]   player[1] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 114.265 f6810]   player[1] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 114.265 f6810]   player[2] GO='pl0800_vergil' padre='null'
-[+ 114.265 f6810]   player[2] componentes de su GO: app.Player=0000027C003BB9D0 (tipo real app.PlayerVergilPL) app.character.Character=0000027C003BB9D0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=0000027C003BB9D0 (tipo real app.PlayerVergilPL) 
-[+ 114.265 f6810]   player[2] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 114.265 f6810]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000027C09257C30
-[+ 114.265 f6810]   player[2] 0000027C003BB9D0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-88.88, -70.36, -238.34) padInput=0000027C0B4C36C0 [P2]
-[+ 114.265 f6810]   player[2] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
-[+ 114.265 f6810]   player[2] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 114.765 f6840] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 114.765 f6840] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 114.765 f6840] p2input: PadInput de P1 = 0000027C0B4C36C0
-[+ 115.765 f6900] diag: no hay P2
-[+ 120.781 f7200] latido: frame=7200
-[+ 150.812 f9000] latido: frame=9000
-[+ 180.828 f10800] latido: frame=10800
-[+ 208.875 f12480] p2create: carpeta antes de restaurar: 'pl0800' Active=1 Activating=0 Standby=1 Ready=1 Exist=1
-[+ 208.875 f12480] p2release (fin de mision): carpeta.deactivate() -> ok; set_Standby(false) -> ok
-[+ 208.875 f12480] p2create: carpeta tras restaurar: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
-[+ 208.875 f12480] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 208.875 f12480] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 208.875 f12480] PlayerManager.players: 3 -> -1
-[+ 210.375 f12570] PlayerManager cambio: 0000027C0B60B4D0 -> 0000000000000000 (nueva mision o fin de mision)
-[+ 210.875 f12600] latido: frame=12600
+[+   0.032 f0] Hook XInputGetState OK en xinput1_4.dll
+[+   0.079 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.094 f1] on_frame ACTIVO (UpdateBehavior, hilo 4800)
+[+   0.579 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.579 f30] trace: hooks de diagnostico desactivados (trace_hooks=1 en la config los activa)
+[+   0.579 f30] trace: hook #0 en app.PadInput::update/0 (id 4)
+[+   0.579 f30] trace: instalacion terminada, 1 hooks (intentos: 1)
+[+   0.579 f30] p2input: hook en app.PadInput::update/0
+[+   1.079 f60] app.AdditionalPlayerLoadManager disponible (000002C6D8693000)
+[+  30.110 f1800] latido: frame=1800
+[+  48.157 f2850] PlayerManager cambio: 0000000000000000 -> 000002C6D8314210 (nueva mision o fin de mision)
+[+  48.157 f2850] PlayerManager.players: -1 -> 0
+[+  60.657 f3600] latido: frame=3600
+[+  80.704 f4800] p2input: reset (fin de mision): objetivo y modo desactivados
+[+  80.704 f4800] P1 (manualPlayer) detectado: app.PlayerDante
+[+  80.704 f4800] p2input: PadInput de P1 = 000002C6D72801D0
+[+  80.704 f4800] PlayerManager.players: 0 -> 1
+[+  80.704 f4800]   player[0] GO='pl0100_dante' padre='null'
+[+  80.704 f4800]   player[0] componentes de su GO: app.Player=000002C6CD21FD60 (tipo real app.PlayerDante) app.character.Character=000002C6CD21FD60 (tipo real app.PlayerDante) app.PlayerDante=000002C6CD21FD60 (tipo real app.PlayerDante) 
+[+  80.704 f4800]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+  80.704 f4800]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002C6D7280BD0
+[+  80.704 f4800]   player[0] 000002C6CD21FD60 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=000002C6D72801D0 [P1/manual]
+[+  80.704 f4800]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+  80.704 f4800]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  90.704 f5400] latido: frame=5400
+[+  91.579 f5452] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+  92.000 f5477] P2: personaje elegido = V (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+  92.360 f5499] P2: personaje elegido = Vergil (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+  93.407 f5562] ORDEN: p2create VergilPL
+[+  93.407 f5562] IDs para P2: player=VergilPL(4) costume=Default(0) situation=Default(0) (P1 player=Dante(1))
+[+  93.407 f5562] config: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss_config.txt -> p2_via_apl=0 
+[+  93.407 f5562] p2create: p2_via_apl=0: sin AdditionalPlayerLoadManager, directo a la carpeta Players/plXXXX
+[+  93.719 f5580] p2create: cargador de 4 -> (sin cargador) (fase 4)
+[+  93.719 f5580] p2create: carpeta antes de Standby: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
+[+  93.719 f5580] p2create: carpeta.set_Standby(true) -> ok
+[+  94.219 f5610] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
+[+  96.219 f5730] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
+[+  98.219 f5850] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
+[+  98.719 f5880] p2create: Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
+[+  99.219 f5910] p2create: carpeta.activate() -> ok
+[+  99.219 f5910] p2create: tras activate: 'pl0800' Active=0 Activating=1 Standby=1 Ready=1 Exist=1
+[+  99.719 f5940] p2create: el juego hizo manual al personaje creado (app.PlayerVergilPL); se devuelve manualPlayer a P1 (app.PlayerDante)
+[+  99.719 f5940]   manual antes: manualPlayer=P2 (P1=app.PlayerDante P2=app.PlayerVergilPL) | P1 isManual=0 masterManual=0 | P2 isManual=1 masterManual=1
+[+  99.719 f5940] p2create: PlayerManager.set_manualPlayer(P1) -> ok
+[+  99.719 f5940]   manual despues: manualPlayer=P1 (P1=app.PlayerDante P2=app.PlayerVergilPL) | P1 isManual=1 masterManual=1 | P2 isManual=0 masterManual=0
+[+  99.719 f5940] p2input: PadInput de P1 = 000002C6D86036C0
+[+  99.719 f5940] p2input: PadInput de P2 = 000002C6D86036C0
+[+  99.719 f5940] --- campos CameraManager 000002C6D8926750 tipo=app.CameraManager ---
+[+  99.719 f5940]   V app.CameraManager.SingleTargetCameraInterpTime (System.Single) = 0.000
+[+  99.719 f5940]   V app.SingletonBehavior`1<app.CameraManager>.IsKillOwn (System.Boolean) = 0
+[+  99.719 f5940]   F app.CameraManager.<gameCameraObject>k__BackingField : via.GameObject = via.GameObject
+[+  99.719 f5940]   F app.CameraManager.<gameCameraComponent>k__BackingField : via.Camera = via.Camera
+[+  99.719 f5940]   F app.CameraManager.<gameCameraTransform>k__BackingField : via.Transform = via.Transform
+[+  99.719 f5940]   F app.CameraManager.<blender>k__BackingField : app.CameraParameterBlender = app.CameraParameterBlender
+[+  99.719 f5940]   F app.CameraManager.PlayerCamera : app.PlayerCameraController = app.PlayerCameraController
+[+  99.719 f5940]   F app.CameraManager.<UICamera>k__BackingField : app.SubstitutionCamera = NULL
+[+  99.719 f5940]   F app.CameraManager.<ModelViewerCamera>k__BackingField : app.SubstitutionCamera = NULL
+[+  99.719 f5940]   F app.CameraManager.SingleTargetCamraParam : app.camera.SingleTargetCameraParamData = NULL
+[+  99.719 f5940]   F app.CameraManager.SingleTargetCameraMode : System.String = NULL
+[+  99.719 f5940]   F app.CameraManager.SingleTargetCharacter : app.character.Character = NULL
+[+  99.719 f5940]   F app.CameraManager.EventSubstitutionCameraList : System.Collections.Generic.List`1<app.CameraManager.EventSubstitutionCameraInfo> = System.Collections.Generic.List`1<app.CameraManager.EventSubstitutionCameraInfo>
+[+  99.719 f5940] --- campos PlayerCameraController 000002C6D8331260 tipo=app.PlayerCameraController ---
+[+  99.719 f5940]   V app.BaseBehavior.<IsStarted>k__BackingField (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.<AICameraDamping>k__BackingField (System.Single) = 0.010
+[+  99.719 f5940]   V app.PlayerCameraController.<AICameraOldAngle>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<AICameraOldIndex>k__BackingField (System.Int32) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<BehindLockOnTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<BusterCameraInterpType>k__BackingField (app.MathEx.EaseType) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<EnemyDeathTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<POGSmoothingYMatchXZTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<PlayerHideSinceWarpTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<_cameraMode>k__BackingField (app.PlayerCameraController.CameraMode) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<aimCameraBlendRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<angleHorizontal>k__BackingField (System.Single) = 0.148
+[+  99.719 f5940]   V app.PlayerCameraController.<angleLockHorizontal>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<angleVertical>k__BackingField (System.Single) = 0.122
+[+  99.719 f5940]   V app.PlayerCameraController.<attackHitTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<autoRotationStartTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<battleCameraBlendRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<battleTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<behindLockOnTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bossCameraInterpolationTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bossCameraInterpolationTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bottomHit>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<bottomHitRate>k__BackingField (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bumperLength>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bumperRateL>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<bumperRateR>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraCastSphereOption>k__BackingField (System.UInt32) = 35
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraResetAngleH>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraResetAngleV>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraResetTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraRotationSpeedHorizontal>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraRotationSpeedVertical>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraShakeID>k__BackingField (System.Int32) = -1
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraShakeMagnitude>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraShakeMode>k__BackingField (app.PlayerCameraController.CameraShakeMode) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<cameraShakePriority>k__BackingField (System.Int32) = -1
+[+  99.719 f5940]   V app.PlayerCameraController.<defaultCameraInterpolationTimer>k__BackingField (System.Single) = -0.467
+[+  99.719 f5940]   V app.PlayerCameraController.<defaultCameraInterpolationTimerMax>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<disableCameraRotation>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<disableFreeFallCameraTimer>k__BackingField (System.Single) = 10.000
+[+  99.719 f5940]   V app.PlayerCameraController.<disableRecommendedCameraTimer>k__BackingField (System.Single) = 1.750
+[+  99.719 f5940]   V app.PlayerCameraController.<disableWallAdjust>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<finishBusterCameraTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishBusterCameraTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishCameraOff>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<finishCameraSkipTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishCameraTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishMotionCameraTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishMotionCameraTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<finishMotionCameraType>k__BackingField (app.MathEx.EaseType) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<finishMoveMode>k__BackingField (app.PlayerCameraController.FinishMoveMode) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<forbitRollTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<forceAngleHorizontal>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<forceAngleHorizontalTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<forceCameraVerticalRotationSpeed>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<groundHitRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<hsRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<hsSpeed>k__BackingField (System.Single) = 0.050
+[+  99.719 f5940]   V app.PlayerCameraController.<idealHorizontalRotation>k__BackingField (System.Single) = 0.148
+[+  99.719 f5940]   V app.PlayerCameraController.<isAICameraHighSpeed>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isAngleLockHorizontal>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isAngleLockVertical>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isAttackHit>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isBattleCameraIgnore>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isBehindLockOn>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isBehindOldLockOn>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isCameraShakeIgnore>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isFinishCameraEndEnabled>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isFinishCameraPapetPlayer>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isFrontCollisionHit>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isHitCollision>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isLockOn>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isLockOnCameraIgnore>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isLockOnOld>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isManualCameraControl>k__BackingField (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.<isOptionZOffsetCameraIgnore>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isOverwritePOGParameter>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isPlayerAngleFixedCamera>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isPlayerHide>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isScreenOutNonRotate>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isSlope>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isStartBusterCameraCurve>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isUseSkillCamera>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<isZoffsetReset>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<lastHitInfo>k__BackingField (app.AttackUserData.AttackIdEnum) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<leftHitLevel>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<limitCurrentPogY>k__BackingField (System.Single) = -340282306073709652508363335590014353408.000
+[+  99.719 f5940]   V app.PlayerCameraController.<liveEnemyCount>k__BackingField (System.Int32) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnAdjustCount>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnBossCameraMode>k__BackingField (app.PlayerCameraController.LockOnBossCameraMode) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnCameraBlendRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnDelay>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnTargetAngle>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<lockOnTimer>k__BackingField (System.Single) = 760.000
+[+  99.719 f5940]   V app.PlayerCameraController.<manualCameraMarginX>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<manualCameraMarginY>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<massAmplifier>k__BackingField (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.<normalCameraBlendRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<normalCameraZOffset>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<offsetTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<offsetWallUp>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<oldAngleHorizontal>k__BackingField (System.Single) = 0.148
+[+  99.719 f5940]   V app.PlayerCameraController.<oldAngleVertical>k__BackingField (System.Single) = 0.122
+[+  99.719 f5940]   V app.PlayerCameraController.<oldCheckBumper>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<oldPOGOffsetRate>k__BackingField (System.Single) = 0.975
+[+  99.719 f5940]   V app.PlayerCameraController.<oldPogMoveRateX>k__BackingField (System.Single) = 0.500
+[+  99.719 f5940]   V app.PlayerCameraController.<oldPogMoveRateZ>k__BackingField (System.Single) = 0.370
+[+  99.719 f5940]   V app.PlayerCameraController.<originalLerpTime>k__BackingField (System.Single) = -1.000
+[+  99.719 f5940]   V app.PlayerCameraController.<originalLerpTimer>k__BackingField (System.Single) = -1.000
+[+  99.719 f5940]   V app.PlayerCameraController.<overwriteCameraAngle>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<overwriteCameraVerticalAngleMax>k__BackingField (System.Single) = 0.873
+[+  99.719 f5940]   V app.PlayerCameraController.<overwriteCameraVerticalAngleMin>k__BackingField (System.Single) = -1.222
+[+  99.719 f5940]   V app.PlayerCameraController.<owBehindLockOn>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<owBehindLockOnHeight>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<pogOffsetY>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<pogYOffsetSpeed>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<reserveFinishCameraEnd>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<resetCamera>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<resetHorizontalAngle>k__BackingField (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.<resetPOG>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<resetPosition>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<resetSpeed>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<resetTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<rightHitLevel>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<screenRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<servantCameraFOV>k__BackingField (System.Single) = 1.134
+[+  99.719 f5940]   V app.PlayerCameraController.<slopeIndex>k__BackingField (System.Int32) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<slopeTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<slopeTotal>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<slopeValue>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<startBusterCameraTime>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<startBusterCameraTimer>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<topHit>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.<topHitRate>k__BackingField (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.<upperCameraBlendRate>k__BackingField (System.Single) = 0.500
+[+  99.719 f5940]   V app.PlayerCameraController.<upperCameraTimer>k__BackingField (System.Single) = -700.000
+[+  99.719 f5940]   V app.PlayerCameraController.AICameraCalcStartAngleRad (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.AICameraTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.AutoRotAccWallRateH (System.Single) = 2.000
+[+  99.719 f5940]   V app.PlayerCameraController.AutoRotRedV (System.Single) = 0.080
+[+  99.719 f5940]   V app.PlayerCameraController.BattleCamTranslateSpeedBackToFront (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.BattleCamTranslateSpeedFrontToBack (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.BehindLockOnManualInit (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.BumperRadius (System.Single) = 0.600
+[+  99.719 f5940]   V app.PlayerCameraController.CameraDebug (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.CameraDifference (System.Single) = 10.000
+[+  99.719 f5940]   V app.PlayerCameraController.CameraHeight (System.Single) = 5.000
+[+  99.719 f5940]   V app.PlayerCameraController.CameraRollSpeed (System.Single) = 0.001
+[+  99.719 f5940]   V app.PlayerCameraController.CameraRollSpeedMax (System.Single) = 0.050
+[+  99.719 f5940]   V app.PlayerCameraController.CameraRollSpeedRed (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.CollisionOffsetDelay (System.Single) = 0.200
+[+  99.719 f5940]   V app.PlayerCameraController.CollisionOffsetTimer (System.Single) = 2.000
+[+  99.719 f5940]   V app.PlayerCameraController.ComplianceInterpType (app.MathEx.EaseType) = 3
+[+  99.719 f5940]   V app.PlayerCameraController.ComplianceMaxLength (System.Single) = 3.000
+[+  99.719 f5940]   V app.PlayerCameraController.ComplianceMinLength (System.Single) = 3.000
+[+  99.719 f5940]   V app.PlayerCameraController.DebugSlopeAngle (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.DefaultCameraIndex (System.UInt32) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.FollowCameraPlayer (app.PlayerID) = 4
+[+  99.719 f5940]   V app.PlayerCameraController.InverseMouseRotH (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.InverseMouseRotV (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.InverseRotH (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.InverseRotV (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsAICameraInit (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsAICameraManual (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsAICameraSphericaInterp (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsFinishResultMission (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.IsForceAdjustCollider (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.IsIgnoreAICameraIndex (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.IsIgnoreBattleManualverticalLimit (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsOldSkillCameraNonCompliance (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsSkillCameraEndInterpZero (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsSkillCameraHitExcute (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsSkillCameraInterp (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsSkillCameraPositionOffset (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.IsUseVersion2 (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.JumpZOffsetOffsetLength (System.Single) = 3.000
+[+  99.719 f5940]   V app.PlayerCameraController.LegShakeTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnOffsetY (System.Single) = 0.530
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnOffsetZRateReduce (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnOffsetZRateSpeed (System.Single) = 10.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnRange (System.Single) = 30.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnReleaseTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnReverberationTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.LockOnWallMoveMaxLength (System.Single) = 0.020
+[+  99.719 f5940]   V app.PlayerCameraController.MaxForceRotationSpeed (System.Single) = 0.500
+[+  99.719 f5940]   V app.PlayerCameraController.MaxZOffsetOverwrite (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.MoveOffsetSpeed (System.Single) = 0.010
+[+  99.719 f5940]   V app.PlayerCameraController.NormalCameraTranslateSpeedToMove (System.Single) = 0.400
+[+  99.719 f5940]   V app.PlayerCameraController.NormalCameraTranslateSpeedToWait (System.Single) = 0.200
+[+  99.719 f5940]   V app.PlayerCameraController.OffsetYTime (System.Single) = 2.000
+[+  99.719 f5940]   V app.PlayerCameraController.OffsetZSlider (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.OldSkillCameraInterpRate (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.POGSmoothingYJumpAcc (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.PlayerHideTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.RecommendedCameraTimerDelay (System.Single) = 2.000
+[+  99.719 f5940]   V app.PlayerCameraController.RotLimitRedV (System.Single) = 0.167
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraBlendMode (app.PlayerCameraController.TrackBlendMode) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraComplianceState (app.PlayerCameraController.SkillCameraStateEnum) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraHitAttackID (app.AttackUserData.AttackIdEnum) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraITrackSaveTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpComplianceTime (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpComplianceTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpEndTime (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpRate (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpTime (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraInterpType (app.MathEx.EaseType) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraManualOffsetRate (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.SkillCameraState (app.PlayerCameraController.SkillCameraStateEnum) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.SlopeAdjustAngle (System.Single) = 10.000
+[+  99.719 f5940]   V app.PlayerCameraController.SlopeRotAccV (System.Single) = 0.500
+[+  99.719 f5940]   V app.PlayerCameraController.SlowRate (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.SpecialBehindLockOnReverberationTimer (System.Single) = 92.000
+[+  99.719 f5940]   V app.PlayerCameraController.StickRotAccH (System.Single) = 0.050
+[+  99.719 f5940]   V app.PlayerCameraController.StickRotAccV (System.Single) = 0.033
+[+  99.719 f5940]   V app.PlayerCameraController.StickRotMaxSpdH (System.Single) = 0.032
+[+  99.719 f5940]   V app.PlayerCameraController.StickRotMaxV (System.Single) = 0.033
+[+  99.719 f5940]   V app.PlayerCameraController.TerrainCheck (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.TimeToResult (System.Single) = 52.000
+[+  99.719 f5940]   V app.PlayerCameraController.UseJumpCamera (System.Boolean) = 1
+[+  99.719 f5940]   V app.PlayerCameraController.VerticalLimitHigh (System.Single) = 50.000
+[+  99.719 f5940]   V app.PlayerCameraController.VerticalLimitLow (System.Single) = -70.000
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitAccHideMax (System.Single) = 8.540
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitAccMax (System.Single) = 4.130
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitRotationMax (System.Single) = 3.000
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitRotationRate (System.Single) = 3.000
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitSpeedHideMax (System.Single) = 5.430
+[+  99.719 f5940]   V app.PlayerCameraController.WallHitSpeedMax (System.Single) = 5.540
+[+  99.719 f5940]   V app.PlayerCameraController.WallOffsetY (System.Single) = 0.900
+[+  99.719 f5940]   V app.PlayerCameraController.WarpInterpTime (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController._IsNightmareAppearOnceEnable (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController._LockonWallMaxTime (System.Single) = 2.000
+[+  99.719 f5940]   V app.PlayerCameraController._LockonWallTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController._NightmareAppearState (app.PlayerCameraController.NightmareAppearState) = 0
+[+  99.719 f5940]   V app.PlayerCameraController._NightmareAppearTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController._maxResetTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.actionFixPointOfGazeInterpAcc (System.Single) = 0.100
+[+  99.719 f5940]   V app.PlayerCameraController.actionFixPointOfGazeInterpSpeed (System.Single) = 1.000
+[+  99.719 f5940]   V app.PlayerCameraController.isAICameraInterpCheck (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isAllowFollowPapetPlayer (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isBossBattle (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isBossCameraSphericaInterp (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isIgnoreHellbound (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isLockOnReverberation (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isNightmareRide (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isNightmareRideInit (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.isReverberationBehindLockOn (System.Boolean) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.nightmareOldCameraMode (app.PlayerCameraController.CameraMode) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.servantCoreOffsetRot (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.servantCoreOffsetRotGoal (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.servantCoreTimer (System.Single) = 0.000
+[+  99.719 f5940]   V app.PlayerCameraController.specialBehindCameraKind (app.PlayerCameraController.SpecialBehindCameraKind) = 0
+[+  99.719 f5940]   V app.PlayerCameraController.wallUpTimer (System.Single) = 0.000
+[+  99.719 f5940]   F app.PlayerCameraController.MissionStartCamera : app.camera.CameraCommandDefaultSetting = app.camera.CameraCommandDefaultSetting
+[+  99.719 f5940] --- campos PlayerCameraController.MissionStartCamera 000002C6D830BD80 tipo=app.camera.CameraCommandDefaultSetting ---
+[+  99.719 f5940]   V app.CameraCommand.<checkOwner>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraCommand.<checkOwnerCollider>k__BackingField (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraCommand._IsFinished (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraCommand._Priority (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraCommand.isBloodyPalace (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraCommandInterpolation.InterpolationIn (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraCommandInterpolation.InterpolationOut (System.Single) = 2.000
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.<finishMode>k__BackingField (app.camera.CameraCommandDefaultSetting.FinishMode) = 0
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.<finished>k__BackingField (System.Boolean) = 1
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.<timer>k__BackingField (System.Single) = 1.300
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.HorizontalAngle (System.Single) = -255.000
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetX (System.Single) = -0.550
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetY (System.Single) = 1.250
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetZ (System.Single) = -2.300
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.Roll (System.Single) = -0.200
+[+  99.719 f5940]   V app.camera.CameraCommandDefaultSetting.VerticalAngle (System.Single) = 4.000
+[+  99.719 f5940]   F app.CameraCommand.<ownerGameObject>k__BackingField : via.GameObject = NULL
+[+  99.719 f5940]   F app.CameraCommand.<ownerCollider>k__BackingField : via.physics.Colliders = NULL
+[+  99.719 f5940]   F app.PlayerCameraController.CameraParameterList : System.Collections.Generic.List`1<app.CameraParameter> = System.Collections.Generic.List`1<app.CameraParameter>
+[+  99.719 f5940]   F   PlayerCameraController.CameraParameterList: 8 elementos
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[0] 000002C6D830E870 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 1.700
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 2
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.500
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.300
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 5.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -5.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[1] 000002C6D830E920 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 1.800
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 0
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.500
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.700
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -4.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -4.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[2] 000002C6D830E9D0 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 75.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 2
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.800
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = -0.800
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -7.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -7.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[3] 000002C6D830EA80 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 0
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.100
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.500
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -5.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -10.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 20.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -20.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[4] 000002C6D830EB30 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 1
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = -0.300
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -5.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -10.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[5] 000002C6D830EBE0 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 2
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -30.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 20.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -20.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.719 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.719 f5940] --- campos PlayerCameraController.CameraParameterList[6] 000002C6D830EC90 tipo=app.CameraParameter ---
+[+  99.719 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.719 f5940]   V app.CameraParameter.LerpTime (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 2
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -20.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -25.000
+[+  99.719 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.719 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.719 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.719 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.719 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 20.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -20.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.735 f5940] --- campos PlayerCameraController.CameraParameterList[7] 000002C6D830ED40 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 0.500
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 0
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = -10.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -10.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 20.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -20.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.735 f5940]   F app.PlayerCameraController.NightmareCamera : app.camera.CameraParameterData = app.camera.CameraParameterData
+[+  99.735 f5940] --- campos PlayerCameraController.NightmareCamera 000002C6D86F2680 tipo=app.camera.CameraParameterData ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/Player/pl0200_camera_coalescence.user.json
+[+  99.735 f5940]   F app.camera.CameraParameterData.CameraParameterList : System.Collections.Generic.List`1<app.CameraParameter> = System.Collections.Generic.List`1<app.CameraParameter>
+[+  99.735 f5940]   F app.PlayerCameraController.StickRotSpeedCurveH : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.PlayerCameraController.CameraData : app.camera.CameraParameterData = app.camera.CameraParameterData
+[+  99.735 f5940] --- campos PlayerCameraController.CameraData 000002C6D86F2770 tipo=app.camera.CameraParameterData ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/DefaultCamera.user.json
+[+  99.735 f5940]   F app.camera.CameraParameterData.CameraParameterList : System.Collections.Generic.List`1<app.CameraParameter> = System.Collections.Generic.List`1<app.CameraParameter>
+[+  99.735 f5940]   F app.PlayerCameraController.FinishCameraCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.PlayerCameraController.FinishCameraCurveFOV : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.PlayerCameraController.FinishCameraCurveWR : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.PlayerCameraController.DefaultParameter : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.DefaultParameter 000002C6D830EDF0 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 55.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 0
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -20.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = app.CameraLookTarget
+[+  99.735 f5940]   F app.PlayerCameraController.AutoRotationParameterDefault : app.camera.AutoRotationParameter = app.camera.AutoRotationParameter
+[+  99.735 f5940] --- campos PlayerCameraController.AutoRotationParameterDefault 000002C6D830EE70 tipo=app.camera.AutoRotationParameter ---
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.FreeFallDampingRate (System.Single) = 0.015
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.FreeFallHight (System.Single) = 8.000
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.FreeFallInitDampingRate (System.Single) = 0.010
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.RotAccH (System.Single) = 0.050
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.RotAngle (System.Single) = 45.000
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.RotAngleMin (System.Single) = 10.000
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.RotMaxH (System.Single) = 0.028
+[+  99.735 f5940]   V app.camera.AutoRotationParameter.RotRedH (System.Single) = 0.005
+[+  99.735 f5940]   F app.PlayerCameraController.SettingData : app.camera.PlayerCameraSettingData = app.camera.PlayerCameraSettingData
+[+  99.735 f5940] --- campos PlayerCameraController.SettingData 000002C6D86F3820 tipo=app.camera.PlayerCameraSettingData ---
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.MaxPogSmoothingRange (System.Single) = 18.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.POGSmoothingXZDampingMax (System.Single) = 0.300
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.POGSmoothingXZDampingMin (System.Single) = 0.150
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.POGSmoothingYDamping (System.Single) = 0.150
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.PlayerHeadOfsetPosQueAverageCount (System.Int32) = 20
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.PlayerHideSinceWarpTime (System.Single) = 60.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.SpecialBehindFinishTime (System.Single) = 120.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.SpecialBehindLockOnDamping (System.Single) = 0.050
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.TargetPosQueAverageCount (System.Int32) = 30
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitDamping (System.Single) = 0.050
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitHigh (System.Single) = 50.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitHighBattle (System.Single) = 10.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitHighBattleLockOn (System.Single) = 20.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitLow (System.Single) = -70.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitLowBattle (System.Single) = -15.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.VerticalLimitLowBattleLockOn (System.Single) = -30.000
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.__IsPOGBaseAverageIgnore (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PlayerCameraSettingData.__IsPOGBaseHeadJoint (System.Boolean) = 0
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/PlayerCameraSettingData.user.json
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.OptionSpeedCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.OptionZOffsetCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.NightmareTPSCameraParameter : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.TPSCameraParameter : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.ReinforcementTPSCameraParameter : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.NormalBehindCameraParameter : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.BusterThrowBehindCameraParameter : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.NavigationCameraParam : app.camera.NavigationParameter = app.camera.NavigationParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.ServantCorePlayerCameraParam : app.camera.ServantCoreCameraParameter = app.camera.ServantCoreCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.ServantCoreBossCameraParam : app.camera.ServantCoreCameraParameter = app.camera.ServantCoreCameraParameter
+[+  99.735 f5940]   F app.camera.PlayerCameraSettingData.PCInputParameter : app.camera.CameraPCInputParameter = app.camera.CameraPCInputParameter
+[+  99.735 f5940]   F app.PlayerCameraController.LockOnParam : app.camera.LockOnCameraParameter = app.camera.LockOnCameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.LockOnParam 000002C6D86F3E40 tipo=app.camera.LockOnCameraParameter ---
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.AutoInterpDamping (System.Single) = 0.001
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.AutoInterpDampingAcc (System.Single) = 0.001
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.AutoInterpDampingMax (System.Single) = 0.030
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.AutoInterpMaxAngleH (System.Single) = 45.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.AutoInterpMinAngleH (System.Single) = 5.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.BehindEndTime (System.Single) = 120.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.BehindTriggerHeight (System.Single) = 12.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.BehindTriggerXZLength (System.Single) = 100.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.EmFrameOutRange (System.Single) = 0.100
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.EnemyDeathDelayTime (System.Single) = 0.500
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.IsEnemyDeathDelay (System.Boolean) = 1
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.Mode (app.camera.LockOnCameraParameter.LockOnCameraMode) = 1
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGNearLength (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGReturnSpeed (System.Single) = 2.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGReturnTime (System.Single) = 4.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGSmoothingYMatchXZTime (System.Single) = 60.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGYAccDamping (System.Single) = 0.080
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.POGYMaxDamping (System.Single) = 0.700
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.PlFrameOutRange (System.Single) = 0.100
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.RecommendedVerticalMaxLength (System.Single) = 15.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.RecommendedVerticalMinLength (System.Single) = 8.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.ReverberationMaxTime (System.Single) = 4.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.ReverberationShorteningTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.ReverberationTime (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.SphericalInterpAngle (System.Single) = 145.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.SphericalInterpPOGHLength (System.Single) = 6.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.WallUpHeight (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.WallUpLength (System.Single) = 2.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.__IsBehindLockOnEnable (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.__IsPlayerLockOnInvalid (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.zOffsetBattleMax (System.Single) = 11.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.zOffsetMax (System.Single) = 18.000
+[+  99.735 f5940]   V app.camera.LockOnCameraParameter.zOffsetRideNightmareMax (System.Single) = 11.000
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/LockOnCameraParameter.user.json
+[+  99.735 f5940]   F app.camera.LockOnCameraParameter.RotateCameraReduceRateCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.camera.LockOnCameraParameter.BehindParam : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.LockOnCameraParameter.BehindNightmareParam : app.camera.BehindCameraParameter = app.camera.BehindCameraParameter
+[+  99.735 f5940]   F app.camera.LockOnCameraParameter.HeightDownCameraParam : app.camera.HeightDownCameraParameter = app.camera.HeightDownCameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.LegShakeParam : app.camera.LegShakeCameraParameter = app.camera.LegShakeCameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.LegShakeParam 000002C6D86F40A0 tipo=app.camera.LegShakeCameraParameter ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/Player/LegShakeCameraParameter.user.json
+[+  99.735 f5940]   F app.camera.LegShakeCameraParameter.Walk : app.camera.LegShakeParameter = app.camera.LegShakeParameter
+[+  99.735 f5940]   F app.camera.LegShakeCameraParameter.Run : app.camera.LegShakeParameter = app.camera.LegShakeParameter
+[+  99.735 f5940]   F app.camera.LegShakeCameraParameter.Dash : app.camera.LegShakeParameter = app.camera.LegShakeParameter
+[+  99.735 f5940]   F app.PlayerCameraController.<defaultParameter>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.<defaultParameter>k__BackingField 000002C6D467EEA0 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 1
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.500
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.300
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 5.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -5.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<oldDefaultParameter>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.<oldDefaultParameter>k__BackingField 000002C6D82725A0 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 55.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 1
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -20.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.FinishCameraLight : via.Prefab = via.Prefab
+[+  99.735 f5940] --- campos PlayerCameraController.FinishCameraLight 000002C6D830F9D0 tipo=via.Prefab ---
+[+  99.735 f5940]   RUTA Prefab/Character/Player/Camera/FinishCameraLight.pfb
+[+  99.735 f5940]   F app.PlayerCameraController.CameraCommandList : System.Collections.Generic.List`1<app.CameraCommand> = System.Collections.Generic.List`1<app.CameraCommand>
+[+  99.735 f5940]   F   PlayerCameraController.CameraCommandList: 1 elementos
+[+  99.735 f5940] --- campos PlayerCameraController.CameraCommandList[0] 000002C6D830BD80 tipo=app.camera.CameraCommandDefaultSetting ---
+[+  99.735 f5940]   V app.CameraCommand.<checkOwner>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraCommand.<checkOwnerCollider>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraCommand._IsFinished (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraCommand._Priority (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraCommand.isBloodyPalace (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraCommandInterpolation.InterpolationIn (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraCommandInterpolation.InterpolationOut (System.Single) = 2.000
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.<finishMode>k__BackingField (app.camera.CameraCommandDefaultSetting.FinishMode) = 0
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.<finished>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.<timer>k__BackingField (System.Single) = 1.300
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.FOV (System.Single) = 65.000
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.HorizontalAngle (System.Single) = -255.000
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetX (System.Single) = -0.550
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetY (System.Single) = 1.250
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.OffsetZ (System.Single) = -2.300
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.Roll (System.Single) = -0.200
+[+  99.735 f5940]   V app.camera.CameraCommandDefaultSetting.VerticalAngle (System.Single) = 4.000
+[+  99.735 f5940]   F app.CameraCommand.<ownerGameObject>k__BackingField : via.GameObject = NULL
+[+  99.735 f5940]   F app.CameraCommand.<ownerCollider>k__BackingField : via.physics.Colliders = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.RemoveCommandList : System.Collections.Generic.List`1<app.CameraCommand> = System.Collections.Generic.List`1<app.CameraCommand>
+[+  99.735 f5940]   F   PlayerCameraController.RemoveCommandList: 0 elementos
+[+  99.735 f5940]   F app.PlayerCameraController.OldLockOnTarget : app.LockOnObject = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.PrevLockOnObject : app.LockOnObject = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<oldCameraMode>k__BackingField : app.PlayerCameraController.CameraMode[] = app.PlayerCameraController.CameraMode[]
+[+  99.735 f5940] --- campos PlayerCameraController.<oldCameraMode>k__BackingField 000002C6D87271D0 tipo=app.PlayerCameraController.CameraMode[] ---
+[+  99.735 f5940]   F app.PlayerCameraController.<owRotationParameter>k__BackingField : app.camera.AutoRotationParameter = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<cachedSnatchPoint>k__BackingField : app.SnatchPoint = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<overwriteFilter>k__BackingField : via.physics.FilterInfo = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<parameter>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.<parameter>k__BackingField 000002C6D467EF70 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 65.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 1
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.500
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.300
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 5.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -5.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = -0.003
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<shakeCamera>k__BackingField : app.camera.ShakeCamera = app.camera.ShakeCamera
+[+  99.735 f5940] --- campos PlayerCameraController.<shakeCamera>k__BackingField 000002C6D8272620 tipo=app.camera.ShakeCamera ---
+[+  99.735 f5940]   V app.camera.ShakeCamera.<roll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.ShakeCamera.<shakeRoll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.camera.ShakeCamera.<cachedCamera>k__BackingField : via.Camera = via.Camera
+[+  99.735 f5940]   F app.camera.ShakeCamera.ShakeSubCamera : via.GameObject = NULL
+[+  99.735 f5940]   F app.camera.ShakeCamera.rollSmoothing : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.PlayerCameraController.<cameraShakeManager>k__BackingField : app.camera.CameraShakeManager = app.camera.CameraShakeManager
+[+  99.735 f5940] --- campos PlayerCameraController.<cameraShakeManager>k__BackingField 000002C6D8330CE0 tipo=app.camera.CameraShakeManager ---
+[+  99.735 f5940]   V app.camera.CameraShakeManager.<priority>k__BackingField (app.camera.CameraShakeManager.Priority) = 1000000
+[+  99.735 f5940]   F app.camera.CameraShakeManager.<cameraShake>k__BackingField : app.camera.CameraShake = NULL
+[+  99.735 f5940]   F app.camera.CameraShakeManager.lockObj : System.Object = System.Object
+[+  99.735 f5940]   F app.camera.CameraShakeManager.<manualShakeCamera>k__BackingField : app.camera.ShakeCamera = NULL
+[+  99.735 f5940]   F app.camera.CameraShakeManager.<manualRequestList>k__BackingField : System.Collections.Generic.List`1<app.camera.CameraShakeManager.ManualRequestWork> = System.Collections.Generic.List`1<app.camera.CameraShakeManager.ManualRequestWork>
+[+  99.735 f5940]   F app.PlayerCameraController.StageCameraShake : app.camera.CameraShakeParameter = app.camera.CameraShakeParameter
+[+  99.735 f5940] --- campos PlayerCameraController.StageCameraShake 000002C6D86F4620 tipo=app.camera.CameraShakeParameter ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/StageCameraShake.user.json
+[+  99.735 f5940]   F app.camera.CameraShakeParameter.ShakeLevelList : System.Collections.Generic.List`1<app.camera.CameraShakeWork> = System.Collections.Generic.List`1<app.camera.CameraShakeWork>
+[+  99.735 f5940]   F app.PlayerCameraController.CameraShake : app.camera.CameraShakeParameter = app.camera.CameraShakeParameter
+[+  99.735 f5940] --- campos PlayerCameraController.CameraShake 000002C6D86F56E0 tipo=app.camera.CameraShakeParameter ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/CameraShake.user.json
+[+  99.735 f5940]   F app.camera.CameraShakeParameter.ShakeLevelList : System.Collections.Generic.List`1<app.camera.CameraShakeWork> = System.Collections.Generic.List`1<app.camera.CameraShakeWork>
+[+  99.735 f5940]   F app.PlayerCameraController.EnemyCameraShake : app.camera.CameraShakeParameter = app.camera.CameraShakeParameter
+[+  99.735 f5940] --- campos PlayerCameraController.EnemyCameraShake 000002C6D86F69F0 tipo=app.camera.CameraShakeParameter ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/EnemyCameraShake.user.json
+[+  99.735 f5940]   F app.camera.CameraShakeParameter.ShakeLevelList : System.Collections.Generic.List`1<app.camera.CameraShakeWork> = System.Collections.Generic.List`1<app.camera.CameraShakeWork>
+[+  99.735 f5940]   F app.PlayerCameraController.<skillCameraComponent>k__BackingField : app.SkillCamera = app.SkillCamera
+[+  99.735 f5940] --- campos PlayerCameraController.<skillCameraComponent>k__BackingField 000002C6D833D110 tipo=app.SkillCamera ---
+[+  99.735 f5940]   V app.BaseBehavior.<IsStarted>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.SkillCamera.<fov>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.SkillCamera.<inverse>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.SkillCamera.<isActive>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.SkillCamera.<roll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.SkillCamera.<param>k__BackingField : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.SkillCamera.<camera>k__BackingField : via.Camera = via.Camera
+[+  99.735 f5940]   F app.SkillCamera.<motCam>k__BackingField : via.motion.MotionCamera = via.motion.MotionCamera
+[+  99.735 f5940]   F app.SkillCamera.<dofH>k__BackingField : app.PostEffectController.BlendDataEventHandler = NULL
+[+  99.735 f5940]   F app.PlayerCameraController._skillCamera : app.CameraParameter = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<defaultCameraParameter>k__BackingField : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940] --- campos PlayerCameraController.<defaultCameraParameter>k__BackingField 000002C6D8330D90 tipo=app.CameraHelper.Parameter ---
+[+  99.735 f5940]   V app.CameraHelper.Parameter.FOV (System.Single) = 65.000
+[+  99.735 f5940]   V app.CameraHelper.Parameter.FarClipPlane (System.Single) = 1000.000
+[+  99.735 f5940]   V app.CameraHelper.Parameter.NearClipPlane (System.Single) = 0.200
+[+  99.735 f5940]   V app.CameraHelper.Parameter.Roll (System.Single) = -0.003
+[+  99.735 f5940]   F app.PlayerCameraController.<bossCamera>k__BackingField : app.camera.SingleTargetCamera = app.camera.SingleTargetCamera
+[+  99.735 f5940] --- campos PlayerCameraController.<bossCamera>k__BackingField 000002C6D8332620 tipo=app.camera.SingleTargetCamera ---
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<BaseBossPosSmoothRate>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<CalcType>k__BackingField (System.UInt32) = 3
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<EyeInterpTime>k__BackingField (System.Single) = 0.500
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<EyeResetInterpTime>k__BackingField (System.Single) = 0.200
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<EyeRotateHorizontalLastSign>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<EyeVerticalAngle>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<HorizontalCollisionOffsetTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<HorizontalManualOffset>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<IsApplyCalcResult>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<IsDisableEyeVerticalAngleSmoothing>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<IsEyeReset>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<PogRate>k__BackingField (System.Single) = 0.600
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<ReverNutoralDampingTime>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<VerticalCollisionOffsetTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<VerticalManualOffset>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<WallEscapeHorizontalOffset>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<WallEscapeVerticalOffset>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<ZOffset>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<circularPOGAngle>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<circularPOGSpeed>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<fov>k__BackingField (System.Single) = 50.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<horizontalAngle>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<horizontalReverSpeedRate>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<isEnable>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<isHitCollision>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<isHitCollisionWall>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<roll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.<verticalReverSpeedRate>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.CommandBlendMode (app.camera.SingleTargetCamera.CommandBlendModeEnum) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.CommandBlendRate (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.CommandTriggerStatus (app.camera.SingleTargetCamera.CommandTriggerStatusEnum) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.EyeResetType (app.camera.SingleTargetCamera.EyeResetTypeEnum) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.FixJointTimer (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsCommandSetFrame (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsEyeVerticalIgnoreInterp (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsLostTargetInterpIgnore (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsRotateTargetLost (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsTargetLostInit (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.IsThroughCameraReset (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.LastCameraTriggerableRange (System.UInt32) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.LockonBlendRate (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.LookDownOffset (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.ReFindPogDelayTimeDef (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.ReFindPogDelayTimer (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.TargetDisableTimer (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.TargetLostMoveTimeDef (System.Single) = 0.500
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.TargetLostTimeDef (System.Single) = 0.500
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.TargetLostTimer (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.ThroughCameraStatus (app.camera.SingleTargetCamera.ThroughCameraStatusEnum) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera._IsResetForEventCamera (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.airOffsetZ (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.airOffsetZZoomInTimer (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.cameraModeAddChangeRate (System.Single) = 1.000
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.isBanCameraModeOverride (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.SingleTargetCamera.secondModeParamRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<target>k__BackingField : app.character.Character = NULL
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<targetCameraExtension>k__BackingField : app.camera.SingleTargetCameraExBase = NULL
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<player>k__BackingField : app.IPlayerAccessor = NULL
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ResDefaultParam : app.camera.SingleTargetCameraParamData = app.camera.SingleTargetCameraParamData
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ResOuterParam : app.camera.SingleTargetCameraParamData = NULL
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.baseModeParam : app.camera.SingleTargetCamera.SingleTargetCameraModeParameter = app.camera.SingleTargetCamera.SingleTargetCameraModeParameter
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.secondModeParam : app.camera.SingleTargetCamera.SingleTargetCameraModeParameter = app.camera.SingleTargetCamera.SingleTargetCameraModeParameter
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.cameraModeAddChangeInterpCurve : app.MathEx.HermiteFloatCurve = app.MathEx.HermiteFloatCurve
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.cameraModeAddName : System.String = System.String
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.LockonBlendSmoothing : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.CommandBlendSmoothing : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.LookDownOffsetSmoothing : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<fovSmoothing>k__BackingField : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<commandWork>k__BackingField : app.camera.SingleTargetCameraCommandWork = app.camera.SingleTargetCameraCommandWork
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.CommandOwner : via.GameObject = NULL
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<BaseBossPosSmoothing>k__BackingField : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<EyeRotateVerticalSmoothing>k__BackingField : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<EyeRotateHorizontalSmoothing>k__BackingField : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.<EyeInterpCurve>k__BackingField : app.MathEx.HermiteFloatCurve = app.MathEx.HermiteFloatCurve
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ManualCameraReduceRate : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.WallEscapeCameraReduceRate : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.WallEscapeHorizontalSmooting : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.WallEscapeVerticalSmooting : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ManualSmooting : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ZOffsetSmoothing : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.AirZOffsetSmoothing : app.MathEx.ExpDampSmoothing = app.MathEx.ExpDampSmoothing
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.PositionInterpSmooting : app.MathEx.ExpDampSmoothingVector = app.MathEx.ExpDampSmoothingVector
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.POGInterpSmooting : app.MathEx.ExpDampSmoothingVector = app.MathEx.ExpDampSmoothingVector
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.ThroughCameraInterpCurve : app.MathEx.HermiteFloatCurve = app.MathEx.HermiteFloatCurve
+[+  99.735 f5940]   F app.camera.SingleTargetCamera.RushThroughParam : app.camera.SingleTargetCamera.RushThroughParameter = app.camera.SingleTargetCamera.RushThroughParameter
+[+  99.735 f5940]   F app.PlayerCameraController.bossCameraData : app.camera.SingleTargetCameraParamData = app.camera.SingleTargetCameraParamData
+[+  99.735 f5940] --- campos PlayerCameraController.bossCameraData 000002C6D86F7BD0 tipo=app.camera.SingleTargetCameraParamData ---
+[+  99.735 f5940]   RUTA assets:/UserData/Camera/SingleTargetCameraParamData.user.json
+[+  99.735 f5940]   F app.camera.SingleTargetCameraParamData.exParam : app.camera.ExpansionAddParameter = app.camera.ExpansionAddParameter
+[+  99.735 f5940]   F app.camera.SingleTargetCameraParamData.param : app.camera.SingleTargetCameraParams = app.camera.SingleTargetCameraParams
+[+  99.735 f5940]   F app.camera.SingleTargetCameraParamData.list : System.Collections.Generic.List`1<app.camera.SingleTargetCameraParamData.ParamsWithName> = System.Collections.Generic.List`1<app.camera.SingleTargetCameraParamData.ParamsWithName>
+[+  99.735 f5940]   F app.PlayerCameraController.<bossCameraParameter>k__BackingField : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940] --- campos PlayerCameraController.<bossCameraParameter>k__BackingField 000002C6D8333A40 tipo=app.CameraHelper.Parameter ---
+[+  99.735 f5940]   V app.CameraHelper.Parameter.FOV (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraHelper.Parameter.FarClipPlane (System.Single) = 1000.000
+[+  99.735 f5940]   V app.CameraHelper.Parameter.NearClipPlane (System.Single) = 0.200
+[+  99.735 f5940]   V app.CameraHelper.Parameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   F app.PlayerCameraController.<bossCameraInterpolator>k__BackingField : app.CameraParameterInterpolator = app.CameraParameterInterpolator
+[+  99.735 f5940] --- campos PlayerCameraController.<bossCameraInterpolator>k__BackingField 000002C6D8333AA0 tipo=app.CameraParameterInterpolator ---
+[+  99.735 f5940]   V app.CameraParameterInterpolator.<divine>k__BackingField (System.Int32) = 0
+[+  99.735 f5940]   V app.CameraParameterInterpolator.<endRoll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.<isHitTerrain>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameterInterpolator.<mode>k__BackingField (app.CameraParameterInterpolator.InterpolationType) = 0
+[+  99.735 f5940]   V app.CameraParameterInterpolator.<startRoll>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.endFOV (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.endFarClipPlane (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.endNearClipPlane (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.oldAngle (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.startFOV (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.startFarClipPlane (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterInterpolator.startNearClipPlane (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameterInterpolator.<points>k__BackingField : via.vec3[] = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.PerformanceCamera : app.camera.PerformanceCamera = app.camera.PerformanceCamera
+[+  99.735 f5940] --- campos PlayerCameraController.PerformanceCamera 000002C6D830EEA0 tipo=app.camera.PerformanceCamera ---
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<fov>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<hitTerrainRoutine>k__BackingField (System.Int32) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<interpolationFrame>k__BackingField (System.Single) = 120.000
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<isActive>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<isSimpleMode>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<restoreAlphaValue>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<restoreTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<timer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<updateAlphaValue>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<updateUpVector>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.PerformanceCamera.<useTerrainCheck>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   F app.camera.PerformanceCamera.CameraData : app.camera.PerformanceCameraParameter = app.camera.PerformanceCameraParameter
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<position0>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<pog0>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<dof0>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<position1>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<pog1>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<dof1>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<position2>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<pog2>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<dof2>k__BackingField : app.camera.PerformanceCameraPosition = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<nextCameraInter>k__BackingField : app.CameraParameterInterpolator = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<param0>k__BackingField : app.CameraHelper.Parameter = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<param1>k__BackingField : app.CameraHelper.Parameter = NULL
+[+  99.735 f5940]   F app.camera.PerformanceCamera.<param2>k__BackingField : app.CameraHelper.Parameter = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.motionCamera : app.MotionCameraController = app.MotionCameraController
+[+  99.735 f5940] --- campos PlayerCameraController.motionCamera 000002C6D830EF60 tipo=app.MotionCameraController ---
+[+  99.735 f5940]   V app.MotionCameraController.<currentTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.MotionCameraController.<interpType>k__BackingField (app.MathEx.EaseType) = 0
+[+  99.735 f5940]   V app.MotionCameraController.<isCollisionCheck>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.MotionCameraController.<maxTime>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.MotionCameraController.<interpolator>k__BackingField : app.CameraParameterInterpolator = app.CameraParameterInterpolator
+[+  99.735 f5940]   F app.MotionCameraController.<skillCameraComponent>k__BackingField : app.SkillCamera = app.SkillCamera
+[+  99.735 f5940]   F app.MotionCameraController.<originalParam>k__BackingField : app.CameraHelper.Parameter = NULL
+[+  99.735 f5940]   F app.MotionCameraController.<motionCameraRoot>k__BackingField : via.Transform = NULL
+[+  99.735 f5940]   F app.MotionCameraController.<requester>k__BackingField : System.Object = NULL
+[+  99.735 f5940]   F app.MotionCameraController.result : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.MotionCameraController.<cameraFinishHandler>k__BackingField : System.Action`1<app.MotionCameraController.FinishType> = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.busterCamera : app.camera.BusterCameraController = app.camera.BusterCameraController
+[+  99.735 f5940] --- campos PlayerCameraController.busterCamera 000002C6D830F130 tipo=app.camera.BusterCameraController ---
+[+  99.735 f5940]   V app.camera.BusterCameraController.<isInitialized>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.camera.BusterCameraController.<rotation>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.camera.BusterCameraController.<speedAngleY>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.camera.BusterCameraController.<self>k__BackingField : via.Transform = NULL
+[+  99.735 f5940]   F app.camera.BusterCameraController.<target>k__BackingField : via.Transform = NULL
+[+  99.735 f5940]   F app.camera.BusterCameraController.<result>k__BackingField : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.camera.BusterCameraController.<work>k__BackingField : app.camera.BusterCameraController.BusterCameraWork = app.camera.BusterCameraController.BusterCameraWork
+[+  99.735 f5940]   F app.camera.BusterCameraController.Data : app.camera.BusterCameraData = app.camera.BusterCameraData
+[+  99.735 f5940]   F app.PlayerCameraController.fixedCamera : app.FixedCameraController = app.FixedCameraController
+[+  99.735 f5940] --- campos PlayerCameraController.fixedCamera 000002C6D830F2A0 tipo=app.FixedCameraController ---
+[+  99.735 f5940]   V app.FixedCameraController.<currentTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.FixedCameraController.<followType>k__BackingField (app.FixedCameraController.FollowType) = 0
+[+  99.735 f5940]   V app.FixedCameraController.<maxTime>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.FixedCameraController.<routine>k__BackingField (app.FixedCameraController.Routine) = 1
+[+  99.735 f5940]   V app.FixedCameraController.alpha (System.Single) = 1.000
+[+  99.735 f5940]   V app.FixedCameraController.alphaType (app.FixedCameraController.AlphaType) = 0
+[+  99.735 f5940]   F app.FixedCameraController.result : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.FixedCameraController.targetCam : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.FixedCameraController.originalCam : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.FixedCameraController.baseCam : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.FixedCameraController.<interpolator>k__BackingField : app.CameraParameterInterpolator = app.CameraParameterInterpolator
+[+  99.735 f5940]   F app.FixedCameraController.FixedCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.FixedCameraController.playerMesh : app.TransparentMeshController = NULL
+[+  99.735 f5940]   F app.FixedCameraController.<posSmoothing>k__BackingField : app.MathEx.ExpDampSmoothingVector = app.MathEx.ExpDampSmoothingVector
+[+  99.735 f5940]   F app.PlayerCameraController.<fixedCameraFinishedEventHandler>k__BackingField : System.Action = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.railCamera : app.RailCameraController = app.RailCameraController
+[+  99.735 f5940] --- campos PlayerCameraController.railCamera 000002C6D830F5A0 tipo=app.RailCameraController ---
+[+  99.735 f5940]   V app.RailCameraController.<RotateX>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.<RotateY>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.<interpCurrentTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.<interpMaxTime>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.FinalFrame (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.OldSplitNum (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.TargetRailArea (System.Int32) = 0
+[+  99.735 f5940]   V app.RailCameraController.deflectionRate (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.pogKind (app.RailCameraController.RailPogKind) = 0
+[+  99.735 f5940]   V app.RailCameraController.rateKind (app.RailCameraController.RailRateKind) = 0
+[+  99.735 f5940]   V app.RailCameraController.rotateMaxX (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.rotateMaxY (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.rotateMinX (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.rotateMinY (System.Single) = 0.000
+[+  99.735 f5940]   V app.RailCameraController.state (app.RailCameraController.RailState) = 0
+[+  99.735 f5940]   F app.RailCameraController.result : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.RailCameraController.targetCam : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.RailCameraController.baseCam : app.CameraHelper.Parameter = app.CameraHelper.Parameter
+[+  99.735 f5940]   F app.RailCameraController.RailUserCurve : via.timeline.UserCurve = NULL
+[+  99.735 f5940]   F app.RailCameraController.RailParam : app.RailCameraUserCurve = app.RailCameraUserCurve
+[+  99.735 f5940]   F app.RailCameraController._CachedPlayer : app.Player = NULL
+[+  99.735 f5940]   F app.RailCameraController.<interpolator>k__BackingField : app.CameraParameterInterpolator = app.CameraParameterInterpolator
+[+  99.735 f5940]   F app.RailCameraController.<posSmoothing>k__BackingField : app.MathEx.ExpDampSmoothingVector = app.MathEx.ExpDampSmoothingVector
+[+  99.735 f5940]   F app.RailCameraController.<pogSmoothing>k__BackingField : app.MathEx.ExpDampSmoothingVector = app.MathEx.ExpDampSmoothingVector
+[+  99.735 f5940]   F app.PlayerCameraController.<owBehindLockOnParam>k__BackingField : app.camera.BehindCameraParameter = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<cameraFilter>k__BackingField : via.physics.FilterInfo = via.physics.FilterInfo
+[+  99.735 f5940]   F app.PlayerCameraController.<normalCameraBlender>k__BackingField : app.PlayerCameraController.CameraBlender = app.PlayerCameraController.CameraBlender
+[+  99.735 f5940] --- campos PlayerCameraController.<normalCameraBlender>k__BackingField 000002C6D827B4B0 tipo=app.PlayerCameraController.CameraBlender ---
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed0>k__BackingField (System.Single) = 0.400
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed1>k__BackingField (System.Single) = 0.200
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<currentRate>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.getRate : System.Func`1<System.Single> = System.Func`1<System.Single>
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter0>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter1>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.<battleCameraBlender>k__BackingField : app.PlayerCameraController.CameraBlender = app.PlayerCameraController.CameraBlender
+[+  99.735 f5940] --- campos PlayerCameraController.<battleCameraBlender>k__BackingField 000002C6D827B3D0 tipo=app.PlayerCameraController.CameraBlender ---
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed0>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed1>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<currentRate>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.getRate : System.Func`1<System.Single> = System.Func`1<System.Single>
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter0>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter1>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.<lockOnCameraBlender>k__BackingField : app.PlayerCameraController.CameraBlender = app.PlayerCameraController.CameraBlender
+[+  99.735 f5940] --- campos PlayerCameraController.<lockOnCameraBlender>k__BackingField 000002C6D827B440 tipo=app.PlayerCameraController.CameraBlender ---
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed0>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed1>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<currentRate>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.getRate : System.Func`1<System.Single> = System.Func`1<System.Single>
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter0>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter1>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.<aimCameraBlender>k__BackingField : app.PlayerCameraController.CameraBlender = app.PlayerCameraController.CameraBlender
+[+  99.735 f5940] --- campos PlayerCameraController.<aimCameraBlender>k__BackingField 000002C6D827B520 tipo=app.PlayerCameraController.CameraBlender ---
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed0>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<blendSpeed1>k__BackingField (System.Single) = 1.000
+[+  99.735 f5940]   V app.PlayerCameraController.CameraBlender.<currentRate>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.getRate : System.Func`1<System.Single> = System.Func`1<System.Single>
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter0>k__BackingField : app.CameraParameter = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.CameraBlender.<parameter1>k__BackingField : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940]   F app.PlayerCameraController.<player>k__BackingField : app.IPlayerAccessor = app.PlayerAccessor
+[+  99.735 f5940] --- campos PlayerCameraController.<player>k__BackingField 000002C6D47B7620 tipo=app.PlayerAccessor ---
+[+  99.735 f5940]   F app.PlayerAccessor.PlayerTransform : via.Transform = via.Transform
+[+  99.735 f5940]   F app.PlayerAccessor._player : app.Player = app.PlayerVergilPL
+[+  99.735 f5940]   F app.PlayerCameraController.oldParameter : app.CameraParameter = app.CameraParameter
+[+  99.735 f5940] --- campos PlayerCameraController.oldParameter 000002C6D83348D0 tipo=app.CameraParameter ---
+[+  99.735 f5940]   V app.CameraParameter.FOV (System.Single) = 55.000
+[+  99.735 f5940]   V app.CameraParameter.LerpTime (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameter.LerpType (app.CameraParameter.LerpDefine) = 1
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.PogOffsetYLow (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitHigh (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitLow (System.Single) = -20.000
+[+  99.735 f5940]   V app.CameraParameter.RecommendedVerticalLimitType (app.CameraParameter.RecommendedVerticalLimit) = 0
+[+  99.735 f5940]   V app.CameraParameter.ResetRecommendedCameraTimer (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameter.Roll (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameter.RotationAccVertical (System.Single) = 1.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitHigh (System.Single) = 10.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitLow (System.Single) = -30.000
+[+  99.735 f5940]   V app.CameraParameter.VerticalLimitRate (System.Single) = 0.000
+[+  99.735 f5940]   F app.CameraParameter.Target : app.CameraLookTarget = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<cachedCamera>k__BackingField : via.Camera = via.Camera
+[+  99.735 f5940]   F app.PlayerCameraController.<cameraBlender>k__BackingField : app.CameraParameterBlender = app.CameraParameterBlender
+[+  99.735 f5940] --- campos PlayerCameraController.<cameraBlender>k__BackingField 000002C6D86AD180 tipo=app.CameraParameterBlender ---
+[+  99.735 f5940]   V app.BaseBehavior.<IsStarted>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.CameraParameterBlender.<blendMode>k__BackingField (app.CameraParameterBlender.BlendMode) = 0
+[+  99.735 f5940]   V app.CameraParameterBlender.<interpolation>k__BackingField (app.CameraParameterBlender.InterpolationMode) = 4
+[+  99.735 f5940]   V app.CameraParameterBlender.<isCollisionCheck>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.CameraParameterBlender.<isHitTerrain>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameterBlender.<isLerping>k__BackingField (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameterBlender.<lerpTimer>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterBlender.<maxTime>k__BackingField (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterBlender.<systemFarClipPlane>k__BackingField (System.Single) = 1000.000
+[+  99.735 f5940]   V app.CameraParameterBlender.BlendLength (System.Single) = 3.000
+[+  99.735 f5940]   V app.CameraParameterBlender.Current (System.Int32) = 0
+[+  99.735 f5940]   V app.CameraParameterBlender.ManualBlendRate (System.Single) = 0.000
+[+  99.735 f5940]   V app.CameraParameterBlender.ManualMode (System.Boolean) = 0
+[+  99.735 f5940]   V app.CameraParameterBlender.Target (System.Int32) = 0
+[+  99.735 f5940]   F app.CameraParameterBlender.BlendStartHandler : app.CameraParameterBlender.EventBlend = app.CameraParameterBlender.EventBlend
+[+  99.735 f5940]   F app.CameraParameterBlender.BlendEndHandler : app.CameraParameterBlender.EventBlend = app.CameraParameterBlender.EventBlend
+[+  99.735 f5940]   F app.CameraParameterBlender.CameraParameterList : System.Collections.Generic.List`1<app.CameraHelper.Parameter> = System.Collections.Generic.List`1<app.CameraHelper.Parameter>
+[+  99.735 f5940]   F app.CameraParameterBlender.BlendCurve : via.AnimationCurve = via.AnimationCurve
+[+  99.735 f5940]   F app.CameraParameterBlender.<customCurve>k__BackingField : via.AnimationCurve = NULL
+[+  99.735 f5940]   F app.CameraParameterBlender.<camera>k__BackingField : via.Camera = via.Camera
+[+  99.735 f5940]   F app.CameraParameterBlender.<smoothing>k__BackingField : app.CameraSmoothing = app.CameraSmoothing
+[+  99.735 f5940]   F app.PlayerCameraController.<cachedCameraTransform>k__BackingField : via.Transform = via.Transform
+[+  99.735 f5940]   F app.PlayerCameraController.<cachedCharacterController>k__BackingField : via.physics.CharacterController = NULL
+[+  99.735 f5940]   F app.PlayerCameraController.<cachedShakeMotion>k__BackingField : via.motion.MotionCamera = via.motion.MotionCamera
+[+  99.735 f5940]   F app.PlayerCameraController.<bumperL1>k__BackingField : app.Collision.AsyncCastRayResult = app.Collision.AsyncCastRayResult
+[+  99.735 f5940] --- campos PlayerCameraController.<bumperL1>k__BackingField 000002C6D8334950 tipo=app.Collision.AsyncCastRayResult ---
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<_state>k__BackingField (app.Collision.CollisionSystem.AsyncCastRayState) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<isRequest>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<options>k__BackingField (System.UInt32) = 2
+[+  99.735 f5940]   F app.Collision.AsyncCastRayResult.Result : app.Collision.CollisionSystem.HitResult = app.Collision.CollisionSystem.HitResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<systemResult>k__BackingField : via.physics.CastRayResult = via.physics.CastRayResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<query>k__BackingField : via.physics.CastRayQuery = via.physics.CastRayQuery
+[+  99.735 f5940]   F app.PlayerCameraController.<bumperL3>k__BackingField : app.Collision.AsyncCastRayResult = app.Collision.AsyncCastRayResult
+[+  99.735 f5940] --- campos PlayerCameraController.<bumperL3>k__BackingField 000002C6D83349E0 tipo=app.Collision.AsyncCastRayResult ---
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<_state>k__BackingField (app.Collision.CollisionSystem.AsyncCastRayState) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<isRequest>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<options>k__BackingField (System.UInt32) = 2
+[+  99.735 f5940]   F app.Collision.AsyncCastRayResult.Result : app.Collision.CollisionSystem.HitResult = app.Collision.CollisionSystem.HitResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<systemResult>k__BackingField : via.physics.CastRayResult = via.physics.CastRayResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<query>k__BackingField : via.physics.CastRayQuery = via.physics.CastRayQuery
+[+  99.735 f5940]   F app.PlayerCameraController.<bumperR1>k__BackingField : app.Collision.AsyncCastRayResult = app.Collision.AsyncCastRayResult
+[+  99.735 f5940] --- campos PlayerCameraController.<bumperR1>k__BackingField 000002C6D8334A70 tipo=app.Collision.AsyncCastRayResult ---
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<_state>k__BackingField (app.Collision.CollisionSystem.AsyncCastRayState) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<isRequest>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<options>k__BackingField (System.UInt32) = 2
+[+  99.735 f5940]   F app.Collision.AsyncCastRayResult.Result : app.Collision.CollisionSystem.HitResult = app.Collision.CollisionSystem.HitResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<systemResult>k__BackingField : via.physics.CastRayResult = via.physics.CastRayResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<query>k__BackingField : via.physics.CastRayQuery = via.physics.CastRayQuery
+[+  99.735 f5940]   F app.PlayerCameraController.<bumperR3>k__BackingField : app.Collision.AsyncCastRayResult = app.Collision.AsyncCastRayResult
+[+  99.735 f5940] --- campos PlayerCameraController.<bumperR3>k__BackingField 000002C6D8334B00 tipo=app.Collision.AsyncCastRayResult ---
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<_state>k__BackingField (app.Collision.CollisionSystem.AsyncCastRayState) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<isRequest>k__BackingField (System.Boolean) = 1
+[+  99.735 f5940]   V app.Collision.AsyncCastBase.<options>k__BackingField (System.UInt32) = 2
+[+  99.735 f5940]   F app.Collision.AsyncCastRayResult.Result : app.Collision.CollisionSystem.HitResult = app.Collision.CollisionSystem.HitResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<systemResult>k__BackingField : via.physics.CastRayResult = via.physics.CastRayResult
+[+  99.735 f5940]   F app.Collision.AsyncCastRayHitOnly.<query>k__BackingField : via.physics.CastRayQuery = via.physics.CastRayQuery
+[+  99.735 f5940] PlayerManager.players: 1 -> 3
+[+  99.735 f5940]   player[0] GO='pl0100_dante' padre='null'
+[+  99.735 f5940]   player[0] componentes de su GO: app.Player=000002C6CD21FD60 (tipo real app.PlayerDante) app.character.Character=000002C6CD21FD60 (tipo real app.PlayerDante) app.PlayerDante=000002C6CD21FD60 (tipo real app.PlayerDante) 
+[+  99.735 f5940]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+  99.735 f5940]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=000002C6D7280BD0
+[+  99.735 f5940]   player[0] 000002C6CD21FD60 tipo=app.PlayerDante id=Dante(1) pos=(-89.52, -70.38, -239.11) padInput=000002C6D86036C0 [P1/manual]
+[+  99.735 f5940]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+  99.735 f5940]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  99.735 f5940]   player[1] GO='pl0200_v' padre='null'
+[+  99.735 f5940]   player[1] componentes de su GO: app.Player=000002C6CD5BFD00 (tipo real app.PlayerV) app.character.Character=000002C6CD5BFD00 (tipo real app.PlayerV) app.PlayerV=000002C6CD5BFD00 (tipo real app.PlayerV) 
+[+  99.735 f5940]   player[1] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+  99.735 f5940]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002C6D662D6E0
+[+  99.735 f5940]   player[1] 000002C6CD5BFD00 tipo=app.PlayerV id=Gilver(2) pos=(-88.88, -70.36, -238.34) padInput=000002C6D86036C0
+[+  99.735 f5940]   player[1] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+  99.735 f5940]   player[1] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+  99.735 f5940]   player[1] origen: carpeta[2] nombre='Players' ruta='Players'
+[+  99.735 f5940]   player[2] GO='pl0800_vergil' padre='null'
+[+  99.735 f5940]   player[2] componentes de su GO: app.Player=000002C6CD515420 (tipo real app.PlayerVergilPL) app.character.Character=000002C6CD515420 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000002C6CD515420 (tipo real app.PlayerVergilPL) 
+[+  99.735 f5940]   player[2] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+  99.735 f5940]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=000002C6D6A0A360
+[+  99.735 f5940]   player[2] 000002C6CD515420 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-88.88, -70.36, -238.34) padInput=000002C6D86036C0 [P2]
+[+  99.735 f5940]   player[2] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
+[+  99.735 f5940]   player[2] origen: carpeta[1] nombre='Players' ruta='Players'
+[+  99.766 f5943] manual watch f5943: manualPlayer=app.PlayerVergilPL isManualPlayer(1)=0 isManualPlayer(4)=1 
+[+ 100.219 f5970] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 100.219 f5970] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 100.219 f5970] p2input: PadInput de P1 = 000002C6D86036C0
+[+ 101.219 f6030] diag: no hay P2
+[+ 102.735 f6121] manual watch: fin
+[+ 120.750 f7200] latido: frame=7200
+[+ 150.766 f9000] latido: frame=9000
+[+ 180.813 f10800] latido: frame=10800
+[+ 186.813 f11160] p2create: carpeta antes de restaurar: 'pl0800' Active=1 Activating=0 Standby=1 Ready=1 Exist=1
+[+ 186.813 f11160] p2release (fin de mision): carpeta.deactivate() -> ok; set_Standby(false) -> ok
+[+ 186.813 f11160] p2create: carpeta tras restaurar: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
+[+ 186.813 f11160] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 186.813 f11160] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 186.813 f11160] PlayerManager.players: 3 -> -1
+[+ 188.313 f11250] PlayerManager cambio: 000002C6D8314210 -> 0000000000000000 (nueva mision o fin de mision)
