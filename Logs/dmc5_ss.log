@@ -1,85 +1,224 @@
-[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  6 2026 00:32:56 ====
-[+   0.000 f0] version del plugin: v99 (p2create registra la ruta y las claves de la config)
+[+   0.000 f0] ==== dmc5_splitscreen compilado Nov  6 2026 00:49:22 ====
+[+   0.000 f0] version del plugin: v100 (p2probe api vuelca PlayerManager/camaras; Ctrl+F8)
 [+   0.000 f0] proceso: E:\SteamLibrary\steamapps\common\Devil May Cry 5\
 [+   0.000 f0] log principal: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss.log  (abierto=1, error_apertura=0)
 [+   0.000 f0] API de plugins de REFramework (runtime): 1.10.0
 [+   0.000 f0] ordenes: archivo dmc5_ss_cmd.txt o teclas F5..F12, Ctrl+F5..F12, Mayus+F5..F12, RePag/AvPag (ver cabecera de main.cpp)
-[+   0.032 f0] Hook XInputGetState OK en xinput1_4.dll
-[+   0.063 f0] Hook XInputGetStateEx (ordinal 100) OK
-[+   0.078 f1] on_frame ACTIVO (UpdateBehavior, hilo 15628)
-[+   0.547 f30] init: hook en app.PlayerManager::doUpdate
-[+   0.547 f30] trace: hooks de diagnostico desactivados (trace_hooks=1 en la config los activa)
-[+   0.547 f30] trace: hook #0 en app.PadInput::update/0 (id 4)
-[+   0.547 f30] trace: instalacion terminada, 1 hooks (intentos: 1)
-[+   0.547 f30] p2input: hook en app.PadInput::update/0
-[+   1.047 f60] app.AdditionalPlayerLoadManager disponible (0000010BEB1F5FD0)
-[+  30.094 f1800] latido: frame=1800
-[+  55.641 f3330] PlayerManager cambio: 0000000000000000 -> 0000010BEB5A11A0 (nueva mision o fin de mision)
-[+  55.641 f3330] PlayerManager.players: -1 -> 0
-[+  60.141 f3600] latido: frame=3600
-[+  90.188 f5400] latido: frame=5400
-[+ 104.188 f6240] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 104.188 f6240] P1 (manualPlayer) detectado: app.PlayerDante
-[+ 104.188 f6240] p2input: PadInput de P1 = 0000010BE9DFC460
-[+ 104.188 f6240] PlayerManager.players: 0 -> 1
-[+ 104.188 f6240]   player[0] GO='pl0100_dante' padre='null'
-[+ 104.188 f6240]   player[0] componentes de su GO: app.Player=0000010BDFD65A40 (tipo real app.PlayerDante) app.character.Character=0000010BDFD65A40 (tipo real app.PlayerDante) app.PlayerDante=0000010BDFD65A40 (tipo real app.PlayerDante) 
-[+ 104.188 f6240]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+ 104.188 f6240]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000010BE9DFD330
-[+ 104.188 f6240]   player[0] 0000010BDFD65A40 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=0000010BE9DFC460 [P1/manual]
-[+ 104.188 f6240]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
-[+ 104.188 f6240]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 113.828 f6817] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 114.282 f6844] P2: personaje elegido = V (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 114.735 f6871] P2: personaje elegido = Vergil (RePag/AvPag para cambiar; F9 adopta, F10 crea)
-[+ 115.485 f6916] ORDEN: p2create VergilPL
-[+ 115.485 f6916] IDs para P2: player=VergilPL(4) costume=Default(0) situation=Default(0) (P1 player=Dante(1))
-[+ 115.485 f6916] config: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss_config.txt -> p2_via_apl=0 
-[+ 115.485 f6916] p2create: p2_via_apl=0: sin AdditionalPlayerLoadManager, directo a la carpeta Players/plXXXX
-[+ 115.719 f6930] p2create: cargador de 4 -> (sin cargador) (fase 4)
-[+ 115.735 f6930] p2create: carpeta antes de Standby: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
-[+ 115.735 f6930] p2create: carpeta.set_Standby(true) -> ok
-[+ 116.219 f6960] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
-[+ 118.235 f7080] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
-[+ 119.735 f7170] p2create: Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
-[+ 120.235 f7200] p2create: carpeta.activate() -> ok
-[+ 120.235 f7200] p2create: tras activate: 'pl0800' Active=0 Activating=1 Standby=1 Ready=1 Exist=1
-[+ 120.235 f7200] latido: frame=7200
-[+ 120.735 f7230] ATENCION: manualPlayer cambio DURANTE el spawn de P2 (posible reemplazo de P1)
-[+ 120.735 f7230] P1 (manualPlayer) detectado: app.PlayerVergilPL
-[+ 120.735 f7230] p2create: peticion ANULADA (el personaje pedido es P1): requestFinishPlayerResource(4) -> ok; cargador ahora: (sin cargador)
-[+ 120.735 f7230] p2input: PadInput de P1 = 0000010BEB1646B0
-[+ 120.735 f7230] PlayerManager.players: 1 -> 3
-[+ 120.735 f7230]   player[0] GO='pl0100_dante' padre='null'
-[+ 120.735 f7230]   player[0] componentes de su GO: app.Player=0000010BDFD65A40 (tipo real app.PlayerDante) app.character.Character=0000010BDFD65A40 (tipo real app.PlayerDante) app.PlayerDante=0000010BDFD65A40 (tipo real app.PlayerDante) 
-[+ 120.735 f7230]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
-[+ 120.735 f7230]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000010BE9DFD330
-[+ 120.735 f7230]   player[0] 0000010BDFD65A40 tipo=app.PlayerDante id=Dante(1) pos=(-89.45, -70.38, -239.16) padInput=0000010BEB1646B0
-[+ 120.735 f7230]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
-[+ 120.735 f7230]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 120.735 f7230]   player[1] GO='pl0200_v' padre='null'
-[+ 120.735 f7230]   player[1] componentes de su GO: app.Player=0000010BE011ACF0 (tipo real app.PlayerV) app.character.Character=0000010BE011ACF0 (tipo real app.PlayerV) app.PlayerV=0000010BE011ACF0 (tipo real app.PlayerV) 
-[+ 120.735 f7230]   player[1] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
-[+ 120.735 f7230]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000010BE8814E00
-[+ 120.735 f7230]   player[1] 0000010BE011ACF0 tipo=app.PlayerV id=Gilver(2) pos=(-88.95, -70.36, -238.29) padInput=0000010BEB1646B0
-[+ 120.735 f7230]   player[1] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
-[+ 120.735 f7230]   player[1] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
-[+ 120.735 f7230]   player[1] origen: carpeta[2] nombre='Players' ruta='Players'
-[+ 120.735 f7230]   player[2] GO='pl0800_vergil' padre='null'
-[+ 120.735 f7230]   player[2] componentes de su GO: app.Player=0000010BE0056770 (tipo real app.PlayerVergilPL) app.character.Character=0000010BE0056770 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=0000010BE0056770 (tipo real app.PlayerVergilPL) 
-[+ 120.735 f7230]   player[2] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
-[+ 120.735 f7230]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000010BEA96F310
-[+ 120.735 f7230]   player[2] 0000010BE0056770 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-88.95, -70.36, -238.29) padInput=0000010BEB1646B0 [P1/manual]
-[+ 120.735 f7230]   player[2] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
-[+ 120.735 f7230]   player[2] origen: carpeta[1] nombre='Players' ruta='Players'
-[+ 150.266 f9000] latido: frame=9000
-[+ 180.297 f10800] latido: frame=10800
-[+ 210.344 f12600] latido: frame=12600
-[+ 240.360 f14400] latido: frame=14400
-[+ 250.907 f15030] p2create: carpeta antes de restaurar: 'pl0800' Active=1 Activating=0 Standby=1 Ready=1 Exist=1
-[+ 250.907 f15030] p2release (fin de mision): carpeta.deactivate() -> ok; set_Standby(false) -> ok
-[+ 250.907 f15030] p2create: carpeta tras restaurar: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
-[+ 250.907 f15030] p2input: reset (fin de mision): objetivo y modo desactivados
-[+ 250.907 f15030] P1 desaparecio (manualPlayer == null): se descartan P1/P2
-[+ 250.907 f15030] PlayerManager.players: 3 -> -1
-[+ 252.407 f15120] PlayerManager cambio: 0000010BEB5A11A0 -> 0000000000000000 (nueva mision o fin de mision)
+[+   0.031 f0] Hook XInputGetState OK en xinput1_4.dll
+[+   0.062 f0] Hook XInputGetStateEx (ordinal 100) OK
+[+   0.406 f1] on_frame ACTIVO (UpdateBehavior, hilo 9608)
+[+   0.875 f30] init: hook en app.PlayerManager::doUpdate
+[+   0.875 f30] trace: hooks de diagnostico desactivados (trace_hooks=1 en la config los activa)
+[+   0.875 f30] trace: hook #0 en app.PadInput::update/0 (id 4)
+[+   0.875 f30] trace: instalacion terminada, 1 hooks (intentos: 1)
+[+   0.875 f30] p2input: hook en app.PadInput::update/0
+[+   1.375 f60] app.AdditionalPlayerLoadManager disponible (00000124454B5FD0)
+[+  30.484 f1800] latido: frame=1800
+[+  44.484 f2640] PlayerManager cambio: 0000000000000000 -> 0000012445254210 (nueva mision o fin de mision)
+[+  44.484 f2640] PlayerManager.players: -1 -> 0
+[+  60.500 f3600] latido: frame=3600
+[+  90.531 f5400] latido: frame=5400
+[+  98.547 f5880] p2input: reset (fin de mision): objetivo y modo desactivados
+[+  98.547 f5880] P1 (manualPlayer) detectado: app.PlayerDante
+[+  98.547 f5880] p2input: PadInput de P1 = 0000012444262E80
+[+  98.547 f5880] PlayerManager.players: 0 -> 1
+[+  98.547 f5880]   player[0] GO='pl0100_dante' padre='null'
+[+  98.547 f5880]   player[0] componentes de su GO: app.Player=000001243A025AD0 (tipo real app.PlayerDante) app.character.Character=000001243A025AD0 (tipo real app.PlayerDante) app.PlayerDante=000001243A025AD0 (tipo real app.PlayerDante) 
+[+  98.547 f5880]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+  98.547 f5880]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=0000012444263880
+[+  98.547 f5880]   player[0] 000001243A025AD0 tipo=app.PlayerDante id=Dante(1) pos=(0.00, 0.00, 0.00) padInput=0000012444262E80 [P1/manual]
+[+  98.547 f5880]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+  98.547 f5880]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
+[+ 120.593 f7200] latido: frame=7200
+[+ 139.828 f8354] P2: personaje elegido = Dante (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+ 140.218 f8377] P2: personaje elegido = V (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+ 140.578 f8399] P2: personaje elegido = Vergil (RePag/AvPag para cambiar; F9 adopta, F10 crea)
+[+ 143.484 f8573] ORDEN: p2create VergilPL
+[+ 143.484 f8573] IDs para P2: player=VergilPL(4) costume=Default(0) situation=Default(0) (P1 player=Dante(1))
+[+ 143.484 f8573] config: E:\SteamLibrary\steamapps\common\Devil May Cry 5\reframework\data\dmc5_ss_config.txt -> p2_via_apl=0 
+[+ 143.484 f8573] p2create: p2_via_apl=0: sin AdditionalPlayerLoadManager, directo a la carpeta Players/plXXXX
+[+ 143.609 f8580] p2create: cargador de 4 -> (sin cargador) (fase 4)
+[+ 143.609 f8580] p2create: carpeta antes de Standby: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
+[+ 143.609 f8580] p2create: carpeta.set_Standby(true) -> ok
+[+ 144.109 f8610] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
+[+ 146.109 f8730] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=0 Exist=1
+[+ 148.140 f8850] p2create: esperando Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
+[+ 148.140 f8850] p2create: Ready: 'pl0800' Active=0 Activating=0 Standby=1 Ready=1 Exist=1
+[+ 148.640 f8880] p2create: carpeta.activate() -> ok
+[+ 148.640 f8880] p2create: tras activate: 'pl0800' Active=0 Activating=1 Standby=1 Ready=1 Exist=1
+[+ 149.140 f8910] ATENCION: manualPlayer cambio DURANTE el spawn de P2 (posible reemplazo de P1)
+[+ 149.140 f8910] P1 (manualPlayer) detectado: app.PlayerVergilPL
+[+ 149.140 f8910] p2create: peticion ANULADA (el personaje pedido es P1): requestFinishPlayerResource(4) -> ok; cargador ahora: (sin cargador)
+[+ 149.140 f8910] p2input: PadInput de P1 = 00000124454246B0
+[+ 149.140 f8910] PlayerManager.players: 1 -> 3
+[+ 149.140 f8910]   player[0] GO='pl0100_dante' padre='null'
+[+ 149.140 f8910]   player[0] componentes de su GO: app.Player=000001243A025AD0 (tipo real app.PlayerDante) app.character.Character=000001243A025AD0 (tipo real app.PlayerDante) app.PlayerDante=000001243A025AD0 (tipo real app.PlayerDante) 
+[+ 149.140 f8910]   player[0] hijos de su GO: 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 'FBIKTargetHandR' 'ac01_010_fausthat_cloak' 'ac01_009_emperor_goggles' 
+[+ 149.140 f8910]   player[0] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=0000012444263880
+[+ 149.140 f8910]   player[0] 000001243A025AD0 tipo=app.PlayerDante id=Dante(1) pos=(-89.38, -70.39, -239.29) padInput=00000124454246B0
+[+ 149.140 f8910]   player[0] origen: carpeta[0] nombre='pl0100' ruta='Players/pl0100'
+[+ 149.140 f8910]   player[0] origen: carpeta[1] nombre='Players' ruta='Players'
+[+ 149.140 f8910]   player[1] GO='pl0200_v' padre='null'
+[+ 149.140 f8910]   player[1] componentes de su GO: app.Player=000001243A69FC70 (tipo real app.PlayerV) app.character.Character=000001243A69FC70 (tipo real app.PlayerV) app.PlayerV=000001243A69FC70 (tipo real app.PlayerV) 
+[+ 149.140 f8910]   player[1] hijos de su GO: 'wp02_000_stick' 'effect_pl0200_v' 'effect_pl0200_v' 'effect_pl0200_v' 'FBIKTargetHandL' 'FBIKTargetHandR' 'IKFootL' 'IKFootR' 
+[+ 149.140 f8910]   player[1] controlType=0(0=Manual,1=Auto) isManuallyControlled=0 isMasterManualPlayer=0 aiModeController=00000124434E6810
+[+ 149.140 f8910]   player[1] 000001243A69FC70 tipo=app.PlayerV id=Gilver(2) pos=(-89.06, -70.37, -238.34) padInput=00000124454246B0
+[+ 149.140 f8910]   player[1] origen: carpeta[0] nombre='pl0200_summon' ruta='Players/pl0800/pl0200_summon'
+[+ 149.140 f8910]   player[1] origen: carpeta[1] nombre='pl0800' ruta='Players/pl0800'
+[+ 149.140 f8910]   player[1] origen: carpeta[2] nombre='Players' ruta='Players'
+[+ 149.140 f8910]   player[2] GO='pl0800_vergil' padre='null'
+[+ 149.140 f8910]   player[2] componentes de su GO: app.Player=000001243A673FA0 (tipo real app.PlayerVergilPL) app.character.Character=000001243A673FA0 (tipo real app.PlayerVergilPL) app.PlayerVergilPL=000001243A673FA0 (tipo real app.PlayerVergilPL) 
+[+ 149.140 f8910]   player[2] hijos de su GO: 'wp08_001_forceedge' 'wp08_002_beowulf' 'wp08_000_yamato' 'IKFootL' 'IKFootR' 'IKHandL' 'IKHandR' 'FBIKTargetHandL' 
+[+ 149.140 f8910]   player[2] controlType=0(0=Manual,1=Auto) isManuallyControlled=1 isMasterManualPlayer=1 aiModeController=00000124451BD590
+[+ 149.140 f8910]   player[2] 000001243A673FA0 tipo=app.PlayerVergilPL id=VergilPL(4) pos=(-89.06, -70.37, -238.34) padInput=00000124454246B0 [P1/manual]
+[+ 149.140 f8910]   player[2] origen: carpeta[0] nombre='pl0800' ruta='Players/pl0800'
+[+ 149.140 f8910]   player[2] origen: carpeta[1] nombre='Players' ruta='Players'
+[+ 150.656 f9000] latido: frame=9000
+[+ 156.265 f9334] ORDEN: p2probe api
+[+ 156.265 f9334] --- api app.PlayerManager ---
+[+ 156.265 f9334]   set_manualPlayer(app.Player) -> System.Void
+[+ 156.265 f9334]   get_manualPlayer() -> app.Player
+[+ 156.265 f9334]   get_isManualPlayerDead() -> System.Boolean
+[+ 156.265 f9334]   get_playerNum() -> System.UInt32
+[+ 156.265 f9334]   get_manualPlayerUpdateCount() -> System.Single
+[+ 156.265 f9334]   set_manualPlayerUpdateCount(System.Single) -> System.Void
+[+ 156.265 f9334]   static getCorrectedPlayerID(app.PlayerID) -> app.PlayerID
+[+ 156.265 f9334]   static isGrimAblePlayer(via.physics.Collidable) -> System.Boolean
+[+ 156.265 f9334]   get_playerList() -> app.Player[]
+[+ 156.265 f9334]   set_playerList(app.Player[]) -> System.Void
+[+ 156.265 f9334]   getPlayer(System.UInt32) -> app.Player
+[+ 156.265 f9334]   getPlayerNum() -> System.Int32
+[+ 156.265 f9334]   getPlayerByID(app.PlayerID) -> app.Player
+[+ 156.265 f9334]   addPlayer(app.Player) -> System.Void
+[+ 156.265 f9334]   removePlayer(app.Player, System.Boolean) -> System.Void
+[+ 156.265 f9334]   createGauntlet(app.GauntletID, via.vec3, via.Quaternion) -> via.GameObject
+[+ 156.265 f9334]   isEnablePlayer(app.PlayerID) -> System.Boolean
+[+ 156.265 f9334]   static getStartPosition(via.vec3, via.Quaternion, app.PlayerID) -> System.Boolean
+[+ 156.265 f9334]   addFearValue(System.Single, app.AttackUserData.AttackIdEnum) -> System.Void
+[+ 156.265 f9334]   addProvokeDTInvacation() -> System.Void
+[+ 156.265 f9334]   static playAIMode(app.PlayerID, via.vec3, via.Quaternion) -> System.Void
+[+ 156.265 f9334]   isManualPlayer(app.PlayerID) -> System.Boolean
+[+ 156.265 f9334]   addPlayerCore(app.Player) -> System.Void
+[+ 156.265 f9334]   findPlayer() -> System.Void
+[+ 156.265 f9334]   updateManualPlayer() -> System.Void
+[+ 156.265 f9334]   updateMissionInitCheck() -> System.Void
+[+ 156.265 f9334]   initCostumeInfo() -> System.Void
+[+ 156.265 f9334]   static setCostumeInfo(app.PlayerID, app.PlayerCostumeID, app.PlayerSituationID) -> System.Void
+[+ 156.265 f9334]   static setCostumeID(app.PlayerID, app.PlayerCostumeID) -> System.Void
+[+ 156.265 f9334]   static setSituationID(app.PlayerID, app.PlayerSituationID) -> System.Void
+[+ 156.265 f9334]   static getCostumeInfo(app.PlayerID) -> app.PlayerManager.PlayerCostumeInfo
+[+ 156.265 f9334]   static getCostumeID(app.PlayerID) -> app.PlayerCostumeID
+[+ 156.265 f9334]   static getSituationID(app.PlayerID) -> app.PlayerSituationID
+[+ 156.265 f9334]   doAwake() -> System.Void
+[+ 156.265 f9334]   doStart() -> System.Void
+[+ 156.265 f9334]   doUpdate() -> System.Void
+[+ 156.265 f9334]   .ctor() -> System.Void
+[+ 156.265 f9334]   (37 metodos)
+[+ 156.265 f9334] --- campos PlayerManager 0000012445254210 tipo=app.PlayerManager ---
+[+ 156.265 f9334]   V app.PlayerManager.<manualPlayerUpdateCount>k__BackingField (System.Single) = 3063.000
+[+ 156.265 f9334]   V app.PlayerManager.ProvokeDTNum (System.Int32) = 0
+[+ 156.265 f9334]   V app.SingletonBehavior`1<app.PlayerManager>.IsKillOwn (System.Boolean) = 0
+[+ 156.265 f9334]   F app.PlayerManager.NeroData : app.PlayerManager.NeroDataHolder = app.PlayerManager.NeroDataHolder
+[+ 156.265 f9334]   F app.PlayerManager.<manualPlayer>k__BackingField : app.Player = app.PlayerVergilPL
+[+ 156.265 f9334]   F app.PlayerManager.players : System.Collections.Generic.List`1<app.Player> = System.Collections.Generic.List`1<app.Player>
+[+ 156.265 f9334]   F app.PlayerManager.<playerList>k__BackingField : app.Player[] = app.Player[]
+[+ 156.265 f9334]   F app.PlayerManager.playerCostumeList : System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo> = System.Collections.Generic.List`1<app.PlayerManager.PlayerCostumeInfo>
+[+ 156.265 f9334]   F app.PlayerManager.transceiverList : System.Collections.Generic.List`1<app.weapon.Transciever> = System.Collections.Generic.List`1<app.weapon.Transciever>
+[+ 156.265 f9334]   F app.PlayerManager.FearAddValueAll : System.Collections.Generic.List`1<System.Single> = System.Collections.Generic.List`1<System.Single>
+[+ 156.265 f9334]   F app.PlayerManager.FearAddAttackId : System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum> = System.Collections.Generic.List`1<app.AttackUserData.AttackIdEnum>
+[+ 156.265 f9334]   F app.PlayerManager.LockProvokeDT : System.Object = System.Object
+[+ 156.265 f9334] --- api app.CameraManager ---
+[+ 156.265 f9334]   get_gameCameraObject() -> via.GameObject
+[+ 156.265 f9334]   set_gameCameraObject(via.GameObject) -> System.Void
+[+ 156.265 f9334]   get_gameCameraComponent() -> via.Camera
+[+ 156.265 f9334]   set_gameCameraComponent(via.Camera) -> System.Void
+[+ 156.265 f9334]   get_gameCameraTransform() -> via.Transform
+[+ 156.265 f9334]   set_gameCameraTransform(via.Transform) -> System.Void
+[+ 156.265 f9334]   get_cachedGameCameraAxisZ() -> via.vec3
+[+ 156.265 f9334]   set_cachedGameCameraAxisZ(via.vec3) -> System.Void
+[+ 156.265 f9334]   get_cachedGameCameraPosition() -> via.vec3
+[+ 156.265 f9334]   set_cachedGameCameraPosition(via.vec3) -> System.Void
+[+ 156.265 f9334]   get_blender() -> app.CameraParameterBlender
+[+ 156.265 f9334]   set_blender(app.CameraParameterBlender) -> System.Void
+[+ 156.265 f9334]   get_playerCamera() -> app.PlayerCameraController
+[+ 156.265 f9334]   set_playerCamera(app.PlayerCameraController) -> System.Void
+[+ 156.265 f9334]   get_UICamera() -> app.SubstitutionCamera
+[+ 156.265 f9334]   set_UICamera(app.SubstitutionCamera) -> System.Void
+[+ 156.265 f9334]   get_ModelViewerCamera() -> app.SubstitutionCamera
+[+ 156.265 f9334]   set_ModelViewerCamera(app.SubstitutionCamera) -> System.Void
+[+ 156.265 f9334]   get_singleTargetCharacter() -> app.character.Character
+[+ 156.265 f9334]   get_singleTargetCameraMode() -> System.String
+[+ 156.265 f9334]   addSubstitutionCamera(app.SubstitutionCamera) -> System.Void
+[+ 156.265 f9334]   removeSubstitutionCamera(app.SubstitutionCamera) -> System.Void
+[+ 156.265 f9334]   getEventCamera(System.UInt32) -> app.SubstitutionCamera
+[+ 156.265 f9334]   setSingleTargetCamera(app.character.Character, app.camera.SingleTargetCameraParamData) -> System.Void
+[+ 156.265 f9334]   setSingleTargetCameraMode(app.character.Character, System.String, System.Single) -> System.Void
+[+ 156.265 f9334]   resetSingleTargetCamera(app.character.Character) -> System.Void
+[+ 156.265 f9334]   applySingleTargetCamera() -> System.Void
+[+ 156.265 f9334]   doAwake() -> System.Void
+[+ 156.265 f9334]   doStart() -> System.Void
+[+ 156.265 f9334]   doUpdate() -> System.Void
+[+ 156.265 f9334]   findCameraObject() -> System.Void
+[+ 156.265 f9334]   .ctor() -> System.Void
+[+ 156.265 f9334]   (32 metodos)
+[+ 156.265 f9334] api: tipo app.PlayerCameraManager no disponible
+[+ 156.265 f9334] api: tipo app.CameraSystem no disponible
+[+ 156.265 f9334] --- api via.Folder ---
+[+ 156.265 f9334]   getAllSubFolders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
+[+ 156.265 f9334]   get_Children() -> System.Collections.Generic.IEnumerable`1<via.Transform>
+[+ 156.265 f9334]   get_Folders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
+[+ 156.265 f9334]   static op_Implicit(via.Folder) -> System.Boolean
+[+ 156.265 f9334]   static op_Equality(via.Folder, via.Folder) -> System.Boolean
+[+ 156.265 f9334]   static op_Inequality(via.Folder, via.Folder) -> System.Boolean
+[+ 156.265 f9334]   activate() -> System.Void
+[+ 156.265 f9334]   activate(System.Boolean) -> System.Void
+[+ 156.265 f9334]   deactivate() -> System.Void
+[+ 156.265 f9334]   static destroy(via.Folder) -> System.Void
+[+ 156.265 f9334]   ToString() -> System.String
+[+ 156.265 f9334]   get_Name() -> System.String
+[+ 156.265 f9334]   get_Path() -> System.String
+[+ 156.265 f9334]   get_Tag() -> System.String
+[+ 156.265 f9334]   set_Tag(System.String) -> System.Void
+[+ 156.265 f9334]   get_Update() -> System.Boolean
+[+ 156.265 f9334]   get_Draw() -> System.Boolean
+[+ 156.265 f9334]   get_Select() -> System.Boolean
+[+ 156.265 f9334]   set_Select(System.Boolean) -> System.Void
+[+ 156.265 f9334]   get_UpdateSelf() -> System.Boolean
+[+ 156.265 f9334]   set_UpdateSelf(System.Boolean) -> System.Void
+[+ 156.265 f9334]   get_DrawSelf() -> System.Boolean
+[+ 156.265 f9334]   set_DrawSelf(System.Boolean) -> System.Void
+[+ 156.265 f9334]   get_Active() -> System.Boolean
+[+ 156.265 f9334]   get_Activating() -> System.Boolean
+[+ 156.265 f9334]   get_Valid() -> System.Boolean
+[+ 156.265 f9334]   get_Standby() -> System.Boolean
+[+ 156.265 f9334]   set_Standby(System.Boolean) -> System.Void
+[+ 156.265 f9334]   get_Ready() -> System.Boolean
+[+ 156.265 f9334]   get_Exist() -> System.Boolean
+[+ 156.265 f9334]   get_SceneFolder() -> System.Boolean
+[+ 156.265 f9334]   get_Parent() -> via.Folder
+[+ 156.265 f9334]   get_Scene() -> via.Scene
+[+ 156.265 f9334]   get_Child() -> via.Folder
+[+ 156.265 f9334]   get_Next() -> via.Folder
+[+ 156.265 f9334]   .ctor() -> System.Void
+[+ 156.265 f9334]   (36 metodos)
+[+ 156.265 f9334] --- api via.Scene ---
+[+ 156.265 f9334]   get_Folders() -> System.Collections.Generic.IEnumerable`1<via.Folder>
+[+ 156.265 f9334]   findFolder(System.String) -> via.Folder
+[+ 156.265 f9334]   findFoldersWithTag(System.String) -> via.Folder[]
+[+ 156.265 f9334]   getNextFolder(via.Folder) -> via.Folder
+[+ 156.265 f9334]   get_FirstFolder() -> via.Folder
+[+ 156.265 f9334]   (5 metodos)
+[+ 156.265 f9334] --- api via.GameObject ---
+[+ 156.265 f9334]   get_Folder() -> via.Folder
+[+ 156.265 f9334]   (1 metodos)
+[+ 156.265 f9334] api: carpeta de P1 00000124459B3390 tipo=via.Folder Active=1 Standby=1 Scene=000001244D8B11A0
+[+ 180.718 f10800] latido: frame=10800
+[+ 210.750 f12600] latido: frame=12600
+[+ 240.797 f14400] latido: frame=14400
+[+ 244.797 f14640] p2create: carpeta antes de restaurar: 'pl0800' Active=1 Activating=0 Standby=1 Ready=1 Exist=1
+[+ 244.797 f14640] p2release (fin de mision): carpeta.deactivate() -> ok; set_Standby(false) -> ok
+[+ 244.797 f14640] p2create: carpeta tras restaurar: 'pl0800' Active=0 Activating=0 Standby=0 Ready=0 Exist=1
+[+ 244.797 f14640] p2input: reset (fin de mision): objetivo y modo desactivados
+[+ 244.797 f14640] P1 desaparecio (manualPlayer == null): se descartan P1/P2
+[+ 244.797 f14640] PlayerManager.players: 3 -> -1
+[+ 246.297 f14730] PlayerManager cambio: 0000012445254210 -> 0000000000000000 (nueva mision o fin de mision)
